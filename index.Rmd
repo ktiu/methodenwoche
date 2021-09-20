@@ -1,0 +1,43 @@
+---
+title: "Spatial Analysis mit R (I)"
+subtitle: Methodenwoche
+author:
+  - name: Till Straube
+    url: https://user.uni-frankfurt.de/~tstraube
+    email: straube@geo.uni-frankfurt.de
+    affiliation: |
+      | Institut für Humangeographie
+      | Goethe-Universität Frankfurt
+date: "20.--21. September 2021"
+site: bookdown::bookdown_site
+documentclass: article
+bibliography: ["datascience.bib"]
+link-citations: yes
+lang: de
+description: "Workshop"
+---
+
+```{r include=F}
+knitr::opts_chunk$set(cache    = T,
+                      warning  = F,
+                      message  = F,
+                      collapse = T,
+                      dev      = "png")
+
+solutions <- knitr::opts_knit$get("rmarkdown.pandoc.to") == "html"
+is_html <- knitr::opts_knit$get("rmarkdown.pandoc.to") == "html"
+```
+
+# Zeitplan {-}
+
+Alle Sitzungen finden über Zoom statt.
+
+Zeit           | Montag                                 | Dienstag
+--------       | --------------------                   | --------------------
+10:00--11:30   | **(1) [Getting started] (LAS)**          | **(5) Geodaten verschneiden: FTR**
+*11:30--11:45* | *Kaffeepause*                          | *Kaffeepause*
+11:45--13:15   | **(2) [Daten visualisieren] (FTR, HOS)** | **(6) Geodaten verschneiden: HOS, SYW**
+*13:15--14:15* | *Mittagspause*                         | *Mittagspause*
+14:15--15:45   | **(3) [Karten erstellen](#karten-erstellen-ftr) (FTR)**         | **(7) Nach Hilfe fragen und und publizieren (FTR)**
+*15:45--16:15* | *Kaffeepause*                          | *Kaffeepause*
+16:15--18:00   | **(4) [Karten erstellen](#karten-erstellen-hos) (HOS, SYW)**    | **(8) Looking back, looking ahead (LAS)**

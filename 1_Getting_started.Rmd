@@ -1,0 +1,130 @@
+# Getting started
+
+## Formales
+
+### Keine reguläre Anrechnung des Workshops
+
+- Die Methodenwoche ist eine außercurriculare Veranstaltung
+- Keine Anrechnung als Prüfungsleistung für das reguläre Studium
+- Alle Teilnehmer\*innen erhalten Methodenzentrum eine Bescheinigung über die erbrachte Leistung (Ende 2021/Anfang 2022)
+
+### Methodenzertifikat
+
+- Nur für Bachelor-Studierende der Fachbereiche 02--05
+- Kann mit 5 CP beantragt werden
+- z. B. Teilnahme Workshop (2 CP) + Leistungsnachweis (3 CP)
+- Maximal 20% Fehlzeit zulässig für Teilnahmenachweis
+- Schriftliche Leistungsnachweise mit maximal vierwöchiger Abgabefrist
+- Alle Fragen dazu bitte an hiwis-methodenzentrum@uni-frankfurt.de
+
+## Inhaltliches
+
+### Lernziele der Veranstaltung
+
+Sie können...
+
+- Datenvisualisierungen nachvollziehen und selbst gestalten.
+- Geodaten einlesen, transformieren und verschneiden.
+- Geodaten kartographisch darstellen.
+- Reproducible examples erstellen um nach Hilfe zu fragen.
+- Berichte in Rmarkdown verfassen und rendern.
+
+### Seminarkonzept
+
+- Kompetenter Umgang mit Geodaten als Kernziel
+- Aber nicht im luftleeren Raum
+- Das Drumherum ist mindestens genauso wichtig
+- Unterlagen sind Auszüge aus einem zweisemestrigen Seminar
+
+### "Opinionated..."
+
+- package choices:
+  - `tidyverse`
+  - `sf`
+- coding style:
+  - Functional
+  - Pipes `%>%`
+- workflow:
+  - Incremental commands
+  - Rmarkdown (reproducible research)
+
+## Didaktisches
+
+### Herausforderungen in der IT-Didaktik
+
+- Unterschiedliche Erfahrungen, Kompetenzen und Herangehensweisen
+- Die eine Hälfte versteht gar nichts, die andere langweilt sich
+- Kleinster gemeinsamer Nenner: Schritt-für-Schritt-Anleitungen
+- In der Praxis wertlos
+
+### Everyone fails
+
+- In der Praxis stoßen alle ständig an die Grenzen ihrer technischen Kompetenz.
+- Es geht darum, sich am Limit einigermaßen wohl zu fühlen und die Grenzen zu verschieben.
+- Gute Angewohnheiten (Strukturen, Formate, Stil) helfen dabei!
+
+### Mein Ansatz in der Lehre
+
+- Strategische Überforderung durch schwierige Aufgaben?
+- Lösungsorientierte Didaktik!
+- Die affektive Seite (Spaß, Frust) ernst nehmen und thematisieren
+- Frustrationsschwelle trainieren
+
+### "Schattenkompetenzen"
+
+- Fehlermeldungen lesen
+- Gezielt googlen (und Antworten auswählen)
+- Copy, paste, customize
+- Gute Fragen (online) stellen
+
+### Dieser Workshop findet in verschiedenen Modi statt:
+
+#### Listen and share (LAS)
+
+- Ich rede (mit Folien oder ohne) oder moderiere eine Diskussion.
+- Sie hören mir und Ihren Kommiliton\*innen aufmerksam zu.
+- Sie "melden" sich für Redebeiträge oder Fragen (Zoom-Funktion).
+
+#### Follow the recipe (FTR)
+
+- Ich teile ein unvollständiges Beispielprojekt.
+- Wir gehen die Teilschritte nach und nach durch.
+- Ich "habe den Plan", stelle aber immer wieder Fragen ans Plenum.
+- Sie vollziehen die Schritte an Ihrer eigenen Kopie des Projekts nach.
+- Sie unterbrechen mich mit Nachfragen oder Problemen.
+
+#### Hands-on session (HOS)
+
+- Sie bearbeiten praktische Aufgabenstellungen alleine.
+- Dabei sind sie in zufälligen Dreier-Konstellationen (Breakout-Session).
+- Bei Fragen oder Problemen wenden Sie sich zunächst an Ihre Kleingruppe.
+- Falls Sie nicht weiterkommen, fordern Sie Hilfe an (Zoom-Funktion).
+- Ich reagiere auf Hilfegesuche oder "mache die Runde".
+
+#### Share your work (SYW)
+
+- Ich wähle eine Teilnehmer\*in zufällig aus.
+- Die Person teilt ihren Bildschirm und berichtet von ihrer Bearbeitung eines Problems.
+- Alle anderen unterstützen solidarisch durch aktives Nachvollziehen, Nachfragen und Hinweise.
+
+## Technisches
+
+### Arbeitsplatz
+
+- Challenge: Zoom (meinen Bildschirm) und R gleichzeitig sehen
+- Am allerbesten: Zweiter Bildschirm
+- Auch gut: Zweites Gerät (Tablet)
+
+### Workshopunterlagen
+
+- Bookdown (statt OLAT)
+- ~Können~ Werden sich verändern
+- Am besten neu laden mit Strg+Umschalt+R
+- https://tiny.gu/mwsa
+
+### RStudio Cloud
+
+- Grundsätzliche Empfehlung: R und RStudio lokal installieren
+- Wir nutzen im Rahmen des Workshops die RStudio Cloud
+  - für einfaches Teilen von Code
+  - für homogenes Setup

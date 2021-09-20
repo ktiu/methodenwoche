@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de" xml:lang="de">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Sitzung 1 Gettting started | Spatial Analysis mit R (I)</title>
+  <meta name="description" content="Workshop" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Sitzung 1 Gettting started | Spatial Analysis mit R (I)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Workshop" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Sitzung 1 Gettting started | Spatial Analysis mit R (I)" />
+  
+  <meta name="twitter:description" content="Workshop" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="assets/header-attrs-2.8/header-attrs.js"></script>
+<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="assets/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="assets/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link rel="icon" href="https://www.uni-frankfurt.de/favicon.ico" type="image/x-icon">
+<script src="solutions.js"></script>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+
+
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Zeitplan</a></li>
+<li class="chapter" data-level="1" data-path="gettting-started.html"><a href="gettting-started.html"><i class="fa fa-check"></i><b>1</b> Gettting started</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="gettting-started.html"><a href="gettting-started.html#formales"><i class="fa fa-check"></i><b>1.1</b> Formales</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="gettting-started.html"><a href="gettting-started.html#keine-reguläre-anrechnung-des-workshops"><i class="fa fa-check"></i><b>1.1.1</b> Keine reguläre Anrechnung des Workshops</a></li>
+<li class="chapter" data-level="1.1.2" data-path="gettting-started.html"><a href="gettting-started.html#methodenzertifikat"><i class="fa fa-check"></i><b>1.1.2</b> Methodenzertifikat</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="gettting-started.html"><a href="gettting-started.html#inhaltliches"><i class="fa fa-check"></i><b>1.2</b> Inhaltliches</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="gettting-started.html"><a href="gettting-started.html#lernziele-der-veranstaltung"><i class="fa fa-check"></i><b>1.2.1</b> Lernziele der Veranstaltung</a></li>
+<li class="chapter" data-level="1.2.2" data-path="gettting-started.html"><a href="gettting-started.html#seminarkonzept"><i class="fa fa-check"></i><b>1.2.2</b> Seminarkonzept</a></li>
+<li class="chapter" data-level="1.2.3" data-path="gettting-started.html"><a href="gettting-started.html#opinionated-package-choice"><i class="fa fa-check"></i><b>1.2.3</b> Opinionated package choice</a></li>
+<li class="chapter" data-level="1.2.4" data-path="gettting-started.html"><a href="gettting-started.html#opinionated-coding-style"><i class="fa fa-check"></i><b>1.2.4</b> Opinionated coding style</a></li>
+<li class="chapter" data-level="1.2.5" data-path="gettting-started.html"><a href="gettting-started.html#opinionated-workflow"><i class="fa fa-check"></i><b>1.2.5</b> Opinionated workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="gettting-started.html"><a href="gettting-started.html#didaktisches"><i class="fa fa-check"></i><b>1.3</b> Didaktisches</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="gettting-started.html"><a href="gettting-started.html#herausforderungen-in-der-it-didaktik"><i class="fa fa-check"></i><b>1.3.1</b> Herausforderungen in der IT-Didaktik</a></li>
+<li class="chapter" data-level="1.3.2" data-path="gettting-started.html"><a href="gettting-started.html#everyone-fails"><i class="fa fa-check"></i><b>1.3.2</b> Everyone fails</a></li>
+<li class="chapter" data-level="1.3.3" data-path="gettting-started.html"><a href="gettting-started.html#mein-ansatz-in-der-lehre"><i class="fa fa-check"></i><b>1.3.3</b> Mein Ansatz in der Lehre</a></li>
+<li class="chapter" data-level="1.3.4" data-path="gettting-started.html"><a href="gettting-started.html#schattenkompetenzen"><i class="fa fa-check"></i><b>1.3.4</b> <q>Schattenkompetenzen</q></a></li>
+<li class="chapter" data-level="1.3.5" data-path="gettting-started.html"><a href="gettting-started.html#dieser-workshop-findet-in-verschiedenen-modi-statt"><i class="fa fa-check"></i><b>1.3.5</b> Dieser Workshop findet in verschiedenen Modi statt:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="gettting-started.html"><a href="gettting-started.html#technisches"><i class="fa fa-check"></i><b>1.4</b> Technisches</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="gettting-started.html"><a href="gettting-started.html#workshopunterlagen"><i class="fa fa-check"></i><b>1.4.1</b> Workshopunterlagen</a></li>
+<li class="chapter" data-level="1.4.2" data-path="gettting-started.html"><a href="gettting-started.html#rstudio-cloud"><i class="fa fa-check"></i><b>1.4.2</b> RStudio Cloud</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Spatial Analysis mit R (I)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="gettting-started" class="section level1" number="1">
+<h1><span class="header-section-number">Sitzung 1</span> Gettting started</h1>
+<div id="formales" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Formales</h2>
+<div id="keine-reguläre-anrechnung-des-workshops" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Keine reguläre Anrechnung des Workshops</h3>
+<ul>
+<li>Die Methodenwoche ist eine außercurriculare Veranstaltung</li>
+<li>Keine Anrechnung als Prüfungsleistung für das reguläre Studium</li>
+<li>Alle Teilnehmer*innen erhalten Methodenzentrum eine Bescheinigung über die erbrachte Leistung (Ende 2021/Anfang 2022)</li>
+</ul>
+</div>
+<div id="methodenzertifikat" class="section level3" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Methodenzertifikat</h3>
+<ul>
+<li>Nur für Bachelor-Studierende der Fachbereiche 02–05</li>
+<li>Kann mit 5 CP beanntragt werden</li>
+<li>z. B. Teilnahme Workshop (2 CP) + Leistungsnachweis (3 CP)</li>
+<li>Maximal 20% Fehlzeit zulässig für Teilnahmenachweis</li>
+<li>Schriftliche Leistungsnachweise mit maximal vierwöchiger Abgabefrist</li>
+<li>Alle Fragen dazu bitte an <a href="mailto:hiwis-methodenzentrum@uni-frankfurt.de" class="email">hiwis-methodenzentrum@uni-frankfurt.de</a></li>
+</ul>
+</div>
+</div>
+<div id="inhaltliches" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Inhaltliches</h2>
+<div id="lernziele-der-veranstaltung" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Lernziele der Veranstaltung</h3>
+<p>Sie können…</p>
+<ul>
+<li>Datenvisualisierungen nachvollziehen und selbst gestalten.</li>
+<li>Geodaten einlesen, transformieren und verschneiden.</li>
+<li>Geodaten kartographisch darstellen.</li>
+<li>Reproducible examples erstellen um nach Hilfe zu fragen.</li>
+<li>Berichte in Rmarkdown verfassen und rendern.</li>
+</ul>
+</div>
+<div id="seminarkonzept" class="section level3" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Seminarkonzept</h3>
+<ul>
+<li><q>Spatial Analysis</q> als Kern</li>
+<li>Findet aber nicht im luftleeren Raum statt</li>
+<li>Das Drumherum ist mindestens genauso wichtig</li>
+</ul>
+</div>
+<div id="opinionated-package-choice" class="section level3" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Opinionated package choice</h3>
+<ul>
+<li><code>tidyverse</code></li>
+<li><code>sf</code></li>
+<li><code>ggplot2</code></li>
+</ul>
+</div>
+<div id="opinionated-coding-style" class="section level3" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Opinionated coding style</h3>
+<ul>
+<li>Functional</li>
+<li>Pipes <code>%&gt;%</code></li>
+</ul>
+</div>
+<div id="opinionated-workflow" class="section level3" number="1.2.5">
+<h3><span class="header-section-number">1.2.5</span> Opinionated workflow</h3>
+<ul>
+<li>Incremental commands</li>
+<li>Rmarkdown</li>
+<li>Ziel: Reproducible research</li>
+</ul>
+</div>
+</div>
+<div id="didaktisches" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Didaktisches</h2>
+<div id="herausforderungen-in-der-it-didaktik" class="section level3" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Herausforderungen in der IT-Didaktik</h3>
+<ul>
+<li>Unterschiedliche Erfahrungen, Kompetenzen und Herangehensweisen</li>
+<li>Die eine Hälfte versteht gar nichts, die andere langweilt sich</li>
+<li>Kleinster gemeinsamer Nenner: Schritt-für-Schritt-Anleitungen</li>
+<li>In der Praxis wertlos</li>
+</ul>
+</div>
+<div id="everyone-fails" class="section level3" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Everyone fails</h3>
+<ul>
+<li>In der Praxis stoßen alle ständig an die Grenzen ihrer technischen Kompetenz.</li>
+<li>Es geht darum, sich am Limit einigermaßen wohl zu fühlen und die Grenzen zu verschieben.</li>
+<li>Gute Angewohnheiten (Strukturen, Formate, Stil) helfen dabei!</li>
+</ul>
+</div>
+<div id="mein-ansatz-in-der-lehre" class="section level3" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Mein Ansatz in der Lehre</h3>
+<ul>
+<li>Strategische Überforderung durch schwierige Aufgaben?</li>
+<li>Lösungsorientierte Didaktik!</li>
+<li>Die affektive Seite (Spaß, Frust) ernst nehmen und thematisieren</li>
+<li>Frustrationsschwelle trainieren</li>
+</ul>
+</div>
+<div id="schattenkompetenzen" class="section level3" number="1.3.4">
+<h3><span class="header-section-number">1.3.4</span> <q>Schattenkompetenzen</q></h3>
+<ul>
+<li>Fehlermeldungen lesen</li>
+<li>Gezielt googlen (und Antworten auswählen)</li>
+<li>Copy, paste, customize</li>
+<li>Gute Fragen (online) stellen</li>
+</ul>
+</div>
+<div id="dieser-workshop-findet-in-verschiedenen-modi-statt" class="section level3" number="1.3.5">
+<h3><span class="header-section-number">1.3.5</span> Dieser Workshop findet in verschiedenen Modi statt:</h3>
+<div id="listen-and-share-las" class="section level4" number="1.3.5.1">
+<h4><span class="header-section-number">1.3.5.1</span> Listen and share (LAS)</h4>
+<ul>
+<li>Ich rede (mit Folien oder ohne) oder moderiere eine Diskussion.</li>
+<li>Sie hören mir und Ihren Kommiliton*innen aufmerksam zu.</li>
+<li>Sie <q>melden</q> sich für Redebeiträge oder Fragen (Zoom-Funktion).</li>
+</ul>
+</div>
+<div id="follow-the-recipe-ftr" class="section level4" number="1.3.5.2">
+<h4><span class="header-section-number">1.3.5.2</span> Follow the recipe (FTR)</h4>
+<ul>
+<li>Ich teile ein unvollständiges Beispielprojekt.</li>
+<li>Wir gehen die Teilschritte nach und nach durch.</li>
+<li>Ich <q>habe den Plan</q>, stelle aber immer wieder Fragen ans Plenum.</li>
+<li>Sie vollziehen die Schritte an Ihrer eigenen Kopie des Projekts nach.</li>
+<li>Sie unterbrechen mich mit Nachfragen oder Problemen.</li>
+</ul>
+</div>
+<div id="hands-on-session-hos" class="section level4" number="1.3.5.3">
+<h4><span class="header-section-number">1.3.5.3</span> Hands-on session (HOS)</h4>
+<ul>
+<li>Sie bearbeiten praktische Aufgabenstellungen alleine.</li>
+<li>Dabei sind sie in zufälligen Dreier-Konstellationen (Breakout-Session).</li>
+<li>Bei Fragen oder Problemen wenden Sie sich zunächst an Ihre Kleingruppe.</li>
+<li>Falls Sie nicht weiterkommen, fordern Sie Hilfe an (Zoom-Funktion).</li>
+<li>Ich reagiere auf Hilfegesuche oder <q>mache die Runde</q>.</li>
+</ul>
+</div>
+<div id="share-your-work-syw" class="section level4" number="1.3.5.4">
+<h4><span class="header-section-number">1.3.5.4</span> Share your work (SYW)</h4>
+<ul>
+<li>Ich wähle eine Teilnehmer*in zufällig aus.</li>
+<li>Die Person teilt ihren Bildschirm und berichtet von ihrer Bearbeitung eines Problems.</li>
+<li>Alle anderen unterstützen solidarisch durch aktives Nachvollziehen, Nachfragen und Hinweise.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="technisches" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Technisches</h2>
+<div id="workshopunterlagen" class="section level3" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> Workshopunterlagen</h3>
+<blockquote>
+<ul>
+<li>Bookdown (statt OLAT)</li>
+<li>Können sich verändern</li>
+<li>Am besten neu laden mit Strg+Umschalt+R</li>
+<li><a href="https://tiny.gu/mwsa" class="uri">https://tiny.gu/mwsa</a></li>
+</ul>
+</blockquote>
+</div>
+<div id="rstudio-cloud" class="section level3" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> RStudio Cloud</h3>
+<blockquote>
+<ul>
+<li>Grundsätzliche Emfpehlung: R und RStudio lokal installieren</li>
+<li>Wir nutzen im Rahmen des Workshops die RStudio Cloud
+<ul>
+<li>für einfaches Teilen von Code</li>
+<li>für homogenes Setup</li>
+</ul></li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ktiu/ds21/edit/master/1_Getting_started.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ktiu/ds21/blob/master/1_Getting_started.Rmd",
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

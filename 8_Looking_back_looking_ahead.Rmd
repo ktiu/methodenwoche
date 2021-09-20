@@ -1,0 +1,65 @@
+## Kollaboration
+
+Im Folgenden sind einige Überlegungen und Tools aufgeführt, die bei der Kollaboration an einem Gruppenprojekt hilfreich sein könnten.
+
+### Find <u>your</u> workflow
+
+Es gibt zwar effiziente und weniger effiziente Praktiken, sowie hilfreiche und weniger hilfreiche Tools -- es gibt jedoch keinesfalls *den einen* perfekten Workflow. Letztendlich kommt es darauf an, sich gemeinsam für einen Workflow zu entscheiden und diesen klar festzulegen, oder sogar irgendwie festzuhalten.
+
+Dazu gehört es z. B. auch, sich auf Formate von Dateinamen oder R-Objekten zu einigen, und einen ,offiziellen‘ Kanal für die Gruppenkommunikation festzulegen -- sei es E-Mail, Slack oder WhatsApp.
+
+### Zwischenstände speichern
+
+Wenn z. B. ein (längeres) Script einen (größeren) Datensatz generiert und ihn dem Objektnamen `mein_datensatz` zuweist, dann erscheint der Datensatz im lokalen Environment. Um den Datensatz mit anderen zu teilen, muss er irgendwie exportiert werden. Hierfür ist es ratsam, die `save()`-Funktion zu nutzen:
+
+```{r, eval=F}
+save(mein_datensatz, file = "zwischenstand_mein_datensatz.Rdata")
+```
+
+So wird eine Datei erstellt, die den Datensatz enthält und verschoben oder geteilt werden kann. Eine solche Datei kann auch andere Objekte (Funktionen, Listen, ...) und mehrere Objekte auf einmal enthalten. Die Dateiendung ist dabei eigentlich egal, `.Rdata` scheint aber Usus zu sein.
+
+Aus der Datei können Objekte dann jederzeit wieder ins Environment geladen werden mit dem Befehl:
+
+```{r, eval=F}
+load("zwischenstand_mein_datensatz.Rdata")
+```
+
+Auch wenn ein Skript auf einmal nicht mehr funktioniert (etwa weil die API sich ändert), ist es hilfreich, auf solche Zwischenstände zurückgreifen zu können.
+
+### RStudio Cloud
+
+Im Seminar haben wir [RStudio Cloud](https://rstudio.cloud/) über den Browser genutzt. Eine gute Möglichkeit der Kollaboration ist, ein Cloud-Projekt miteinander zu teilen. Aber Achtung: Dabei wird beim Teilen immer eine Kopie erstellt -- daher kann es schwierig werden, gleichzeitig vorgenommene Änderungen wieder zusammenzuführen.
+
+Wer die Cloud im Rahmen des Projektseminars nutzt, sollte keine vertraulichen Daten verarbeiten und sich sorgfältig absprechen, wer gerade an welcher Version des Projekts wie weiterarbeitet.
+
+### File sharing
+
+Mit File-Sharing-Plattformen wie Dropbox (oder Google Drive, OneDrive, ...) können ganze Ordner leicht zwischen verschiedenen Rechnern synchronisiert werden. Hierbei ist es jedoch keine gute Idee, den Projektordner (das *working directory*) selbst zu synchronisieren -- dabei sind Probleme vorprogrammiert! Stattdessen ist es vielleicht eine Idee, einen Unterordner anzulegen, der dann mit diesen Diensten verknüpft werden kann.
+
+**Aber Vorsicht:** Wenn mit vertraulichen Daten gearbeitet wird, ist der Austausch der Daten über diese Programme nicht zulässig!
+
+### E-Mail
+
+Der Austausch von Scripts, Datensätzen, zip-Dateien etc. über E-Mail ist vielleicht umständlich, aber im Zweifel eine praktikable Lösung. Nur bei sehr großen Datensätzen ist man vielleicht irgendwann auf File-Sharing-Dienste wie [WeTransfer](https://wetransfer.com/) angewiesen -- aber auch hier mit den gleichen datenschutzrechtlichen Bedenken.
+
+### Git
+
+[Git](https://git-scm.com/) ist ein mächtiges Tool für Version Control, und war lange aufgrund seiner etwas steilen Lernkurve berüchtigt. Mit dem richtigen Interface (RStudio bietet z. B. eine GUI an) ist das aber alles gar nicht so schwierig, und Portale wie [Github](https://github.com) oder [Bitbucket](https://bitbucket.org/) erleichtern die zentrale Verwaltung von Repositories.
+
+Git hat eine steile Lernkurve und erleichtert die Arbeit erst, wenn man damit sicher umgehen kann.
+Aber Git ist zurecht ein absolutes Standardwerkzeug für Entwickler\*innen, und wer jemals ernsthaft in einer Gruppe (oder auch alleine!) an Code arbeiten will, sollte sich mit Git auseinandersetzen.
+
+Eine ausführliche Anleitung für die Verknüpfung von RStudio und GitHub findet sich hier: https://happygitwithr.com/
+
+### Trello
+
+[Trello](https://trello.com/de) ist ein flexibles Projektmanagement-Tool, in dem man gemeinsame Listen anlegen kann.
+
+Neben einer gemeinsamen To-do-Liste bietet es sich gerade bei größeren Teams an, wer gerade an was arbeitet (Liste: „Till arbeitet an...“).
+
+Es ist erfahrungsgemäß ratsam, nicht nur kryptische Stichpunkte festzuhalten, sondern die gewünschten Resultate als „Stories“ zu beschreiben:
+
+- „Wir haben ein API-Passwort“
+- „Datensatz x ist mit Datensatz y verschnitten“
+- „Wir haben fünf Quellen für den Theorieteil“
+- ...

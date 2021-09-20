@@ -1,0 +1,17 @@
+base
+tmap
+sf
+tidyverse
+ggplot2
+tibble
+tidyr
+readr
+purrr
+dplyr
+stringr
+forcats
+rvest
+rnaturalearth
+jsonlite
+plotly
+ggdendro

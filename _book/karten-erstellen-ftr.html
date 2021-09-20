@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de" xml:lang="de">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Teil 3 Karten erstellen (FTR) | Spatial Analysis mit R (I)</title>
+  <meta name="description" content="Workshop" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Teil 3 Karten erstellen (FTR) | Spatial Analysis mit R (I)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Workshop" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Teil 3 Karten erstellen (FTR) | Spatial Analysis mit R (I)" />
+  
+  <meta name="twitter:description" content="Workshop" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="daten-visualisieren.html"/>
+<link rel="next" href="karten-erstellen-hos.html"/>
+<script src="assets/header-attrs-2.8/header-attrs.js"></script>
+<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="assets/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="assets/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link rel="icon" href="https://www.uni-frankfurt.de/favicon.ico" type="image/x-icon">
+<script src="solutions.js"></script>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Zeitplan</a></li>
+<li class="chapter" data-level="1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>1</b> Getting started</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="getting-started.html"><a href="getting-started.html#formales"><i class="fa fa-check"></i><b>1.1</b> Formales</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="getting-started.html"><a href="getting-started.html#keine-reguläre-anrechnung-des-workshops"><i class="fa fa-check"></i><b>1.1.1</b> Keine reguläre Anrechnung des Workshops</a></li>
+<li class="chapter" data-level="1.1.2" data-path="getting-started.html"><a href="getting-started.html#methodenzertifikat"><i class="fa fa-check"></i><b>1.1.2</b> Methodenzertifikat</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="getting-started.html"><a href="getting-started.html#inhaltliches"><i class="fa fa-check"></i><b>1.2</b> Inhaltliches</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="getting-started.html"><a href="getting-started.html#lernziele-der-veranstaltung"><i class="fa fa-check"></i><b>1.2.1</b> Lernziele der Veranstaltung</a></li>
+<li class="chapter" data-level="1.2.2" data-path="getting-started.html"><a href="getting-started.html#seminarkonzept"><i class="fa fa-check"></i><b>1.2.2</b> Seminarkonzept</a></li>
+<li class="chapter" data-level="1.2.3" data-path="getting-started.html"><a href="getting-started.html#opinionated"><i class="fa fa-check"></i><b>1.2.3</b> <q>Opinionated…</q></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="getting-started.html"><a href="getting-started.html#didaktisches"><i class="fa fa-check"></i><b>1.3</b> Didaktisches</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="getting-started.html"><a href="getting-started.html#herausforderungen-in-der-it-didaktik"><i class="fa fa-check"></i><b>1.3.1</b> Herausforderungen in der IT-Didaktik</a></li>
+<li class="chapter" data-level="1.3.2" data-path="getting-started.html"><a href="getting-started.html#everyone-fails"><i class="fa fa-check"></i><b>1.3.2</b> Everyone fails</a></li>
+<li class="chapter" data-level="1.3.3" data-path="getting-started.html"><a href="getting-started.html#mein-ansatz-in-der-lehre"><i class="fa fa-check"></i><b>1.3.3</b> Mein Ansatz in der Lehre</a></li>
+<li class="chapter" data-level="1.3.4" data-path="getting-started.html"><a href="getting-started.html#schattenkompetenzen"><i class="fa fa-check"></i><b>1.3.4</b> <q>Schattenkompetenzen</q></a></li>
+<li class="chapter" data-level="1.3.5" data-path="getting-started.html"><a href="getting-started.html#dieser-workshop-findet-in-verschiedenen-modi-statt"><i class="fa fa-check"></i><b>1.3.5</b> Dieser Workshop findet in verschiedenen Modi statt:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="getting-started.html"><a href="getting-started.html#technisches"><i class="fa fa-check"></i><b>1.4</b> Technisches</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="getting-started.html"><a href="getting-started.html#arbeitsplatz"><i class="fa fa-check"></i><b>1.4.1</b> Arbeitsplatz</a></li>
+<li class="chapter" data-level="1.4.2" data-path="getting-started.html"><a href="getting-started.html#workshopunterlagen"><i class="fa fa-check"></i><b>1.4.2</b> Workshopunterlagen</a></li>
+<li class="chapter" data-level="1.4.3" data-path="getting-started.html"><a href="getting-started.html#rstudio-cloud"><i class="fa fa-check"></i><b>1.4.3</b> RStudio Cloud</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html"><i class="fa fa-check"></i><b>2</b> Daten visualisieren</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#lernziele-dieser-sitzung"><i class="fa fa-check"></i><b>2.1</b> Lernziele dieser Sitzung</a></li>
+<li class="chapter" data-level="2.2" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#voraussetzungen"><i class="fa fa-check"></i><b>2.2</b> Voraussetzungen</a></li>
+<li class="chapter" data-level="2.3" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#überblick"><i class="fa fa-check"></i><b>2.3</b> Überblick</a></li>
+<li class="chapter" data-level="2.4" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#visualisierung-mit-dem-standardpaket"><i class="fa fa-check"></i><b>2.4</b> Visualisierung mit dem Standardpaket</a></li>
+<li class="chapter" data-level="2.5" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#visualisierung-mit-ggplot"><i class="fa fa-check"></i><b>2.5</b> Visualisierung mit <code>ggplot()</code></a></li>
+<li class="chapter" data-level="2.6" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#aufgaben"><i class="fa fa-check"></i><b>2.6</b> Aufgaben</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html"><i class="fa fa-check"></i><b>3</b> Karten erstellen (FTR)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#lernziele-dieser-sitzung-1"><i class="fa fa-check"></i><b>3.1</b> Lernziele dieser Sitzung</a></li>
+<li class="chapter" data-level="3.2" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#voraussetzungen-1"><i class="fa fa-check"></i><b>3.2</b> Voraussetzungen</a></li>
+<li class="chapter" data-level="3.3" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#exkurs-pipes"><i class="fa fa-check"></i><b>3.3</b> Exkurs: Pipes</a></li>
+<li class="chapter" data-level="3.4" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#daten-importieren"><i class="fa fa-check"></i><b>3.4</b> Daten importieren</a></li>
+<li class="chapter" data-level="3.5" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#überblick-verschaffen"><i class="fa fa-check"></i><b>3.5</b> Überblick verschaffen</a></li>
+<li class="chapter" data-level="3.6" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#visualisieren"><i class="fa fa-check"></i><b>3.6</b> Visualisieren</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="karten-erstellen-hos.html"><a href="karten-erstellen-hos.html"><i class="fa fa-check"></i><b>4</b> Karten erstellen (HOS)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="karten-erstellen-hos.html"><a href="karten-erstellen-hos.html#aufgaben-1"><i class="fa fa-check"></i><b>4.1</b> Aufgaben</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Spatial Analysis mit R (I)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="karten-erstellen-ftr" class="section level1" number="3">
+<h1><span class="header-section-number">Teil 3</span> Karten erstellen (FTR)</h1>
+<div id="lernziele-dieser-sitzung-1" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Lernziele dieser Sitzung</h2>
+<p>Sie können…</p>
+<ul>
+<li>Pipes benutzen</li>
+<li>einfache <code>dplyr</code>-Befehle ausführen</li>
+<li>Koordinaten visualisieren</li>
+</ul>
+</div>
+<div id="voraussetzungen-1" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Voraussetzungen</h2>
+<p>Wir laden erstmal <code>tidyverse</code>:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="karten-erstellen-ftr.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+</div>
+<div id="exkurs-pipes" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Exkurs: Pipes</h2>
+<p>Teil vom <code>tidyverse</code> ist auch das Paket <code>magrittr</code>, das einen besonderen Operator enthält: <code>%&gt;%</code></p>
+<p>Der Operator <code>%&gt;%</code> heißt <q>Pipe</q> und setzt das Ergebnis der vorherigen Funktion als ersten Parameter in die nächste Funktion ein. Zur Veranschaulichung:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="karten-erstellen-ftr.html#cb21-1" aria-hidden="true" tabindex="-1"></a>anzahl_buchstaben <span class="ot">&lt;-</span> <span class="fu">length</span>(letters)</span>
+<span id="cb21-2"><a href="karten-erstellen-ftr.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(anzahl_buchstaben)</span></code></pre></div>
+<p>…ist das gleiche wie…</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="karten-erstellen-ftr.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">length</span>(letters))</span></code></pre></div>
+<p>…ist das gleiche wie…</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="karten-erstellen-ftr.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(letters) <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="karten-erstellen-ftr.html#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>()</span></code></pre></div>
+<p>…ist das gleiche wie…</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="karten-erstellen-ftr.html#cb24-1" aria-hidden="true" tabindex="-1"></a>letters <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a href="karten-erstellen-ftr.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  length <span class="sc">%&gt;%</span></span>
+<span id="cb24-3"><a href="karten-erstellen-ftr.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>()</span></code></pre></div>
+<p>So können beliebig viele Funktionen aneinandergereiht werden. Und mit <code>-&gt;</code> kann eine Variable „in die andere Richtung“ zugewiesen werden</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="karten-erstellen-ftr.html#cb25-1" aria-hidden="true" tabindex="-1"></a>letters <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="karten-erstellen-ftr.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb25-3"><a href="karten-erstellen-ftr.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb25-4"><a href="karten-erstellen-ftr.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb25-5"><a href="karten-erstellen-ftr.html#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.character</span>() <span class="ot">-&gt;</span></span>
+<span id="cb25-6"><a href="karten-erstellen-ftr.html#cb25-6" aria-hidden="true" tabindex="-1"></a>  my_var</span></code></pre></div>
+<p>Gerade bei komplizierteren Zusammenhängen wird der Code so oft lesbarer, weil die Logik von links nach rechts, bzw. von oben nach unten gelesen werden kann.</p>
+</div>
+<div id="daten-importieren" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Daten importieren</h2>
+<p>Beim Open-Data-Portal der Stadt Frankfurt steht ein <a href="http://offenedaten.frankfurt.de/dataset/baumkataster-frankfurt-am-main">Baumkataster</a> zur Verfügung.</p>
+<p>Die Datei im CSV-Format (comma separated values) kann entweder heruntergeladen und durch klicken importiert werden, oder direkt über den Befehl:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="karten-erstellen-ftr.html#cb26-1" aria-hidden="true" tabindex="-1"></a>baumkataster <span class="ot">&lt;-</span> <span class="fu">read_csv2</span>(<span class="st">&quot;http://offenedaten.frankfurt.de/dataset/73c5a6b3-c033-4dad-bb7d-8783427dd233/resource/7a73520b-961a-4aad-a582-449e676c247c/download/gprojekteopen-datadatenamt-67datenbaumauswahl_veroffentlichung_4baumauswahl_veroffentlichung_4.csv&quot;</span>)</span></code></pre></div>
+</div>
+<div id="überblick-verschaffen" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Überblick verschaffen</h2>
+<p>Mit <code>summary()</code> lässt sich eine Zusammenfassung der Werte generieren:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="karten-erstellen-ftr.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(baumkataster)</span>
+<span id="cb27-2"><a href="karten-erstellen-ftr.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="do">##  Gattung/Art/Deutscher Name   Baumnummer         Objekt            Pflanzjahr  </span></span>
+<span id="cb27-3"><a href="karten-erstellen-ftr.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="do">##  Length:118403              Min.   :    1.0   Length:118403      Min.   :1645  </span></span>
+<span id="cb27-4"><a href="karten-erstellen-ftr.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="do">##  Class :character           1st Qu.:   24.0   Class :character   1st Qu.:1970  </span></span>
+<span id="cb27-5"><a href="karten-erstellen-ftr.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mode  :character           Median :   82.0   Mode  :character   Median :1982  </span></span>
+<span id="cb27-6"><a href="karten-erstellen-ftr.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Mean   :  232.7                      Mean   :1979  </span></span>
+<span id="cb27-7"><a href="karten-erstellen-ftr.html#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="do">##                             3rd Qu.:  270.0                      3rd Qu.:1995  </span></span>
+<span id="cb27-8"><a href="karten-erstellen-ftr.html#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Max.   :20158.0                      Max.   :2017  </span></span>
+<span id="cb27-9"><a href="karten-erstellen-ftr.html#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="do">##                             NA&#39;s   :1853                                       </span></span>
+<span id="cb27-10"><a href="karten-erstellen-ftr.html#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  Kronendurchmesser    HOCHWERT         RECHTSWERT    </span></span>
+<span id="cb27-11"><a href="karten-erstellen-ftr.html#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  Min.   : 2.000    Min.   :5545117   Min.   :463163  </span></span>
+<span id="cb27-12"><a href="karten-erstellen-ftr.html#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  1st Qu.: 4.000    1st Qu.:5550428   1st Qu.:472715  </span></span>
+<span id="cb27-13"><a href="karten-erstellen-ftr.html#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  Median : 6.000    Median :5552601   Median :475219  </span></span>
+<span id="cb27-14"><a href="karten-erstellen-ftr.html#cb27-14" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mean   : 6.688    Mean   :5552953   Mean   :475244  </span></span>
+<span id="cb27-15"><a href="karten-erstellen-ftr.html#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="do">##  3rd Qu.: 9.000    3rd Qu.:5555165   3rd Qu.:478201  </span></span>
+<span id="cb27-16"><a href="karten-erstellen-ftr.html#cb27-16" aria-hidden="true" tabindex="-1"></a><span class="do">##  Max.   :63.000    Max.   :5563639   Max.   :485361  </span></span>
+<span id="cb27-17"><a href="karten-erstellen-ftr.html#cb27-17" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span></code></pre></div>
+<p>Genauere Infos über diese Merkmale gibt es auf dem Datenportal.</p>
+</div>
+<div id="visualisieren" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Visualisieren</h2>
+<p>Wie in der letzten Lektion besprochen, lässt sich der Datensatz mit <code>ggplot()</code> visualisieren, z. B.:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="karten-erstellen-ftr.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(baumkataster, <span class="fu">aes</span>(<span class="at">x =</span> Kronendurchmesser)) <span class="sc">+</span></span>
+<span id="cb28-2"><a href="karten-erstellen-ftr.html#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>Eine neue Messreihe lässt sich z. B. so errechnen:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="karten-erstellen-ftr.html#cb29-1" aria-hidden="true" tabindex="-1"></a>alter <span class="ot">&lt;-</span> <span class="dv">2020</span> <span class="sc">-</span> baumkataster<span class="sc">$</span>Pflanzjahr</span>
+<span id="cb29-2"><a href="karten-erstellen-ftr.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(alter)</span>
+<span id="cb29-3"><a href="karten-erstellen-ftr.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 100 100 100 100 100 100</span></span></code></pre></div>
+<p>Der Befehl <code>mutate()</code> funktioniert sehr ähnlich, gibt aber den veränderten Datensatz zurück:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="karten-erstellen-ftr.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(baumkataster, <span class="at">alter =</span> <span class="dv">2020</span> <span class="sc">-</span> Pflanzjahr)</span>
+<span id="cb30-2"><a href="karten-erstellen-ftr.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 118,403 x 8</span></span>
+<span id="cb30-3"><a href="karten-erstellen-ftr.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="do">##    `Gattung/Art/Deutsch… Baumnummer Objekt  Pflanzjahr Kronendurchmess… HOCHWERT</span></span>
+<span id="cb30-4"><a href="karten-erstellen-ftr.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="do">##    &lt;chr&gt;                      &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;            &lt;dbl&gt;    &lt;dbl&gt;</span></span>
+<span id="cb30-5"><a href="karten-erstellen-ftr.html#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="do">##  1 Platanus x hispanica…          1 Ackerm…       1920                8 5549511.</span></span>
+<span id="cb30-6"><a href="karten-erstellen-ftr.html#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="do">##  2 Platanus x hispanica…          2 Ackerm…       1920                8 5549517.</span></span>
+<span id="cb30-7"><a href="karten-erstellen-ftr.html#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  3 Platanus x hispanica…          3 Ackerm…       1920                8 5549524.</span></span>
+<span id="cb30-8"><a href="karten-erstellen-ftr.html#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  4 Platanus x hispanica…          4 Ackerm…       1920                8 5549531 </span></span>
+<span id="cb30-9"><a href="karten-erstellen-ftr.html#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  5 Platanus x hispanica…          5 Ackerm…       1920                8 5549538.</span></span>
+<span id="cb30-10"><a href="karten-erstellen-ftr.html#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  6 Platanus x hispanica…          6 Ackerm…       1920                8 5549544.</span></span>
+<span id="cb30-11"><a href="karten-erstellen-ftr.html#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  7 Platanus x hispanica…          7 Ackerm…       1920                8 5549551.</span></span>
+<span id="cb30-12"><a href="karten-erstellen-ftr.html#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  8 Platanus x hispanica…          8 Ackerm…       1920                8 5549557.</span></span>
+<span id="cb30-13"><a href="karten-erstellen-ftr.html#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  9 Platanus x hispanica…          9 Ackerm…       1920                8 5549564.</span></span>
+<span id="cb30-14"><a href="karten-erstellen-ftr.html#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 Platanus x hispanica…         10 Ackerm…       1920                8 5549571.</span></span>
+<span id="cb30-15"><a href="karten-erstellen-ftr.html#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="do">## # … with 118,393 more rows, and 2 more variables: RECHTSWERT &lt;dbl&gt;, alter &lt;dbl&gt;</span></span></code></pre></div>
+<p>Derselbe Befehl mit dem Pipe-Operator:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="karten-erstellen-ftr.html#cb31-1" aria-hidden="true" tabindex="-1"></a>baumkataster <span class="sc">%&gt;%</span></span>
+<span id="cb31-2"><a href="karten-erstellen-ftr.html#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">alter =</span> <span class="dv">2020</span> <span class="sc">-</span> Pflanzjahr)</span>
+<span id="cb31-3"><a href="karten-erstellen-ftr.html#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 118,403 x 8</span></span>
+<span id="cb31-4"><a href="karten-erstellen-ftr.html#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="do">##    `Gattung/Art/Deutsch… Baumnummer Objekt  Pflanzjahr Kronendurchmess… HOCHWERT</span></span>
+<span id="cb31-5"><a href="karten-erstellen-ftr.html#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="do">##    &lt;chr&gt;                      &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;            &lt;dbl&gt;    &lt;dbl&gt;</span></span>
+<span id="cb31-6"><a href="karten-erstellen-ftr.html#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="do">##  1 Platanus x hispanica…          1 Ackerm…       1920                8 5549511.</span></span>
+<span id="cb31-7"><a href="karten-erstellen-ftr.html#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  2 Platanus x hispanica…          2 Ackerm…       1920                8 5549517.</span></span>
+<span id="cb31-8"><a href="karten-erstellen-ftr.html#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  3 Platanus x hispanica…          3 Ackerm…       1920                8 5549524.</span></span>
+<span id="cb31-9"><a href="karten-erstellen-ftr.html#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  4 Platanus x hispanica…          4 Ackerm…       1920                8 5549531 </span></span>
+<span id="cb31-10"><a href="karten-erstellen-ftr.html#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  5 Platanus x hispanica…          5 Ackerm…       1920                8 5549538.</span></span>
+<span id="cb31-11"><a href="karten-erstellen-ftr.html#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  6 Platanus x hispanica…          6 Ackerm…       1920                8 5549544.</span></span>
+<span id="cb31-12"><a href="karten-erstellen-ftr.html#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  7 Platanus x hispanica…          7 Ackerm…       1920                8 5549551.</span></span>
+<span id="cb31-13"><a href="karten-erstellen-ftr.html#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  8 Platanus x hispanica…          8 Ackerm…       1920                8 5549557.</span></span>
+<span id="cb31-14"><a href="karten-erstellen-ftr.html#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="do">##  9 Platanus x hispanica…          9 Ackerm…       1920                8 5549564.</span></span>
+<span id="cb31-15"><a href="karten-erstellen-ftr.html#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 Platanus x hispanica…         10 Ackerm…       1920                8 5549571.</span></span>
+<span id="cb31-16"><a href="karten-erstellen-ftr.html#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="do">## # … with 118,393 more rows, and 2 more variables: RECHTSWERT &lt;dbl&gt;, alter &lt;dbl&gt;</span></span></code></pre></div>
+<p>So lassen sich auch hier verschiedene Befehle verknüpfen. <code>filter()</code> beschränkt den Datensatz auf Merkmalsträger, die den Kriterien entsprechen:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="karten-erstellen-ftr.html#cb32-1" aria-hidden="true" tabindex="-1"></a>baumkataster <span class="sc">%&gt;%</span></span>
+<span id="cb32-2"><a href="karten-erstellen-ftr.html#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">alter =</span> <span class="dv">2020</span> <span class="sc">-</span> Pflanzjahr) <span class="sc">%&gt;%</span></span>
+<span id="cb32-3"><a href="karten-erstellen-ftr.html#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(alter <span class="sc">&gt;</span> <span class="dv">30</span>) <span class="ot">-&gt;</span></span>
+<span id="cb32-4"><a href="karten-erstellen-ftr.html#cb32-4" aria-hidden="true" tabindex="-1"></a>  alte_baeume</span>
+<span id="cb32-5"><a href="karten-erstellen-ftr.html#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-6"><a href="karten-erstellen-ftr.html#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(alte_baeume)</span>
+<span id="cb32-7"><a href="karten-erstellen-ftr.html#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  Gattung/Art/Deutscher Name   Baumnummer         Objekt            Pflanzjahr  </span></span>
+<span id="cb32-8"><a href="karten-erstellen-ftr.html#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  Length:73859               Min.   :    1.0   Length:73859       Min.   :1645  </span></span>
+<span id="cb32-9"><a href="karten-erstellen-ftr.html#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  Class :character           1st Qu.:   29.0   Class :character   1st Qu.:1960  </span></span>
+<span id="cb32-10"><a href="karten-erstellen-ftr.html#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mode  :character           Median :   97.0   Mode  :character   Median :1974  </span></span>
+<span id="cb32-11"><a href="karten-erstellen-ftr.html#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Mean   :  263.2                      Mean   :1966  </span></span>
+<span id="cb32-12"><a href="karten-erstellen-ftr.html#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="do">##                             3rd Qu.:  314.0                      3rd Qu.:1980  </span></span>
+<span id="cb32-13"><a href="karten-erstellen-ftr.html#cb32-13" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Max.   :10489.0                      Max.   :1989  </span></span>
+<span id="cb32-14"><a href="karten-erstellen-ftr.html#cb32-14" aria-hidden="true" tabindex="-1"></a><span class="do">##                             NA&#39;s   :684                                        </span></span>
+<span id="cb32-15"><a href="karten-erstellen-ftr.html#cb32-15" aria-hidden="true" tabindex="-1"></a><span class="do">##  Kronendurchmesser    HOCHWERT         RECHTSWERT         alter       </span></span>
+<span id="cb32-16"><a href="karten-erstellen-ftr.html#cb32-16" aria-hidden="true" tabindex="-1"></a><span class="do">##  Min.   : 2.000    Min.   :5545117   Min.   :463163   Min.   : 31.00  </span></span>
+<span id="cb32-17"><a href="karten-erstellen-ftr.html#cb32-17" aria-hidden="true" tabindex="-1"></a><span class="do">##  1st Qu.: 6.000    1st Qu.:5550415   1st Qu.:472667   1st Qu.: 40.00  </span></span>
+<span id="cb32-18"><a href="karten-erstellen-ftr.html#cb32-18" aria-hidden="true" tabindex="-1"></a><span class="do">##  Median : 8.000    Median :5552480   Median :475708   Median : 46.00  </span></span>
+<span id="cb32-19"><a href="karten-erstellen-ftr.html#cb32-19" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mean   : 8.503    Mean   :5552593   Mean   :475402   Mean   : 53.54  </span></span>
+<span id="cb32-20"><a href="karten-erstellen-ftr.html#cb32-20" aria-hidden="true" tabindex="-1"></a><span class="do">##  3rd Qu.:10.000    3rd Qu.:5554589   3rd Qu.:478539   3rd Qu.: 60.00  </span></span>
+<span id="cb32-21"><a href="karten-erstellen-ftr.html#cb32-21" aria-hidden="true" tabindex="-1"></a><span class="do">##  Max.   :35.000    Max.   :5563639   Max.   :485360   Max.   :375.00  </span></span>
+<span id="cb32-22"><a href="karten-erstellen-ftr.html#cb32-22" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span></code></pre></div>
+<p>Schließlich ergibt das Streudiagramm von Koordinaten so eine art Karte:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="karten-erstellen-ftr.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(alte_baeume) <span class="sc">+</span></span>
+<span id="cb33-2"><a href="karten-erstellen-ftr.html#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">0.1</span>, <span class="fu">aes</span>(<span class="at">x =</span> RECHTSWERT, <span class="at">y =</span> HOCHWERT))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<p>Diesen Ansatz werden wir in der nächsten Lektion vertiefen.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="daten-visualisieren.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="karten-erstellen-hos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ktiu/ds21/edit/master/3_Karten_erstellen.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ktiu/ds21/blob/master/3_Karten_erstellen.Rmd",
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

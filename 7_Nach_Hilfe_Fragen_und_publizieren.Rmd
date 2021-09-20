@@ -1,0 +1,117 @@
+# Nach Hilfe fragen und publizieren
+
+## Nach Hilfe fragen
+
+Oft ist 
+
+## Publizieren mit Rmarkdown
+
+### Text formatieren
+
+Wir arbeiten schon von Anfang an mit im Rmarkdown-Format. Wie Überschriften, Links, Bilder usw. in Rmarkdown genau funktionieren, ist in [dieser Übersicht](https://rmarkdown.rstudio.com/authoring_basics.html) und auf [diesem Cheat Sheet](https://github.com/rstudio/cheatsheets/blob/master/rmarkdown-2.0.pdf) gut festgehalten.
+
+### Der Knit-Button
+
+Wenn wir im [YAML](https://de.wikipedia.org/wiki/YAML)-Header die Zeile 
+
+```
+output: html_document
+```
+
+setzen, erscheint (nach Abspeichern) ein „Knit“-Button in der GUI. Durch Drücken auf diesen Knopf passiert folgendes:
+
+- R erstellt („strickt“) ein HTML-Dokument aus dem vorliegenden Markdown und den Code Chunks
+- Dabei spielen „gespeicherte“ Objekte keine Rolle, die Chunks werden einfach der Reihe nach (in einem neuen Environment) ausgeführt
+- Externe Datensätze o. ä. müssen also am Anfang des Dokuments explizit geladen werden (etwa mit `load()`). Für den Abschlussbericht ist es ratsam, einen vorbereiteten Datensatz am Anfang des Rmarkdown-Dokuments so zu laden.
+
+Im YAML-Header können noch viele weitere Angaben gemacht werden, die das Resultat verändern. Hier eine gute Dokumentation: https://bookdown.org/yihui/rmarkdown/html-document.html
+
+### Kable
+
+Im `knitr`-Paket sorgt der Befehl `kable()` für eine schöne Darstellung von Tabellen:
+
+```{r}
+ggplot2::diamonds %>%
+  head() %>%
+  knitr::kable()
+```
+
+Auch hier gibt es wieder vielfältige Möglichkeiten zur visuellen Gestaltung. Diesen Post finde ich immer besonders hilfreich: https://haozhu233.github.io/kableExtra/awesome_table_in_html.html
+
+### Chunk Options
+
+Am Anfang eines Code Chunks kann genau festgelegt werden, ob der Code ausgeführt werden soll, ob er im finalen Dokument erscheinen soll, ob Warnungen oder Fehler ausgegeben werden sollen, etc. Wenn zum Beispiel Libraries „versteckt“ geladen werden sollen, geht das mit diesem Code Chunk:
+
+```{r echo=F, comment=NA}
+cat("```{r, include = FALSE}
+library(tidyverse)
+library(rvest)
+```")
+```
+
+Ein überblick über die Chunk-Optionen findet sich hier: https://bookdown.org/yihui/rmarkdown/r-code.html
+
+### Reproducible research
+
+Wenn z. B. ein (längeres) Script einen (größeren) Datensatz generiert und ihn dem Objektnamen `mein_datensatz` zuweist, dann erscheint der Datensatz im lokalen Environment. Um den Datensatz mit anderen zu teilen, muss er irgendwie exportiert werden. Hierfür ist es ratsam, die `save()`-Funktion zu nutzen:
+
+```{r, eval=F}
+save(mein_datensatz, file = "zwischenstand_mein_datensatz.Rdata")
+```
+
+So wird eine Datei erstellt, die den Datensatz enthält und verschoben oder geteilt werden kann. Eine solche Datei kann auch andere Objekte (Funktionen, Listen, ...) und mehrere Objekte auf einmal enthalten. Die Dateiendung ist dabei eigentlich egal, `.Rdata` scheint aber Usus zu sein.
+
+Aus der Datei können Objekte dann jederzeit wieder ins Environment geladen werden mit dem Befehl:
+
+```{r, eval=F}
+load("zwischenstand_mein_datensatz.Rdata")
+```
+
+Auch wenn ein Skript auf einmal nicht mehr funktioniert (etwa weil die API sich ändert), ist es hilfreich, auf solche Zwischenstände zurückgreifen zu können.
+
+### Wissenschaftliches Zitieren
+
+Wer die Vorzüge von Literaturverwaltungssoftware (wie Citavi, Zotero, ...) schon schätzen gelernt hat, kann in Rmarkdown folgendermaßen vorgehen:
+
+#### Schritt 1: Exportieren
+
+Die relevante Literatur in eine BibTex-Datei im R-Arbeitsverzeichnis exportieren, z.B. `literatur.bib`. BibTex (bzw. BibLatex) ist ein bewährtes und gut dokumentiertes Format. Ein Eintrag sieht dann z.B. so aus, wobei `bortz` der „Name“ des Eintrags ist, den wir frei wählen können:
+
+```
+@book{bortz,
+  author = {Bortz, J{\"u}rgen and Schuster, Christof},
+  title = {{Statistik f{\"u}r Human- und Sozialwissenschaftler}},
+  publisher = {Springer},
+  year = {2010},
+  address = {Berlin},
+  edition = {7},
+}
+```
+
+#### Schritt 2: Verlinken
+
+Im YAML-Header des Rmarkdown-dokuments die Angabe ergänzen:
+
+```
+bibliography: literatur.bib
+```
+
+Damit weiß der „Knit“-Befehl, wo er nach Literatur suchen soll.
+
+#### Schritt 3: Zitieren
+
+Im Text kann dann z. B. so zitiert werden:
+
+```
+Das zentrale Grenzwerttheorem besagt, dass die Stichprobenverteilung von
+$\bar{x}$ mit steigender Stichprobengröße $n$ in eine Normalverteilung übergeht
+[@bortz: 86].
+```
+
+#### Schritt 4: Stricken
+
+Beim „Knit“-Befehl wird ein Literaturverzeichnis automatisch erstellt und ans Ende des Dokuments gehängt. Deshalb beendet man das Dokument am besten mit der Zeile:
+
+```
+## Literaturverzeichnis
+```

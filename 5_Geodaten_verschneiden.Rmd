@@ -1,0 +1,146 @@
+# Geodaten verschneiden (FTR)
+
+## Lernziele
+
+Sie können...
+
+- Geodaten als Simple Features importieren,
+- CRS bestimmen und umwandeln,
+- einfache Verschneidungen von Simple Features durchführen und
+- Simple Features kartographisch darstellen.
+
+## Vorbereitung
+
+Für diese Lektion werden zwei Pakete geladen:
+
+```{r}
+library(tidyverse)
+library(sf)
+```
+
+## Ziel
+
+Ziel ist, eine [Choroplethenkarte](https://de.wikipedia.org/wiki/Choroplethenkarte) von Frankfurt zu erstellen, die die Versorgung mit Kiosken darstellt.
+
+## Grundkarte
+
+Eine Shapefile der Frankfurter Stadtteile findet sich hier: http://www.offenedaten.frankfurt.de/dataset/frankfurter-stadtteilgrenzen-fur-gis-systeme
+
+Wir laden die Zip-Datei herunter und speichern den enthaltenen Ordner `stadtteile` in unserem Arbeitsverzeichnis. Es ist eine gute Angewohnheit, einen Unterordner für Ressourcen anzulegen.
+
+Dann importieren wir den Geodatensatz als Simple Features (Paket `sf`):
+
+```{r}
+stadtteile <- st_read("resources/stadtteile/Stadtteile_Frankfurt_am_Main.shp")
+```
+
+Simple Features sind Datensätze, die eine Spalte `geometry` enthalten, in der Geodaten in einem standardisierten Format hinterlegt sind.
+
+```{r}
+str(stadtteile)
+```
+
+Eine Vorschau:
+
+```{r}
+ggplot(stadtteile) +
+  geom_sf() +
+  geom_sf_label(aes(label = STTLNAME), size = 2)
+```
+
+## OSM-Daten 
+
+Im [OSM Wiki](https://wiki.openstreetmap.org/wiki/Map_Features) suchen wir den richtigen *tag* heraus. In diesem Fall `shop=kiosk`
+
+Dann bauen wir auf [Overpass Turbo](https://overpass-turbo.eu/) die Abfrage und laden den Datensatz herunter.
+
+Schließlich importieren wir:
+
+```{r}
+kioske <- st_read("resources/kioske.geojson")
+```
+
+Eine Vorschau:
+
+```{r cache=T}
+ggplot() +
+  geom_sf(data = stadtteile) +
+  geom_sf(data = kioske)
+```
+
+## Koordinatenreferenzsysteme
+
+Der OSM-Datensatz ist mit WGS84 (EPSG 4326) referenziert: 
+
+```{r}
+st_crs(kioske)
+```
+
+Die Stadtteilen hingegen sind sind in ETSR89 (EPSG 25832):
+
+```{r}
+st_crs(stadtteile)
+```
+
+Der Datensatz lässt sich allerdings transformieren:
+
+```{r}
+stadtteile %>%
+  st_transform(4326) %>%
+  st_crs()
+```
+
+Jetzt haben beide Datensätze den selben EPSG-Code. Das ist die Voraussetzung für den nächsten Schritt.
+
+## Verschneiden
+
+Mit `st_covers()` und `lengths()` lassen sich die Anzahl der Kioske in jedem Stadtteil zählen und einer neuen Spalte im Originaldatensatz zuordnen:
+
+```{r, message=F}
+stadtteile %>%
+  st_transform(4326) %>%
+  st_covers(kioske) %>%
+  lengths() -> stadtteile$anzahl_kioske
+```
+
+Auf einer Karte veranschaulicht:
+
+```{r}
+ggplot(stadtteile) +
+  geom_sf(aes(fill = anzahl_kioske))
+```
+
+Allerdings wäre es schöner, die Kioskdichte (nach Fläche) darzustellen. Dazu berechnen wir zunächst die Flächen der Stadtteile:
+
+```{r}
+st_area(stadtteile) %>%
+  as.numeric() / 1000 / 1000 ->
+  stadtteile$qkm
+```
+
+Oder mit Pipes:
+
+```{r}
+stadtteile %>%
+  mutate(qkm = st_area(.) %>% as.numeric() / 1000 / 1000)
+```
+
+Und dann die Kioskdichte:
+
+```{r}
+stadtteile %>%
+  mutate(qkm = st_area(.) %>% as.numeric() / 1000 / 1000,
+         kioskdichte = anzahl_kioske / qkm)
+```
+
+Schließlich die Karte:
+
+```{r cache=T}
+stadtteile %>%
+  mutate(qkm = st_area(.) %>% as.numeric() / 1000 / 1000,
+         kioskdichte = anzahl_kioske / qkm) %>%
+  ggplot() +
+    geom_sf(aes(fill = kioskdichte), color=NA) +
+    scale_fill_continuous("Kioske pro km²") +
+    theme_void()
+```

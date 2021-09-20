@@ -1,0 +1,6933 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2020-12-21T23:13:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/29073296",
+        "building": "kiosk",
+        "building:levels": "1",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.646911,
+              50.1285484
+            ],
+            [
+              8.6469181,
+              50.1286244
+            ],
+            [
+              8.6467654,
+              50.1286302
+            ],
+            [
+              8.6467583,
+              50.1285543
+            ],
+            [
+              8.646911,
+              50.1285484
+            ]
+          ]
+        ]
+      },
+      "id": "way/29073296"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/32885175",
+        "building": "yes",
+        "name": "Trinkhalle am windigen Eck",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6508735,
+              50.1590358
+            ],
+            [
+              8.6507235,
+              50.159078
+            ],
+            [
+              8.6506571,
+              50.158981
+            ],
+            [
+              8.6507388,
+              50.1589581
+            ],
+            [
+              8.6507593,
+              50.158988
+            ],
+            [
+              8.6508276,
+              50.1589688
+            ],
+            [
+              8.6508735,
+              50.1590358
+            ]
+          ]
+        ]
+      },
+      "id": "way/32885175"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/62905950",
+        "building": "commercial",
+        "building:levels": "1",
+        "noname": "yes",
+        "roof:levels": "0",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6514563,
+              50.0883644
+            ],
+            [
+              8.6514013,
+              50.0883023
+            ],
+            [
+              8.6514378,
+              50.088289
+            ],
+            [
+              8.6514927,
+              50.0883511
+            ],
+            [
+              8.6514563,
+              50.0883644
+            ]
+          ]
+        ]
+      },
+      "id": "way/62905950"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/74339973",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "130A",
+        "addr:postcode": "63071",
+        "addr:street": "Waldstraße",
+        "building": "yes",
+        "name": "Offenbacher Post",
+        "noname": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.7685823,
+              50.0948461
+            ],
+            [
+              8.7685993,
+              50.0947959
+            ],
+            [
+              8.7687211,
+              50.0948129
+            ],
+            [
+              8.7687034,
+              50.0948617
+            ],
+            [
+              8.7685823,
+              50.0948461
+            ]
+          ]
+        ]
+      },
+      "id": "way/74339973"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/91734599",
+        "building": "yes",
+        "name": "Müller",
+        "shop": "kiosk",
+        "source": "Bing"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.5822033,
+              50.1840362
+            ],
+            [
+              8.5822649,
+              50.1840218
+            ],
+            [
+              8.5823191,
+              50.1841164
+            ],
+            [
+              8.5822575,
+              50.1841308
+            ],
+            [
+              8.5822033,
+              50.1840362
+            ]
+          ]
+        ]
+      },
+      "id": "way/91734599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/92066899",
+        "building": "yes",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6707336,
+              50.1989145
+            ],
+            [
+              8.6706759,
+              50.1989013
+            ],
+            [
+              8.6707321,
+              50.1988002
+            ],
+            [
+              8.6707899,
+              50.1988133
+            ],
+            [
+              8.6707336,
+              50.1989145
+            ]
+          ]
+        ]
+      },
+      "id": "way/92066899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/95911179",
+        "addr:city": "Offenbach am Main",
+        "addr:country": "DE",
+        "addr:postcode": "63071",
+        "building": "roof",
+        "name": "Köylüm Trinkhalle",
+        "opening_hours": "Mo-Fr 08:00-22:00; Sa 08:00-23:00; Su 08:00-22:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.7659966,
+              50.0992318
+            ],
+            [
+              8.7659537,
+              50.0992262
+            ],
+            [
+              8.765956,
+              50.0992187
+            ],
+            [
+              8.7659129,
+              50.0992131
+            ],
+            [
+              8.7659272,
+              50.0991678
+            ],
+            [
+              8.7659489,
+              50.0991706
+            ],
+            [
+              8.7659387,
+              50.0992023
+            ],
+            [
+              8.7660032,
+              50.0992109
+            ],
+            [
+              8.7659966,
+              50.0992318
+            ]
+          ]
+        ]
+      },
+      "id": "way/95911179"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/96314128",
+        "building": "yes",
+        "name": "Mühlberg",
+        "opening_hours": "Mo-Sa 08:00-23:00;Su 13:00-21:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6995884,
+              50.1018006
+            ],
+            [
+              8.6994969,
+              50.1018345
+            ],
+            [
+              8.6994546,
+              50.1017875
+            ],
+            [
+              8.699546,
+              50.1017536
+            ],
+            [
+              8.6995884,
+              50.1018006
+            ]
+          ]
+        ]
+      },
+      "id": "way/96314128"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/103699615",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "30",
+        "addr:postcode": "65929",
+        "addr:street": "Gerlachstraße",
+        "building": "yes",
+        "level": "0",
+        "name": "Kiosk Vanicek",
+        "phone": "+49 69 301761",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.5461815,
+              50.1051587
+            ],
+            [
+              8.5460899,
+              50.1052399
+            ],
+            [
+              8.5459665,
+              50.1051828
+            ],
+            [
+              8.5459442,
+              50.1052026
+            ],
+            [
+              8.5458846,
+              50.105175
+            ],
+            [
+              8.5459069,
+              50.1051552
+            ],
+            [
+              8.5459985,
+              50.105074
+            ],
+            [
+              8.5461815,
+              50.1051587
+            ]
+          ]
+        ]
+      },
+      "id": "way/103699615"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/103989955",
+        "building": "retail",
+        "building:levels": "1",
+        "name": "Imbiss + Kiosk am US-Konsulat",
+        "opening_hours": "Mo-Fr 07:00-20:00; So,PH 12:00-20:00",
+        "roof:levels": "0",
+        "roof:shape": "flat",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6917773,
+              50.1440705
+            ],
+            [
+              8.6918107,
+              50.1440119
+            ],
+            [
+              8.6918669,
+              50.1440251
+            ],
+            [
+              8.6918335,
+              50.1440837
+            ],
+            [
+              8.6917773,
+              50.1440705
+            ]
+          ]
+        ]
+      },
+      "id": "way/103989955"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/105047382",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "22",
+        "addr:postcode": "65929",
+        "addr:street": "Antoniterstraße",
+        "building": "yes",
+        "name": "Tabak & Presse Krämer, Tourist Info",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.5441062,
+              50.1007983
+            ],
+            [
+              8.5442766,
+              50.1008799
+            ],
+            [
+              8.544185,
+              50.1009648
+            ],
+            [
+              8.5441703,
+              50.1009783
+            ],
+            [
+              8.5440219,
+              50.1009123
+            ],
+            [
+              8.5440341,
+              50.100901
+            ],
+            [
+              8.5440079,
+              50.1008893
+            ],
+            [
+              8.5441062,
+              50.1007983
+            ]
+          ]
+        ]
+      },
+      "id": "way/105047382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/106178365",
+        "amenity": "fast_food",
+        "building": "yes",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6531496,
+              50.0924913
+            ],
+            [
+              8.6532455,
+              50.0924989
+            ],
+            [
+              8.6532245,
+              50.0926079
+            ],
+            [
+              8.6531877,
+              50.092605
+            ],
+            [
+              8.6531933,
+              50.0925759
+            ],
+            [
+              8.6531342,
+              50.0925712
+            ],
+            [
+              8.6531496,
+              50.0924913
+            ]
+          ]
+        ]
+      },
+      "id": "way/106178365"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/130546677",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:postcode": "60316",
+        "addr:street": "Friedberger Platz",
+        "building": "kiosk",
+        "name": "J.J. Treff",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6919518,
+              50.1236445
+            ],
+            [
+              8.6919518,
+              50.1236078
+            ],
+            [
+              8.6920437,
+              50.1236078
+            ],
+            [
+              8.6920437,
+              50.1236445
+            ],
+            [
+              8.6919518,
+              50.1236445
+            ]
+          ]
+        ]
+      },
+      "id": "way/130546677"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/134127307",
+        "addr:city": "Bad Vilbel",
+        "addr:housenumber": "24",
+        "addr:postcode": "61118",
+        "addr:street": "Niddastraße",
+        "building": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.738002,
+              50.1841998
+            ],
+            [
+              8.7380445,
+              50.1842096
+            ],
+            [
+              8.7380322,
+              50.1842317
+            ],
+            [
+              8.7380719,
+              50.1842408
+            ],
+            [
+              8.7380756,
+              50.1842341
+            ],
+            [
+              8.7381026,
+              50.1842403
+            ],
+            [
+              8.7380705,
+              50.1842965
+            ],
+            [
+              8.7380187,
+              50.1842833
+            ],
+            [
+              8.7380089,
+              50.184278
+            ],
+            [
+              8.738002,
+              50.1842703
+            ],
+            [
+              8.7379983,
+              50.1842628
+            ],
+            [
+              8.7379998,
+              50.1842559
+            ],
+            [
+              8.738022,
+              50.1842166
+            ],
+            [
+              8.7379959,
+              50.1842106
+            ],
+            [
+              8.738002,
+              50.1841998
+            ]
+          ]
+        ]
+      },
+      "id": "way/134127307"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/134290526",
+        "addr:city": "Bad Vilbel",
+        "addr:housenumber": "141",
+        "addr:postcode": "61118",
+        "addr:street": "Frankfurter Straße",
+        "building": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.73537,
+              50.1775361
+            ],
+            [
+              8.735462,
+              50.1775153
+            ],
+            [
+              8.7354935,
+              50.177561
+            ],
+            [
+              8.7354084,
+              50.1775774
+            ],
+            [
+              8.7353871,
+              50.1775702
+            ],
+            [
+              8.73537,
+              50.1775361
+            ]
+          ]
+        ]
+      },
+      "id": "way/134290526"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135032601",
+        "building": "kiosk",
+        "name": "Jöst Kiosk 72",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6769526,
+              50.1273621
+            ],
+            [
+              8.676869,
+              50.1273474
+            ],
+            [
+              8.6769052,
+              50.127263
+            ],
+            [
+              8.6769888,
+              50.1272778
+            ],
+            [
+              8.6769526,
+              50.1273621
+            ]
+          ]
+        ]
+      },
+      "id": "way/135032601"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135460491",
+        "addr:city": "Bad Vilbel",
+        "addr:postcode": "61118",
+        "building": "yes",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.7299053,
+              50.1820234
+            ],
+            [
+              8.7300509,
+              50.1820348
+            ],
+            [
+              8.7300398,
+              50.1820928
+            ],
+            [
+              8.7298943,
+              50.1820814
+            ],
+            [
+              8.7299053,
+              50.1820234
+            ]
+          ]
+        ]
+      },
+      "id": "way/135460491"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/150300936",
+        "building": "yes",
+        "name": "Südpark Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.5324461,
+              50.0509191
+            ],
+            [
+              8.532395,
+              50.050837
+            ],
+            [
+              8.5324816,
+              50.0508148
+            ],
+            [
+              8.5325327,
+              50.0508969
+            ],
+            [
+              8.5324461,
+              50.0509191
+            ]
+          ]
+        ]
+      },
+      "id": "way/150300936"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/150341288",
+        "building": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.5074127,
+              50.1927596
+            ],
+            [
+              8.5072575,
+              50.1927173
+            ],
+            [
+              8.5073363,
+              50.1925987
+            ],
+            [
+              8.5074915,
+              50.1926409
+            ],
+            [
+              8.5074127,
+              50.1927596
+            ]
+          ]
+        ]
+      },
+      "id": "way/150341288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/152072707",
+        "building": "retail",
+        "name": "Heidrun's Trinkstübchen",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.7135105,
+              50.124833
+            ],
+            [
+              8.7135248,
+              50.1247998
+            ],
+            [
+              8.7136111,
+              50.1248151
+            ],
+            [
+              8.7135967,
+              50.1248483
+            ],
+            [
+              8.7135105,
+              50.124833
+            ]
+          ]
+        ]
+      },
+      "id": "way/152072707"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/153186992",
+        "building": "yes",
+        "name": "Trinkhalle",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.7729617,
+              50.1169065
+            ],
+            [
+              8.7729643,
+              50.1168592
+            ],
+            [
+              8.7729388,
+              50.1168586
+            ],
+            [
+              8.7729404,
+              50.1168298
+            ],
+            [
+              8.7729658,
+              50.1168303
+            ],
+            [
+              8.7729669,
+              50.11681
+            ],
+            [
+              8.7730239,
+              50.1168113
+            ],
+            [
+              8.7730228,
+              50.1168313
+            ],
+            [
+              8.7730597,
+              50.1168321
+            ],
+            [
+              8.7730556,
+              50.1169086
+            ],
+            [
+              8.7729617,
+              50.1169065
+            ]
+          ]
+        ]
+      },
+      "id": "way/153186992"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/153194829",
+        "building": "retail",
+        "building:levels": "1",
+        "roof:levels": "0",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.7110684,
+              50.1343164
+            ],
+            [
+              8.7110529,
+              50.1342681
+            ],
+            [
+              8.7111297,
+              50.1342579
+            ],
+            [
+              8.7111452,
+              50.1343063
+            ],
+            [
+              8.7110684,
+              50.1343164
+            ]
+          ]
+        ]
+      },
+      "id": "way/153194829"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/154521328",
+        "building": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.627923,
+              50.0971459
+            ],
+            [
+              8.627999,
+              50.0971671
+            ],
+            [
+              8.6279687,
+              50.0972118
+            ],
+            [
+              8.6278928,
+              50.0971906
+            ],
+            [
+              8.627923,
+              50.0971459
+            ]
+          ]
+        ]
+      },
+      "id": "way/154521328"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/155152226",
+        "building": "kiosk",
+        "noname": "yes",
+        "opening_hours": "Mo,Tu,Th,Fr 06:30-19:00; We,Sa 06:30-14:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6148542,
+              50.1298967
+            ],
+            [
+              8.6147777,
+              50.1299308
+            ],
+            [
+              8.6146737,
+              50.129835
+            ],
+            [
+              8.6147502,
+              50.1298009
+            ],
+            [
+              8.6148542,
+              50.1298967
+            ]
+          ]
+        ]
+      },
+      "id": "way/155152226"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/159061569",
+        "FIXME": "position and size has to be verified",
+        "building": "yes",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6834923,
+              50.1433553
+            ],
+            [
+              8.6835094,
+              50.1433087
+            ],
+            [
+              8.6836594,
+              50.1433313
+            ],
+            [
+              8.6836422,
+              50.1433779
+            ],
+            [
+              8.6834923,
+              50.1433553
+            ]
+          ]
+        ]
+      },
+      "id": "way/159061569"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/164361258",
+        "building": "kiosk",
+        "name": "Trinkhalle",
+        "opening_hours": "Mo-Fr 06:00-22:00; Sa 08:00-22:00; Su 09:00-22:00",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.7265123,
+              50.127691
+            ],
+            [
+              8.7264299,
+              50.127661
+            ],
+            [
+              8.7264635,
+              50.1276231
+            ],
+            [
+              8.7265459,
+              50.1276531
+            ],
+            [
+              8.7265123,
+              50.127691
+            ]
+          ]
+        ]
+      },
+      "id": "way/164361258"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/178548960",
+        "building": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.7607311,
+              50.1256409
+            ],
+            [
+              8.7606328,
+              50.1256295
+            ],
+            [
+              8.7606499,
+              50.1255687
+            ],
+            [
+              8.7607461,
+              50.1255799
+            ],
+            [
+              8.7607395,
+              50.1256033
+            ],
+            [
+              8.7607519,
+              50.1256047
+            ],
+            [
+              8.7607437,
+              50.1256341
+            ],
+            [
+              8.7607334,
+              50.1256329
+            ],
+            [
+              8.7607311,
+              50.1256409
+            ]
+          ]
+        ]
+      },
+      "id": "way/178548960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/240734697",
+        "building": "yes",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6953862,
+              50.1831678
+            ],
+            [
+              8.6954801,
+              50.1830932
+            ],
+            [
+              8.6955185,
+              50.1831142
+            ],
+            [
+              8.6954416,
+              50.1831983
+            ],
+            [
+              8.6953862,
+              50.1831678
+            ]
+          ]
+        ]
+      },
+      "id": "way/240734697"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/295396599",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "47",
+        "addr:postcode": "60385",
+        "addr:street": "Roßdorfer Straße",
+        "building": "retail",
+        "name": "Trinkhalle",
+        "opening_hours": "Mo-Th 10:00-23:00; Fr,Su,PH 11:00-23:00",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.7084551,
+              50.1247633
+            ],
+            [
+              8.7085611,
+              50.1248354
+            ],
+            [
+              8.7085695,
+              50.1248412
+            ],
+            [
+              8.7085331,
+              50.1248622
+            ],
+            [
+              8.7084234,
+              50.1247797
+            ],
+            [
+              8.7084551,
+              50.1247633
+            ]
+          ]
+        ]
+      },
+      "id": "way/295396599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/298486144",
+        "building": "yes",
+        "name": "Köln-Düsseldorfer Ticketverkauf",
+        "operator": "Köln Düsseldorfer Deutsche Rheinschiffahrt AG",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6812792,
+              50.10877
+            ],
+            [
+              8.6812938,
+              50.1087408
+            ],
+            [
+              8.6813701,
+              50.1087564
+            ],
+            [
+              8.6813556,
+              50.1087856
+            ],
+            [
+              8.6812792,
+              50.10877
+            ]
+          ]
+        ]
+      },
+      "id": "way/298486144"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/390787317",
+        "amenity": "fuel",
+        "brand": "Aral",
+        "fuel:GTL_diesel": "yes",
+        "fuel:diesel": "yes",
+        "fuel:e10": "yes",
+        "fuel:lpg": "yes",
+        "fuel:octane_95": "yes",
+        "fuel:octane_98": "yes",
+        "landuse": "commercial",
+        "opening_hours": "24/7",
+        "operator": "Aral",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6041663,
+              50.0997892
+            ],
+            [
+              8.6048594,
+              50.0999191
+            ],
+            [
+              8.6049422,
+              50.0999346
+            ],
+            [
+              8.6050975,
+              50.0999637
+            ],
+            [
+              8.6050996,
+              50.1000747
+            ],
+            [
+              8.604945,
+              50.1000772
+            ],
+            [
+              8.6046058,
+              50.1000826
+            ],
+            [
+              8.6040958,
+              50.1000908
+            ],
+            [
+              8.6040565,
+              50.1000847
+            ],
+            [
+              8.6040207,
+              50.1000716
+            ],
+            [
+              8.6039932,
+              50.1000548
+            ],
+            [
+              8.6039801,
+              50.1000326
+            ],
+            [
+              8.6039765,
+              50.100005
+            ],
+            [
+              8.6039837,
+              50.0999805
+            ],
+            [
+              8.6039992,
+              50.0999599
+            ],
+            [
+              8.6041663,
+              50.0997892
+            ]
+          ]
+        ]
+      },
+      "id": "way/390787317"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/397916188",
+        "indoor": "room",
+        "level": "-1",
+        "name": "Weber",
+        "opening_hours": "Su,PH on",
+        "room": "shop",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6875769,
+              50.1145898
+            ],
+            [
+              8.6876311,
+              50.114591
+            ],
+            [
+              8.6877365,
+              50.1145935
+            ],
+            [
+              8.6877001,
+              50.1146212
+            ],
+            [
+              8.6876141,
+              50.1146186
+            ],
+            [
+              8.6875769,
+              50.1145898
+            ]
+          ]
+        ]
+      },
+      "id": "way/397916188"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/397916190",
+        "indoor": "room",
+        "level": "-1",
+        "lottery": "yes",
+        "name": "Noorzai's Schnäppchen Markt",
+        "opening_hours": "Mo-Fr 06:00-19:00; Sa 08:00-16:00; Su,PH off",
+        "shop": "kiosk",
+        "tobacco": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6874698,
+              50.114756
+            ],
+            [
+              8.6874741,
+              50.1146885
+            ],
+            [
+              8.6875563,
+              50.1146883
+            ],
+            [
+              8.6875554,
+              50.1147096
+            ],
+            [
+              8.687555,
+              50.1147191
+            ],
+            [
+              8.6875538,
+              50.1147585
+            ],
+            [
+              8.6874698,
+              50.114756
+            ]
+          ]
+        ]
+      },
+      "id": "way/397916190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/402951753",
+        "building": "yes",
+        "name": "Presse Bailly",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6728989,
+              50.1097394
+            ],
+            [
+              8.673003,
+              50.1097787
+            ],
+            [
+              8.6729363,
+              50.1098513
+            ],
+            [
+              8.6728323,
+              50.109812
+            ],
+            [
+              8.6728989,
+              50.1097394
+            ]
+          ]
+        ]
+      },
+      "id": "way/402951753"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/441414728",
+        "indoor": "room",
+        "level": "-2",
+        "room": "shop",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6782308,
+              50.1141711
+            ],
+            [
+              8.6781176,
+              50.1141782
+            ],
+            [
+              8.6781127,
+              50.1141467
+            ],
+            [
+              8.6781949,
+              50.1141416
+            ],
+            [
+              8.6782308,
+              50.1141711
+            ]
+          ]
+        ]
+      },
+      "id": "way/441414728"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/442018386",
+        "brand": "Relay",
+        "indoor": "room",
+        "level": "0",
+        "name": "Relay",
+        "opening_hours": "Mo-Fr 05:30-20:00; Sa 06:30-20:00; Su 08:00-20:00",
+        "phone": "+49 69 617 179",
+        "room": "shop",
+        "shop": "kiosk",
+        "website": "https://www.my-relay.de/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6863506,
+              50.0994195
+            ],
+            [
+              8.686295,
+              50.099379
+            ],
+            [
+              8.686358,
+              50.0993434
+            ],
+            [
+              8.6864136,
+              50.0993838
+            ],
+            [
+              8.6863506,
+              50.0994195
+            ]
+          ]
+        ]
+      },
+      "id": "way/442018386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/455697978",
+        "building": "yes",
+        "name": "Nedo's Kiosk",
+        "shop": "kiosk",
+        "toilets": "customers",
+        "toilets:wheelchair": "no",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6497189,
+              50.1065795
+            ],
+            [
+              8.6499094,
+              50.1066562
+            ],
+            [
+              8.6498587,
+              50.1067079
+            ],
+            [
+              8.6496683,
+              50.1066313
+            ],
+            [
+              8.6497189,
+              50.1065795
+            ]
+          ]
+        ]
+      },
+      "id": "way/455697978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/543849975",
+        "building": "yes",
+        "name": "Trinkhalle am Lindenbaum",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6611079,
+              50.1532329
+            ],
+            [
+              8.6611662,
+              50.1531869
+            ],
+            [
+              8.6612437,
+              50.1532272
+            ],
+            [
+              8.6611853,
+              50.1532732
+            ],
+            [
+              8.6611079,
+              50.1532329
+            ]
+          ]
+        ]
+      },
+      "id": "way/543849975"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/564012145",
+        "building": "yes",
+        "building:levels": "1",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.759526,
+              50.1301549
+            ],
+            [
+              8.7596538,
+              50.13005
+            ],
+            [
+              8.759701,
+              50.1300737
+            ],
+            [
+              8.7595732,
+              50.1301786
+            ],
+            [
+              8.759526,
+              50.1301549
+            ]
+          ]
+        ]
+      },
+      "id": "way/564012145"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/624062745",
+        "addr:city": "Offenbach am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "76",
+        "addr:postcode": "63071",
+        "addr:street": "Feldstraße",
+        "building": "yes",
+        "name": "Kiosk am Tunnel",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.7724274,
+              50.1007468
+            ],
+            [
+              8.7724409,
+              50.1007175
+            ],
+            [
+              8.7725102,
+              50.1007307
+            ],
+            [
+              8.7724967,
+              50.1007599
+            ],
+            [
+              8.7724274,
+              50.1007468
+            ]
+          ]
+        ]
+      },
+      "id": "way/624062745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/638295338",
+        "building": "kiosk",
+        "level": "1",
+        "name": "Kiosk am Zoo",
+        "roof:shape": "flat",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6990927,
+              50.1153129
+            ],
+            [
+              8.6990407,
+              50.1153106
+            ],
+            [
+              8.6990465,
+              50.1152579
+            ],
+            [
+              8.6990985,
+              50.1152602
+            ],
+            [
+              8.6990927,
+              50.1153129
+            ]
+          ]
+        ]
+      },
+      "id": "way/638295338"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/684555708",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "61",
+        "addr:postcode": "60435",
+        "addr:street": "Marbachweg",
+        "building": "retail",
+        "building:levels": "1",
+        "noname": "yes",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6979428,
+              50.1447937
+            ],
+            [
+              8.6978902,
+              50.1447836
+            ],
+            [
+              8.6979153,
+              50.1447301
+            ],
+            [
+              8.6979679,
+              50.1447402
+            ],
+            [
+              8.6979428,
+              50.1447937
+            ]
+          ]
+        ]
+      },
+      "id": "way/684555708"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/686892649",
+        "amenity": "fast_food",
+        "building": "yes",
+        "cuisine": "kebab",
+        "name": "Kiosk-Mitte",
+        "opening_hours": "Mo-Th 06:00-01:00, Fr-Sa 06:00-02:00, Su 07:00-01:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.7078196,
+              50.1265518
+            ],
+            [
+              8.7078626,
+              50.1265274
+            ],
+            [
+              8.7079213,
+              50.1265699
+            ],
+            [
+              8.7078783,
+              50.1265943
+            ],
+            [
+              8.7078196,
+              50.1265518
+            ]
+          ]
+        ]
+      },
+      "id": "way/686892649"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/692438909",
+        "access": "yes",
+        "addr:city": "Oberursel (Taunus)",
+        "addr:country": "DE",
+        "addr:housenumber": "64",
+        "addr:postcode": "61440",
+        "addr:street": "Nassauer Straße",
+        "indoor": "room",
+        "internet_access": "wlan",
+        "level": "0",
+        "name": "DB Service Store",
+        "opening_hours": "Mo-Fr 05:00-21:00; Sa 07:00-20:00",
+        "public_transport": "service_center",
+        "room": "shop",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.5879313,
+              50.1988942
+            ],
+            [
+              8.5880735,
+              50.1989575
+            ],
+            [
+              8.58802,
+              50.1990054
+            ],
+            [
+              8.5880605,
+              50.1990293
+            ],
+            [
+              8.5880152,
+              50.1990602
+            ],
+            [
+              8.5879816,
+              50.1990832
+            ],
+            [
+              8.5879494,
+              50.1990674
+            ],
+            [
+              8.5879095,
+              50.199049
+            ],
+            [
+              8.5879641,
+              50.198999
+            ],
+            [
+              8.5879337,
+              50.1989851
+            ],
+            [
+              8.5878917,
+              50.1989659
+            ],
+            [
+              8.5879042,
+              50.1989547
+            ],
+            [
+              8.5878774,
+              50.1989424
+            ],
+            [
+              8.5879313,
+              50.1988942
+            ]
+          ]
+        ]
+      },
+      "id": "way/692438909"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/696471207",
+        "building": "retail",
+        "building:levels": "1",
+        "name": "Adlerflychtplatz",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6816639,
+              50.1245469
+            ],
+            [
+              8.6816588,
+              50.1245169
+            ],
+            [
+              8.6817209,
+              50.1245126
+            ],
+            [
+              8.6817259,
+              50.1245427
+            ],
+            [
+              8.6816639,
+              50.1245469
+            ]
+          ]
+        ]
+      },
+      "id": "way/696471207"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/701380716",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "38a",
+        "addr:postcode": "60435",
+        "addr:street": "Jaspertstraße",
+        "building": "retail",
+        "building:levels": "1",
+        "name": "Kiosk 66",
+        "opening_hours:signed": "no",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6962938,
+              50.154156
+            ],
+            [
+              8.6963526,
+              50.1540549
+            ],
+            [
+              8.6964242,
+              50.154072
+            ],
+            [
+              8.6965113,
+              50.1540928
+            ],
+            [
+              8.6964525,
+              50.1541939
+            ],
+            [
+              8.6962938,
+              50.154156
+            ]
+          ]
+        ]
+      },
+      "id": "way/701380716"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/770998903",
+        "brand": "hub CONVENIENCE",
+        "indoor": "room",
+        "level": "0",
+        "name": "hub CONVENIENCE",
+        "opening_hours": "Mo-Fr 05:30-20:00; Sa 06:30-20:00; Su 08:00-20:00",
+        "phone": "+49 69 60329976",
+        "room": "shop",
+        "shop": "kiosk",
+        "website": "https://www.my-hub-convenience.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6861854,
+              50.09951
+            ],
+            [
+              8.6861298,
+              50.0994695
+            ],
+            [
+              8.6861928,
+              50.0994339
+            ],
+            [
+              8.6862484,
+              50.0994743
+            ],
+            [
+              8.6861854,
+              50.09951
+            ]
+          ]
+        ]
+      },
+      "id": "way/770998903"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/784142535",
+        "building": "retail",
+        "name": "Zum gemütlichen Eck",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6911517,
+              50.1546879
+            ],
+            [
+              8.6911469,
+              50.1547062
+            ],
+            [
+              8.6911053,
+              50.1547018
+            ],
+            [
+              8.69111,
+              50.1546834
+            ],
+            [
+              8.6911517,
+              50.1546879
+            ]
+          ]
+        ]
+      },
+      "id": "way/784142535"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/784142536",
+        "building": "retail",
+        "name": "Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6914609,
+              50.1542886
+            ],
+            [
+              8.6914578,
+              50.1542657
+            ],
+            [
+              8.6914971,
+              50.154272
+            ],
+            [
+              8.6914958,
+              50.1542929
+            ],
+            [
+              8.6914609,
+              50.1542886
+            ]
+          ]
+        ]
+      },
+      "id": "way/784142536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/86965416",
+        "amenity": "fuel",
+        "brand": "Shell",
+        "fuel:diesel": "yes",
+        "fuel:lpg": "yes",
+        "fuel:octane_100": "yes",
+        "fuel:octane_91": "yes",
+        "fuel:octane_95": "yes",
+        "fuel:octane_98": "yes",
+        "name": "Shell",
+        "note:de": "Benzin und Super noch aktuell?",
+        "operator": "Shell",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6623059,
+          50.0910092
+        ]
+      },
+      "id": "node/86965416"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240903816",
+        "addr:housenumber": "121",
+        "addr:postcode": "60385",
+        "addr:street": "Röderbergweg",
+        "name": "Konsumgut",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa,Su 09:00-20:00",
+        "opening_hours:covid19": "open",
+        "payment:cash": "yes",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7102962,
+          50.116064
+        ]
+      },
+      "id": "node/240903816"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/267282529",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.647805,
+          50.1415828
+        ]
+      },
+      "id": "node/267282529"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/267283220",
+        "shop": "kiosk",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6579881,
+          50.1461654
+        ]
+      },
+      "id": "node/267283220"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/267284918",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6728416,
+          50.1501039
+        ]
+      },
+      "id": "node/267284918"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/267286858",
+        "name": "Einkaufskiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6775506,
+          50.1404711
+        ]
+      },
+      "id": "node/267286858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/267289045",
+        "name": "Baaz",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6987563,
+          50.1287986
+        ]
+      },
+      "id": "node/267289045"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/267289091",
+        "name": "Miquelshop",
+        "shop": "kiosk",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6719014,
+          50.1320283
+        ]
+      },
+      "id": "node/267289091"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/267289104",
+        "name": "Einkaufskiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6559603,
+          50.1433688
+        ]
+      },
+      "id": "node/267289104"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268121777",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6453926,
+          50.1370381
+        ]
+      },
+      "id": "node/268121777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268124677",
+        "name": "Cem's Lotto und Presselädchen",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.646583,
+          50.1385076
+        ]
+      },
+      "id": "node/268124677"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268124678",
+        "name": "Trinkhalle",
+        "shop": "kiosk",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6465942,
+          50.1394886
+        ]
+      },
+      "id": "node/268124678"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/269452305",
+        "name": "Trinkhalle",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.667438,
+          50.1377909
+        ]
+      },
+      "id": "node/269452305"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/269452448",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6641281,
+          50.1383551
+        ]
+      },
+      "id": "node/269452448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/279857835",
+        "name": "Einkaufskiosk",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7123569,
+          50.1354527
+        ]
+      },
+      "id": "node/279857835"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286821242",
+        "addr:city": "Bad Vilbel",
+        "addr:housenumber": "6",
+        "addr:postcode": "61118",
+        "addr:street": "Marktplatz",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7441924,
+          50.183475
+        ]
+      },
+      "id": "node/286821242"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/290189090",
+        "name": "Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7842779,
+          50.1022911
+        ]
+      },
+      "id": "node/290189090"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/301337497",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6953032,
+          50.1225956
+        ]
+      },
+      "id": "node/301337497"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/301355080",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6952118,
+          50.1244094
+        ]
+      },
+      "id": "node/301355080"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/310659272",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6024939,
+          50.1038223
+        ]
+      },
+      "id": "node/310659272"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/313189405",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6618255,
+          50.1605202
+        ]
+      },
+      "id": "node/313189405"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/316196086",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "2",
+        "addr:postcode": "60431",
+        "addr:street": "Alt-Ginnheim",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6487398,
+          50.1445671
+        ]
+      },
+      "id": "node/316196086"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/316962409",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6545517,
+          50.1437344
+        ]
+      },
+      "id": "node/316962409"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/318791584",
+        "name": "Einkaufskiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.669024,
+          50.1537615
+        ]
+      },
+      "id": "node/318791584"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/321321450",
+        "shop": "kiosk",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6621032,
+          50.1474043
+        ]
+      },
+      "id": "node/321321450"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/322806293",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6806059,
+          50.1414806
+        ]
+      },
+      "id": "node/322806293"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/331885335",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6475325,
+          50.1171621
+        ]
+      },
+      "id": "node/331885335"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/344136647",
+        "name": "Trinkhalle",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6177216,
+          50.1626404
+        ]
+      },
+      "id": "node/344136647"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/348345100",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6322991,
+          50.1557414
+        ]
+      },
+      "id": "node/348345100"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/360757541",
+        "name": "Einkaufskiosk am Elisabethen-Krankenhaus",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.638596,
+          50.1254927
+        ]
+      },
+      "id": "node/360757541"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/430311916",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6859955,
+          50.1019392
+        ]
+      },
+      "id": "node/430311916"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/465510869",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6422042,
+          50.1200834
+        ]
+      },
+      "id": "node/465510869"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/471917633",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6238861,
+          50.148082
+        ]
+      },
+      "id": "node/471917633"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/482615645",
+        "name": "Kiosk am Palmengarten",
+        "shop": "kiosk",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6601263,
+          50.1191149
+        ]
+      },
+      "id": "node/482615645"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/494778551",
+        "name": "Kiosk an der Reiterstaffel",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7037699,
+          50.0950396
+        ]
+      },
+      "id": "node/494778551"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/503471567",
+        "name": "Kiosk",
+        "opening_hours": "Mo-Fr 07:30-22:00; Sa,Su 08:30-22:00",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6451189,
+          50.1069544
+        ]
+      },
+      "id": "node/503471567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/527997403",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6292964,
+          50.1014614
+        ]
+      },
+      "id": "node/527997403"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/539562509",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.647476,
+          50.1186439
+        ]
+      },
+      "id": "node/539562509"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/583813704",
+        "amenity": "fast_food",
+        "name": "Parkblick",
+        "opening_hours": "Mo-Su,PH 10:00-22:00",
+        "opening_hours:covid19": "open",
+        "outdoor_seating": "yes",
+        "payment:cash": "yes",
+        "payment:credit_cards": "no",
+        "payment:debit_cards": "no",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.721536,
+          50.1183387
+        ]
+      },
+      "id": "node/583813704"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/608234494",
+        "name": "Kiosk und Post",
+        "shop": "kiosk",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6193171,
+          50.1381261
+        ]
+      },
+      "id": "node/608234494"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/613084769",
+        "name": "Treppchen",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5710309,
+          50.0987805
+        ]
+      },
+      "id": "node/613084769"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/632849691",
+        "name": "Café Campus",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6509918,
+          50.1200854
+        ]
+      },
+      "id": "node/632849691"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/686578390",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6941413,
+          50.1054053
+        ]
+      },
+      "id": "node/686578390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/767413857",
+        "shop": "kiosk",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7723165,
+          50.1045446
+        ]
+      },
+      "id": "node/767413857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/767529846",
+        "name": "Kiosk Sossenheim",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5711056,
+          50.126085
+        ]
+      },
+      "id": "node/767529846"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/768532377",
+        "name": "Interkiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6669026,
+          50.1902793
+        ]
+      },
+      "id": "node/768532377"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/771351540",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6652933,
+          50.1853616
+        ]
+      },
+      "id": "node/771351540"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/776633317",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5522353,
+          50.1029782
+        ]
+      },
+      "id": "node/776633317"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/787314216",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6926401,
+          50.1064343
+        ]
+      },
+      "id": "node/787314216"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/797833462",
+        "brand": "Lyca Mobile",
+        "ice_cream": "artisanal",
+        "name": "All in one shop",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6655241,
+          50.1489307
+        ]
+      },
+      "id": "node/797833462"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/797833485",
+        "name": "Oliver Schaad",
+        "opening_hours": "Mo-Fr 05:30-19:00; Sa 07:00-19:00; Su 10:00-18:00",
+        "operator": "Oliver Schaad",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.655622,
+          50.156614
+        ]
+      },
+      "id": "node/797833485"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/807697869",
+        "name": "Frankfurter Mini Shop",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6647657,
+          50.1054462
+        ]
+      },
+      "id": "node/807697869"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/843472205",
+        "name": "Kiosk im Cityhaus",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6596588,
+          50.1103484
+        ]
+      },
+      "id": "node/843472205"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/888442753",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7545673,
+          50.0964179
+        ]
+      },
+      "id": "node/888442753"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/888442756",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7549594,
+          50.0963747
+        ]
+      },
+      "id": "node/888442756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/903892308",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.596884,
+          50.1019064
+        ]
+      },
+      "id": "node/903892308"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/903970761",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6105779,
+          50.0964311
+        ]
+      },
+      "id": "node/903970761"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1038763173",
+        "opening_hours": "Mo-Fr 06:00-12:30, 14:00-18:00; Sa 06:00-18:00",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.530368,
+          50.062424
+        ]
+      },
+      "id": "node/1038763173"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1086945632",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7038024,
+          50.1201805
+        ]
+      },
+      "id": "node/1086945632"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1106069494",
+        "shop": "kiosk",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7630979,
+          50.1035056
+        ]
+      },
+      "id": "node/1106069494"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1106628426",
+        "description": "Trinkhalle",
+        "name": "Mikesch's Trinkhalle",
+        "opening_hours": "Mo-Su 10:00-20:00",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6124398,
+          50.1233589
+        ]
+      },
+      "id": "node/1106628426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1126033910",
+        "addr:city": "Offenbach am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "63",
+        "addr:postcode": "63069",
+        "addr:street": "Senefelderstraße",
+        "name": "Lotto Hessen",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7621882,
+          50.095089
+        ]
+      },
+      "id": "node/1126033910"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1126644521",
+        "name": "Einkaufskiosk",
+        "opening_hours": "Mo-Sa 09:00-14:00,15:00-20:00; Su 10:00-20:00",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6166762,
+          50.1217574
+        ]
+      },
+      "id": "node/1126644521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1234676174",
+        "name": "Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6218295,
+          50.1659808
+        ]
+      },
+      "id": "node/1234676174"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1283799197",
+        "name": "Einkaufs Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6834997,
+          50.1197562
+        ]
+      },
+      "id": "node/1283799197"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1368885653",
+        "name": "Lebensmittel Feinkost",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6640453,
+          50.1040799
+        ]
+      },
+      "id": "node/1368885653"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1370035424",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7670386,
+          50.1333117
+        ]
+      },
+      "id": "node/1370035424"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1376072707",
+        "amenity": "fuel",
+        "brand": "Independent",
+        "name": "Hessol",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.725093,
+          50.1939698
+        ]
+      },
+      "id": "node/1376072707"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1394952183",
+        "noname": "yes",
+        "opening_hours": "Mo-Fr 06:00-19:00; Sa 08:00-18:00",
+        "opening_hours:covid19": "open",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6083621,
+          50.1240541
+        ]
+      },
+      "id": "node/1394952183"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1424171097",
+        "name": "Trinkhalle",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6936041,
+          50.122634
+        ]
+      },
+      "id": "node/1424171097"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1460238278",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6632054,
+          50.1865311
+        ]
+      },
+      "id": "node/1460238278"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1477066146",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6302163,
+          50.1526771
+        ]
+      },
+      "id": "node/1477066146"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1477066371",
+        "name": "Trinkhalle Adlereck",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.635477,
+          50.1537795
+        ]
+      },
+      "id": "node/1477066371"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1483996330",
+        "level": "-1",
+        "location": "underground",
+        "name": "ServiceStore DB",
+        "old_name": "Mini-Markt",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7653415,
+          50.1055151
+        ]
+      },
+      "id": "node/1483996330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1488270781",
+        "shop": "kiosk",
+        "source": "local_knowledge",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5759372,
+          50.2018491
+        ]
+      },
+      "id": "node/1488270781"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1545590993",
+        "name": "Kiosk am Kirchberg",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5663259,
+          50.119621
+        ]
+      },
+      "id": "node/1545590993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1552514823",
+        "name": "Snack & Drinks",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6221467,
+          50.1045905
+        ]
+      },
+      "id": "node/1552514823"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1610927941",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6763259,
+          50.0532377
+        ]
+      },
+      "id": "node/1610927941"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1619915845",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "34",
+        "addr:postcode": "60316",
+        "addr:street": "Burgstraße",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6970696,
+          50.1236695
+        ]
+      },
+      "id": "node/1619915845"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1625069760",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6973245,
+          50.1261408
+        ]
+      },
+      "id": "node/1625069760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1625070760",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6973093,
+          50.1300716
+        ]
+      },
+      "id": "node/1625070760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1639294986",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6995194,
+          50.111492
+        ]
+      },
+      "id": "node/1639294986"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1649027537",
+        "name": "Wasserhäuschen",
+        "opening_hours:signed": "no",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7163973,
+          50.1266224
+        ]
+      },
+      "id": "node/1649027537"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1652652141",
+        "name": "Luisenkiosk",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6962809,
+          50.1219554
+        ]
+      },
+      "id": "node/1652652141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1657899189",
+        "name": "Toha Getränkemarkt",
+        "opening_hours": "Mo-Sa 08:00-20:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7128728,
+          50.1337181
+        ]
+      },
+      "id": "node/1657899189"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1658947291",
+        "addr:city": "Bad Vilbel",
+        "addr:housenumber": "18",
+        "addr:postcode": "61118",
+        "addr:street": "Otto-Fricke-Straße",
+        "name": "Happy Shop",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7199367,
+          50.1734604
+        ]
+      },
+      "id": "node/1658947291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1669207380",
+        "name": "Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6385177,
+          50.0846396
+        ]
+      },
+      "id": "node/1669207380"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1669235049",
+        "name": "Kiosk #37",
+        "opening_hours": "Tu-Fr 10:00-20:00; Sa 12:30-21:30; Su 13:00-20:30",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6386819,
+          50.0828185
+        ]
+      },
+      "id": "node/1669235049"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1670316777",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6206265,
+          50.1006466
+        ]
+      },
+      "id": "node/1670316777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1679739099",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6152702,
+          50.0927849
+        ]
+      },
+      "id": "node/1679739099"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1681301258",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6445338,
+          50.1252042
+        ]
+      },
+      "id": "node/1681301258"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1684467908",
+        "name": "Doki's Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6106754,
+          50.1249602
+        ]
+      },
+      "id": "node/1684467908"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1707453426",
+        "name": "Micha's Lädchen",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6911177,
+          50.154989
+        ]
+      },
+      "id": "node/1707453426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1715908314",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6814178,
+          50.0587068
+        ]
+      },
+      "id": "node/1715908314"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1740136954",
+        "internet_access": "terminal",
+        "name": "Internetcafe",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6648654,
+          50.1022797
+        ]
+      },
+      "id": "node/1740136954"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1740267249",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "139a",
+        "addr:postcode": "60439",
+        "addr:street": "Gerhart-Hauptmann-Ring",
+        "name": "Kiosk und Trinkhalle",
+        "phone": "+49 69 57009012",
+        "shop": "kiosk",
+        "wheelchair": "limited",
+        "wheelchair:description": "kein behindertengerechtes WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6194338,
+          50.1606596
+        ]
+      },
+      "id": "node/1740267249"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1754660996",
+        "name": "KC Mini Shop",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6863641,
+          50.1220101
+        ]
+      },
+      "id": "node/1754660996"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1758779904",
+        "name": "Trinkhalle",
+        "opening_hours:signed": "no",
+        "shop": "kiosk",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7351667,
+          50.1280881
+        ]
+      },
+      "id": "node/1758779904"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1780669357",
+        "name": "Kiosk Ariana",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6870926,
+          50.1505307
+        ]
+      },
+      "id": "node/1780669357"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1786355033",
+        "name": "Snack FM",
+        "opening_hours": "Mo-Sa 12:00-20:00; Su 09:00-18:00",
+        "operator": "Pierre",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7172496,
+          50.139426
+        ]
+      },
+      "id": "node/1786355033"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1788473887",
+        "internet_access": "yes",
+        "name": "NR Minimarkt",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6643208,
+          50.1056125
+        ]
+      },
+      "id": "node/1788473887"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1788473906",
+        "internet_access": "yes",
+        "name": "Non Stop Market",
+        "opening_hours": "24/7",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6637002,
+          50.104882
+        ]
+      },
+      "id": "node/1788473906"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1825753127",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5517778,
+          50.1594152
+        ]
+      },
+      "id": "node/1825753127"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1878907016",
+        "shop": "kiosk",
+        "source": "photo;survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6616653,
+          50.1025405
+        ]
+      },
+      "id": "node/1878907016"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1878907017",
+        "name": "Shiraz",
+        "opening_hours": "Mo-Sa 09:30-23:30",
+        "shop": "kiosk",
+        "source": "photo;survey",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6609242,
+          50.1021906
+        ]
+      },
+      "id": "node/1878907017"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1878907018",
+        "name": "Trinkhalle",
+        "shop": "kiosk",
+        "source": "photo;survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6605496,
+          50.1020012
+        ]
+      },
+      "id": "node/1878907018"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1901118647",
+        "name": "Trinkhalle & Einkaufsladen",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6860802,
+          50.1201048
+        ]
+      },
+      "id": "node/1901118647"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1938473854",
+        "name": "Kiosk Saleh",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6434644,
+          50.1033532
+        ]
+      },
+      "id": "node/1938473854"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1964274179",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5861279,
+          50.0827757
+        ]
+      },
+      "id": "node/1964274179"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1978535710",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6675716,
+          50.109368
+        ]
+      },
+      "id": "node/1978535710"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2009667200",
+        "name": "Die Zwo",
+        "opening_hours": "Mo-Fr 09:00-22:00; Sa,Su 10:00-22:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6446723,
+          50.088875
+        ]
+      },
+      "id": "node/2009667200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2076184207",
+        "name": "Pressecenter",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6338549,
+          50.1574092
+        ]
+      },
+      "id": "node/2076184207"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2091234829",
+        "addr:postcode": "65451",
+        "amenity": "post_office",
+        "name": "DHL Postfiliale 651",
+        "name:de": "DHL Paketshop 651",
+        "name:en": "DHL Paketshop 651",
+        "opening_hours": "Mo 15:00-20:30; Tu-Su 10:00-20:30",
+        "phone": "+4961075621",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5279701,
+          50.0697038
+        ]
+      },
+      "id": "node/2091234829"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2142214404",
+        "name": "Kiosk Wasserhäuschen",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6490528,
+          50.084494
+        ]
+      },
+      "id": "node/2142214404"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163309770",
+        "opening_hours": "Mo-Fr 06:00-21:00; Sa 08:00-21:00; Su 09:00-21:00",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7540217,
+          50.0853726
+        ]
+      },
+      "id": "node/2163309770"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2239950954",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "45",
+        "addr:postcode": "60385",
+        "addr:street": "Wiesenstraße",
+        "name": "Kiosk 45",
+        "opening_hours": "Mo-Fr 10:00-24:00, Sa,Su 10:00-02:00",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7035535,
+          50.1271181
+        ]
+      },
+      "id": "node/2239950954"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2278966580",
+        "shop": "kiosk",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5637653,
+          50.1398819
+        ]
+      },
+      "id": "node/2278966580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2283129693",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "102",
+        "addr:postcode": "60528",
+        "addr:street": "Gerauer Straße",
+        "name": "Zeitschriften Link",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6476345,
+          50.0783864
+        ]
+      },
+      "id": "node/2283129693"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2337462211",
+        "name": "InternetTele Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6253568,
+          50.131237
+        ]
+      },
+      "id": "node/2337462211"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2337512891",
+        "name": "Trinkhalle Pfeiffer",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5054678,
+          50.0887731
+        ]
+      },
+      "id": "node/2337512891"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2361453834",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "29",
+        "addr:postcode": "60488",
+        "addr:street": "Große Nelkenstraße",
+        "name": "Drachenkiosk",
+        "shop": "kiosk",
+        "wheelchair": "limited",
+        "wheelchair:description": "Kiosk mit Ausenverkauf kein behindertengerechtes WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6290365,
+          50.1334643
+        ]
+      },
+      "id": "node/2361453834"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2407040432",
+        "name": "Kiosk am Westendplatz",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6621366,
+          50.1130731
+        ]
+      },
+      "id": "node/2407040432"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2414825795",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7635643,
+          50.1224094
+        ]
+      },
+      "id": "node/2414825795"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2422032842",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7699856,
+          50.117286
+        ]
+      },
+      "id": "node/2422032842"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2423882715",
+        "name": "Trinkhalle an der Galluswarte",
+        "opening_hours:covid19": "open",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6444045,
+          50.1030895
+        ]
+      },
+      "id": "node/2423882715"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2428949775",
+        "name": "Kio",
+        "opening_hours": "Mo-Fr 06:15-19:00; Sa 07:00-15:00; Su off",
+        "opening_hours:covid19": "open",
+        "shop": "kiosk",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7125547,
+          50.1198565
+        ]
+      },
+      "id": "node/2428949775"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2430170544",
+        "name": "Bergstübel",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6735224,
+          50.166736
+        ]
+      },
+      "id": "node/2430170544"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2466528981",
+        "addr:city": "Frankfurt am Main",
+        "addr:postcode": "60435",
+        "addr:street": "Im Klingenfeld",
+        "name": "Berkersheimer Lädchen",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.696921,
+          50.1715355
+        ]
+      },
+      "id": "node/2466528981"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2477790160",
+        "name": "New York Kiosk",
+        "name:en": "off license",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7692066,
+          50.1054173
+        ]
+      },
+      "id": "node/2477790160"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2523995349",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "1",
+        "addr:postcode": "63065",
+        "addr:street": "Stadthof",
+        "name": "Lebkuchen-Schmidt - Saisonladen",
+        "shop": "kiosk",
+        "toilets:wheelchair": "no",
+        "website": "https://www.lebkuchen-schmidt.com/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7608689,
+          50.1052147
+        ]
+      },
+      "id": "node/2523995349"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2558987540",
+        "name": "Cinelli's",
+        "outdoor_seating": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.665208,
+          50.1235073
+        ]
+      },
+      "id": "node/2558987540"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2605775135",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7058833,
+          50.1442887
+        ]
+      },
+      "id": "node/2605775135"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2627073810",
+        "name": "Trinkhalle",
+        "shop": "kiosk",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6791194,
+          50.0977317
+        ]
+      },
+      "id": "node/2627073810"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2671746630",
+        "name": "Glücks-Theke",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6912392,
+          50.1234974
+        ]
+      },
+      "id": "node/2671746630"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2676885610",
+        "name": "Tabakwaren Weisheit",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6900894,
+          50.1028329
+        ]
+      },
+      "id": "node/2676885610"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2683239365",
+        "name": "Einkaufskiosk Sunny",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6846869,
+          50.1063744
+        ]
+      },
+      "id": "node/2683239365"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2683677969",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6921563,
+          50.1062456
+        ]
+      },
+      "id": "node/2683677969"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2685670633",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "22",
+        "addr:postcode": "63067",
+        "addr:street": "Lilistraße",
+        "name": "Zur roten Sonne",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7484576,
+          50.1072446
+        ]
+      },
+      "id": "node/2685670633"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2686568410",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6740026,
+          50.0909596
+        ]
+      },
+      "id": "node/2686568410"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2707025273",
+        "name": "Karlsbader Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6731837,
+          50.0868147
+        ]
+      },
+      "id": "node/2707025273"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2747411703",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "81",
+        "addr:postcode": "60487",
+        "addr:street": "Leipziger Straße",
+        "name": "Kartenvorverkauf F. Demir",
+        "opening_hours": "08:00-18:00",
+        "payment:bitcoin": "yes",
+        "payment:coins": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6425881,
+          50.1235171
+        ]
+      },
+      "id": "node/2747411703"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2772023192",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6909212,
+          50.0903097
+        ]
+      },
+      "id": "node/2772023192"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2785571115",
+        "name": "Alba Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6799718,
+          50.0917683
+        ]
+      },
+      "id": "node/2785571115"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2800968602",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6950274,
+          50.0963259
+        ]
+      },
+      "id": "node/2800968602"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2817374985",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5603043,
+          50.1015801
+        ]
+      },
+      "id": "node/2817374985"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2824787980",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "130",
+        "addr:postcode": "60599",
+        "addr:street": "Offenbacher Landstraße",
+        "opening_hours": "Mo-Fr 06:30-21:00; Sa 09:00-21:00",
+        "post_office": "GLS",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7034508,
+          50.0996622
+        ]
+      },
+      "id": "node/2824787980"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2830219974",
+        "name": "Trinkhalle",
+        "shop": "kiosk",
+        "wheelchair": "yes",
+        "wheelchair:description": "stufenloser Zugang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6981401,
+          50.1212959
+        ]
+      },
+      "id": "node/2830219974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2833747442",
+        "name": "Buddha Bar Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6960476,
+          50.1174767
+        ]
+      },
+      "id": "node/2833747442"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2833747449",
+        "name": "Kiosk Getränke-Abhollager",
+        "shop": "kiosk",
+        "wheelchair": "no",
+        "wheelchair:description": "Stufe am Eingang, aber auch Verkauf am Fenster"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7002297,
+          50.1212814
+        ]
+      },
+      "id": "node/2833747449"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2833747454",
+        "name": "Zeitschriften, Tabak Buchterkirch",
+        "note": "Paketshop Post",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6968643,
+          50.1184792
+        ]
+      },
+      "id": "node/2833747454"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2844961801",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "297",
+        "addr:postcode": "60385",
+        "addr:street": "Berger Straße",
+        "name": "Alt Bernemer Wasserhütt",
+        "opening_hours": "Mo-Th 10:00-22:00; Fr,Sa 10:00-24:00, Su 11:00-21:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.714194,
+          50.1305707
+        ]
+      },
+      "id": "node/2844961801"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2878608986",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6361559,
+          50.0861339
+        ]
+      },
+      "id": "node/2878608986"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2887026603",
+        "name": "Elli's Stübchen",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6500668,
+          50.0802713
+        ]
+      },
+      "id": "node/2887026603"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2891403407",
+        "addr:housenumber": "238",
+        "addr:street": "Offenbacher Landstraße",
+        "name": "Bistro 236",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7150676,
+          50.0993527
+        ]
+      },
+      "id": "node/2891403407"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2909552641",
+        "amenity": "cafe",
+        "description": "Kiosk und Internetcafe",
+        "internet_access": "terminal",
+        "internet_access:fee": "yes",
+        "name": "All in one",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6573936,
+          50.1019176
+        ]
+      },
+      "id": "node/2909552641"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2909552642",
+        "name": "Kiosk Am Schönplatz",
+        "shop": "kiosk",
+        "source": "extrapolation"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6581448,
+          50.1021174
+        ]
+      },
+      "id": "node/2909552642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2917379507",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7314577,
+          50.0985277
+        ]
+      },
+      "id": "node/2917379507"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2997208033",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:postcode": "60329",
+        "addr:street": "Düsseldorfer Straße",
+        "name": "City-Shop",
+        "opening_hours:covid19": "open",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6620164,
+          50.1085815
+        ]
+      },
+      "id": "node/2997208033"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3125516430",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.747793,
+          50.1078111
+        ]
+      },
+      "id": "node/3125516430"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3125519590",
+        "name": "Kiosk",
+        "opening_hours": "Mo-Su 08:00-22:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7065357,
+          50.1207612
+        ]
+      },
+      "id": "node/3125519590"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3125564430",
+        "noname": "yes",
+        "opening_hours:signed": "no",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.751726,
+          50.1070816
+        ]
+      },
+      "id": "node/3125564430"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3125564929",
+        "noname": "yes",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7513149,
+          50.1085277
+        ]
+      },
+      "id": "node/3125564929"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3125587829",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.749136,
+          50.110567
+        ]
+      },
+      "id": "node/3125587829"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3125623730",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "32",
+        "addr:postcode": "63067",
+        "addr:street": "Bettinastraße",
+        "entrance": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7524197,
+          50.1099303
+        ]
+      },
+      "id": "node/3125623730"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3139470938",
+        "level": "0",
+        "name": "T. H. Kleen",
+        "opening_hours": "Mo-Fr 09:00-20:00; Sa 10:00-20:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6533844,
+          50.1093564
+        ]
+      },
+      "id": "node/3139470938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3176598063",
+        "name": "Dan Sam",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7577235,
+          50.1019928
+        ]
+      },
+      "id": "node/3176598063"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3211151959",
+        "name": "Casa del Gusto",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6396773,
+          50.1551328
+        ]
+      },
+      "id": "node/3211151959"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3223121761",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7810419,
+          50.1005467
+        ]
+      },
+      "id": "node/3223121761"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3397332793",
+        "amenity": "gambling",
+        "gambling": "betting",
+        "min_age": "18",
+        "name": "Tipwin",
+        "opening_hours": "Mo-Su 10:00-24:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6950541,
+          50.0557301
+        ]
+      },
+      "id": "node/3397332793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3397332812",
+        "lottery": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6955671,
+          50.0580999
+        ]
+      },
+      "id": "node/3397332812"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3423479993",
+        "name": "Kiosk Westenberger",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7857027,
+          50.0842413
+        ]
+      },
+      "id": "node/3423479993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3506154701",
+        "alt_name": "Kiosk Waldbahn",
+        "name": "steh café waldbahn",
+        "opening_hours": "Mo-Fr 05:00-18:00; Sa 06:00-16:00; PH,Su off",
+        "shop": "kiosk",
+        "wheelchair": "yes",
+        "wheelchair:description:de": "Der Eingang ist ebenerdig.",
+        "wheelchair:description:en": "The entrance is ground-level."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6950378,
+          50.0596299
+        ]
+      },
+      "id": "node/3506154701"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3571561893",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7895382,
+          50.1257033
+        ]
+      },
+      "id": "node/3571561893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3592180194",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7837792,
+          50.1151119
+        ]
+      },
+      "id": "node/3592180194"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4039122144",
+        "addr:city": "Neu-Isenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "25",
+        "addr:postcode": "63263",
+        "addr:street": "Stoltzestraße",
+        "amenity": "post_office",
+        "description": "GLS Paketshop",
+        "lottery": "yes",
+        "name": "Kiosk Stoltze 25",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6888886,
+          50.0561813
+        ]
+      },
+      "id": "node/4039122144"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4042660849",
+        "name": "Nordend-Shop",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.686071,
+          50.1224514
+        ]
+      },
+      "id": "node/4042660849"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4065660527",
+        "name": "Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6362581,
+          50.1242386
+        ]
+      },
+      "id": "node/4065660527"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4065739421",
+        "name": "Kioskoase",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6372883,
+          50.1244132
+        ]
+      },
+      "id": "node/4065739421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4078041429",
+        "name": "Lotto-Café Gallus",
+        "opening_hours": "Mo-Sa 06:00-19:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6443183,
+          50.1051991
+        ]
+      },
+      "id": "node/4078041429"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4080919225",
+        "name": "Bei Biggi",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7519409,
+          50.1098422
+        ]
+      },
+      "id": "node/4080919225"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4087677635",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5683702,
+          50.1222535
+        ]
+      },
+      "id": "node/4087677635"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4120854402",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7883143,
+          50.1217398
+        ]
+      },
+      "id": "node/4120854402"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4120940036",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7852949,
+          50.1193116
+        ]
+      },
+      "id": "node/4120940036"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4185964109",
+        "description": "Postbank, Deutsche Post",
+        "name": "Kiosk Lotto",
+        "operator": "Ralf Baumgart",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6741128,
+          50.1997874
+        ]
+      },
+      "id": "node/4185964109"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4252133684",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.543754,
+          50.1019477
+        ]
+      },
+      "id": "node/4252133684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4301356759",
+        "addr:housenumber": "22",
+        "addr:street": "Freiherr-vom-Stein-Straße",
+        "name": "Einkaufsladen",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.664418,
+          50.1202142
+        ]
+      },
+      "id": "node/4301356759"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4317143090",
+        "layer": "-1",
+        "name": "DB ServiceStore",
+        "shop": "kiosk",
+        "website": "https://www.servicestoredb.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.668492,
+          50.1132336
+        ]
+      },
+      "id": "node/4317143090"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4317143091",
+        "layer": "-1",
+        "name": "DB ServiceStore",
+        "shop": "kiosk",
+        "website": "https://www.servicestoredb.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6695037,
+          50.1140259
+        ]
+      },
+      "id": "node/4317143091"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4382529525",
+        "addr:housenumber": "2",
+        "addr:street": "Lindenstraße",
+        "name": "Mobile&Internetcaffé",
+        "noname": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7675182,
+          50.0968705
+        ]
+      },
+      "id": "node/4382529525"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4382539131",
+        "noname": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.767414,
+          50.0962052
+        ]
+      },
+      "id": "node/4382539131"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4428949417",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "8",
+        "addr:postcode": "65929",
+        "addr:street": "Kurmainzer Straße",
+        "entrance": "yes",
+        "name": "Kiosk Khamba",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5532963,
+          50.1053202
+        ]
+      },
+      "id": "node/4428949417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4486652037",
+        "name": "7 Tage Kiosk",
+        "opening_hours": "10:00-22:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6471074,
+          50.085765
+        ]
+      },
+      "id": "node/4486652037"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4549324711",
+        "name": "Kiosk 49",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6435193,
+          50.088677
+        ]
+      },
+      "id": "node/4549324711"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4687773961",
+        "coffee": "yes",
+        "level": "0",
+        "shop": "kiosk",
+        "tobacco": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.697776,
+          50.1110937
+        ]
+      },
+      "id": "node/4687773961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4876287710",
+        "amenity": "cafe",
+        "name": "Onur Cafe-Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6367288,
+          50.1021077
+        ]
+      },
+      "id": "node/4876287710"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4901998648",
+        "name": "Klausens Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6946776,
+          50.0561714
+        ]
+      },
+      "id": "node/4901998648"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4937901185",
+        "name": "City Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6655132,
+          50.1085959
+        ]
+      },
+      "id": "node/4937901185"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4943776867",
+        "description": "Schreibwaren, Zeitschriften, Lottoannahmestelle, Brief-/Paket-Annahmestelle",
+        "name": "Saba´s Laden",
+        "opening_hours": "Mo-Sa 07:00-13:30",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6938665,
+          50.1447104
+        ]
+      },
+      "id": "node/4943776867"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4966657421",
+        "name": "Trinkhalle im Turm",
+        "name:de": "Trinkhalle im Turm",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6446243,
+          50.1031339
+        ]
+      },
+      "id": "node/4966657421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5065030521",
+        "level": "0",
+        "lottery": "yes",
+        "name": "Lotto Totto",
+        "shop": "kiosk",
+        "wheelchair": "no",
+        "wheelchair:step_height": "10 cm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6866993,
+          50.1140778
+        ]
+      },
+      "id": "node/5065030521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5083477630",
+        "name": "Kiosk U-Bahn Heddernheim",
+        "note:de": "Namen herausfinden und korrigieren. Generischer Name",
+        "payment:coins": "yes",
+        "payment:notes": "yes",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6499752,
+          50.1611696
+        ]
+      },
+      "id": "node/5083477630"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5085682478",
+        "description": "Kiosk, Reisebüro, Internet Café, alles in einem",
+        "name": "Zadran",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.706709,
+          50.1251891
+        ]
+      },
+      "id": "node/5085682478"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5087152082",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6994802,
+          50.0545136
+        ]
+      },
+      "id": "node/5087152082"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5161382859",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6591546,
+          50.1019482
+        ]
+      },
+      "id": "node/5161382859"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5163575718",
+        "name": "Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6575077,
+          50.1080025
+        ]
+      },
+      "id": "node/5163575718"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5163575720",
+        "name": "Kiosk Center",
+        "opening_hours": "Mo-FR 7:00-00:00, Sa-Su 10:00-00:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6569494,
+          50.1078154
+        ]
+      },
+      "id": "node/5163575720"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5272153207",
+        "name": "Kiosk am Zentrum",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6981382,
+          50.0480145
+        ]
+      },
+      "id": "node/5272153207"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5274914503",
+        "name": "City Eck Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6922504,
+          50.1132079
+        ]
+      },
+      "id": "node/5274914503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5306648555",
+        "name": "Dein Kiosk ToGo",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6920516,
+          50.0522016
+        ]
+      },
+      "id": "node/5306648555"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5358464148",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6307937,
+          50.1036827
+        ]
+      },
+      "id": "node/5358464148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5358954519",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "18",
+        "addr:postcode": "60329",
+        "addr:street": "Münchener Straße",
+        "name": "Tabak-Weider",
+        "operator": "Hilde Petersen-Weider",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6698353,
+          50.1079531
+        ]
+      },
+      "id": "node/5358954519"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5370965405",
+        "name": "Trinkhalle Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5064517,
+          50.0970884
+        ]
+      },
+      "id": "node/5370965405"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5385267241",
+        "name": "Tabak Presse Herrmann",
+        "opening_hours": "Mo-Fr 07:00-18:30; Sa 07:00-14:30",
+        "shop": "kiosk",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7072564,
+          50.125916
+        ]
+      },
+      "id": "node/5385267241"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5432163933",
+        "name": "Stehcaffee Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6877141,
+          50.0532447
+        ]
+      },
+      "id": "node/5432163933"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5484301518",
+        "name": "Hermes Paketshop",
+        "opening_hours": "Mo-Fr 10:00-18:30; Sa 10:00-14:30",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7058447,
+          50.0487177
+        ]
+      },
+      "id": "node/5484301518"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5554738815",
+        "name": "Kiosk R. Whig",
+        "opening_hours": "Mo-Fr 07:30-19:00; Sa 07:30-17:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5528028,
+          50.1057145
+        ]
+      },
+      "id": "node/5554738815"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5634860156",
+        "name": "Philipp und Onur Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7782795,
+          50.0996495
+        ]
+      },
+      "id": "node/5634860156"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5726481606",
+        "amenity": "cafe",
+        "name": "Ditana Stehcafé & Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6950571,
+          50.0556882
+        ]
+      },
+      "id": "node/5726481606"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5736897151",
+        "name": "Seven Day’s Kiosk",
+        "outdoor_seating": "sidewalk",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6953552,
+          50.0564436
+        ]
+      },
+      "id": "node/5736897151"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5761472926",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "23",
+        "addr:postcode": "63065",
+        "addr:street": "Hermann-Steinhäuser-Straße",
+        "name": "Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7714237,
+          50.1056346
+        ]
+      },
+      "id": "node/5761472926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5867322866",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "39",
+        "addr:postcode": "60314",
+        "addr:street": "Hanauer Landstraße",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6990786,
+          50.1132111
+        ]
+      },
+      "id": "node/5867322866"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5899872883",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "204a",
+        "addr:postcode": "60488",
+        "addr:street": "Heerstraße",
+        "building": "yes",
+        "name": "Asia Kiosk",
+        "phone": "+49 69 74745919",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6050994,
+          50.1442576
+        ]
+      },
+      "id": "node/5899872883"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5952908971",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "54",
+        "addr:postcode": "60486",
+        "addr:street": "Funckstraße",
+        "description": "DHL Filiale 452",
+        "name": "Kiosk Kuhwaldsiedlung",
+        "opening_hours": "Mo-Tu,Th-Su 08:00-22:00; We 08:00-20:00",
+        "operator": "Deutsche Post",
+        "payment:cash": "yes",
+        "phone": "+49-69-41071165",
+        "post_office:type": "post_partner",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6305366,
+          50.113229
+        ]
+      },
+      "id": "node/5952908971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5968359783",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "22",
+        "addr:postcode": "63065",
+        "addr:street": "Schloßstraße",
+        "name": "Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "designated"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7642519,
+          50.1059982
+        ]
+      },
+      "id": "node/5968359783"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5968365098",
+        "name": "leon",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7576396,
+          50.1085836
+        ]
+      },
+      "id": "node/5968365098"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5968365100",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "kiosk",
+        "addr:postcode": "63065",
+        "addr:street": "Kaiserstraße",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7576487,
+          50.1085696
+        ]
+      },
+      "id": "node/5968365100"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5981306308",
+        "addr:housenumber": "82",
+        "addr:street": "Fahrgasse",
+        "name": "Khan Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6862794,
+          50.1127354
+        ]
+      },
+      "id": "node/5981306308"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5983933402",
+        "noname": "yes",
+        "opening_hours": "Mo-Th 06:00-21:00; Fr,Sa 06:00-22:00; Su 09:00-21:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7657098,
+          50.1011
+        ]
+      },
+      "id": "node/5983933402"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6044975589",
+        "name": "Kiosk 34",
+        "shop": "kiosk",
+        "toilets:wheelchair": "no",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6709444,
+          50.1092042
+        ]
+      },
+      "id": "node/6044975589"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6049605288",
+        "name": "7th star",
+        "opening_hours:signed": "no",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6678511,
+          50.1084234
+        ]
+      },
+      "id": "node/6049605288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6049605300",
+        "name": "City-Shop-Zainus",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6654287,
+          50.1085525
+        ]
+      },
+      "id": "node/6049605300"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6050977009",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6668315,
+          50.1090164
+        ]
+      },
+      "id": "node/6050977009"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6081583440",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6294122,
+          50.1018285
+        ]
+      },
+      "id": "node/6081583440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6284198767",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6956787,
+          50.1168418
+        ]
+      },
+      "id": "node/6284198767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6284198776",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6993809,
+          50.120358
+        ]
+      },
+      "id": "node/6284198776"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6284198780",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "60",
+        "addr:postcode": "60316",
+        "addr:street": "Sandweg",
+        "name": "Eddys Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6987042,
+          50.1198102
+        ]
+      },
+      "id": "node/6284198780"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6284200197",
+        "name": "Trinkhalle",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6965732,
+          50.1177288
+        ]
+      },
+      "id": "node/6284200197"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6284200208",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6958155,
+          50.1165743
+        ]
+      },
+      "id": "node/6284200208"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6284200224",
+        "shop": "kiosk",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6970926,
+          50.1159562
+        ]
+      },
+      "id": "node/6284200224"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6291259483",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6940265,
+          50.1305852
+        ]
+      },
+      "id": "node/6291259483"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6322446336",
+        "name": "Tele Kiosk",
+        "opening_hours": "Fr,Sa 10:30-01:00, Su-Th 10:30-24:00",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7088739,
+          50.1270686
+        ]
+      },
+      "id": "node/6322446336"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6348293046",
+        "noname": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6926062,
+          50.1276995
+        ]
+      },
+      "id": "node/6348293046"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6348293055",
+        "noname": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6922327,
+          50.1267486
+        ]
+      },
+      "id": "node/6348293055"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355945493",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6927075,
+          50.1147361
+        ]
+      },
+      "id": "node/6355945493"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6383409791",
+        "name": "Konsti Kiosk",
+        "opening_hours": "07:00-03:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6906107,
+          50.1135683
+        ]
+      },
+      "id": "node/6383409791"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6408736589",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7007323,
+          50.1239511
+        ]
+      },
+      "id": "node/6408736589"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6408736604",
+        "name": "el Quiosco",
+        "opening_hours": "Mo-Th 06:00-24:00; Fr-Sa 06:00-02:00, Su,PH 09:00-23:00",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7025036,
+          50.1236164
+        ]
+      },
+      "id": "node/6408736604"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6448186130",
+        "addr:housenumber": "7b",
+        "addr:street": "Adalbertstraße",
+        "name": "Khan Kiosk",
+        "note": "Hermes & GLS Paketshop",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6484307,
+          50.1197897
+        ]
+      },
+      "id": "node/6448186130"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6498819715",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "145",
+        "addr:postcode": "63067",
+        "addr:street": "Ludwigstraße",
+        "opening_hours": "Mo-Sa 08:30-21:00; Su 12:00-21:00",
+        "post_office": "yes",
+        "ref": "Postfiliale 744",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7508203,
+          50.1086015
+        ]
+      },
+      "id": "node/6498819715"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6514031943",
+        "name": "Himalaya Imbiss & Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6386662,
+          50.1256035
+        ]
+      },
+      "id": "node/6514031943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6517744083",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6795282,
+          50.1187595
+        ]
+      },
+      "id": "node/6517744083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6578966918",
+        "name": "Presse Shop Taei",
+        "opening_hours": "Mo-Fr 07:00-19:00; Sa 09:00-15:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6700851,
+          50.1384048
+        ]
+      },
+      "id": "node/6578966918"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6617301742",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6919478,
+          50.1503835
+        ]
+      },
+      "id": "node/6617301742"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7021221113",
+        "name": "Einkaufs Kiosk",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7764996,
+          50.1020414
+        ]
+      },
+      "id": "node/7021221113"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7083950785",
+        "name": "Trinkhalle \"Treffpunkt\"",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6192383,
+          50.1640527
+        ]
+      },
+      "id": "node/7083950785"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7117204302",
+        "addr:housenumber": "57",
+        "addr:street": "Baumweg",
+        "name": "Einkaufs-Kiosk",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6923062,
+          50.1204385
+        ]
+      },
+      "id": "node/7117204302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7158888124",
+        "addr:housenumber": "63a",
+        "addr:street": "Luisenstraße",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7567388,
+          50.1040518
+        ]
+      },
+      "id": "node/7158888124"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7187401146",
+        "noname": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.762846,
+          50.1023903
+        ]
+      },
+      "id": "node/7187401146"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7200755133",
+        "name": "Tankwart",
+        "opening_hours": "Mo-Sa 09:00-22:00",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6392054,
+          50.1042196
+        ]
+      },
+      "id": "node/7200755133"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7252664930",
+        "addr:housenumber": "31",
+        "addr:street": "Friedrichstraße",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7688379,
+          50.1032351
+        ]
+      },
+      "id": "node/7252664930"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7279018854",
+        "name": "Lotto-friedrich",
+        "opening_hours": "Mo-Fr 06:00-19:00; Sa 07:00-19:00; Su,PH off",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6840232,
+          50.1363079
+        ]
+      },
+      "id": "node/7279018854"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7342626085",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.541941,
+          50.1016187
+        ]
+      },
+      "id": "node/7342626085"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7372903191",
+        "name": "Trinkhalle",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5108794,
+          50.0870391
+        ]
+      },
+      "id": "node/7372903191"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7550724697",
+        "opening_hours": "Mo-Fr 07:00-13:30,15:00-18:30; Sa 07:30-13:00; PH closed",
+        "shop": "kiosk",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6118769,
+          50.1270209
+        ]
+      },
+      "id": "node/7550724697"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7551796752",
+        "name": "Mein Cityshop",
+        "opening_hours": "Mo-Su 08:30-23:30",
+        "shop": "kiosk",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6182256,
+          50.1307486
+        ]
+      },
+      "id": "node/7551796752"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7710832746",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "148",
+        "addr:postcode": "60431",
+        "addr:street": "Ginnheimer Landstraße",
+        "name": "Kiosk Endstation",
+        "payment:cash": "yes",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6472132,
+          50.1399791
+        ]
+      },
+      "id": "node/7710832746"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7811795454",
+        "name": "Kiosk Ostend",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6987263,
+          50.1129831
+        ]
+      },
+      "id": "node/7811795454"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7817558503",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.724782,
+          50.097224
+        ]
+      },
+      "id": "node/7817558503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7817558530",
+        "name": "Oberräder Feinkost",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.721959,
+          50.1005825
+        ]
+      },
+      "id": "node/7817558530"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7817558541",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7203865,
+          50.1000599
+        ]
+      },
+      "id": "node/7817558541"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7817558546",
+        "name": "Easy Call Shop & Internet",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7188691,
+          50.0998204
+        ]
+      },
+      "id": "node/7817558546"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7903285934",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5112074,
+          50.0880736
+        ]
+      },
+      "id": "node/7903285934"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7910153752",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.516436,
+          50.0816902
+        ]
+      },
+      "id": "node/7910153752"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7934219767",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "225",
+        "addr:postcode": "60598",
+        "addr:street": "Mörfelder Landstraße",
+        "name": "Winter's Laden",
+        "opening_hours": "Mo-Fr 07:30-18:30; Sa 08:00-14:00",
+        "shop": "kiosk",
+        "website": "http://winters-laden.de/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6720512,
+          50.0895123
+        ]
+      },
+      "id": "node/7934219767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8155079560",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7539833,
+          50.1083261
+        ]
+      },
+      "id": "node/8155079560"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8223813872",
+        "amenity": "post_office",
+        "brand": "DHL",
+        "name": "Lotto-Toto Eldener",
+        "opening_hours": "Mo-Fr 06:00-21:00, Sa 07:00-21:00, Su 11:00-19:00",
+        "ref": "DHL Paketshop 742",
+        "shop": "kiosk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.766433,
+          50.0996071
+        ]
+      },
+      "id": "node/8223813872"
+    }
+  ]
+}

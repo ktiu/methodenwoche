@@ -1,0 +1,162 @@
+# Daten visualisieren
+
+## Lernziele dieser Sitzung
+
+Sie können...
+
+- einfache Befehle zur Visualisierung in Base R anwenden.
+- die Grammatik von `ggplot2` für Visualisierungen in Grundzügen wiedergeben und anwenden.
+- eigene Ideen für Visualisierungen entwickeln und umsetzen.
+
+## Voraussetzungen
+
+Für diese Lektion benötigen wir das Paket `tidyverse`:
+
+```{r}
+library(tidyverse)
+```
+
+Und einen Datensatz, der in Form eines tibble vorliegt. Der Beispieldatensatz `diamonds` wird mitgeliefert:
+
+```{r cache=T}
+diamonds
+```
+
+Wenn wir mögen, können wir ihn mit der Funktion `data()` explizit in unser Environment laden:
+
+```{r cache=T}
+data(diamonds)
+```
+
+## Überblick
+
+Einen ersten Überblick kriegen wir zum Einen durch den Befehl `str()`, der uns die Typen in den Spalten anzeigt:
+
+```{r cache=T}
+str(diamonds)
+```
+
+Zum Anderen gibt die Hilfefunktion Auskunft über den Datensatz und die einzelnen Variablen (Metadaten):
+
+```{r eval=F}
+?diamonds
+```
+
+Einen Überblick über die wichtigsten statistischen Parameter erhalten wir mit:
+
+```{r cache=T}
+summary(diamonds)
+```
+
+## Visualisierung mit dem Standardpaket
+
+Es gibt in R mehrere grundlegend verschiedene Möglichkeiten, Daten zu visualisieren. Für einen schnellen Überblick sind z.B. `hist()` und `boxplot()` hilfreich:
+
+```{r cache=T}
+hist(diamonds$price)
+```
+
+```{r cache=T}
+boxplot(diamonds$x)
+```
+
+## Visualisierung mit `ggplot()`
+
+Das Paket `ggplot2` ist Teil vom `tidyverse`. Hiermit lassen sich sehr flexible Graphiken gestalten. Wir werden ausschließlich mit diesem System arbeiten.
+
+Die Syntax ist dabei auf den ersten Blick etwas komplexer.
+
+Am Anfang steht der Befehl `ggplot(x)` mit dem Datensatz als Parameter
+
+```{r cache=T}
+ggplot(data = diamonds)
+```
+
+Mit einem Mapping-Parameter legen wir die Dimensionen fest:
+
+```{r cache=T}
+ggplot(data = diamonds, mapping = aes(x = price, y = carat))
+```
+
+Das gleiche ohne Parameternamen:
+
+```{r cache=T}
+ggplot(diamonds, aes(price, carat))
+```
+
+Nun kann mit dem `+`-Operator ein "geometrischer" Layer hinzugefügt werden:
+  
+```{r cache=T}
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point()
+```
+
+Weitere `geom`-Layer lassen sich mit dem `+`-Operator hinzufügen:
+
+```{r cache=T, message=F}
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point() +
+  geom_smooth()
+```
+
+Die Layer-Funktionen können durch Parameter angepasst werden:
+
+```{r cache=T, message=F}
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point(size = 0.5) +
+  geom_smooth(color = "red")
+```
+
+Dabei lassen sich in den einzelnen Layers mappings hinzufügen oder verändern:
+
+```{r cache=T, message=F}
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point(aes(color = clarity), size = 0.5) +
+  geom_smooth(color = "red")
+```
+
+Schließlich lassen sich noch viele weitere optische Aspekte anpassen, z.B. Achsen, Farben, etc.:
+
+```{r cache=T, message=F}
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point(aes(color = clarity), size = 0.5) +
+  geom_smooth(color = "red") +
+  scale_x_continuous("Karatzahl", breaks = seq(0, 5, 0.5)) +
+  scale_y_continuous("Preis") +
+  scale_color_brewer("Klarheit") +
+  theme_dark()
+```
+
+## Aufgaben
+
+1. Versuchen Sie, die folgenden Visualisierungen des Datensatzes `diamonds` auszugeben: 
+
+    ```{r cache=T, echo=solutions, class.source='solution'}
+    ggplot(diamonds, aes(x = cut)) +
+      geom_bar(aes(fill = color))
+    ```
+
+    ```{r cache=T, echo=solutions, class.source='solution'}
+    ggplot(diamonds, aes(x = depth, y = price)) +
+      geom_point(alpha = 0.1, aes(color = cut)) +
+      guides(colour = guide_legend(override.aes = list(alpha = 1)))
+    ```
+
+    ```{r cache=T, echo=solutions, class.source='solution'}
+    ggplot(diamonds, aes(x = color, y = price)) +
+      geom_boxplot(aes(color = color), outlier.colour = NA) +
+      facet_wrap(~cut) +
+      theme(legend.position = "none") +
+      scale_x_discrete("Farbe") +
+      scale_y_continuous("Preis")
+    ```
+
+2. Schauen Sie sich die Publikation [R for Data Science](https://r4ds.had.co.nz/) an.
+
+3. Was ist das für ein Buch? Wer ist das Zielpublikum?
+
+4. Lesen Sie das Kapitel "3: Data Visualization" und vollziehen Sie die Visualisierungen nach.
+
+5. Bearbeiten Sie die Aufgaben.
+
+6. Bearbeiten Sie die [RStudio Primers zu Datenvisualisierung](https://rstudio.cloud/learn/primers/3).

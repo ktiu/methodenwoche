@@ -1,0 +1,131 @@
+# Karten erstellen (FTR)
+
+## Lernziele dieser Sitzung
+
+Sie können...
+
+- Pipes benutzen
+- einfache `dplyr`-Befehle ausführen
+- Koordinaten visualisieren
+
+## Voraussetzungen
+
+Wir laden erstmal `tidyverse`:
+
+```{r}
+library(tidyverse)
+```
+
+## Exkurs: Pipes
+
+Teil vom `tidyverse` ist auch das Paket `magrittr`, das einen besonderen Operator enthält: `%>%`
+
+Der Operator `%>%` heißt "Pipe" und setzt das Ergebnis der vorherigen Funktion als ersten Parameter in die nächste Funktion ein. Zur Veranschaulichung:
+
+```{r eval=F}
+anzahl_buchstaben <- length(letters)
+sqrt(anzahl_buchstaben)
+```
+
+...ist das gleiche wie...
+
+```{r eval=F}
+sqrt(length(letters))
+```
+
+...ist das gleiche wie...
+
+```{r eval=F}
+length(letters) %>%
+  sqrt()
+```
+
+...ist das gleiche wie...
+
+```{r eval=F}
+letters %>%
+  length %>%
+  sqrt()
+```
+
+So können beliebig viele Funktionen aneinandergereiht werden. Und mit `->` kann eine Variable „in die andere Richtung“ zugewiesen werden
+
+```{r}
+letters %>%
+  length() %>%
+  sqrt() %>%
+  round() %>%
+  as.character() ->
+  my_var
+```
+
+Gerade bei komplizierteren Zusammenhängen wird der Code so oft lesbarer, weil die Logik von links nach rechts, bzw. von oben nach unten gelesen werden kann.
+
+## Daten importieren
+
+Beim Open-Data-Portal der Stadt Frankfurt steht ein [Baumkataster](http://offenedaten.frankfurt.de/dataset/baumkataster-frankfurt-am-main) zur Verfügung.
+
+Die Datei im CSV-Format (comma separated values) kann entweder heruntergeladen und durch klicken importiert werden, oder direkt über den Befehl:
+
+```{r warning=FALSE, message=F}
+baumkataster <- read_csv2("http://offenedaten.frankfurt.de/dataset/73c5a6b3-c033-4dad-bb7d-8783427dd233/resource/7a73520b-961a-4aad-a582-449e676c247c/download/gprojekteopen-datadatenamt-67datenbaumauswahl_veroffentlichung_4baumauswahl_veroffentlichung_4.csv")
+```
+
+## Überblick verschaffen
+
+Mit `summary()` lässt sich eine Zusammenfassung der Werte generieren:
+
+```{r}
+summary(baumkataster)
+```
+
+Genauere Infos über diese Merkmale gibt es auf dem Datenportal.
+
+## Visualisieren
+
+Wie in der letzten Lektion besprochen, lässt sich der Datensatz mit `ggplot()` visualisieren, z. B.:
+
+```{r message=F}
+ggplot(baumkataster, aes(x = Kronendurchmesser)) +
+  geom_histogram()
+```
+
+Eine neue Messreihe lässt sich z. B. so errechnen: 
+
+```{r}
+alter <- 2020 - baumkataster$Pflanzjahr
+head(alter)
+```
+
+Der Befehl `mutate()` funktioniert sehr ähnlich, gibt aber den veränderten Datensatz zurück:
+
+```{r}
+mutate(baumkataster, alter = 2020 - Pflanzjahr)
+```
+
+Derselbe Befehl mit dem Pipe-Operator:
+
+```{r}
+baumkataster %>%
+  mutate(alter = 2020 - Pflanzjahr)
+```
+
+So lassen sich auch hier verschiedene Befehle verknüpfen. `filter()` beschränkt den Datensatz auf Merkmalsträger, die den Kriterien entsprechen:
+
+```{r}
+baumkataster %>%
+  mutate(alter = 2020 - Pflanzjahr) %>%
+  filter(alter > 30) ->
+  alte_baeume
+
+summary(alte_baeume)
+```
+
+Schließlich ergibt das Streudiagramm von Koordinaten so eine art Karte:
+ 
+```{r cache=T}
+ggplot(alte_baeume) +
+    geom_point(size = 0.1, aes(x = RECHTSWERT, y = HOCHWERT))
+```
+
+Diesen Ansatz werden wir in der nächsten Lektion vertiefen.

@@ -1,0 +1,187 @@
+# Karten erstellen (HOS)
+
+## Aufgaben
+
+1. Besuchen Sie https://pleiades.stoa.org/ - worum geht es hier?
+
+2. Finden Sie den kompletten aktuellen Datensatz für „locations“ als CSV-Datei.
+
+3. Importieren Sie ihn in R und weisen Sie dem Datensatz den Namen `pleiades` zu.
+
+    ```{r include=solutions, class.source='solution', warning=F, message=F}
+    pleiades <- read_csv("http://atlantides.org/downloads/pleiades/dumps/pleiades-locations-latest.csv.gz")
+    ```
+
+4. Finden Sie geeignete Werte für (einzelne) Längen- und Breitengrade im Datensatz.
+
+    ```{r include=solutions, class.source='solution'}
+    pleiades$reprLong %>% # Längengrad
+     summary()
+    pleiades$reprLat %>% # Breitengrad
+      summary()
+    ```
+
+5. Plotten Sie die Koordinaten auf x- und y-Achse mit `ggplot()`. Was erkennen Sie?
+
+    ```{r include=solutions, class.source='solution', out.extra='class="solution"'}
+    ggplot(pleiades) +
+      geom_point(aes(x = reprLong, y = reprLat))
+    ```
+
+6. Halbieren Sie die Größe und setzen Sie den Alpha-Wert der Punkte auf 0,2. 
+
+    ```{r include=solutions, class.source='solution', out.extra='class="solution"'}
+    ggplot(pleiades) +
+      geom_point(aes(x = reprLong, y = reprLat), size = 0.5, alpha = 0.2)
+    ```
+
+7. Bringen Sie die Grafik in die Mercator-Projektion.
+
+    ```{r include=solutions, class.source='solution', out.extra='class="solution"'}
+    ggplot(pleiades) +
+      geom_point(aes(x = reprLong, y = reprLat), size = 0.5, alpha = 0.2) +
+      coord_map("mercator")
+    ```
+
+8. Schauen Sie sich diesen Befehl an: 
+
+    ```{r eval=F}
+    map_data("world") %>%
+      ggplot() +
+        geom_polygon(mapping = aes(x = long,
+                                   y = lat,
+                                   group = group)) +
+        coord_quickmap(xlim = c(-8, 40),
+                       ylim = c(26, 48))
+    ```
+
+9. Versuchen Sie, jede einzelne Zeile nachzuvollziehen, indem Sie die entsprechenden Funktionen recherchieren.
+
+10. Führen Sie den Befehl aus.
+
+    ```{r echo=F, include=solutions, out.extra='class="solution"'}
+    map_data("world") %>%
+      ggplot() +
+        geom_polygon(mapping = aes(x = long,
+                                   y = lat,
+                                   group = group)) +
+        coord_quickmap(xlim = c(-8, 40),
+                       ylim = c(26, 48))
+    ```
+
+11. Ändern Sie die Farbe der Flächen in hellgrau.
+
+    ```{r include=solutions, class.source='solution', out.extra='class="solution"'}
+    map_data("world") %>%
+      ggplot() +
+        geom_polygon(mapping = aes(x = long, y = lat, group = group),
+                     fill    = "grey") +
+        coord_quickmap(xlim = c(-8, 40),
+                       ylim = c(26, 48))
+    ```
+
+12. Wählen Sie einen Kartenausschnitt, auf dem Portugal, Ägypten, Irak und Frankreich komplett zu sehen sind.
+
+    ```{r include=solutions, class.source='solution', out.extra='class="solution"'}
+    map_data("world") %>%
+      ggplot() +
+        geom_polygon(mapping = aes(x = long, y = lat, group = group),
+                     fill    = "grey") +
+        coord_quickmap(xlim = c(-8, 48),
+                       ylim = c(22, 50))
+    ```
+
+13. Plotten Sie auf diesem Hintergrund den Datensatz `pleiades`. Passen Sie dabei die Parameter so an, dass es Ihnen optisch zusagt.
+
+    ```{r include=solutions, class.source='solution', out.extra='class="solution"'}
+    map_data("world") %>%
+      ggplot() +
+        geom_polygon(mapping = aes(x = long, y = lat, group = group),
+                     fill    = "grey") +
+        coord_quickmap(xlim = c(-8, 48), 
+                       ylim = c(22, 50)) +
+        geom_point(data    = pleiades,
+                   mapping = aes(x = reprLong, y = reprLat),
+                   color   = "blue",
+                   size    = 0.3,
+                   alpha   = 0.5)
+    ```
+
+14. Wählen Sie für die Karte die [Bonnesche Projektion](https://de.wikipedia.org/wiki/Bonnesche_Projektion) mit Standardparallele bei 40°N.
+
+    ```{r include=solutions, class.source='solution', out.extra='class="solution"'}
+    map_data("world") %>%
+      ggplot() +
+        geom_polygon(mapping = aes(x = long, y = lat, group = group),
+                     fill    = "grey") +
+        coord_map("bonne", 40,
+                  xlim = c(-8, 48),
+                  ylim = c(22, 50)) +
+        geom_point(data    = pleiades,
+                   mapping = aes(x = reprLong, y = reprLat),
+                   color   = "blue",
+                   size    = 0.3,
+                   alpha   = 0.5)
+    ```
+
+15. Entfernen Sie alle Achsenbeschriftungen.
+
+    ```{r include=solutions, class.source='solution', out.extra='class="solution"'}
+    map_data("world") %>%
+      ggplot() +
+        geom_polygon(mapping = aes(x = long, y = lat, group = group),
+                     fill    = "grey") +
+        coord_map("bonne", 40,
+                  xlim = c(-8, 48),
+                  ylim = c(22, 50)) +
+        geom_point(data    = pleiades,
+                   mapping = aes(x = reprLong, y = reprLat),
+                   color   = "blue",
+                   size    = 0.3,
+                   alpha   = 0.5) +
+        theme(axis.title = element_blank(),
+              axis.ticks = element_blank(),
+              axis.text  = element_blank())
+    ```
+
+16. (Achtung: knifflig!) Bilden Sie diese Grafik nach, die die Orte geordnet nach ältestem Fund darstellt:
+
+    ```{r echo=solutions, class.source='solution'}
+    pleiades %>%
+      select(long = reprLong,
+             lat = reprLat,
+             timePeriods) %>%
+      mutate(oldest = str_extract(timePeriods, "[ACHRL]")) %>%
+      mutate(oldest = factor(oldest, levels = c("A", "C", "H", "R", "L"))) ->
+      pleiades_periods
+ 
+      map_data("world") %>%
+        filter(region != "Antarctica") %>%
+        ggplot() +
+          geom_polygon(mapping = aes(long, lat, group = group),
+                       fill    = "darkgreen") +
+          coord_map("albers",
+                    parameters = c(16, 37),
+                    xlim       = c(-8, 40),
+                    ylim       = c(26, 48)) +
+          geom_point(data    = pleiades_periods,
+                     mapping = aes(long, lat, color = oldest),
+                     size    = 0.2,
+                     alpha   = 0.3) +
+          scale_color_brewer("Früheste Epoche",
+                             breaks = c("A", "C", "H", "R", "L"),
+                             labels = c("1000-550 v.d.Z.",
+                                        "550-330 v.d.Z.",
+                                        "330 v.d.Z. - 30 n.d.Z.",
+                                        "30-300 n.d.Z.",
+                                        "300-640 n.d.Z."),
+                             palette = "YlOrBr") +
+          theme(axis.title       = element_blank(),
+                axis.ticks       = element_blank(),
+                axis.text        = element_blank(),
+                panel.background = element_rect(fill  = "darkblue"),
+                panel.grid       = element_line(color = "blue")) +
+          guides(colour = guide_legend(override.aes = list(alpha = 1,
+                                                           size  = 8,
+                                                           shape = 15)))
+      ```

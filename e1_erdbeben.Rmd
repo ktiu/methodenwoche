@@ -1,0 +1,202 @@
+# HTML-Tabellen
+
+## Lernziele dieser Sitzung
+
+Sie können...
+
+- sich den Quellcode einer Webseite anzeigen lassen und interpretieren.
+- HTML-Tabellen als Datensatz einlesen.
+- Fortgeschrittene Methoden der Datenbereinigung nachvollziehen.
+
+## Vorbereitung
+
+Am Beispiel der Küstenlängen verschiedener Länder besprechen wir Techniken der Datenerhebung/-erfassung und -visualisierung. Unser Ziel ist es, die Daten zu den Küstenlängen in einer Grafik darzustellen. 
+
+Für die folgenden Aufgaben benötigen wir die Pakete `rvest` und `tidyverse`. Zunächst müssen diese installiert und in unsere Umgebung geladen werden.
+
+```{r message=F}
+library(tidyverse)
+library(rvest)
+```
+
+## Datenbeschaffung
+
+Auf dem Internetauftritt der CIA gab es es eine Tabelle, welche die Küstenlänge (inklusive der Inseln) der einzelnen Länder enthält.
+
+Über die Archivierungsplattform WayBackMachine ist die Seite immer noch abrufbar: https://web.archive.org/web/20190802010710/https://www.cia.gov/library/publications/the-world-factbook/fields/282.html
+
+In einem ersten Schritt wird die URL der Tabelle der Variable `url` zugewiesen, sodass der Quellcode mit dem Befehl `read_html()` eingelesen werden kann. 
+
+```{r}
+url <- "https://web.archive.org/web/20190802010710/https://www.cia.gov/library/publications/the-world-factbook/fields/282.html"
+reply <- read_html(url)
+```
+
+Der Befehl `html_table()` ermöglicht das Auslesen *aller* Tabellen auf der Seite. Mithilfe des Befehls `str()` sehen wir, dass die Seite genau eine Tabelle enthält, welche die Informationen zu den Küstenlängen enthält.   
+
+```{r}
+tables <- html_table(reply, fill = TRUE)
+str(tables)
+```
+
+Durch die Umformung zu einem tibble erhalten wir eine Tabelle mit den gewünschten Informationen: 
+
+```{r}
+as_tibble(tables[[1]])
+```
+
+Mit pipes können wir die obigen Befehle zusammenfassen und somit das Ganze auf einmal ausführen.
+
+```{r}
+"https://web.archive.org/web/20190802010710/https://www.cia.gov/library/publications/the-world-factbook/fields/282.html" %>%
+  read_html() %>%
+  html_table(fill = T) %>%
+  .[[1]] %>%
+  as_tibble() -> coast
+```
+
+## Datenformatierung
+
+Zur Datenformatierung nutzen wir Funktionen aus dem Paket `stringr`. Die Spalte mit der Küstenlänge soll keinen Text, keine Einheit direkt hinter den Zahlenwerten und keine Kommata zur Trennung der Zahlenwerte enthalten.
+
+Der Befehl "str_extract()" sucht nach vorgegebenen Mustern (engl. *patterns*) und wählt diese aus. Diese patterns werden auch reguläre Ausdrücke (*regular expressions / regex*) genannt und sind eigentlich [ein Thema für sich](https://danielfett.de/en/tutorials/tutorial-regulare-ausdrucke/). Das Pattern `[0-9,.]+ km` extrahiert die Kilometerangaben.
+
+```{r}
+km <- str_extract(coast$Coastline, "[0-9,.]+ km")
+```
+
+Die ausgewählten Muster (in unserem Fall Kommata und Text) können durch den Befehl `str_replace_all()` gelöscht oder ersetzt werden. Wir ersetzen alle Zeichen *außer* Zahlen und Dezimalpunkt mit einem leeren String, so dass sie verschwinden. 
+
+```{r}
+str_replace_all(km, "[^0-9.]", "")
+```
+
+Auch hier kann alles in einen Befehl gepackt werden:
+
+```{r}
+coast$Coastline %>%
+  str_extract("[0-9,.]+ km") %>%
+  str_replace_all("[^0-9.]", "") %>%
+  as.numeric() -> coast$coast_num
+```
+
+## Datenaufbereitung
+
+Mit dem Befehl `arrange()` kann die Tabelle sortiert werden. Zunächst auftseigend,
+
+```{r}
+coast %>%
+  arrange(coast_num)
+```
+
+und schließlich absteigend, sodass die größten Werte an erster Stelle stehen. 
+
+```{r}
+coast %>%
+  arrange(desc(coast_num))
+```
+
+Bevor wir jedoch eine vollständig sortierte Liste haben, muss der Datensatz noch von falschen Einträgen gesäubert werden. Dafür benutzen wir den Befehl `filter()`.  Wir suchen wieder nach einem bestimmten Muster (hier zum Beispiel dem Wort "Ocean") und filtern es aus dem Datensatz.
+
+Die Grafik soll nur aus den ersten 30 Einträgen der Tabelle bestehen, welche uns der Befehl `head()` ausgibt. 
+
+```{r}
+coast %>%
+  arrange(desc(coast_num)) %>%
+  filter(!str_detect(Country, "Ocean")) %>%
+  filter(!Country %in% c("World", "European Union")) %>%
+  head(30) -> top_30
+```
+
+## Datenvisualisierung
+
+Das Balkendiagramm erhalten wir durch den "ggplot" Befehl. Hierbei gibt es verschiedenste Einstellmöglichkeiten. Wichitg sind vor allem die Angabe des verwendeten Datensatzes und die Art der Grafik (ob Kartendarstellung oder Balkendiagramm). Desweiteren kann man noch Farben der Eigenschaften, eine Achsenbeschriftung u. v. m. bestimmen.  
+
+```{r}
+ggplot(top_30, aes(x = reorder(Country, coast_num), y=coast_num)) +
+  geom_bar(stat='identity', fill="darkblue") +
+  coord_flip() +
+  scale_x_discrete(NULL) +
+  scale_y_continuous("Küstenlinie (km)")
+```
+
+## Aufgaben
+
+```{r include=F}
+solutions <- T
+```
+
+1. Importieren Sie die Daten zu den [tödlichen Erdbeben auf Wikipedia](https://en.wikipedia.org/wiki/List_of_deadly_earthquakes_since_1900)
+und formen sie diese zu einem tibble um.
+
+```{r echo=solutions, class.source='solution', out.extra='class="solution"'}
+"https://en.wikipedia.org/wiki/List_of_deadly_earthquakes_since_1900" %>%
+  read_html %>%
+  html_table(fill = T) %>%
+  .[[5]] %>%
+  as.tibble() -> earthquakes_raw
+```
+
+2. Erstellen Sie mit den erhaltenen Daten eine Karte, welche die Lage und die Stärke der Erdbeben angibt:
+
+```{r echo=solutions, message=F, class.source='solution'}
+earthquakes_raw %>%
+  mutate(Lat = as.numeric(Lat), Long = as.numeric(Long)) %>%
+  mutate(magnitude_num = as.numeric(str_extract(Magnitude, "[0-9.]+"))) -> earthquakes
+
+ggplot() +
+  geom_polygon(data = map_data("world"), aes(x = long, y = lat, group = group)) +
+  geom_point(data = earthquakes,
+             aes(x = Long, y = Lat, size = magnitude_num),
+             color = "red", alpha = 0.1) +
+  coord_quickmap() +
+  scale_size_area("Stärke")
+```
+
+3. Wandeln Sie den Erdbeben-Datensatz in das Simple Features Format um. Laden Sie zusätzlich eine Weltkarte mit dem Paket `rnaturalearth` und wandeln Sie auch diese in Simple Features um. Finden Sie außerdem einen Geodatensatz zu tektonischen Platten. Visualiseren Sie alles auf einer Welktarte (Projektion: Gall-Peters).
+
+```{r echo=solutions, eval=F, class.source='solution'}
+library(sf)
+
+earthquakes %>%
+  filter(! is.na(Long)) %>%
+  st_as_sf(coords=c("Long", "Lat")) %>%
+  st_set_crs(4326) -> quakesf
+
+library(rnaturalearth)
+
+ne_download(type="land", category = "physical") %>%
+  st_as_sf() %>%
+  st_transform('+proj=cea +lon_0=0 +x_0=0 +y_0=0 +lat_ts=45 +ellps=WGS84 +datum=WGS84 +units=m +no_defs') -> earthsf
+
+st_read("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_plates.json") -> plates
+
+ggplot() +
+  geom_sf(data = earthsf, fill = "gray", color = NA) +
+  geom_sf(size = 1, data = quakesf, color = "red", alpha = 0.1) +
+  geom_sf(data = plates, color = "orange", fill = NA, lwd = 0.3)
+```
+
+```{r include=F, warnings=F}
+library(sf)
+
+earthquakes %>%
+  filter(! is.na(Long)) %>%
+  st_as_sf(coords=c("Long", "Lat")) %>%
+  st_set_crs(4326) -> quakesf
+
+library(rnaturalearth)
+
+ne_download(type="land", category = "physical") %>%
+  st_as_sf() %>%
+  st_transform('+proj=cea +lon_0=0 +x_0=0 +y_0=0 +lat_ts=45 +ellps=WGS84 +datum=WGS84 +units=m +no_defs') -> earthsf
+
+st_read("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_plates.json") -> plates
+```
+
+```{r echo=F}
+ggplot() +
+  geom_sf(data = earthsf, fill = "gray", color = NA) +
+  geom_sf(size = 1, data = quakesf, color = "red", alpha = 0.1) +
+  geom_sf(data = plates, color = "orange", fill = NA, lwd = 0.3)
+```

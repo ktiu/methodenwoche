@@ -1,0 +1,16 @@
+repo: https://github.com/ktiu/ds21/
+view: https://github.com/ktiu/ds21/blob/master/%s
+edit: https://github.com/ktiu/ds21/edit/master/%s
+clean: ["resources"]
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Teil "
+rmd_files:
+  - index.Rmd
+  - 1_Getting_started.Rmd
+  - 2_Daten_visualisieren.Rmd
+  - 3_Karten_erstellen.Rmd
+  - 4_Karten_erstellen.Rmd
+  # - 5_Geodaten_verschneiden.Rmd
+  # - 6_Geodaten_verschneiden.Rmd

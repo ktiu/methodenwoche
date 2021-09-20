@@ -1,0 +1,6341 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2020-12-22T13:57:03Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25318241",
+        "addr:city": "Eschborn",
+        "addr:country": "DE",
+        "addr:housenumber": "16",
+        "addr:postcode": "65760",
+        "addr:street": "Rathausplatz",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "contact:email": "rats-apotheke-eschborn@t-online.de",
+        "contact:fax": "+49-6196-42036",
+        "contact:phone": "+49-6196-42131",
+        "contact:website": "https://www.rats-apotheke-eschborn-app.de/",
+        "healthcare": "pharmacy",
+        "name": "Rats-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:00-16:00",
+        "operator": "Claudia Krämer",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.5734033,
+              50.1413423
+            ],
+            [
+              8.5733875,
+              50.1413604
+            ],
+            [
+              8.5734037,
+              50.1413663
+            ],
+            [
+              8.5733605,
+              50.1414157
+            ],
+            [
+              8.5733399,
+              50.1414083
+            ],
+            [
+              8.5733002,
+              50.1414536
+            ],
+            [
+              8.5731458,
+              50.1413981
+            ],
+            [
+              8.5732445,
+              50.1412853
+            ],
+            [
+              8.5734033,
+              50.1413423
+            ]
+          ]
+        ]
+      },
+      "id": "way/25318241"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/92260264",
+        "addr:city": "Oberursel (Taunus)",
+        "addr:country": "DE",
+        "addr:housenumber": "85",
+        "addr:postcode": "61440",
+        "addr:street": "Kurmainzer Straße",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "dispensing": "yes",
+        "name": "Birkenapotheke",
+        "source": "Bing"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.5929809,
+              50.180066
+            ],
+            [
+              8.5929541,
+              50.1800241
+            ],
+            [
+              8.5930686,
+              50.1799941
+            ],
+            [
+              8.5930812,
+              50.1799908
+            ],
+            [
+              8.5931446,
+              50.1800899
+            ],
+            [
+              8.5930176,
+              50.1801233
+            ],
+            [
+              8.5929809,
+              50.180066
+            ]
+          ]
+        ]
+      },
+      "id": "way/92260264"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/96265426",
+        "addr:housenumber": "17a",
+        "addr:postcode": "61138",
+        "addr:street": "Oberdorfelder Straße",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "dispensing": "yes",
+        "name": "Brunnen Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.8014905,
+              50.1934236
+            ],
+            [
+              8.8016961,
+              50.1933707
+            ],
+            [
+              8.8017618,
+              50.1934772
+            ],
+            [
+              8.8015567,
+              50.1935298
+            ],
+            [
+              8.8014905,
+              50.1934236
+            ]
+          ]
+        ]
+      },
+      "id": "way/96265426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/103989500",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "93a",
+        "addr:postcode": "60435",
+        "addr:street": "Marbachweg",
+        "amenity": "pharmacy",
+        "building": "retail",
+        "building:levels": "1",
+        "contact:email": "marbach-apotheke@t-online.de",
+        "contact:fax": "+49 69 543145",
+        "contact:phone": "+49 69 549106",
+        "contact:website": "https://www.marbach-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Marbach Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,14:00-18:30, Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6962403,
+              50.1444589
+            ],
+            [
+              8.6961239,
+              50.1444409
+            ],
+            [
+              8.6961561,
+              50.1443554
+            ],
+            [
+              8.6962725,
+              50.1443734
+            ],
+            [
+              8.6962626,
+              50.1443997
+            ],
+            [
+              8.6962403,
+              50.1444589
+            ]
+          ]
+        ]
+      },
+      "id": "way/103989500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/200962684",
+        "addr:city": "Mühlheim am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "45",
+        "addr:postcode": "63165",
+        "addr:street": "Offenbacher Straße",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "dispensing": "yes",
+        "name": "Aesculap Apotheke",
+        "opening_hours": "Mo - Fr 08:00 - 13:00, 14:30 - 18:30; Sa 08:00 - 13:00",
+        "toilets:wheelchair": "no",
+        "website": "http://www.ihre-aesculap.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.8269571,
+              50.1233756
+            ],
+            [
+              8.8270134,
+              50.1232812
+            ],
+            [
+              8.827025,
+              50.1232618
+            ],
+            [
+              8.8270666,
+              50.123272
+            ],
+            [
+              8.8271177,
+              50.1231864
+            ],
+            [
+              8.8272528,
+              50.1232195
+            ],
+            [
+              8.827141,
+              50.1234069
+            ],
+            [
+              8.8269571,
+              50.1233756
+            ]
+          ]
+        ]
+      },
+      "id": "way/200962684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/294035035",
+        "access:covid19": "yes",
+        "amenity": "pharmacy",
+        "contact:email": "info@apotheke-hbf-frankfurt.de",
+        "contact:fax": "+49 69 24271916",
+        "contact:phone": "+49 69 233047",
+        "contact:website": "https://www.apotheke-frankfurt-hbf.de/",
+        "healthcare": "pharmacy",
+        "indoor": "room",
+        "layer": "-1",
+        "level": "-1",
+        "name": "Apotheke im Hauptbahnhof",
+        "opening_hours": "Mo-Fr 06:30-21:00; Sa 08:00-21:00; Su,PH 09:00-20:00",
+        "opening_hours:covid19": "Mo-Sa 08:00-20:00; Su 09:00-19:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6640852,
+              50.1075221
+            ],
+            [
+              8.664152,
+              50.1075504
+            ],
+            [
+              8.6639485,
+              50.1077478
+            ],
+            [
+              8.6642129,
+              50.1078989
+            ],
+            [
+              8.6640859,
+              50.1079627
+            ],
+            [
+              8.6639656,
+              50.1078825
+            ],
+            [
+              8.6638545,
+              50.1078089
+            ],
+            [
+              8.6638543,
+              50.1077298
+            ],
+            [
+              8.6639925,
+              50.1075828
+            ],
+            [
+              8.6640146,
+              50.107592
+            ],
+            [
+              8.6640852,
+              50.1075221
+            ]
+          ]
+        ]
+      },
+      "id": "way/294035035"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/440792177",
+        "amenity": "pharmacy",
+        "contact:email": "hauptwache@struwwelpeterapotheken.de",
+        "contact:fax": "+49 69 13384410",
+        "contact:phone": "+49 69 1338440",
+        "contact:website": "https://www.struwwelpeter-apotheke-hauptwache-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "indoor": "room",
+        "layer": "-2",
+        "level": "-2",
+        "name": "Struwwelpeter Apotheke",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 09:00-19:00",
+        "room": "shop",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.6780678,
+              50.1139233
+            ],
+            [
+              8.6780532,
+              50.1138386
+            ],
+            [
+              8.6782761,
+              50.1138183
+            ],
+            [
+              8.6782889,
+              50.1138171
+            ],
+            [
+              8.6783017,
+              50.1138698
+            ],
+            [
+              8.6783554,
+              50.1138644
+            ],
+            [
+              8.6783595,
+              50.1138809
+            ],
+            [
+              8.6782191,
+              50.1138948
+            ],
+            [
+              8.6782056,
+              50.1138795
+            ],
+            [
+              8.6781195,
+              50.1138882
+            ],
+            [
+              8.6781156,
+              50.1139187
+            ],
+            [
+              8.6780678,
+              50.1139233
+            ]
+          ]
+        ]
+      },
+      "id": "way/440792177"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/28212675",
+        "amenity": "pharmacy",
+        "contact:email": "apotheke-am-frankfurter-berg@t-online.de",
+        "contact:fax": "+49 69 5400484",
+        "contact:phone": "+49 69 5481202",
+        "contact:website": "https://www.apotheke-am-frankfurter-berg.de/",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Frankfurter Berg",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-18:30; Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6805202,
+          50.1680695
+        ]
+      },
+      "id": "node/28212675"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/60145845",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "125",
+        "addr:postcode": "60431",
+        "addr:street": "Ginnheimer Landstraße",
+        "amenity": "pharmacy",
+        "contact:email": "service@falken-apotheke-frankfurt.de",
+        "contact:fax": "+49 69 521602",
+        "contact:phone": "+49 69 531552",
+        "contact:website": "https://www.falken-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Falkenapotheke",
+        "opening_hours": "Mo-Sa 08:30-18:30",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6462059,
+          50.1384765
+        ]
+      },
+      "id": "node/60145845"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/81381234",
+        "addr:housenumber": "25",
+        "addr:postcode": "63477",
+        "addr:street": "Alt Bischofsheim",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "name": "Rathaus-Apotheke",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8062905,
+          50.1518332
+        ]
+      },
+      "id": "node/81381234"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/144267096",
+        "amenity": "pharmacy",
+        "name": "Schloss-Apotheke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5167737,
+          50.1831901
+        ]
+      },
+      "id": "node/144267096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/144268753",
+        "addr:city": "Kronberg im Taunus",
+        "addr:country": "DE",
+        "addr:housenumber": "23",
+        "addr:postcode": "61476",
+        "addr:street": "Westerbachstraße",
+        "amenity": "pharmacy",
+        "name": "Apotheke am Westerbach",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5282342,
+          50.1731445
+        ]
+      },
+      "id": "node/144268753"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/185522189",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Alte Apotheke",
+        "toilets:wheelchair": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6419563,
+          50.0863712
+        ]
+      },
+      "id": "node/185522189"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/185522194",
+        "amenity": "pharmacy",
+        "contact:email": "service@kissel-apotheke.de",
+        "contact:fax": "+49 69 689747321",
+        "contact:phone": "+49 69 68974730",
+        "contact:website": "https://kisselapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Kissel",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6709233,
+          50.0891501
+        ]
+      },
+      "id": "node/185522194"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/224035851",
+        "access:covid19": "yes",
+        "amenity": "pharmacy",
+        "contact:email": "info@roederberg-apotheke.de",
+        "contact:fax": "+49 69 49 30 04 5",
+        "contact:phone": "+49 69 43 95 20",
+        "contact:website": "http://www.roederberg-apotheke.de",
+        "delivery:covid19": "yes",
+        "healthcare": "pharmacy",
+        "name": "Röderberg - Apotheke",
+        "opening_hours": "Mo-Fr 08:30-14:00,15:00-18:30; Sa 08:30-13:00",
+        "opening_hours:covid19": "Mo-Fr 08:30-14:00,15:00-18:30; Sa 08:30-13:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7112164,
+          50.1190975
+        ]
+      },
+      "id": "node/224035851"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/244982078",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "244",
+        "addr:postcode": "60320",
+        "addr:street": "Eckenheimer Landstraße",
+        "amenity": "pharmacy",
+        "contact:email": "info@marienapothekefrankfurt.de",
+        "contact:fax": "+49 69 5601899",
+        "contact:phone": "+49 69 563426",
+        "contact:website": "https://www.marienapothekefrankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Marien Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6843988,
+          50.1418424
+        ]
+      },
+      "id": "node/244982078"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/248905026",
+        "amenity": "pharmacy",
+        "contact:email": "info@riedapotheke.de",
+        "contact:fax": "+49 6109 34930",
+        "contact:phone": "+49 6109 35555",
+        "contact:website": "https://www.riedapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Riedapotheke",
+        "opening_hours": "Mo-Th 08:00-13:00, 14:00-18:30; Fr 08:00-18:30; Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7547263,
+          50.1459751
+        ]
+      },
+      "id": "node/248905026"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/251705837",
+        "addr:city": "Oberursel (Taunus)",
+        "addr:country": "DE",
+        "addr:housenumber": "21",
+        "addr:postcode": "61440",
+        "addr:street": "Adenauerallee",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Rosen-Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5835988,
+          50.2005185
+        ]
+      },
+      "id": "node/251705837"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/251885856",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "11",
+        "addr:postcode": "60431",
+        "addr:street": "Am Weißen Stein",
+        "amenity": "pharmacy",
+        "contact:email": "apojhowitz@arcor.de",
+        "contact:fax": "+49 69 534312",
+        "contact:phone": "+49 69 521678",
+        "contact:website": "http://www.apotheke-am-weissen-stein.de/",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Weißen Stein",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:00-13:00",
+        "wheelchair": "no",
+        "wheelchair:description": "🔔👈 Klingel benutzen; Treppenlift drinnen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6564802,
+          50.1563527
+        ]
+      },
+      "id": "node/251885856"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/252412404",
+        "amenity": "pharmacy",
+        "contact:email": "info@roseggerapotheke.de",
+        "contact:fax": "+49 69 568390",
+        "contact:phone": "+49 69 561221",
+        "contact:website": "https://www.roseggerapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Rosegger Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-18:30; Sa 08:30-13:00",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6679193,
+          50.1446087
+        ]
+      },
+      "id": "node/252412404"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/252596187",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Taunus Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5334864,
+          50.1499518
+        ]
+      },
+      "id": "node/252596187"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/252614337",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "448",
+        "addr:postcode": "60433",
+        "addr:street": "Eschersheimer Landstraße",
+        "amenity": "pharmacy",
+        "contact:email": "apolindenbaum@aol.de",
+        "contact:fax": "+49 69 514465",
+        "contact:phone": "+49 69 524686",
+        "contact:website": "https://www.apo-lindenbaum.de/",
+        "healthcare": "pharmacy",
+        "name": "Apotheke Am Lindenbaum",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:30-14:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.663088,
+          50.1513541
+        ]
+      },
+      "id": "node/252614337"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/252945882",
+        "amenity": "pharmacy",
+        "contact:email": "info@hadrian-apotheke.de",
+        "contact:fax": "+49 69 579707",
+        "contact:phone": "+49 69 571116",
+        "contact:website": "https://www.hadrian-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Hadrian Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-18:30; Sa 08:30-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6351271,
+          50.1537057
+        ]
+      },
+      "id": "node/252945882"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/253004608",
+        "amenity": "pharmacy",
+        "contact:email": "info@dornbusch-apotheke.de",
+        "contact:fax": "+49 69 564161",
+        "contact:phone": "+49 69 5601433",
+        "contact:website": "https://www.dornbusch-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Dornbusch Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:30-13:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6707586,
+          50.13834
+        ]
+      },
+      "id": "node/253004608"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/253202114",
+        "addr:city": "Bad Soden am Taunus",
+        "addr:country": "DE",
+        "addr:housename": "City Arkaden",
+        "addr:housenumber": "7",
+        "addr:postcode": "65812",
+        "addr:street": "Am Bahnhof",
+        "amenity": "pharmacy",
+        "fax": "+49 6196 65199919",
+        "healthcare": "pharmacy",
+        "name": "Thermen Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-13:00; Su off",
+        "operator": "Martina Reineke",
+        "phone": "+49 6196 6519990",
+        "website": "https://www.thermen-apotheke-app.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5031673,
+          50.1439563
+        ]
+      },
+      "id": "node/253202114"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/253288242",
+        "addr:city": "Schwalbach am Taunus",
+        "addr:country": "DE",
+        "addr:housenumber": "23",
+        "addr:postcode": "65824",
+        "addr:street": "Marktplatz",
+        "amenity": "pharmacy",
+        "contact:fax": "+49 6196 7799829",
+        "contact:phone": "+49 6196 77998-0",
+        "contact:website": "http://www.limes-apo.de",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Limes-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-14:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5272198,
+          50.1553916
+        ]
+      },
+      "id": "node/253288242"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/253746198",
+        "amenity": "pharmacy",
+        "contact:email": "aeskulap.apotheke@t-online.de",
+        "contact:fax": "+49 69 77012949",
+        "contact:phone": "+49 69 77011770",
+        "contact:website": "http://www.aeskulap-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Aeskulap-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-14:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6460382,
+          50.123053
+        ]
+      },
+      "id": "node/253746198"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/253746199",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "57",
+        "addr:postcode": "60487",
+        "addr:street": "Leipziger Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "West-Apotheke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6445488,
+          50.1228797
+        ]
+      },
+      "id": "node/253746199"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/255492920",
+        "amenity": "pharmacy",
+        "contact:email": "info@kronen-apotheke-frankfurt.de",
+        "contact:fax": "+49 69 58604796",
+        "contact:phone": "+49 69 573379",
+        "contact:website": "https://www.kronen-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Kronen Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-18:30; Sa 08:30-13:00",
+        "toilets:wheelchair": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6436577,
+          50.1610751
+        ]
+      },
+      "id": "node/255492920"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/255895866",
+        "amenity": "pharmacy",
+        "contact:email": "info@titus-apotheke.de",
+        "contact:fax": "+49 69 5890196",
+        "contact:phone": "+49 69 95116650",
+        "contact:website": "http://www.titus-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Titus Apotheke",
+        "opening_hours": "Mo-Fr 08:30-20:00; Sa 09:30-20:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6340499,
+          50.1574012
+        ]
+      },
+      "id": "node/255895866"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/259657190",
+        "amenity": "pharmacy",
+        "contact:email": "schwarzburg-apotheke-ffm@t-online.de",
+        "contact:fax": "+49 69 5962105",
+        "contact:phone": "+49 69 590327",
+        "contact:website": "https://www.schwarzburg-apotheke.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Schwarzburg Apotheke",
+        "opening_hours": "Mo-Fr 08:15-19:00; Sa 08:30-14:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6850658,
+          50.1280909
+        ]
+      },
+      "id": "node/259657190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/262518103",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "36",
+        "addr:postcode": "60325",
+        "addr:street": "Schumannstraße",
+        "amenity": "pharmacy",
+        "contact:email": "service@schumannapotheke.de",
+        "contact:fax": "+49 69 749132",
+        "contact:phone": "+49 69 752409",
+        "contact:website": "http://www.schumannapotheke.de",
+        "healthcare": "pharmacy",
+        "name": "Schumann-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6550612,
+          50.1166472
+        ]
+      },
+      "id": "node/262518103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/262518104",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Parcelsus-Apotheke",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6448952,
+          50.1183071
+        ]
+      },
+      "id": "node/262518104"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/262865427",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Schwarzbach Apotheke",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5815575,
+          50.0860287
+        ]
+      },
+      "id": "node/262865427"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/262865429",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "64",
+        "addr:postcode": "60529",
+        "addr:street": "Martinskirchstraße",
+        "amenity": "pharmacy",
+        "contact:email": "main-apotheke@c-kling.de",
+        "contact:fax": "+49 69 35353667",
+        "contact:phone": "+49 69 355419",
+        "contact:website": "http://www.main-apotheke-schwanheim.de/",
+        "healthcare": "pharmacy",
+        "name": "Main Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,14:30-18:30, Sa 08:30-13:00",
+        "operator": "Cornelia Kling",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5828177,
+          50.0873277
+        ]
+      },
+      "id": "node/262865429"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/263336502",
+        "amenity": "pharmacy",
+        "contact:email": "service@grafenapotheke.de",
+        "contact:fax": "+49 69 53054362",
+        "contact:phone": "+49 69 511143",
+        "contact:website": "https://www.grafenapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Grafen Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:30, 14:30-18:30; Sa 09:00-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.670945,
+          50.1494288
+        ]
+      },
+      "id": "node/263336502"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/264142354",
+        "amenity": "pharmacy",
+        "contact:email": "goethe-apotheke@t-online.de",
+        "contact:fax": "+49 69 5969398",
+        "contact:phone": "+49 69 556621",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Goethe Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30, Sa 08:00-13:30",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6801697,
+          50.1215861
+        ]
+      },
+      "id": "node/264142354"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268391699",
+        "addr:city": "Heusenstamm",
+        "addr:housenumber": "2",
+        "addr:postcode": "63150",
+        "addr:street": "Hegelstraße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6104 61130",
+        "contact:website": "http://www.linapo.de/",
+        "dispensing": "yes",
+        "name": "Linden Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7919115,
+          50.0578656
+        ]
+      },
+      "id": "node/268391699"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/270131186",
+        "amenity": "pharmacy",
+        "contact:email": "apohauptwache@aol.com",
+        "contact:fax": "+49 69 91307050",
+        "contact:phone": "+49 69 9130700",
+        "contact:website": "https://www.apotheke-an-der-hauptwache.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotheke An der Hauptwache",
+        "opening_hours": "Mo-Fr 09:00-19:00; Sa 10:00-18:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6786073,
+          50.1143975
+        ]
+      },
+      "id": "node/270131186"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/271198418",
+        "amenity": "pharmacy",
+        "contact:email": "info@holzhausenapotheke.de",
+        "contact:fax": "+49 69 15309822",
+        "contact:phone": "+49 69 555756",
+        "contact:website": "https://www.holzhausenapotheke.de/",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Holzhausen Apotheke",
+        "opening_hours": "Mo,Tu,Th 08:00-19:00, We,Fr 08:00-18:30, Sa 09:00-14:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6813856,
+          50.1229666
+        ]
+      },
+      "id": "node/271198418"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/271198419",
+        "amenity": "pharmacy",
+        "contact:email": "info@grueneburg-apotheke.de",
+        "contact:fax": "+49 69 5974647",
+        "contact:phone": "+49 69 551775",
+        "contact:website": "https://www.apotheke-frankfurt-westend.de/",
+        "healthcare": "pharmacy",
+        "name": "Grüneburg Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-13:00",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6750564,
+          50.1207642
+        ]
+      },
+      "id": "node/271198419"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/273404544",
+        "addr:city": "Eschborn",
+        "addr:country": "DE",
+        "addr:housenumber": "47-55",
+        "addr:postcode": "65760",
+        "addr:street": "Götzenstraße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "email": "info@central-apotheke-eschborn.de",
+        "fax": "+49 6196 44139",
+        "healthcare": "pharmacy",
+        "name": "Central-Apotheke",
+        "opening_hours": "Mo-Sa 08:30-18:30",
+        "operator": "Ulrike Preuss e.Kfr.",
+        "phone": "+49 6196 42521",
+        "website": "https://www.central-apotheke-eschborn-app.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5667549,
+          50.1411797
+        ]
+      },
+      "id": "node/273404544"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/276912297",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Apotheke an den 3 Hasen",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5956039,
+          50.2042054
+        ]
+      },
+      "id": "node/276912297"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/276913554",
+        "addr:city": "Oberursel (Taunus)",
+        "addr:country": "DE",
+        "addr:housenumber": "16",
+        "addr:postcode": "61440",
+        "addr:street": "Vorstadt",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Columbus Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00, Sa 08:00-18:00",
+        "phone": "+49 6171 694970",
+        "source": "survey",
+        "website": "http://columbus-apotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5813483,
+          50.2013887
+        ]
+      },
+      "id": "node/276913554"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/276915370",
+        "addr:city": "Oberursel (Taunus)",
+        "addr:country": "DE",
+        "addr:housenumber": "24a",
+        "addr:postcode": "61440",
+        "addr:street": "Taunusstraße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "name": "Stern Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5826046,
+          50.1841777
+        ]
+      },
+      "id": "node/276915370"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/277676779",
+        "addr:city": "Eschborn",
+        "addr:housenumber": "31-35",
+        "addr:postcode": "65760",
+        "addr:street": "Berliner Straße",
+        "amenity": "pharmacy",
+        "dispensing": "no",
+        "healthcare": "pharmacy",
+        "name": "Bahnhof Apotheke",
+        "opening_hours": "Mo-Fr 8:00-18:30, Sa 8:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5626474,
+          50.1416342
+        ]
+      },
+      "id": "node/277676779"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/279851814",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "78",
+        "addr:postcode": "60385",
+        "addr:street": "Arnsburger Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "info@arnsburg-apotheke.de",
+        "fax": "+49 69 4930339",
+        "healthcare": "pharmacy",
+        "name": "Arnsburg Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:00-16:00",
+        "operator": "Apotheker Holger Seyfarth",
+        "phone": "+49 69 433190",
+        "website": "https://arnsburg-apotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7069535,
+          50.1253652
+        ]
+      },
+      "id": "node/279851814"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/280227188",
+        "amenity": "pharmacy",
+        "contact:email": "info@delphin-apotheke-frankfurt.de",
+        "contact:fax": "+49 69 541435",
+        "contact:phone": "+49 69 541736",
+        "contact:website": "https://www.delphin-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Delphin Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6914503,
+          50.1506167
+        ]
+      },
+      "id": "node/280227188"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/280312886",
+        "addr:city": "Bad Vilbel",
+        "addr:housenumber": "2",
+        "addr:postcode": "61118",
+        "addr:street": "Dortelweiler Platz",
+        "addr:suburb": "Dortelweil",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Apotheke im Brunnen Center",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-18:00",
+        "phone": "+49-6101-556241",
+        "toilets:wheelchair": "yes",
+        "website": "https://www.apotheke-im-brunnencenter.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7437858,
+          50.2074459
+        ]
+      },
+      "id": "node/280312886"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282519865",
+        "amenity": "pharmacy",
+        "contact:email": "rezaparsa@t-online.de",
+        "contact:fax": "+49 69 56004335",
+        "contact:phone": "+49 69 56004334",
+        "contact:website": "https://www.bornheim-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Bornheim Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7061374,
+          50.1288516
+        ]
+      },
+      "id": "node/282519865"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282519916",
+        "amenity": "pharmacy",
+        "contact:email": "info@sonnen-apotheke-bornheim.de",
+        "contact:fax": "+49 69 94506393",
+        "contact:phone": "+49 69 452828",
+        "contact:website": "http://www.sonnen-apotheke-ffm.de/",
+        "healthcare": "pharmacy",
+        "name": "Sonnen Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7102187,
+          50.1314245
+        ]
+      },
+      "id": "node/282519916"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/288455216",
+        "amenity": "pharmacy",
+        "contact:email": "mail@germania-apotheke.net",
+        "contact:fax": "+49 69 40593559",
+        "contact:phone": "+49 69 433536",
+        "contact:website": "http://germania-apotheke.net",
+        "healthcare": "pharmacy",
+        "name": "Germania Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 08:30-15:00",
+        "operator": "Riyad Aldada",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6918462,
+          50.1229019
+        ]
+      },
+      "id": "node/288455216"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/288467881",
+        "addr:city": "Offenbach am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "4",
+        "addr:postcode": "63073",
+        "addr:street": "Aschaffenburger Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "aposoft@t-online.de",
+        "fax": "+49 69 98935567",
+        "name": "Kronen-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-13:00,15:00-18:30; Sa 08:00-13:00",
+        "operator": "Markus Beer",
+        "phone": "+49 69 892933",
+        "toilets:wheelchair": "no",
+        "website": "https://www.kronen-apotheke-bieber.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8080234,
+          50.0883716
+        ]
+      },
+      "id": "node/288467881"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/290428162",
+        "amenity": "pharmacy",
+        "contact:email": "roensch@schwanen-apotheke-ffm.de",
+        "contact:fax": "+49 69 94414464",
+        "contact:phone": "+49 69 431525",
+        "contact:website": "https://schwanen-apotheke-frankfurt.de",
+        "healthcare": "pharmacy",
+        "name": "Schwanen-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00, Sa 09:00-14:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6953601,
+          50.1163139
+        ]
+      },
+      "id": "node/290428162"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/292406539",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "5",
+        "addr:postcode": "60435",
+        "addr:street": "Weilbrunnstraße",
+        "amenity": "pharmacy",
+        "contact:email": "neueaporeichffm@t-online.de",
+        "contact:fax": "+49 69 90548946",
+        "contact:phone": "+49 69 5481959",
+        "contact:website": "https://www.neue-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Neue Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, Mo,Tu,Th,Fr 15:00-18:30; Sa 08:00-13:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.69221,
+          50.1548651
+        ]
+      },
+      "id": "node/292406539"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/294671030",
+        "addr:city": "Frankfurt am Main",
+        "addr:postcode": "60437",
+        "addr:suburb": "Nieder-Erlenbach",
+        "amenity": "pharmacy",
+        "name": "Erlen Apotheke",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7082619,
+          50.2041548
+        ]
+      },
+      "id": "node/294671030"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296111023",
+        "amenity": "pharmacy",
+        "contact:email": "info@eschbach-apotheke.de",
+        "contact:fax": "+49 69 5073424",
+        "contact:phone": "+49 69 5077077",
+        "contact:website": "https://www.meine-gesundheitsengel.de",
+        "healthcare": "pharmacy",
+        "name": "Eschbach Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00; PH off",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6745641,
+          50.2008824
+        ]
+      },
+      "id": "node/296111023"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/301373536",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "96",
+        "addr:postcode": "60313",
+        "addr:street": "Zeil",
+        "amenity": "pharmacy",
+        "contact:email": "centrumapo@aol.com",
+        "contact:fax": "+49 69 2977320",
+        "contact:phone": "+49 69 295129",
+        "contact:website": "https://www.centrum-apotheke.com/",
+        "healthcare": "pharmacy",
+        "name": "Centrum-Apotheke",
+        "opening_hours": "Mo-Fr 09:00-20:00, Sa 09:30-20:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6833759,
+          50.1148347
+        ]
+      },
+      "id": "node/301373536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/303086397",
+        "amenity": "pharmacy",
+        "contact:email": "hirsch@ihre-apotheker.de",
+        "contact:fax": "+49 69 296649",
+        "contact:phone": "+49 69 281565",
+        "contact:website": "https://www.ihre-apotheker.de/hirsch-apotheke/",
+        "healthcare": "pharmacy",
+        "name": "Hirsch-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 09:00-14:00",
+        "opening_hours:covid19": "same",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6814511,
+          50.1139816
+        ]
+      },
+      "id": "node/303086397"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/304199703",
+        "amenity": "pharmacy",
+        "contact:email": "kepler-apotheke-ffm@t-online.de",
+        "contact:fax": "+49 69 557948",
+        "contact:phone": "+49 69 590296",
+        "contact:website": "https://kepler-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Kepler Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 09:00-16:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6858721,
+          50.1252153
+        ]
+      },
+      "id": "node/304199703"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/304484596",
+        "amenity": "pharmacy",
+        "contact:email": "info@eichwald-apotheke.de",
+        "contact:fax": "+49 69 4909868",
+        "contact:phone": "+49 69 493176",
+        "contact:website": "https://eichwald-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Eichwaldapotheke",
+        "opening_hours": "Mo-Fr 07:30-20:00, Sa 08:00-16:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7023389,
+          50.1235509
+        ]
+      },
+      "id": "node/304484596"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/312517623",
+        "amenity": "pharmacy",
+        "contact:email": "info@alte-apotheke-frankfurt.de",
+        "contact:fax": "+49 6109 7269217",
+        "contact:phone": "+49 6109 726920",
+        "contact:website": "https://www.alte-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Alte Apotheke",
+        "opening_hours": "Mo-Fr 08:00-13:00,14:30-19:00, Sa 08:00-13:00",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7509918,
+          50.1551851
+        ]
+      },
+      "id": "node/312517623"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/312528337",
+        "addr:city": "Bad Vilbel",
+        "addr:country": "DE",
+        "addr:housenumber": "28a",
+        "addr:postcode": "61118",
+        "addr:street": "Alte Frankfurter Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fax": "+49 6101 88494",
+        "healthcare": "pharmacy",
+        "name": "Heilsberg-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-13:00,14:30-18:30; Sa 08:00-13:00",
+        "operator": "Dr.  Ulrich Hentschel",
+        "phone": "+49 6101 85017",
+        "website": "http://www.apotheken.de/clubarea/index.php?fkt=1&idc=17249"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7268244,
+          50.1678041
+        ]
+      },
+      "id": "node/312528337"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/317083334",
+        "amenity": "pharmacy",
+        "contact:email": "info@apotheke-friedberger-warte.de",
+        "contact:fax": "+49 69 9054589950",
+        "contact:phone": "+49 69 905458990",
+        "contact:website": "https://apotheke-friedberger-warte.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotheke an der Friedberger Warte",
+        "opening_hours": "Mo-Fr 09:00-19:30, Sa 09:00-15:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6988834,
+          50.1392099
+        ]
+      },
+      "id": "node/317083334"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/317191908",
+        "amenity": "pharmacy",
+        "contact:email": "info@gruenhof-apotheke.de",
+        "contact:fax": "+49 69 56005991",
+        "contact:phone": "+49 69 56005990",
+        "contact:website": "https://www.gruenhof-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Grünhof Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-14:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6714033,
+          50.1341982
+        ]
+      },
+      "id": "node/317191908"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/317951906",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Bonifatius-Apotheke",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6794279,
+          50.097867
+        ]
+      },
+      "id": "node/317951906"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/323977595",
+        "amenity": "pharmacy",
+        "contact:email": "info@palmengartenapotheke.de",
+        "contact:fax": "+49 69 727201",
+        "contact:phone": "+49 69 727613",
+        "contact:website": "https://www.palmengartenapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Palmengarten",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 09:00-13:00",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6610054,
+          50.1189675
+        ]
+      },
+      "id": "node/323977595"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/334459153",
+        "addr:housenumber": "416",
+        "addr:postcode": "65760",
+        "addr:street": "Hauptstraße",
+        "amenity": "pharmacy",
+        "check_date": "2018-05-05",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Löwen-Apotheke",
+        "opening_hours": "Mo,Tu,Th,Fr 08:00-13:00,15:00-18:30; We,Sa 08:00-13:00; PH off",
+        "payment:cash": "yes",
+        "source": "http://www.pillenpasche.de",
+        "website": "http://www.pillenpasche.de",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5468494,
+          50.1586003
+        ]
+      },
+      "id": "node/334459153"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/335742809",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "33",
+        "addr:postcode": "60313",
+        "addr:street": "Liebfrauenberg",
+        "amenity": "pharmacy",
+        "contact:email": "info@adlerapotheke-frankfurt.de",
+        "contact:fax": "+49 69 21657944",
+        "contact:phone": "+49 69 283525",
+        "contact:website": "http://www.adlerapotheke-frankfurt.de/",
+        "dispensing": "yes",
+        "entrance": "main",
+        "healthcare": "pharmacy",
+        "name": "Adler Apotheke",
+        "opening_hours": "Mo-Sa 09:30-18:00; PH off",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6811182,
+          50.1126241
+        ]
+      },
+      "id": "node/335742809"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/335746251",
+        "amenity": "pharmacy",
+        "contact:email": "gesund@apotheke-am-zoo.de",
+        "contact:fax": "+49 69 442937",
+        "contact:phone": "+49 69 495855",
+        "contact:website": "https://www.apotheke-am-zoo.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Zoo",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-14:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6999311,
+          50.113148
+        ]
+      },
+      "id": "node/335746251"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/335999282",
+        "amenity": "pharmacy",
+        "contact:email": "info@mohren-apotheke-frankfurt.de",
+        "contact:fax": "+49 69 517982",
+        "contact:phone": "+49 69 514872",
+        "contact:website": "http://www.mohren-apotheke-frankfurt.de",
+        "healthcare": "pharmacy",
+        "name": "Mohren Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-18:30; Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6556709,
+          50.1612951
+        ]
+      },
+      "id": "node/335999282"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/336253515",
+        "amenity": "pharmacy",
+        "contact:email": "flora-apo-ffm@pharma-online.de",
+        "contact:fax": "+49 69 61990819",
+        "contact:phone": "+49 69 623016",
+        "healthcare": "pharmacy",
+        "name": "Flora-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:00-14:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6910287,
+          50.1029005
+        ]
+      },
+      "id": "node/336253515"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/348318217",
+        "amenity": "pharmacy",
+        "contact:email": "email@schlossapotheke-frankfurt.de",
+        "contact:fax": "+49 69 583667",
+        "contact:phone": "+49 69 579196",
+        "contact:website": "https://www.schloss-apotheke-frankfurt.de/apotheke-2/",
+        "healthcare": "pharmacy",
+        "name": "Schloß Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-18:30; Sa 08:30-13:00",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6264574,
+          50.1518156
+        ]
+      },
+      "id": "node/348318217"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/362905327",
+        "addr:city": "Heusenstamm",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "63150",
+        "addr:street": "Hohebergstraße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6104 2255",
+        "name": "Schloss Apotheke",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8018944,
+          50.058468
+        ]
+      },
+      "id": "node/362905327"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/369036594",
+        "amenity": "pharmacy",
+        "contact:fax": "+49 69 95804972",
+        "contact:phone": "+49 69 570214",
+        "contact:website": "https://apotheken-vor-der-höhe.de/nordwest-apotheke/",
+        "healthcare": "pharmacy",
+        "name": "Nordwest Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 14:30-18:30; Sa 09:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.619324,
+          50.1638724
+        ]
+      },
+      "id": "node/369036594"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/377687847",
+        "amenity": "pharmacy",
+        "name": "Rats-Apotheke",
+        "operator": "Evertz Ludger",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4971336,
+          50.0544978
+        ]
+      },
+      "id": "node/377687847"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/392767190",
+        "amenity": "pharmacy",
+        "contact:email": "info@radilo-apotheke.de",
+        "contact:fax": "+49 69 784990",
+        "contact:phone": "+49 69 783416",
+        "contact:website": "https://www.radilo-apotheke.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Radilo Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-13:00",
+        "opening_hours:covid19": "Mo-Sa 08:00-13:00, 13:30-18:00; Sa 09:00-13:00; PH off",
+        "operator": "Apotheker Holger Seyfarth",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.610276,
+          50.1248132
+        ]
+      },
+      "id": "node/392767190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/392855871",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Kaysser Apotheke",
+        "opening_hours": "Mo,Tu,Th 08:00-18:30, We,Fr 08:00-15:00, Sa 09:00-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5497743,
+          50.0999396
+        ]
+      },
+      "id": "node/392855871"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/409815793",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Brücken Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30, Sa 08:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5703741,
+          50.086887
+        ]
+      },
+      "id": "node/409815793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/411722097",
+        "amenity": "pharmacy",
+        "contact:email": "info@senckenbergapotheke.de",
+        "contact:fax": "+49 69 7071372",
+        "contact:phone": "+49 69 774340",
+        "contact:website": "https://www.senckenbergapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Senckenberg-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 09:00-15:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6498283,
+          50.1204984
+        ]
+      },
+      "id": "node/411722097"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/411722098",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Bockenheimer Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 09:00-16:00",
+        "phone": "+49 69 97787890",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6487072,
+          50.1211535
+        ]
+      },
+      "id": "node/411722098"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/411722099",
+        "amenity": "pharmacy",
+        "contact:email": "info@leipzigerapotheke.de",
+        "contact:fax": "+49 69 7075823",
+        "contact:phone": "+49 69 7075823",
+        "contact:website": "https://www.leipzigerapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Leipziger Apotheke",
+        "opening_hours": "Mo-Fr 08:15-19:00; Sa 08:30-15:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6468753,
+          50.1223019
+        ]
+      },
+      "id": "node/411722099"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/412786617",
+        "amenity": "pharmacy",
+        "contact:email": "info@raben-apotheke-frankfurt.de",
+        "contact:fax": "+49 69 61092121",
+        "contact:phone": "+49 69 6109210",
+        "contact:website": "https://raben-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Raben Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:30-14:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6811753,
+          50.1015913
+        ]
+      },
+      "id": "node/412786617"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/418164067",
+        "access:covid19": "yes",
+        "amenity": "pharmacy",
+        "contact:email": "mail@wasgauapotheke.de",
+        "contact:fax": "+49 69 30069738",
+        "contact:phone": "+49 69 302929",
+        "contact:website": "https://wasgauapotheke.de",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Wasgau Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:30-13:00",
+        "opening_hours:covid19": "Mo-Fr 08:00-19:00; Sa 08:30-13:00",
+        "operator": "Margit Kowalski",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5385792,
+          50.1108366
+        ]
+      },
+      "id": "node/418164067"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/433930861",
+        "amenity": "pharmacy",
+        "contact:email": "info@alexanderapotheke.com",
+        "contact:fax": "+49 69 374865",
+        "contact:phone": "+49 69 374242",
+        "contact:website": "http://alexanderapotheke.com/",
+        "healthcare": "pharmacy",
+        "name": "Alexander Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5174278,
+          50.0804603
+        ]
+      },
+      "id": "node/433930861"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/437334115",
+        "amenity": "pharmacy",
+        "contact:email": "info@hermes-apotheke.de",
+        "contact:fax": "+49 69 24404120",
+        "contact:phone": "+49 69 2440410",
+        "contact:website": "http://www.hermes-apotheke.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Hermes-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 10:00-14:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.668232,
+          50.1085123
+        ]
+      },
+      "id": "node/437334115"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/440813734",
+        "amenity": "pharmacy",
+        "contact:email": "ostend-apotheke-frankfurt@t-online.de",
+        "contact:fax": "+49 69 94340549",
+        "contact:phone": "+49 69 446801",
+        "contact:website": "https://www.ostend-apotheke-frankfurt.de",
+        "healthcare": "pharmacy",
+        "name": "Ostend-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.695475,
+          50.1133099
+        ]
+      },
+      "id": "node/440813734"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/440936907",
+        "addr:city": "Bad Vilbel",
+        "addr:country": "DE",
+        "addr:housenumber": "51-53",
+        "addr:postcode": "61118",
+        "addr:street": "Frankfurter Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "park-apo61118@t-online.de",
+        "fax": "+49 6101 1321",
+        "healthcare": "pharmacy",
+        "name": "Park Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-14:00",
+        "operator": "Dr. Joachim Würschmidt",
+        "phone": "+49 6101 582903",
+        "website": "https://www.park-apotheke-bad-vilbel.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7417453,
+          50.1811863
+        ]
+      },
+      "id": "node/440936907"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/440936908",
+        "addr:city": "Bad Vilbel",
+        "addr:country": "DE",
+        "addr:housenumber": "28",
+        "addr:postcode": "61118",
+        "addr:street": "Frankfurter Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "nidda-apotheke@aranea.de",
+        "fax": "+49 6101 87056",
+        "healthcare": "pharmacy",
+        "name": "Nidda Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-13:00",
+        "operator": "Sylvia Fey",
+        "phone": "+49 6101 83852",
+        "website": "http://www.niddaapotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7425714,
+          50.1820176
+        ]
+      },
+      "id": "node/440936908"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/441251522",
+        "addr:city": "Bad Vilbel",
+        "addr:country": "DE",
+        "addr:housenumber": "122",
+        "addr:postcode": "61118",
+        "addr:street": "Frankfurter Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "info@apo-sued.de",
+        "fax": "+49 6101 800605",
+        "name": "Süd Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 08:30-15:00;PH off",
+        "operator": "Joachim Rüblinger",
+        "phone": "+49 6101 800600",
+        "website": "https://www.apo-sued.de/",
+        "wheelchair": "limited",
+        "wheelchair:description": "Rampe zwar vorhanden, allerdings extrem steil. Gefühlt 45°! Kann nicht benutzt werden."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7359923,
+          50.1790903
+        ]
+      },
+      "id": "node/441251522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/441251524",
+        "addr:city": "Bad Vilbel",
+        "addr:country": "DE",
+        "addr:housenumber": "119",
+        "addr:postcode": "61118",
+        "addr:street": "Frankfurter Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "info@kur-apotheke-badvilbel.de",
+        "fax": "+49 6101 83380",
+        "last_checked": "2015-04-19",
+        "name": "Kur Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-14:00",
+        "operator": "Ursula Wolf-Janus e.K.",
+        "phone": "+49 6101 85266",
+        "website": "https://www.kur-apotheke-badvilbel.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7369836,
+          50.1794282
+        ]
+      },
+      "id": "node/441251524"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/442332377",
+        "amenity": "pharmacy",
+        "contact:email": "info@apotheke-im-rewe.de",
+        "contact:fax": "+49 69 35356941",
+        "contact:phone": "+49 69 35356940",
+        "contact:website": "https://www.toomapotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Apotheke im Rewe Center",
+        "opening_hours": "Mo-Sa 08:30-20:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5902516,
+          50.0975382
+        ]
+      },
+      "id": "node/442332377"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/443399391",
+        "amenity": "pharmacy",
+        "contact:email": "merton-apotheke@web.de",
+        "contact:fax": "+49 69 95730224",
+        "contact:phone": "+49 69 95730223",
+        "contact:website": "https://merton-apotheke-frankfurt.avie.de/",
+        "healthcare": "pharmacy",
+        "name": "Merton Apotheke",
+        "opening_hours": "Mo,Tu,Th,Fr 08:30-18:30; We 08:30-17:00; Sa 09:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6387686,
+          50.1686825
+        ]
+      },
+      "id": "node/443399391"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/467701876",
+        "amenity": "pharmacy",
+        "contact:email": "info@riederwald-apotheke.de",
+        "contact:fax": "+49 69 418249",
+        "contact:phone": "+49 69 413717",
+        "contact:website": "http://www.riederwald-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Riederwald Apotheke",
+        "opening_hours": "Mo-Sa 08:30-13:00, Mo-Fr 15:00-18:30",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7347153,
+          50.1287807
+        ]
+      },
+      "id": "node/467701876"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/471363515",
+        "addr:city": "Königstein im Taunus",
+        "addr:housenumber": "7",
+        "addr:postcode": "61462",
+        "addr:street": "Frankfurter Straße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6174 955650",
+        "contact:website": "http://www.apotheke.com/hp/pharmacy/index.jsp?pharmacy_id=11904",
+        "dispensing": "yes",
+        "name": "Burg-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00;Sa 08:30-14:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4693404,
+          50.1822114
+        ]
+      },
+      "id": "node/471363515"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/472593841",
+        "amenity": "pharmacy",
+        "contact:email": "info@apotheke-lehmann.de",
+        "contact:fax": "+49 6109 731274",
+        "contact:phone": "+49 6109 731273",
+        "contact:website": "https://www.apotheke-lehmann.de/",
+        "healthcare": "pharmacy",
+        "name": "Sonnenapotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-19:00; Sa 08:30-13:30",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.757923,
+          50.1452841
+        ]
+      },
+      "id": "node/472593841"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/474418021",
+        "addr:city": "Hattersheim",
+        "addr:country": "DE",
+        "addr:housenumber": "3",
+        "addr:postcode": "65795",
+        "addr:street": "Flörsheimer Straße",
+        "amenity": "pharmacy",
+        "name": "Main-Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.473895,
+          50.0421367
+        ]
+      },
+      "id": "node/474418021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/476678021",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fax": "+49 69 346583",
+        "healthcare": "pharmacy",
+        "name": "Feldberg-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30; Sa 08:30-13:00",
+        "phone": "+49 69 342830",
+        "website": "https://feldberg-apotheke-frankfurt.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5606695,
+          50.1184873
+        ]
+      },
+      "id": "node/476678021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/494225279",
+        "amenity": "pharmacy",
+        "contact:email": "apotheke@1horn.de",
+        "contact:fax": "+49 69 920386922",
+        "contact:phone": "+49 69 92038690",
+        "contact:website": "https://1horn.de/",
+        "healthcare": "pharmacy",
+        "name": "Einhorn Apotheke",
+        "opening_hours": "Mo-Fr 09:00-19:30; Sa 09:30-19:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6771478,
+          50.113751
+        ]
+      },
+      "id": "node/494225279"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/494225281",
+        "amenity": "pharmacy",
+        "contact:email": "hauptwache@struwwelpeterapotheken.de",
+        "contact:fax": "+49 69 13384410",
+        "contact:phone": "+49 69 1338440",
+        "contact:website": "https://www.struwwelpeter-apotheke-hauptwache-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "level": "-0.5",
+        "name": "Struwwelpeter Apotheke",
+        "note": "Gehört zusammen zu der Fläche in der B-Ebene und ist für das Personal verbunden. Hat gleiches Personal, gleiches Lager, gleiche Öffnungszeiten - hier jedoch nur reduziertes Angebot im Laden",
+        "note:position": "Befindet sich unter dem Sitzbereich von Maredo, jedoch oberhalb der B-Ebene. Ist etwas zurückgesetzt von dem südlichem Treppenbereich",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 09:00-19:00",
+        "wheelchair": "no",
+        "wheelchair:description": "nur über Treppen erreichbar; barrierefreie Alternative in der B-Ebene"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6783698,
+          50.1137042
+        ]
+      },
+      "id": "node/494225281"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/502895046",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "2c",
+        "addr:postcode": "63065",
+        "addr:street": "Hermann-Steinhäuser-Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "roemerApotheke.of@t-online.de",
+        "fax": "+49 69 886405",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "Römer-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30; Sa 08:30-13:00",
+        "phone": "+49 69 886403",
+        "website": "www.roemer-apotheke-offenbach.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7704196,
+          50.1057399
+        ]
+      },
+      "id": "node/502895046"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/518851992",
+        "amenity": "pharmacy",
+        "contact:email": "info@suedapotheke-frankfurt.de",
+        "contact:fax": "+49 69 6312004",
+        "contact:phone": "+49 69 639061",
+        "contact:website": "http://suedapotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Süd-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-13:00",
+        "toilets:wheelchair": "no",
+        "wheelchair": "no",
+        "wheelchair:description": "man wird am Eingang bedient"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6693898,
+          50.099335
+        ]
+      },
+      "id": "node/518851992"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/528799289",
+        "amenity": "pharmacy",
+        "contact:email": "info@liebigapotheke.net",
+        "contact:fax": "+49 69 721741",
+        "contact:phone": "+49 69 722450",
+        "contact:website": "https://www.liebig-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Liebig Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-13:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6672935,
+          50.1209801
+        ]
+      },
+      "id": "node/528799289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/534686334",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "3-5",
+        "addr:postcode": "60311",
+        "addr:street": "Am Salzhaus",
+        "amenity": "pharmacy",
+        "contact:email": "info@rosenapotheke-frankfurt.de",
+        "contact:fax": "+49 69 289087",
+        "contact:phone": "+49 69 282470",
+        "contact:website": "https://www.rosenapotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Rosen Apotheke",
+        "opening_hours": "Mo-Sa 08:00-21:00",
+        "operator": "Erika Malaviya-Pölert",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6774069,
+          50.1117041
+        ]
+      },
+      "id": "node/534686334"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/534686335",
+        "amenity": "pharmacy",
+        "contact:email": "mail@apoturm.de",
+        "contact:fax": "+49 69 293210",
+        "contact:phone": "+49 69 281171",
+        "contact:website": "https://www.apoturm.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Eschenheimer Turm",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 09:00-15:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6758553,
+          50.1160402
+        ]
+      },
+      "id": "node/534686335"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/559554635",
+        "amenity": "pharmacy",
+        "contact:email": "service@medicentrumapotheke.de",
+        "contact:fax": "+49 69 53054013",
+        "contact:phone": "+49 69 53053962",
+        "contact:website": "https://www.medicentrumapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "MediCenter-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6462677,
+          50.1367828
+        ]
+      },
+      "id": "node/559554635"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/564720554",
+        "amenity": "pharmacy",
+        "contact:email": "info@apotheke-am-reuterweg.de",
+        "contact:fax": "+49 69 173560",
+        "contact:phone": "+49 69 727417",
+        "contact:website": "http://www.apotheke-am-reuterweg.de",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Reuterweg",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.670724,
+          50.1212294
+        ]
+      },
+      "id": "node/564720554"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/571629734",
+        "addr:city": "Bad Vilbel",
+        "addr:country": "DE",
+        "addr:housenumber": "13",
+        "addr:postcode": "61118",
+        "addr:street": "Friedberger Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fax": "+49 6101 65305",
+        "healthcare": "pharmacy",
+        "name": "Sprudel Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-13:00",
+        "operator": "Dr. Norbert Hohl",
+        "payment:debit_cards": "yes",
+        "phone": "+49 6101 2321",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7418957,
+          50.1845393
+        ]
+      },
+      "id": "node/571629734"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/587634354",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Brunnenapotheke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7259047,
+          50.1003691
+        ]
+      },
+      "id": "node/587634354"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/587684542",
+        "amenity": "pharmacy",
+        "contact:email": "email@niddaapotheke-frankfurt.de",
+        "contact:fax": "+49 69 7682504",
+        "contact:phone": "+49 69 762081",
+        "contact:website": "https://www.nidda-apotheke-frankfurt.de/apotheke-2/",
+        "healthcare": "pharmacy",
+        "name": "Nidda Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-18:30; Sa 08:30-18:30",
+        "toilets:wheelchair": "no",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6193699,
+          50.1491202
+        ]
+      },
+      "id": "node/587684542"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/613084768",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Luthmer-Apotheke",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5703986,
+          50.1018692
+        ]
+      },
+      "id": "node/613084768"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/617018004",
+        "addr:city": "Heusenstamm",
+        "addr:country": "DE",
+        "addr:housenumber": "41",
+        "addr:postcode": "63150",
+        "addr:street": "Frankfurter Straße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6104 3709",
+        "contact:website": "http://www.apotheken.de/club/63150/caecilien-apotheke",
+        "name": "Cäcilien-Apotheke",
+        "opening_hours": "Mo-Th 08:30-19:00; We,Fr 08:30-18:30; Sa 08:30-13:00",
+        "operator": "Jeanett Wetzel",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8046344,
+          50.0592162
+        ]
+      },
+      "id": "node/617018004"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/617018005",
+        "addr:city": "Heusenstamm",
+        "addr:country": "DE",
+        "addr:postcode": "63150",
+        "addr:street": "Frankfurter Straße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6104 924717",
+        "contact:website": "http://www.apotheke-am-torbau.de/",
+        "name": "Apotheke am Torbau",
+        "opening_hours": "Mo-Th 08:30-19:00; We,Fr 08:30-18:30; Sa 08:30-13:00",
+        "operator": "Ingrid Hennighausen",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8064558,
+          50.059189
+        ]
+      },
+      "id": "node/617018005"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/619298035",
+        "amenity": "pharmacy",
+        "contact:email": "bechtenwald-apotheke@t-online.de",
+        "contact:fax": "+49 69 93635184",
+        "contact:phone": "+49 69 364332",
+        "contact:website": "https://www.bechtenwald-apotheke-app.de",
+        "healthcare": "pharmacy",
+        "name": "Bechtenwald-Apotheke",
+        "opening_hours": "Mo-Sa 08:30-13:00, Mo-Fr 15:00-18:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5038289,
+          50.0991349
+        ]
+      },
+      "id": "node/619298035"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/644761302",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "54",
+        "addr:postcode": "60437",
+        "addr:street": "Ben-Gurion-Ring",
+        "amenity": "pharmacy",
+        "contact:email": "info@apothekeambuegel.de",
+        "contact:fax": "+49 69 5074427",
+        "contact:phone": "+49 69 5072545",
+        "contact:website": "https://apothekeambuegel.de/",
+        "healthcare": "pharmacy",
+        "name": "Apotheke Am Bügel",
+        "opening_hours": "Mo,Tu,Th,Fr 08:00-18:30; We 08:00-13:00; Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6640591,
+          50.1894712
+        ]
+      },
+      "id": "node/644761302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/662763833",
+        "amenity": "pharmacy",
+        "name": "Brunnen Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5718758,
+          50.1681562
+        ]
+      },
+      "id": "node/662763833"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/671414276",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "14",
+        "addr:postcode": "60488",
+        "addr:street": "Praunheimer Landstraße",
+        "amenity": "pharmacy",
+        "contact:email": "info@hausener-apotheke.de",
+        "contact:fax": "+49 69 787306",
+        "contact:phone": "+49 69 788833",
+        "contact:website": "http://www.hausener-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Hausener Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:30, 14:30-18:30; Sa 08:30-13:00",
+        "wheelchair": "yes",
+        "wheelchair:description": "Es wurde speziell für Rollstuhlfahrer eine Klingel angebracht."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6252224,
+          50.1348164
+        ]
+      },
+      "id": "node/671414276"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/677809491",
+        "amenity": "pharmacy",
+        "contact:email": "schweizer-apotheke@web.de",
+        "contact:fax": "+49 69 60607787",
+        "contact:phone": "+49 69 616067",
+        "contact:website": "http://www.schweizer-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Schweizer Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:00-14:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6805452,
+          50.1023759
+        ]
+      },
+      "id": "node/677809491"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/692848331",
+        "amenity": "pharmacy",
+        "name": "Kreuz-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4690495,
+          50.083608
+        ]
+      },
+      "id": "node/692848331"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/697820925",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "name": "Vitus-Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4721917,
+          50.0854468
+        ]
+      },
+      "id": "node/697820925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/701172852",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "171",
+        "addr:postcode": "60326",
+        "addr:street": "Frankenallee",
+        "amenity": "pharmacy",
+        "contact:email": "hessen-apotheke@apotheken.de",
+        "contact:fax": "+49 69 7306255",
+        "contact:phone": "+49 69 730800",
+        "contact:website": "https://www.hessen-apotheke-frankfurt.de/",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Hessen Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "opening_hours:covid19": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.635623,
+          50.1038272
+        ]
+      },
+      "id": "node/701172852"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/710440106",
+        "addr:city": "Schwalbach am Taunus",
+        "addr:country": "DE",
+        "addr:housenumber": "3",
+        "addr:postcode": "65824",
+        "addr:street": "Avrilléstraße",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Pinguin Apotheke",
+        "website": "http://www.p-apo.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.529859,
+          50.1535187
+        ]
+      },
+      "id": "node/710440106"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/723754330",
+        "amenity": "pharmacy",
+        "name": "Rats-Apotheke",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5396938,
+          50.1834696
+        ]
+      },
+      "id": "node/723754330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/745777466",
+        "amenity": "pharmacy",
+        "contact:email": "rundumdieuhrapotheke@t-online.de",
+        "contact:fax": "+49 69 60607833",
+        "contact:phone": "+49 69 60607800",
+        "contact:website": "https://www.walter-kolb-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Walter-Kolb-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 08:30-14:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6854027,
+          50.105228
+        ]
+      },
+      "id": "node/745777466"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/764487095",
+        "addr:postcode": "65795",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Rosen Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.491114,
+          50.0664196
+        ]
+      },
+      "id": "node/764487095"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/766788022",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "2",
+        "addr:postcode": "60438",
+        "addr:street": "Riedbergplatz",
+        "amenity": "pharmacy",
+        "contact:fax": "+49 69 95118628",
+        "contact:phone": "+49 69 95118627",
+        "healthcare": "pharmacy",
+        "name": "Apotheke im Riedberg Zentrum",
+        "opening_hours": "Mo-Sa 09:00-20:00",
+        "operator": "Althaus & Althaus OHG",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.629455,
+          50.1770834
+        ]
+      },
+      "id": "node/766788022"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/768540793",
+        "addr:city": "Frankfurt am Main",
+        "addr:postcode": "60437",
+        "addr:street": "Homburger Landstraße",
+        "amenity": "pharmacy",
+        "contact:email": "info@saalburgapo.de",
+        "contact:fax": "+49 69 95049082",
+        "contact:phone": "+49 69 95049081",
+        "contact:website": "https://www.meine-gesundheitsengel.de/",
+        "healthcare": "pharmacy",
+        "name": "Saalburg Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30; Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6656437,
+          50.1848446
+        ]
+      },
+      "id": "node/768540793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/805109063",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "93",
+        "addr:postcode": "63069",
+        "addr:street": "Richard-Wagner-Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "disused:amenity": "pharmacy",
+        "email": "hayek@lauterborn-apotheke.de",
+        "fax": "+49 69 98340156",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "Lauterborn-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "operator": "Dr. Mohammed Hayek-Quassini",
+        "phone": "+49 69 842999",
+        "toilets:wheelchair": "no",
+        "website": "https://www.lauterborn-apotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7540167,
+          50.0854821
+        ]
+      },
+      "id": "node/805109063"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/848673504",
+        "addr:city": "Offenbach am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "70",
+        "addr:postcode": "63069",
+        "addr:street": "Odenwaldring",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "info@apoRingCenter.de",
+        "fax": "+49 69 838367-41",
+        "healthcare": "pharmacy",
+        "name": "Apotheke im Ring-Center",
+        "opening_hours": "Mo-We 08:00-20:00; Th-Sa 08:00-20:30",
+        "phone": "+49 69 83836740",
+        "toilets:wheelchair": "no",
+        "website": "https://www.aporingcenter.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7603351,
+          50.0872774
+        ]
+      },
+      "id": "node/848673504"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/864049085",
+        "addr:housenumber": "152",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "pharmacy",
+        "name": "Löwen-Apotheke",
+        "phone": "+49 6181 441134",
+        "website": "https://www.loewen-apotheke-maintal.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8349624,
+          50.1515176
+        ]
+      },
+      "id": "node/864049085"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/870531066",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "42",
+        "addr:postcode": "63069",
+        "addr:street": "Isenburgring",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fax": "+49 69 98340124",
+        "healthcare": "pharmacy",
+        "name": "Buchrain-Apotheke",
+        "opening_hours": "Mo-Fr 8:30-18:30; Sa 8:30-13:00",
+        "phone": "+49 69 98340125",
+        "toilets:wheelchair": "no",
+        "website": "http://www.buchrain-apotheke.de/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7546693,
+          50.0966984
+        ]
+      },
+      "id": "node/870531066"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/871975270",
+        "addr:housenumber": "51",
+        "addr:street": "Lichtenplattenweg",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Buchhügel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7805362,
+          50.0962423
+        ]
+      },
+      "id": "node/871975270"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/872063149",
+        "addr:city": "Offenbach am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "32",
+        "addr:postcode": "63065",
+        "addr:street": "Kleiner Biergrund",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Central Apotheke;Central-Apotheke",
+        "operator": "Peter Petri",
+        "phone": "+49 69 88 08 69",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7670209,
+          50.1049332
+        ]
+      },
+      "id": "node/872063149"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/872102456",
+        "addr:city": "Offenbach am Main",
+        "addr:postcode": "63065",
+        "addr:street": "Kaiserstraße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fax": "+49 69 82 62 08",
+        "healthcare": "pharmacy",
+        "name": "Paracelsus Apotheke",
+        "opening_hours": "Mo,We,Fr 08:00-18:30; Tu,Th 08:00-19:00; Sa 09:00-13:00",
+        "phone": "+49 69 88 89 87",
+        "website": "https://www.paracelsus-apotheke-offenbach.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7591683,
+          50.1030765
+        ]
+      },
+      "id": "node/872102456"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/873547660",
+        "addr:city": "Offenbach am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "8",
+        "addr:postcode": "63065",
+        "addr:street": "Marktplatz",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Schwanen Apotheke am Markt",
+        "phone": "+49 69 8 09 06 60",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7642992,
+          50.1046321
+        ]
+      },
+      "id": "node/873547660"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/873550235",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "70",
+        "addr:postcode": "63067",
+        "addr:street": "Luisenstraße",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Aesculap Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-13:00",
+        "operator": "Patricia Feeser",
+        "phone": "+49 69 88 37 42",
+        "website": "https://www.apotheke-in-offenbach.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.75621,
+          50.1043964
+        ]
+      },
+      "id": "node/873550235"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/873554869",
+        "addr:city": "Offenbach am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "112",
+        "addr:postcode": "63067",
+        "addr:street": "Ludwigstraße",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Westend Apotheke",
+        "phone": "+49 69 811492",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7515178,
+          50.1068557
+        ]
+      },
+      "id": "node/873554869"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/873557386",
+        "addr:housenumber": "2-4",
+        "addr:street": "Rowentastraße",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Apotheke im Ärztezentrum",
+        "phone": "+49 69 98556666",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7721269,
+          50.087467
+        ]
+      },
+      "id": "node/873557386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/873559098",
+        "addr:city": "Offenbach am Main",
+        "addr:postcode": "63071",
+        "addr:street": "Brunnenweg",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Tempelsee Apotheke",
+        "phone": "+49 69 85 00 36 46",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.778976,
+          50.0833066
+        ]
+      },
+      "id": "node/873559098"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/873562492",
+        "addr:city": "Offenbach am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "14",
+        "addr:postcode": "63073",
+        "addr:street": "Von-Brentano-Straße",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Bieber-Apotheke",
+        "phone": "+49 69 894149",
+        "toilets:wheelchair": "no",
+        "website": "http://www.bieber-apotheke-offenbach.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7970199,
+          50.0850699
+        ]
+      },
+      "id": "node/873562492"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/873567249",
+        "addr:housenumber": "20",
+        "addr:street": "Langstraße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 69 865500",
+        "healthcare": "pharmacy",
+        "name": "Viktoria-Apotheke",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7850553,
+          50.1181392
+        ]
+      },
+      "id": "node/873567249"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/873572673",
+        "addr:city": "Offenbach am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "35",
+        "addr:postcode": "63075",
+        "addr:street": "Bürgeler Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "schlossapotheke@web.de",
+        "fax": "+49 69 866854",
+        "healthcare": "pharmacy",
+        "name": "Schloss-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:30-13:30",
+        "operator": "Thorsten Klebs",
+        "phone": "+49 69 864004",
+        "website": "http://www.schloss-apotheke-offenbach.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7968779,
+          50.1294038
+        ]
+      },
+      "id": "node/873572673"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/903971737",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Bürgerhaus",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00",
+        "wheelchair": "no",
+        "wheelchair:description:de": "Stufen am Eingang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6069102,
+          50.0952882
+        ]
+      },
+      "id": "node/903971737"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/924251258",
+        "amenity": "pharmacy",
+        "contact:email": "info@pharmacie-raphael.de",
+        "contact:fax": "+49 69 920207825",
+        "contact:phone": "+49 69 920207818",
+        "contact:website": "https://www.pharmacie-raphael.de/",
+        "healthcare": "pharmacy",
+        "name": "Pharmacie Raphaël",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 09:00-19:00",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6744845,
+          50.1144205
+        ]
+      },
+      "id": "node/924251258"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/926834103",
+        "amenity": "pharmacy",
+        "contact:email": "nordend-apotheke@t-online.de",
+        "contact:fax": "+49 69 544310",
+        "contact:phone": "+49 69 318168",
+        "contact:website": "https://www.nordend-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Nordend Apotheke",
+        "opening_hours": "Mo-Sa 08:30-13:00, Mo,Tu,Th,Fr 15:00-18:30",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6816677,
+          50.1495643
+        ]
+      },
+      "id": "node/926834103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/943935582",
+        "alt_name": "Ihre Apotheker",
+        "amenity": "pharmacy",
+        "brand": "Ihre Apotheker",
+        "healthcare": "pharmacy",
+        "name": "Central Apotheke",
+        "network": "Ihre Apotheker",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 09:00-18:00",
+        "strapline": "IHRE APOTHEKER",
+        "website": "https://www.ihre-apotheker.de/central-apotheke/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.581313,
+          50.1703597
+        ]
+      },
+      "id": "node/943935582"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/969127871",
+        "addr:city": "Sulzbach (Taunus)",
+        "addr:country": "DE",
+        "addr:housenumber": "50",
+        "addr:postcode": "65843",
+        "addr:street": "Hauptstraße",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Sankt Barbara Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30; Sa 08:30-13:00",
+        "phone": "+49 6196 7 18 91",
+        "website": "http://www.stbarbara-apotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5247975,
+          50.1345712
+        ]
+      },
+      "id": "node/969127871"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/981378547",
+        "addr:city": "Bad Soden am Taunus",
+        "addr:country": "DE",
+        "addr:housenumber": "51",
+        "addr:postcode": "65812",
+        "addr:street": "Königsteiner Straße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6196 22308",
+        "contact:website": "http://www.marienapotheke-badsoden.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Marien-Apotheke",
+        "opening_hours": "Mo-Th 08:30-13:00, 15:00-18:30; Fr 08:30-18:00; Sa 08:30-13:00",
+        "operator": "Bernd Parthun",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5024928,
+          50.1429529
+        ]
+      },
+      "id": "node/981378547"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1022304518",
+        "amenity": "pharmacy",
+        "contact:email": "info@apotheke-am-ziegelhuettenplatz.de",
+        "contact:fax": "+49 69 629443",
+        "contact:phone": "+49 69 614079",
+        "contact:website": "http://www.apotheke-ziegelhuettenplatz.de/",
+        "healthcare": "pharmacy",
+        "name": "Am Ziegelhüttenplatz",
+        "opening_hours": "Mo,Tu,Th,Fr 08:30-19:00; We 08:30-18:30; Sa 08:30-14:00",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.682052,
+          50.0948031
+        ]
+      },
+      "id": "node/1022304518"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1033446107",
+        "amenity": "pharmacy",
+        "contact:email": "info@kettenhof.de",
+        "contact:fax": "+49 69 172832",
+        "contact:phone": "+49 69 727398",
+        "contact:website": "https://www.kettenhof.de/",
+        "healthcare": "pharmacy",
+        "name": "Kettenhof-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6628901,
+          50.1162092
+        ]
+      },
+      "id": "node/1033446107"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1036402286",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Stadt Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5308067,
+          50.0617005
+        ]
+      },
+      "id": "node/1036402286"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1051778751",
+        "amenity": "pharmacy",
+        "contact:email": "Altkoenig-Apotheke@t-online.de",
+        "contact:fax": "+49 69 7896585",
+        "contact:phone": "+49 69 783639",
+        "contact:website": "http://www.altkönig-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Altkönig Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-18:30; Sa 09:00-13:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6152829,
+          50.1306011
+        ]
+      },
+      "id": "node/1051778751"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1078613518",
+        "addr:housenumber": "1",
+        "addr:postcode": "63477",
+        "addr:street": "Goethestraße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "name": "Apotheke Am Kreuzstein",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8096617,
+          50.1515585
+        ]
+      },
+      "id": "node/1078613518"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1083707641",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "flora.apotheke.maintal@t-online.de",
+        "fax": "+49 6109 61064",
+        "name": "Flora Apotheke",
+        "phone": "+49 6109 64747",
+        "website": "http://www.flora-apotheke-maintal.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.81068,
+          50.1483266
+        ]
+      },
+      "id": "node/1083707641"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1106279397",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Brentanoapotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00",
+        "opening_hours:covid19": "same",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6108303,
+          50.1252035
+        ]
+      },
+      "id": "node/1106279397"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1121954176",
+        "amenity": "pharmacy",
+        "contact:email": "apo@goethe-neuisenburg.de",
+        "contact:fax": "+49 6102 21245",
+        "contact:phone": "+49 6102 4212",
+        "contact:website": "http://www.goethe-apotheke-neuisenburg.de",
+        "dispensing": "yes",
+        "name": "Goethe Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "operator": "Ingrid Greß",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6801093,
+          50.053297
+        ]
+      },
+      "id": "node/1121954176"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1205450720",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Stadt Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6107921,
+          50.1255027
+        ]
+      },
+      "id": "node/1205450720"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1259266704",
+        "addr:city": "Mühlheim am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "63165",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "pharmacy",
+        "name": "Neue Raths-Apotheke",
+        "website": "http://www.neue-raths-apotheke.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8325203,
+          50.1246543
+        ]
+      },
+      "id": "node/1259266704"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1281873094",
+        "amenity": "pharmacy",
+        "contact:email": "info@receptura.de",
+        "contact:fax": "+49 69 92880333",
+        "contact:phone": "+49 69 92880300",
+        "contact:website": "https://www.receptura.de/",
+        "healthcare": "pharmacy",
+        "name": "Receptura Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 09:00-15:00; PH off",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6310649,
+          50.1759968
+        ]
+      },
+      "id": "node/1281873094"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1291415326",
+        "access:covid19": "yes",
+        "amenity": "pharmacy",
+        "contact:email": "info@sertuerner-apo-frankfurt.de",
+        "contact:fax": "+49 69 38039893",
+        "contact:phone": "+49 69 381085",
+        "contact:website": "http://www.sertuerner-apo-frankfurt.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Sertürner Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-14:00",
+        "opening_hours:covid19": "Mo-Fr 08:30-18:30; Sa 09:00-14:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6071738,
+          50.0920275
+        ]
+      },
+      "id": "node/1291415326"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1309760750",
+        "amenity": "pharmacy",
+        "contact:email": "pelikan-apotheke@t-online.de",
+        "contact:fax": "+49 69 361015",
+        "contact:phone": "+49 69 364516",
+        "contact:website": "https://www.pelikan-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Pelikan-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-18:30; Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4958195,
+          50.0956742
+        ]
+      },
+      "id": "node/1309760750"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1454841031",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "137",
+        "addr:postcode": "60389",
+        "addr:street": "Wilhelmshöher Straße",
+        "amenity": "pharmacy",
+        "check_date": "*",
+        "fax": "+49 69 742455",
+        "healthcare": "pharmacy",
+        "name": "Lohrberg Apotheke",
+        "opening_hours": "Mo-Sa 08:30-13:00, Mo,Tu,Th,Fr 14:30-18:30, We 14:30-18:00",
+        "operator": "Yvonne Belloma",
+        "phone": "+49 69 472454",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7262013,
+          50.1438833
+        ]
+      },
+      "id": "node/1454841031"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1455056263",
+        "amenity": "pharmacy",
+        "contact:email": "info@kalbachapotheke.de",
+        "contact:fax": "+49 69 50930212",
+        "contact:phone": "+49 69 50930211",
+        "contact:website": "https://www.kalbachapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Kalbach Apotheke",
+        "opening_hours": "Mo-Sa 08:30-13:00, Mo,Tu,Th,Fr 15:00-18:30",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6409376,
+          50.1891311
+        ]
+      },
+      "id": "node/1455056263"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1468509046",
+        "addr:city": "Bad Soden",
+        "addr:housenumber": "19",
+        "addr:postcode": "65812",
+        "addr:street": "Hauptstraße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6196 22937",
+        "contact:website": "http://www.dreilindenapotheke.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Dreilindenapotheke",
+        "opening_hours": "Mo-Th 08:30-13:00, 15:00-18:30;Fr 08:30-18:00; Sa 08:30-13:00",
+        "operator": "Ulrike Wilhelm-Parthun",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.492664,
+          50.156005
+        ]
+      },
+      "id": "node/1468509046"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1469617590",
+        "amenity": "pharmacy",
+        "contact:email": "info@schiller-apotheke-ffm.de",
+        "contact:fax": "+49 69 95509917",
+        "contact:phone": "+49 69 552325",
+        "contact:website": "https://www.schiller-apotheke-frankfurt.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Schiller Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:30-16:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6851316,
+          50.1265728
+        ]
+      },
+      "id": "node/1469617590"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1520456155",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "name": "City Apotheke",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:30-18:00",
+        "payment:american_express": "yes",
+        "payment:cash": "yes",
+        "payment:diners_club": "yes",
+        "payment:girocard": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "payment:visa_electron": "yes",
+        "phone": "+49 6102 327260",
+        "website": "https://ihre-apotheker.de/city-apotheke/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6955063,
+          50.0490784
+        ]
+      },
+      "id": "node/1520456155"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1540348415",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Berg-Apotheke am Wendelsplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6910666,
+          50.1000207
+        ]
+      },
+      "id": "node/1540348415"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1545538061",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "kontakt@westerbach-apotheke.de",
+        "fax": "+49 69 9349774",
+        "healthcare": "pharmacy",
+        "name": "Westerbach Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30; Sa 08:30-13:00",
+        "operator": "Jochen Wiechula",
+        "phone": "+49 69 9349770",
+        "website": "http://www.westerbach-apotheke.de/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5690686,
+          50.1227692
+        ]
+      },
+      "id": "node/1545538061"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1614143979",
+        "addr:city": "Sulzbach (Taunus)",
+        "addr:country": "DE",
+        "addr:postcode": "65843",
+        "addr:street": "Main-Taunus-Zentrum",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Lieblings Apotheke im Main-Taunus-Zentrum",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5259129,
+          50.1192882
+        ]
+      },
+      "id": "node/1614143979"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1619915536",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Höhenapotheke",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7005208,
+          50.1227354
+        ]
+      },
+      "id": "node/1619915536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1619915555",
+        "amenity": "pharmacy",
+        "contact:email": "merian-apo@gmx.de",
+        "contact:fax": "+49 69 4930806",
+        "contact:phone": "+49 69 435454",
+        "contact:website": "https://www.merian-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Merian Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:30; Sa 08:30-16:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6960248,
+          50.1203069
+        ]
+      },
+      "id": "node/1619915555"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1619915588",
+        "amenity": "pharmacy",
+        "contact:email": "info@brockssche-apotheke.de",
+        "contact:fax": "+49 69 4960565",
+        "contact:phone": "+49 69 442435",
+        "contact:website": "https://brockssche-apotheke.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "brocks'sche Apotheke",
+        "opening_hours": "Mo-Fr 09:00-19:00; Sa 09:30-18:00",
+        "wheelchair": "limited",
+        "wheelchair:description": "Zugang mit flacher Stufe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6952859,
+          50.119906
+        ]
+      },
+      "id": "node/1619915588"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1625070841",
+        "amenity": "pharmacy",
+        "contact:email": "rotlint-apotheke@t-online.de",
+        "contact:fax": "+49 69 451095",
+        "contact:phone": "+49 69 454046",
+        "contact:website": "https://www.rotlint-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Rotlint Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 08:30-14:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6951885,
+          50.1283497
+        ]
+      },
+      "id": "node/1625070841"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1643398373",
+        "access:covid19": "yes",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "4a",
+        "addr:postcode": "60385",
+        "addr:street": "Parlamentsplatz",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2020-12-11",
+        "contact:email": "lukas.apotheke@gmx.de",
+        "contact:fax": "+49 69 4990844",
+        "contact:phone": "+49 69 447571",
+        "contact:website": "https://www.lukas-apotheke-frankfurt.de/",
+        "delivery:covid19": "yes",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Lukas Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30; Sa 08:30-13:00",
+        "opening_hours:covid19": "Mo-Fr 08:30-13:00,15:00-18:30; Sa 08:30-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7147431,
+          50.1198664
+        ]
+      },
+      "id": "node/1643398373"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1647258149",
+        "amenity": "pharmacy",
+        "contact:email": "info@malteser-apotheke-ffm.de",
+        "contact:fax": "+49 69 4990053",
+        "contact:phone": "+49 69 490060",
+        "contact:website": "https://www.malteser-apotheke-ffm.de/",
+        "healthcare": "pharmacy",
+        "name": "Malteser Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00, Sa 08:30-15:30",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7057601,
+          50.1249298
+        ]
+      },
+      "id": "node/1647258149"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1649025644",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "233",
+        "addr:postcode": "60385",
+        "addr:street": "Berger Straße",
+        "amenity": "pharmacy",
+        "contact:email": "service@berger-apotheke.de",
+        "contact:fax": "+49 69 94592422",
+        "contact:phone": "+49 800 2374372",
+        "contact:website": "https://www.berger-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Berger Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-14:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7097598,
+          50.1278223
+        ]
+      },
+      "id": "node/1649025644"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1666284698",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "87",
+        "addr:postcode": "60322",
+        "addr:street": "Eschersheimer Landstraße",
+        "amenity": "pharmacy",
+        "contact:email": "wolf.apotheke@t-online.de",
+        "contact:fax": "+49 69 5976391",
+        "contact:phone": "+49 69 550188",
+        "contact:website": "https://www.wolf-apotheke-frankfurt.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Wolf Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 09:00-14:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6749179,
+          50.1242017
+        ]
+      },
+      "id": "node/1666284698"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1675802338",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "30",
+        "addr:postcode": "60486",
+        "addr:street": "Müllerstraße",
+        "amenity": "pharmacy",
+        "contact:email": "info@kuhwald-apotheke.de",
+        "contact:fax": "+49 69 7075777",
+        "contact:phone": "+49 69 771735",
+        "contact:website": "http://www.kuhwald-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Kuhwald Apotheke",
+        "opening_hours": "Mo-Sa 08:30-13:00, Mo,Tu,Th,Fr 15:00-18:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6302172,
+          50.1125077
+        ]
+      },
+      "id": "node/1675802338"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1681301176",
+        "amenity": "pharmacy",
+        "contact:email": "info@bock-apotheke.de",
+        "contact:fax": "+49 69 97063777",
+        "contact:phone": "+49 69 9706370",
+        "contact:website": "https://www.bock-apotheke.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Bock-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:30",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6433198,
+          50.1232668
+        ]
+      },
+      "id": "node/1681301176"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1684484362",
+        "amenity": "pharmacy",
+        "contact:email": "ahornapotheke@gmx.de",
+        "contact:fax": "+49 69 38030003",
+        "contact:phone": "+49 69 382486",
+        "contact:website": "https://www.ahorn-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Ahorn Apotheke",
+        "opening_hours": "Mo-Sa 08:30-13:00, Mo-Fr 15:00-18:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6053051,
+          50.098276
+        ]
+      },
+      "id": "node/1684484362"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1685622056",
+        "amenity": "pharmacy",
+        "contact:email": "pharmabestellung@hotmail.com",
+        "contact:fax": "+49 69 93635039",
+        "contact:phone": "+49 69 362770",
+        "contact:website": "https://www.taunusblick-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Taunusblick-Apotheke",
+        "opening_hours": "Mo-Sa 08:30-13:00, Mo-Fr 15:00-19:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4989565,
+          50.0971137
+        ]
+      },
+      "id": "node/1685622056"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1704776817",
+        "access:covid19": "yes",
+        "amenity": "pharmacy",
+        "contact:email": "info@alte-apo-griesheim.de",
+        "contact:fax": "+49 69 397266",
+        "contact:phone": "+49 69 381329",
+        "contact:website": "http://www.alte-apo-griesheim.de/",
+        "healthcare": "pharmacy",
+        "name": "Alte Apotheke",
+        "opening_hours": "Mo-Fr 08:00-13:00, Mo,Tu,Th,Fr 15:00-18:30; Sa 08:30-13:00",
+        "opening_hours:covid19": "Mo,Tu,Th,Fr 08:00-13:00,15:00-18:30; Sa 08:30-13:00; We 08:00-13:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6047255,
+          50.0924493
+        ]
+      },
+      "id": "node/1704776817"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1707453720",
+        "addr:housenumber": "7",
+        "addr:postcode": "60435",
+        "addr:street": "Kreuzstraße",
+        "amenity": "pharmacy",
+        "contact:email": "ronneburg-apotheke.reich@t-online.de",
+        "contact:fax": "+49 69 54806515",
+        "contact:phone": "+49 69 54806220",
+        "contact:website": "https://www.ronneburg-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Ronneburg-Apotheke",
+        "opening_hours": "Mo-Sa 08:30-13:00, Mo-Fr 15:00-18:30",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6904501,
+          50.1527006
+        ]
+      },
+      "id": "node/1707453720"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1722860952",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "102",
+        "addr:postcode": "60329",
+        "addr:street": "Gutleutstraße",
+        "amenity": "pharmacy",
+        "contact:fax": "+49 69 250371",
+        "contact:phone": "+49 69 231702",
+        "contact:website": "http://www.bluecherapotheke.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Blücher Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6629919,
+          50.10358
+        ]
+      },
+      "id": "node/1722860952"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1726321823",
+        "amenity": "pharmacy",
+        "contact:email": "frankfurt-suedbahnhof@easyapotheken.de",
+        "contact:fax": "+49 69 962445229",
+        "contact:phone": "+49 69 96244520",
+        "contact:website": "https://frankfurt-suedbahnhof.easyapotheken.de/",
+        "healthcare": "pharmacy",
+        "name": "easyApotheke Frankfurt Südbahnhof",
+        "opening_hours": "Mo-Fr 09:00-19:00, Sa 09:00-18:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6872381,
+          50.1005559
+        ]
+      },
+      "id": "node/1726321823"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1727687641",
+        "amenity": "pharmacy",
+        "contact:email": "albanus.apo.ffm@pharma-online.de",
+        "contact:fax": "+49 69 316848",
+        "contact:phone": "+49 69 313380",
+        "contact:website": "https://www.albanus-apotheke.com/",
+        "healthcare": "pharmacy",
+        "name": "Albanus Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-13:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5468682,
+          50.1009939
+        ]
+      },
+      "id": "node/1727687641"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1744313500",
+        "addr:city": "Königstein im Taunus",
+        "addr:country": "DE",
+        "addr:housenumber": "1a",
+        "addr:postcode": "61462",
+        "addr:street": "Herzog-Adolph-Straße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6174 21264",
+        "contact:website": "http://www.alteapothekekoenigstein.de/",
+        "dispensing": "yes",
+        "name": "Alte Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00;Sa 08:00-14:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4660041,
+          50.1842191
+        ]
+      },
+      "id": "node/1744313500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1751259745",
+        "amenity": "pharmacy",
+        "contact:email": "phoenixnied@aol.com",
+        "contact:fax": "+49 69 384270",
+        "contact:phone": "+49 69 397545",
+        "contact:website": "http://www.apotheke-phoenix.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Phönix Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5671096,
+          50.0985466
+        ]
+      },
+      "id": "node/1751259745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1773973916",
+        "addr:city": "Kronberg im Taunus",
+        "addr:country": "DE",
+        "addr:housenumber": "16",
+        "addr:postcode": "61476",
+        "addr:street": "Friedrich-Ebert-Straße",
+        "amenity": "pharmacy",
+        "name": "Hof-Apotheke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5085201,
+          50.1798083
+        ]
+      },
+      "id": "node/1773973916"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1927944036",
+        "addr:city": "Kronberg im Taunus",
+        "addr:country": "DE",
+        "addr:housenumber": "2",
+        "addr:postcode": "61476",
+        "addr:street": "Hainstraße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "name": "Park-Apotheke",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5106838,
+          50.1799658
+        ]
+      },
+      "id": "node/1927944036"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1960863358",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "8",
+        "addr:postcode": "60313",
+        "addr:street": "Große Friedberger Straße",
+        "amenity": "pharmacy",
+        "contact:email": "info@zeilapotheke.de",
+        "contact:fax": "+49 69 46097920",
+        "contact:phone": "+49 69 21995187",
+        "contact:website": "https://www.zeilapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Zeil Apotheke",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 10:00-20:00",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6865135,
+          50.1149903
+        ]
+      },
+      "id": "node/1960863358"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2011164808",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Kreuzapotheke",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5792793,
+          50.0842756
+        ]
+      },
+      "id": "node/2011164808"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2053119292",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Eulen Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5673114,
+          50.1210723
+        ]
+      },
+      "id": "node/2053119292"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2068082059",
+        "amenity": "pharmacy",
+        "email": "kronenapo.gezi@t-online.de",
+        "healthcare": "pharmacy",
+        "name": "Kronen-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-12:00",
+        "phone": "+49 6107 4472",
+        "website": "https://www.kronenapotheke.com/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5326485,
+          50.0580207
+        ]
+      },
+      "id": "node/2068082059"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2081430077",
+        "addr:city": "Neu-Isenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "42",
+        "addr:postcode": "63263",
+        "addr:street": "Herzogstraße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fax": "+49-6102-368645",
+        "name": "Herzog-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 09:00-14:00",
+        "payment:american_express": "yes",
+        "payment:cash": "yes",
+        "payment:diners_club": "yes",
+        "payment:girocard": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "payment:visa_electron": "yes",
+        "phone": "+49-6102-368643",
+        "website": "https://ihre-apotheker.de/herzog-apotheke/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7010882,
+          50.0510336
+        ]
+      },
+      "id": "node/2081430077"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2081447999",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Anna Apotheke",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7312854,
+          50.0986694
+        ]
+      },
+      "id": "node/2081447999"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2086180257",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "easy Apotheke",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.741435,
+          50.188765
+        ]
+      },
+      "id": "node/2086180257"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2131102688",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 69 304088",
+        "healthcare": "pharmacy",
+        "name": "Kosmos Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5439783,
+          50.1059706
+        ]
+      },
+      "id": "node/2131102688"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2144885153",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Bärenapotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5822579,
+          50.2005074
+        ]
+      },
+      "id": "node/2144885153"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2149506570",
+        "amenity": "pharmacy",
+        "name": "Liederbach-Apotheke",
+        "website": "https://www.liederbach-apotheke.de/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5400099,
+          50.1095639
+        ]
+      },
+      "id": "node/2149506570"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2166651272",
+        "amenity": "pharmacy",
+        "contact:email": "service@dieapfelapotheke.de",
+        "contact:fax": "+49 69 298028620",
+        "contact:phone": "+49 69 29802860",
+        "contact:website": "https://www.dieapfelapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Apfel Apotheke",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 09:00-20:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6859947,
+          50.1142295
+        ]
+      },
+      "id": "node/2166651272"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2166658626",
+        "amenity": "pharmacy",
+        "contact:email": "info@prinzenapotheke.com",
+        "contact:fax": "+49 69 209777622",
+        "contact:phone": "+49 69 20977760",
+        "contact:website": "https://www.prinzenapotheke.com/",
+        "healthcare": "pharmacy",
+        "name": "Prinzen Apotheke",
+        "opening_hours": "Mo-Sa 08:30-20:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.683878,
+          50.1135269
+        ]
+      },
+      "id": "node/2166658626"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2207162507",
+        "amenity": "pharmacy",
+        "contact:email": "info.ba@aktiv-apotheken.de",
+        "contact:fax": "+49 69 333283",
+        "contact:phone": "+49 69 3140430",
+        "contact:website": "https://aktiv-apotheken.de/apotheken/bahnhof-apotheke-frankfurt-hoechst/",
+        "healthcare": "pharmacy",
+        "name": "Bahnhof Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30, Sa 08:30-14:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5431219,
+          50.1018762
+        ]
+      },
+      "id": "node/2207162507"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2283129695",
+        "amenity": "pharmacy",
+        "contact:email": "info@fontane-ffm.de",
+        "contact:fax": "+49 69 6669402",
+        "contact:phone": "+49 69 6662442",
+        "contact:website": "https://www.fontane-ffm.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Fontane Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-18:30; Sa 08:30-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6473944,
+          50.0787566
+        ]
+      },
+      "id": "node/2283129695"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2306217650",
+        "addr:city": "Kronberg im Taunus",
+        "addr:country": "DE",
+        "addr:housenumber": "15",
+        "addr:postcode": "61476",
+        "addr:street": "Frankfurter Straße",
+        "amenity": "pharmacy",
+        "name": "Kur-Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5136591,
+          50.1791578
+        ]
+      },
+      "id": "node/2306217650"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2413532466",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 69 411813",
+        "contact:website": "http://rathausapotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Rathaus-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-13:00",
+        "operator": "Peter Lang",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7695657,
+          50.1237348
+        ]
+      },
+      "id": "node/2413532466"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2418023345",
+        "addr:housenumber": "26",
+        "addr:street": "Pfortenstraße",
+        "amenity": "pharmacy",
+        "contact:email": "apo@spessart-apotheke.com",
+        "contact:fax": "+49 69 40809730",
+        "contact:phone": "+49 69 415657",
+        "contact:website": "https://www.rathausapotheke-frankfurt.de/spessart-apotheke.html",
+        "healthcare": "pharmacy",
+        "name": "Spessart Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:30, Mo,Tu,Th,Fr 14:30-18:30; Sa 09:00-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.767125,
+          50.122076
+        ]
+      },
+      "id": "node/2418023345"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2419468733",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Alpha Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7622443,
+          50.1064543
+        ]
+      },
+      "id": "node/2419468733"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2438733672",
+        "amenity": "pharmacy",
+        "fax": "+49 6107 9686091",
+        "healthcare": "pharmacy",
+        "name": "Europa Apotheke am Rathaus",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 09:00-16:00",
+        "operator": "Dr. Okan Osman Oglou e.K.",
+        "phone": "+49 6107 9686090",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5325542,
+          50.0611712
+        ]
+      },
+      "id": "node/2438733672"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2500753372",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "7",
+        "addr:postcode": "60437",
+        "addr:street": "Alt-Harheim",
+        "amenity": "pharmacy",
+        "contact:email": "harheim-apotheke@outlook.de",
+        "contact:fax": "+49 6101 406711",
+        "contact:phone": "+49 6101 41274",
+        "contact:website": "https://www.harheim-apotheke.de/",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Harheim-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, Mo,Tu,Th,Fr 15:00-18:30; Sa 09:00-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6928054,
+          50.1825674
+        ]
+      },
+      "id": "node/2500753372"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2503494998",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "name": "Brunnen-Apotheke",
+        "opening_hours": "Mo,Tu,Th,Fr 08:30-13:00,15:00-18:30; We,Sa 08:30-13:00",
+        "phone": "+49 69 3140411",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4928241,
+          50.1196933
+        ]
+      },
+      "id": "node/2503494998"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2503495057",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "name": "Sonnenschein-Apotheke",
+        "opening_hours": "Mo,Th 08:00-19:00; Tu,We,Fr 08:00-18:30; Sa 08:30-13:00",
+        "phone": "+49 6196 764310",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4898297,
+          50.1250526
+        ]
+      },
+      "id": "node/2503495057"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2624852729",
+        "amenity": "pharmacy",
+        "contact:email": "apothekeanderwarte@t-online.de",
+        "contact:fax": "+49 69 734614",
+        "contact:phone": "+49 69 731406",
+        "contact:website": "https://www.apothekeanderwarte.de/",
+        "healthcare": "pharmacy",
+        "name": "Apotheke an der Galluswarte",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-13:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6444222,
+          50.1033948
+        ]
+      },
+      "id": "node/2624852729"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2624852746",
+        "addr:city": "Frankfurt am Main",
+        "addr:postcode": "60326",
+        "addr:street": "Mainzer Landstraße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 69 73904966",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Hellerhof-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 09:00-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6445126,
+          50.1027906
+        ]
+      },
+      "id": "node/2624852746"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2647302215",
+        "amenity": "pharmacy",
+        "contact:email": "hans_thoma-apotheke@t-online.de",
+        "contact:fax": "+49 69 60609642",
+        "contact:phone": "+49 69 623360",
+        "contact:website": "https://www.hans-thoma-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Hans Thoma Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-14:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6793866,
+          50.1038402
+        ]
+      },
+      "id": "node/2647302215"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2801580763",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "144-146",
+        "addr:postcode": "60599",
+        "addr:street": "Hainer Weg",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fax": "+49 69 681277",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Hainerweg",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00; Su off",
+        "operator": "Nafrin Jafari",
+        "phone": "+49 69 685612",
+        "toilets:wheelchair": "no",
+        "website": "http://apo-hainerweg.com/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6961035,
+          50.0945594
+        ]
+      },
+      "id": "node/2801580763"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2830197211",
+        "amenity": "pharmacy",
+        "contact:email": "info@sandwegapotheke.de",
+        "contact:fax": "+49 69 40580122",
+        "contact:phone": "+49 69 4058010",
+        "contact:website": "https://www.sandwegapotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "Sandweg-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 08:30-14:00",
+        "wheelchair": "limited",
+        "wheelchair:description": "Am Eingang links Klingel für Leute mit Rollstuhl und Kinderwagen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6998238,
+          50.1210714
+        ]
+      },
+      "id": "node/2830197211"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2866757753",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "30",
+        "addr:postcode": "60528",
+        "addr:street": "Bruchfeldstraße",
+        "amenity": "pharmacy",
+        "contact:email": "info@bruchfeld-apotheke.de",
+        "contact:fax": "+49 69 676085",
+        "contact:phone": "+49 69 676021",
+        "contact:website": "https://www.bruchfeld-apotheke.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Bruchfeld Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "operator": "Dr. Peter Scherm e.K. Apotheker",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6487652,
+          50.0871909
+        ]
+      },
+      "id": "node/2866757753"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2874554704",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "6",
+        "addr:postcode": "60327",
+        "addr:street": "Europa-Allee",
+        "amenity": "pharmacy",
+        "contact:email": "info@apotheke-skyline-plaza.de",
+        "contact:phone": "+49 69 2575822330",
+        "contact:website": "http://www.apotheke-skyline-plaza.de",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "Apotheke im Skyline Plaza",
+        "opening_hours": "Mo-Fr 09:00-21:00; Sa 10:00-21:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6533356,
+          50.1098003
+        ]
+      },
+      "id": "node/2874554704"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2904388001",
+        "amenity": "pharmacy",
+        "contact:email": "info@hortus-apotheke-frankfurt.de",
+        "contact:fax": "+49 69 656228",
+        "contact:phone": "+49 69 653651",
+        "contact:website": "https://hortus-apotheke-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Hortus Apotheke",
+        "opening_hours": "Mo-Fr 07:30-13:00, 14:00-18:30; Sa 08:30-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7208828,
+          50.1003456
+        ]
+      },
+      "id": "node/2904388001"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2937623751",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Stadtapotheke",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4865347,
+          50.0692645
+        ]
+      },
+      "id": "node/2937623751"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3000178684",
+        "amenity": "pharmacy",
+        "contact:email": "europaviertel@easyapotheken.de",
+        "contact:fax": "+49 69 907387520",
+        "contact:phone": "+49 69 90738750",
+        "contact:website": "https://europaviertel.easyapotheken.de/",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "easyApotheke Europaviertel",
+        "opening_hours": "Mo-Fr 09:00-19:00; Sa 09:00-18:00",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6258763,
+          50.1080013
+        ]
+      },
+      "id": "node/3000178684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3090778310",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "indoor": "yes",
+        "level": "0",
+        "name": "Pluspunkt Apotheke",
+        "opening_hours": "Mo-Sa 09:30-20:00",
+        "operator": "Plus-Punkt Vertriebs- und Marketinggesellschaft mbH",
+        "phone": "+49 6102 306666",
+        "ref:iz": "42",
+        "website": "https://www.pluspunkt-apotheke-neu-isenburg.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6991862,
+          50.0502794
+        ]
+      },
+      "id": "node/3090778310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3095672504",
+        "addr:city": "Oberursel (Taunus)",
+        "addr:country": "DE",
+        "addr:housenumber": "10",
+        "addr:postcode": "61440",
+        "addr:street": "Nassauer Straße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6171 9899022",
+        "contact:website": "http://www.medicus-apotheke-oberursel.de/",
+        "drive_through": "no",
+        "entrance": "yes",
+        "name": "Medicus-Apotheke im Fachartztzentrum Oberursel",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 09:00-13:00",
+        "operator": "Margit Kowalski",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5870657,
+          50.199343
+        ]
+      },
+      "id": "node/3095672504"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3160972861",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Apotheke im Bismarckhof",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7651074,
+          50.1010121
+        ]
+      },
+      "id": "node/3160972861"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3163267926",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Markt Apotheke",
+        "phone": "+49 69 880593"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7652496,
+          50.1042436
+        ]
+      },
+      "id": "node/3163267926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3163267929",
+        "addr:city": "Offenbach am Main",
+        "addr:housenumber": "11",
+        "addr:postcode": "63065",
+        "addr:street": "Bieberer Straße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2020-11-14",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Rosen-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-14:30",
+        "operator": "Dr. H.-R. Diefenbach",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.765725,
+          50.1041373
+        ]
+      },
+      "id": "node/3163267929"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3271338461",
+        "addr:city": "Bad Soden am Taunus",
+        "addr:housenumber": "1",
+        "addr:postcode": "65812",
+        "addr:street": "Alleestraße",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Kur-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30; Sa 09:00-13:00",
+        "phone": "+49 6196/2 36 05",
+        "website": "http://www.kurapotheke-bad-soden.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.503685,
+          50.1415629
+        ]
+      },
+      "id": "node/3271338461"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3274526457",
+        "addr:city": "Königstein im Taunus",
+        "addr:housenumber": "11-13",
+        "addr:postcode": "61462",
+        "addr:street": "Hauptstraße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6174 21597",
+        "contact:website": "http://www.marienapotheke-koenigstein.de/",
+        "dispensing": "yes",
+        "name": "Marien-Apotheke",
+        "opening_hours": "Mo-Th 08:00-13:00, 14:30-19:00;Fr 08:00-19:00;Sa 08:30-14:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4668642,
+          50.1822737
+        ]
+      },
+      "id": "node/3274526457"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3321108545",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Metropolitan Pharmacy",
+        "opening_hours": "Mo-Su,PH 06:30-21:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5713623,
+          50.0499389
+        ]
+      },
+      "id": "node/3321108545"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3323542631",
+        "addr:city": "Königstein im Taunus",
+        "addr:country": "DE",
+        "addr:housenumber": "1a",
+        "addr:postcode": "61462",
+        "addr:street": "Bischof-Kaller-Straße",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6174 9552570",
+        "contact:website": "http://www.apo-am-kreisel-koenigstein.de/",
+        "dispensing": "yes",
+        "name": "Apotheke am Kreisel",
+        "opening_hours": "Mo-Fr 08:00-18:30;Sa 09:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.474834,
+          50.1787254
+        ]
+      },
+      "id": "node/3323542631"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3338186147",
+        "addr:city": "Offenbach am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "35",
+        "addr:postcode": "63065",
+        "addr:street": "Frankfurter Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "info@apo-zum-loewen.de",
+        "fax": "+49 69 882141",
+        "healthcare": "pharmacy",
+        "name": "Apotheke zum Löwen",
+        "opening_hours": "Mo-Sa 08:00-20:00",
+        "operator": "Franziska Hoefer",
+        "phone": "+49 69 813685",
+        "toilets:wheelchair": "no",
+        "website": "https://www.apo-zum-loewen.de/de/apotheke-zum-loewen",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7607345,
+          50.1050323
+        ]
+      },
+      "id": "node/3338186147"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3389557987",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "name": "Stadt Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 08:30-13:00",
+        "phone": "+49 6102 22703",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6920401,
+          50.0532653
+        ]
+      },
+      "id": "node/3389557987"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3397331278",
+        "addr:city": "Neu-Isenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "89",
+        "addr:postcode": "63263",
+        "addr:street": "Frankfurter Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "name": "Kronen Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00",
+        "payment:cash": "yes",
+        "payment:credit_cards": "no",
+        "payment:girocard": "yes",
+        "phone": "+49 6102 39081",
+        "website": "https://www.kronenapotheke-neuisenburg.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6950594,
+          50.0527029
+        ]
+      },
+      "id": "node/3397331278"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3454255736",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fax": "+49 6102 79885-20",
+        "level": "0",
+        "name": "Apotheke im Facharztzentrum",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 09:00-12:00",
+        "payment:american_express": "yes",
+        "payment:cash": "yes",
+        "payment:diners_club": "yes",
+        "payment:girocard": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "payment:visa_electron": "yes",
+        "phone": "+49 6102 79885-0",
+        "website": "https://ihre-apotheker.de/apotheke-im-facharztzentrum/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.70228,
+          50.0487226
+        ]
+      },
+      "id": "node/3454255736"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3517120995",
+        "amenity": "pharmacy",
+        "contact:email": "m.loris@outlook.de",
+        "contact:fax": "+49 69 76754517",
+        "contact:phone": "+49 69 761054",
+        "contact:website": "https://www.ebelfeld-apotheke.de/",
+        "healthcare": "pharmacy",
+        "name": "ebelfeld Apotheke",
+        "opening_hours": "Mo-Sa 08:30-13:00, Mo,Tu,Th,Fr 15:00-18:30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6098937,
+          50.1424551
+        ]
+      },
+      "id": "node/3517120995"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3712425512",
+        "amenity": "pharmacy",
+        "name": "Eichwald Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8022574,
+          50.1510266
+        ]
+      },
+      "id": "node/3712425512"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3723177570",
+        "amenity": "pharmacy",
+        "contact:email": "kontakt@distel-apotheke.info",
+        "contact:fax": "+49 69 40806354",
+        "contact:phone": "+49 69 418010",
+        "contact:website": "http://www.distel-apotheke.info/",
+        "healthcare": "pharmacy",
+        "name": "Distel-Apotheke",
+        "note": "Interims-Lösung im Container wegen Neubaua",
+        "opening_hours": "Mo-Fr 08:00-13:00,14:30-18:30; Sa 08:30-13:30; PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7590364,
+          50.1329263
+        ]
+      },
+      "id": "node/3723177570"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3813718271",
+        "addr:city": "Bad Soden am Taunus",
+        "addr:housenumber": "45",
+        "addr:postcode": "65812",
+        "addr:street": "Zum Quellenpark",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Quellen-Apotheke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.4988536,
+          50.139988
+        ]
+      },
+      "id": "node/3813718271"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3880752757",
+        "addr:housenumber": "10",
+        "addr:street": "Kaiserstraße",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Struwwelpeter Apotheke",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 09:00-19:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.675914,
+          50.111217
+        ]
+      },
+      "id": "node/3880752757"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4191240163",
+        "amenity": "pharmacy",
+        "contact:phone": "+49 6171 51031",
+        "contact:website": "https://www.schuetzen-apotheke-oberursel-app.de/",
+        "healthcare": "pharmacy",
+        "name": "Schützen-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5840645,
+          50.2010592
+        ]
+      },
+      "id": "node/4191240163"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4390324454",
+        "amenity": "pharmacy",
+        "name": "Hochtaunus-Apotheke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6170203,
+          50.2125194
+        ]
+      },
+      "id": "node/4390324454"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4876250253",
+        "amenity": "pharmacy",
+        "name": "Hellerhof Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6302786,
+          50.1018786
+        ]
+      },
+      "id": "node/4876250253"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4918277074",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "4",
+        "addr:postcode": "60488",
+        "addr:street": "Steinbacher Hohl",
+        "amenity": "pharmacy",
+        "contact:email": "triamedis@5k-apotheken.de",
+        "contact:fax": "+49 69 756147611",
+        "contact:phone": "+49 69 756147600",
+        "contact:website": "https://www.5k-frankfurt.de/",
+        "healthcare": "pharmacy",
+        "name": "Triamedis Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6168348,
+          50.1503885
+        ]
+      },
+      "id": "node/4918277074"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5003730221",
+        "addr:city": "Bad Soden am Taunus",
+        "addr:housenumber": "2",
+        "addr:postcode": "65812",
+        "addr:street": "Prof.-Much-Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Brunnen-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00",
+        "phone": "‭+49 6196 7640670‬",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5107313,
+          50.1399183
+        ]
+      },
+      "id": "node/5003730221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5398850829",
+        "addr:housenumber": "1-3",
+        "addr:postcode": "63067",
+        "addr:street": "Hafenplatz",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotheke im Hafenzentrum",
+        "opening_hours": "Mo-Fr 09:00-19:00; Sa 09:00-18:00",
+        "operator": "Althaus und Althaus OHG",
+        "phone": "+49 69 98195656",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7557123,
+          50.1122177
+        ]
+      },
+      "id": "node/5398850829"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5554074339",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Bahnhof Rödelheim",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6066363,
+          50.1245424
+        ]
+      },
+      "id": "node/5554074339"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5562203359",
+        "addr:city": "Frankfurt am Main",
+        "addr:country": "DE",
+        "addr:housenumber": "64-66",
+        "addr:postcode": "60599",
+        "addr:street": "Hainer Weg",
+        "addr:suburb": "Sachsenhausen",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "email": "info@apo-henningerturm.de",
+        "fax": "+49 69 30064226",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Henninger Turm",
+        "opening_hours": "Mo-Fr 09:00-19:00; Sa 09:00-18:00",
+        "phone": "+49 69 30064201",
+        "website": "https://www.apo-henningerturm.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6929619,
+          50.0971634
+        ]
+      },
+      "id": "node/5562203359"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6044975590",
+        "amenity": "pharmacy",
+        "contact:email": "info@5k-apotheken.de",
+        "contact:fax": "+49 69 85803374",
+        "contact:phone": "+49 69 85803590",
+        "contact:website": "https://www.5k-frankfurt.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "5k",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 10:00-15:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6702513,
+          50.1090278
+        ]
+      },
+      "id": "node/6044975590"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6075270166",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "level": "2",
+        "name": "Metropolitan Pharmacy",
+        "opening_hours": "Mo-Su 07:00-21:00",
+        "opening_hours:covid19": "07:00-20:00",
+        "payment:american_express": "yes",
+        "payment:jcb": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "source": "estimate; extrapolate; survey",
+        "start_date": "2018"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5687707,
+          50.0528197
+        ]
+      },
+      "id": "node/6075270166"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6268174036",
+        "amenity": "pharmacy",
+        "contact:email": "info@domroemerapo.de",
+        "contact:fax": "+49 69 92034661",
+        "contact:phone": "+49 69 92034660",
+        "contact:website": "https://www.domroemerapo.de/",
+        "healthcare": "pharmacy",
+        "name": "Dom Römer Apotheke",
+        "opening_hours": "Mo-Sa 10:00-18:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.6837691,
+          50.1107447
+        ]
+      },
+      "id": "node/6268174036"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6320685999",
+        "amenity": "pharmacy",
+        "contact:email": "backoffice.hc@apotheke-frankfurt.de",
+        "contact:fax": "+49 6109 508350",
+        "contact:phone": "+49 6109 50830",
+        "contact:website": "https://apotheke-im-hessencenter.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotheke im Hessencenter",
+        "opening_hours": "Mo-Sa 09:30-20:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7530097,
+          50.1406097
+        ]
+      },
+      "id": "node/6320685999"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6658856942",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "12",
+        "addr:postcode": "65929",
+        "addr:street": "Königsteiner Straße",
+        "amenity": "pharmacy",
+        "contact:email": "service@baeren-apotheke-frankfurt.de",
+        "contact:fax": "+49 69 30091589",
+        "contact:phone": "+49 69 313419",
+        "contact:website": "https://www.baeren-apotheke-frankfurt-app.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "Bären-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:30-14:00",
+        "operator": "Martin Preißmann",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5489289,
+          50.1015304
+        ]
+      },
+      "id": "node/6658856942"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6699232629",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7517351,
+          50.0587297
+        ]
+      },
+      "id": "node/6699232629"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7254688481",
+        "addr:city": "Frankfurt am Main",
+        "addr:housenumber": "183",
+        "addr:postcode": "60385",
+        "addr:street": "Wittelsbacherallee",
+        "amenity": "pharmacy",
+        "contact:email": "info@wittelsbach-apotheke.de",
+        "contact:fax": "+49 69 4693352",
+        "contact:phone": "+49 69 454597",
+        "contact:website": "http://www.wittelsbach-apotheke.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Wittelsbach Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30; Sa 08:30-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7157736,
+          50.1263142
+        ]
+      },
+      "id": "node/7254688481"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726308052",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "easy Apotheke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7056757,
+          50.1124899
+        ]
+      },
+      "id": "node/7726308052"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7904944332",
+        "amenity": "pharmacy",
+        "name": "Apotheke an der Post"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5453045,
+          50.1011723
+        ]
+      },
+      "id": "node/7904944332"
+    }
+  ]
+}
