@@ -218,13 +218,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Halbieren Sie die Größe und setzen Sie den Alpha-Wert der Punkte auf 0,2.</p></li>
 <li><p>Bringen Sie die Grafik in die Mercator-Projektion.</p></li>
 <li><p>Schauen Sie sich diesen Befehl an:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="karten-erstellen-hos.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map_data</span>(<span class="st">&quot;world&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb31-2"><a href="karten-erstellen-hos.html#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb31-3"><a href="karten-erstellen-hos.html#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_polygon</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> long,</span>
-<span id="cb31-4"><a href="karten-erstellen-hos.html#cb31-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">y =</span> lat,</span>
-<span id="cb31-5"><a href="karten-erstellen-hos.html#cb31-5" aria-hidden="true" tabindex="-1"></a>                               <span class="at">group =</span> group)) <span class="sc">+</span></span>
-<span id="cb31-6"><a href="karten-erstellen-hos.html#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_quickmap</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">8</span>, <span class="dv">40</span>),</span>
-<span id="cb31-7"><a href="karten-erstellen-hos.html#cb31-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">26</span>, <span class="dv">48</span>))</span></code></pre></div></li>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="karten-erstellen-hos.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map_data</span>(<span class="st">&quot;world&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb34-2"><a href="karten-erstellen-hos.html#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb34-3"><a href="karten-erstellen-hos.html#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_polygon</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> long,</span>
+<span id="cb34-4"><a href="karten-erstellen-hos.html#cb34-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">y =</span> lat,</span>
+<span id="cb34-5"><a href="karten-erstellen-hos.html#cb34-5" aria-hidden="true" tabindex="-1"></a>                               <span class="at">group =</span> group)) <span class="sc">+</span></span>
+<span id="cb34-6"><a href="karten-erstellen-hos.html#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_quickmap</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">8</span>, <span class="dv">40</span>),</span>
+<span id="cb34-7"><a href="karten-erstellen-hos.html#cb34-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">26</span>, <span class="dv">48</span>))</span></code></pre></div></li>
 <li><p>Versuchen Sie, jede einzelne Zeile nachzuvollziehen, indem Sie die entsprechenden Funktionen recherchieren.</p></li>
 <li><p>Führen Sie den Befehl aus.</p></li>
 <li><p>Ändern Sie die Farbe der Flächen in hellgrau.</p></li>

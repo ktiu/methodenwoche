@@ -219,129 +219,129 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="voraussetzungen-1" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Voraussetzungen</h2>
 <p>Wir laden erstmal <code>tidyverse</code>:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="karten-erstellen-ftr.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="karten-erstellen-ftr.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
 </div>
 <div id="exkurs-pipes" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Exkurs: Pipes</h2>
 <p>Teil vom <code>tidyverse</code> ist auch das Paket <code>magrittr</code>, das einen besonderen Operator enthält: <code>%&gt;%</code></p>
 <p>Der Operator <code>%&gt;%</code> heißt <q>Pipe</q> und setzt das Ergebnis der vorherigen Funktion als ersten Parameter in die nächste Funktion ein. Zur Veranschaulichung:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="karten-erstellen-ftr.html#cb18-1" aria-hidden="true" tabindex="-1"></a>anzahl_buchstaben <span class="ot">&lt;-</span> <span class="fu">length</span>(letters)</span>
-<span id="cb18-2"><a href="karten-erstellen-ftr.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(anzahl_buchstaben)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="karten-erstellen-ftr.html#cb21-1" aria-hidden="true" tabindex="-1"></a>anzahl_buchstaben <span class="ot">&lt;-</span> <span class="fu">length</span>(letters)</span>
+<span id="cb21-2"><a href="karten-erstellen-ftr.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(anzahl_buchstaben)</span></code></pre></div>
 <p>…ist das gleiche wie…</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="karten-erstellen-ftr.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">length</span>(letters))</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="karten-erstellen-ftr.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">length</span>(letters))</span></code></pre></div>
 <p>…ist das gleiche wie…</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="karten-erstellen-ftr.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(letters) <span class="sc">%&gt;%</span></span>
-<span id="cb20-2"><a href="karten-erstellen-ftr.html#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="karten-erstellen-ftr.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(letters) <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="karten-erstellen-ftr.html#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>()</span></code></pre></div>
 <p>…ist das gleiche wie…</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="karten-erstellen-ftr.html#cb21-1" aria-hidden="true" tabindex="-1"></a>letters <span class="sc">%&gt;%</span></span>
-<span id="cb21-2"><a href="karten-erstellen-ftr.html#cb21-2" aria-hidden="true" tabindex="-1"></a>  length <span class="sc">%&gt;%</span></span>
-<span id="cb21-3"><a href="karten-erstellen-ftr.html#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="karten-erstellen-ftr.html#cb24-1" aria-hidden="true" tabindex="-1"></a>letters <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a href="karten-erstellen-ftr.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  length <span class="sc">%&gt;%</span></span>
+<span id="cb24-3"><a href="karten-erstellen-ftr.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>()</span></code></pre></div>
 <p>So können beliebig viele Funktionen aneinandergereiht werden. Und mit <code>-&gt;</code> kann eine Variable „in die andere Richtung“ zugewiesen werden</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="karten-erstellen-ftr.html#cb22-1" aria-hidden="true" tabindex="-1"></a>letters <span class="sc">%&gt;%</span></span>
-<span id="cb22-2"><a href="karten-erstellen-ftr.html#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb22-3"><a href="karten-erstellen-ftr.html#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb22-4"><a href="karten-erstellen-ftr.html#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb22-5"><a href="karten-erstellen-ftr.html#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.character</span>() <span class="ot">-&gt;</span></span>
-<span id="cb22-6"><a href="karten-erstellen-ftr.html#cb22-6" aria-hidden="true" tabindex="-1"></a>  my_var</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="karten-erstellen-ftr.html#cb25-1" aria-hidden="true" tabindex="-1"></a>letters <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="karten-erstellen-ftr.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb25-3"><a href="karten-erstellen-ftr.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb25-4"><a href="karten-erstellen-ftr.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb25-5"><a href="karten-erstellen-ftr.html#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.character</span>() <span class="ot">-&gt;</span></span>
+<span id="cb25-6"><a href="karten-erstellen-ftr.html#cb25-6" aria-hidden="true" tabindex="-1"></a>  my_var</span></code></pre></div>
 <p>Gerade bei komplizierteren Zusammenhängen wird der Code so oft lesbarer, weil die Logik von links nach rechts, bzw. von oben nach unten gelesen werden kann.</p>
 </div>
 <div id="daten-importieren" class="section level2" number="3.4">
 <h2><span class="header-section-number">3.4</span> Daten importieren</h2>
 <p>Beim Open-Data-Portal der Stadt Frankfurt steht ein <a href="http://offenedaten.frankfurt.de/dataset/baumkataster-frankfurt-am-main">Baumkataster</a> zur Verfügung.</p>
 <p>Die Datei im CSV-Format (comma separated values) kann entweder heruntergeladen und durch klicken importiert werden, oder direkt über den Befehl:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="karten-erstellen-ftr.html#cb23-1" aria-hidden="true" tabindex="-1"></a>baumkataster <span class="ot">&lt;-</span> <span class="fu">read_csv2</span>(<span class="st">&quot;http://offenedaten.frankfurt.de/dataset/73c5a6b3-c033-4dad-bb7d-8783427dd233/resource/7a73520b-961a-4aad-a582-449e676c247c/download/gprojekteopen-datadatenamt-67datenbaumauswahl_veroffentlichung_4baumauswahl_veroffentlichung_4.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="karten-erstellen-ftr.html#cb26-1" aria-hidden="true" tabindex="-1"></a>baumkataster <span class="ot">&lt;-</span> <span class="fu">read_csv2</span>(<span class="st">&quot;http://offenedaten.frankfurt.de/dataset/73c5a6b3-c033-4dad-bb7d-8783427dd233/resource/7a73520b-961a-4aad-a582-449e676c247c/download/gprojekteopen-datadatenamt-67datenbaumauswahl_veroffentlichung_4baumauswahl_veroffentlichung_4.csv&quot;</span>)</span></code></pre></div>
 </div>
 <div id="überblick-verschaffen" class="section level2" number="3.5">
 <h2><span class="header-section-number">3.5</span> Überblick verschaffen</h2>
 <p>Mit <code>summary()</code> lässt sich eine Zusammenfassung der Werte generieren:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="karten-erstellen-ftr.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(baumkataster)</span>
-<span id="cb24-2"><a href="karten-erstellen-ftr.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="do">##  Gattung/Art/Deutscher Name   Baumnummer         Objekt            Pflanzjahr  </span></span>
-<span id="cb24-3"><a href="karten-erstellen-ftr.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="do">##  Length:118403              Min.   :    1.0   Length:118403      Min.   :1645  </span></span>
-<span id="cb24-4"><a href="karten-erstellen-ftr.html#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="do">##  Class :character           1st Qu.:   24.0   Class :character   1st Qu.:1970  </span></span>
-<span id="cb24-5"><a href="karten-erstellen-ftr.html#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mode  :character           Median :   82.0   Mode  :character   Median :1982  </span></span>
-<span id="cb24-6"><a href="karten-erstellen-ftr.html#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Mean   :  232.7                      Mean   :1979  </span></span>
-<span id="cb24-7"><a href="karten-erstellen-ftr.html#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="do">##                             3rd Qu.:  270.0                      3rd Qu.:1995  </span></span>
-<span id="cb24-8"><a href="karten-erstellen-ftr.html#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Max.   :20158.0                      Max.   :2017  </span></span>
-<span id="cb24-9"><a href="karten-erstellen-ftr.html#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="do">##                             NA&#39;s   :1853                                       </span></span>
-<span id="cb24-10"><a href="karten-erstellen-ftr.html#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  Kronendurchmesser    HOCHWERT         RECHTSWERT    </span></span>
-<span id="cb24-11"><a href="karten-erstellen-ftr.html#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  Min.   : 2.000    Min.   :5545117   Min.   :463163  </span></span>
-<span id="cb24-12"><a href="karten-erstellen-ftr.html#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  1st Qu.: 4.000    1st Qu.:5550428   1st Qu.:472715  </span></span>
-<span id="cb24-13"><a href="karten-erstellen-ftr.html#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  Median : 6.000    Median :5552601   Median :475219  </span></span>
-<span id="cb24-14"><a href="karten-erstellen-ftr.html#cb24-14" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mean   : 6.688    Mean   :5552953   Mean   :475244  </span></span>
-<span id="cb24-15"><a href="karten-erstellen-ftr.html#cb24-15" aria-hidden="true" tabindex="-1"></a><span class="do">##  3rd Qu.: 9.000    3rd Qu.:5555165   3rd Qu.:478201  </span></span>
-<span id="cb24-16"><a href="karten-erstellen-ftr.html#cb24-16" aria-hidden="true" tabindex="-1"></a><span class="do">##  Max.   :63.000    Max.   :5563639   Max.   :485361  </span></span>
-<span id="cb24-17"><a href="karten-erstellen-ftr.html#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="karten-erstellen-ftr.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(baumkataster)</span>
+<span id="cb27-2"><a href="karten-erstellen-ftr.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="do">##  Gattung/Art/Deutscher Name   Baumnummer         Objekt            Pflanzjahr  </span></span>
+<span id="cb27-3"><a href="karten-erstellen-ftr.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="do">##  Length:118403              Min.   :    1.0   Length:118403      Min.   :1645  </span></span>
+<span id="cb27-4"><a href="karten-erstellen-ftr.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="do">##  Class :character           1st Qu.:   24.0   Class :character   1st Qu.:1970  </span></span>
+<span id="cb27-5"><a href="karten-erstellen-ftr.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mode  :character           Median :   82.0   Mode  :character   Median :1982  </span></span>
+<span id="cb27-6"><a href="karten-erstellen-ftr.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Mean   :  232.7                      Mean   :1979  </span></span>
+<span id="cb27-7"><a href="karten-erstellen-ftr.html#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="do">##                             3rd Qu.:  270.0                      3rd Qu.:1995  </span></span>
+<span id="cb27-8"><a href="karten-erstellen-ftr.html#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Max.   :20158.0                      Max.   :2017  </span></span>
+<span id="cb27-9"><a href="karten-erstellen-ftr.html#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="do">##                             NA&#39;s   :1853                                       </span></span>
+<span id="cb27-10"><a href="karten-erstellen-ftr.html#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  Kronendurchmesser    HOCHWERT         RECHTSWERT    </span></span>
+<span id="cb27-11"><a href="karten-erstellen-ftr.html#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  Min.   : 2.000    Min.   :5545117   Min.   :463163  </span></span>
+<span id="cb27-12"><a href="karten-erstellen-ftr.html#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  1st Qu.: 4.000    1st Qu.:5550428   1st Qu.:472715  </span></span>
+<span id="cb27-13"><a href="karten-erstellen-ftr.html#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  Median : 6.000    Median :5552601   Median :475219  </span></span>
+<span id="cb27-14"><a href="karten-erstellen-ftr.html#cb27-14" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mean   : 6.688    Mean   :5552953   Mean   :475244  </span></span>
+<span id="cb27-15"><a href="karten-erstellen-ftr.html#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="do">##  3rd Qu.: 9.000    3rd Qu.:5555165   3rd Qu.:478201  </span></span>
+<span id="cb27-16"><a href="karten-erstellen-ftr.html#cb27-16" aria-hidden="true" tabindex="-1"></a><span class="do">##  Max.   :63.000    Max.   :5563639   Max.   :485361  </span></span>
+<span id="cb27-17"><a href="karten-erstellen-ftr.html#cb27-17" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span></code></pre></div>
 <p>Genauere Infos über diese Merkmale gibt es auf dem Datenportal.</p>
 </div>
 <div id="visualisieren" class="section level2" number="3.6">
 <h2><span class="header-section-number">3.6</span> Visualisieren</h2>
 <p>Wie in der letzten Lektion besprochen, lässt sich der Datensatz mit <code>ggplot()</code> visualisieren, z. B.:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="karten-erstellen-ftr.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(baumkataster, <span class="fu">aes</span>(<span class="at">x =</span> Kronendurchmesser)) <span class="sc">+</span></span>
-<span id="cb25-2"><a href="karten-erstellen-ftr.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="karten-erstellen-ftr.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(baumkataster, <span class="fu">aes</span>(<span class="at">x =</span> Kronendurchmesser)) <span class="sc">+</span></span>
+<span id="cb28-2"><a href="karten-erstellen-ftr.html#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 <p>Eine neue Messreihe lässt sich z. B. so errechnen:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="karten-erstellen-ftr.html#cb26-1" aria-hidden="true" tabindex="-1"></a>alter <span class="ot">&lt;-</span> <span class="dv">2020</span> <span class="sc">-</span> baumkataster<span class="sc">$</span>Pflanzjahr</span>
-<span id="cb26-2"><a href="karten-erstellen-ftr.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(alter)</span>
-<span id="cb26-3"><a href="karten-erstellen-ftr.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 100 100 100 100 100 100</span></span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="karten-erstellen-ftr.html#cb29-1" aria-hidden="true" tabindex="-1"></a>alter <span class="ot">&lt;-</span> <span class="dv">2020</span> <span class="sc">-</span> baumkataster<span class="sc">$</span>Pflanzjahr</span>
+<span id="cb29-2"><a href="karten-erstellen-ftr.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(alter)</span>
+<span id="cb29-3"><a href="karten-erstellen-ftr.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 100 100 100 100 100 100</span></span></code></pre></div>
 <p>Der Befehl <code>mutate()</code> funktioniert sehr ähnlich, gibt aber den veränderten Datensatz zurück:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="karten-erstellen-ftr.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(baumkataster, <span class="at">alter =</span> <span class="dv">2020</span> <span class="sc">-</span> Pflanzjahr)</span>
-<span id="cb27-2"><a href="karten-erstellen-ftr.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 118,403 x 8</span></span>
-<span id="cb27-3"><a href="karten-erstellen-ftr.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="do">##    `Gattung/Art/Deutsch… Baumnummer Objekt  Pflanzjahr Kronendurchmess… HOCHWERT</span></span>
-<span id="cb27-4"><a href="karten-erstellen-ftr.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="do">##    &lt;chr&gt;                      &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;            &lt;dbl&gt;    &lt;dbl&gt;</span></span>
-<span id="cb27-5"><a href="karten-erstellen-ftr.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="do">##  1 Platanus x hispanica…          1 Ackerm…       1920                8 5549511.</span></span>
-<span id="cb27-6"><a href="karten-erstellen-ftr.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="do">##  2 Platanus x hispanica…          2 Ackerm…       1920                8 5549517.</span></span>
-<span id="cb27-7"><a href="karten-erstellen-ftr.html#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  3 Platanus x hispanica…          3 Ackerm…       1920                8 5549524.</span></span>
-<span id="cb27-8"><a href="karten-erstellen-ftr.html#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  4 Platanus x hispanica…          4 Ackerm…       1920                8 5549531 </span></span>
-<span id="cb27-9"><a href="karten-erstellen-ftr.html#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  5 Platanus x hispanica…          5 Ackerm…       1920                8 5549538.</span></span>
-<span id="cb27-10"><a href="karten-erstellen-ftr.html#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  6 Platanus x hispanica…          6 Ackerm…       1920                8 5549544.</span></span>
-<span id="cb27-11"><a href="karten-erstellen-ftr.html#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  7 Platanus x hispanica…          7 Ackerm…       1920                8 5549551.</span></span>
-<span id="cb27-12"><a href="karten-erstellen-ftr.html#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  8 Platanus x hispanica…          8 Ackerm…       1920                8 5549557.</span></span>
-<span id="cb27-13"><a href="karten-erstellen-ftr.html#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  9 Platanus x hispanica…          9 Ackerm…       1920                8 5549564.</span></span>
-<span id="cb27-14"><a href="karten-erstellen-ftr.html#cb27-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 Platanus x hispanica…         10 Ackerm…       1920                8 5549571.</span></span>
-<span id="cb27-15"><a href="karten-erstellen-ftr.html#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="do">## # … with 118,393 more rows, and 2 more variables: RECHTSWERT &lt;dbl&gt;, alter &lt;dbl&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="karten-erstellen-ftr.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(baumkataster, <span class="at">alter =</span> <span class="dv">2020</span> <span class="sc">-</span> Pflanzjahr)</span>
+<span id="cb30-2"><a href="karten-erstellen-ftr.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 118,403 x 8</span></span>
+<span id="cb30-3"><a href="karten-erstellen-ftr.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="do">##    `Gattung/Art/Deutsch… Baumnummer Objekt  Pflanzjahr Kronendurchmess… HOCHWERT</span></span>
+<span id="cb30-4"><a href="karten-erstellen-ftr.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="do">##    &lt;chr&gt;                      &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;            &lt;dbl&gt;    &lt;dbl&gt;</span></span>
+<span id="cb30-5"><a href="karten-erstellen-ftr.html#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="do">##  1 Platanus x hispanica…          1 Ackerm…       1920                8 5549511.</span></span>
+<span id="cb30-6"><a href="karten-erstellen-ftr.html#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="do">##  2 Platanus x hispanica…          2 Ackerm…       1920                8 5549517.</span></span>
+<span id="cb30-7"><a href="karten-erstellen-ftr.html#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  3 Platanus x hispanica…          3 Ackerm…       1920                8 5549524.</span></span>
+<span id="cb30-8"><a href="karten-erstellen-ftr.html#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  4 Platanus x hispanica…          4 Ackerm…       1920                8 5549531 </span></span>
+<span id="cb30-9"><a href="karten-erstellen-ftr.html#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  5 Platanus x hispanica…          5 Ackerm…       1920                8 5549538.</span></span>
+<span id="cb30-10"><a href="karten-erstellen-ftr.html#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  6 Platanus x hispanica…          6 Ackerm…       1920                8 5549544.</span></span>
+<span id="cb30-11"><a href="karten-erstellen-ftr.html#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  7 Platanus x hispanica…          7 Ackerm…       1920                8 5549551.</span></span>
+<span id="cb30-12"><a href="karten-erstellen-ftr.html#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  8 Platanus x hispanica…          8 Ackerm…       1920                8 5549557.</span></span>
+<span id="cb30-13"><a href="karten-erstellen-ftr.html#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  9 Platanus x hispanica…          9 Ackerm…       1920                8 5549564.</span></span>
+<span id="cb30-14"><a href="karten-erstellen-ftr.html#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 Platanus x hispanica…         10 Ackerm…       1920                8 5549571.</span></span>
+<span id="cb30-15"><a href="karten-erstellen-ftr.html#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="do">## # … with 118,393 more rows, and 2 more variables: RECHTSWERT &lt;dbl&gt;, alter &lt;dbl&gt;</span></span></code></pre></div>
 <p>Derselbe Befehl mit dem Pipe-Operator:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="karten-erstellen-ftr.html#cb28-1" aria-hidden="true" tabindex="-1"></a>baumkataster <span class="sc">%&gt;%</span></span>
-<span id="cb28-2"><a href="karten-erstellen-ftr.html#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">alter =</span> <span class="dv">2020</span> <span class="sc">-</span> Pflanzjahr)</span>
-<span id="cb28-3"><a href="karten-erstellen-ftr.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 118,403 x 8</span></span>
-<span id="cb28-4"><a href="karten-erstellen-ftr.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="do">##    `Gattung/Art/Deutsch… Baumnummer Objekt  Pflanzjahr Kronendurchmess… HOCHWERT</span></span>
-<span id="cb28-5"><a href="karten-erstellen-ftr.html#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="do">##    &lt;chr&gt;                      &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;            &lt;dbl&gt;    &lt;dbl&gt;</span></span>
-<span id="cb28-6"><a href="karten-erstellen-ftr.html#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="do">##  1 Platanus x hispanica…          1 Ackerm…       1920                8 5549511.</span></span>
-<span id="cb28-7"><a href="karten-erstellen-ftr.html#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  2 Platanus x hispanica…          2 Ackerm…       1920                8 5549517.</span></span>
-<span id="cb28-8"><a href="karten-erstellen-ftr.html#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  3 Platanus x hispanica…          3 Ackerm…       1920                8 5549524.</span></span>
-<span id="cb28-9"><a href="karten-erstellen-ftr.html#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  4 Platanus x hispanica…          4 Ackerm…       1920                8 5549531 </span></span>
-<span id="cb28-10"><a href="karten-erstellen-ftr.html#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  5 Platanus x hispanica…          5 Ackerm…       1920                8 5549538.</span></span>
-<span id="cb28-11"><a href="karten-erstellen-ftr.html#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  6 Platanus x hispanica…          6 Ackerm…       1920                8 5549544.</span></span>
-<span id="cb28-12"><a href="karten-erstellen-ftr.html#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  7 Platanus x hispanica…          7 Ackerm…       1920                8 5549551.</span></span>
-<span id="cb28-13"><a href="karten-erstellen-ftr.html#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  8 Platanus x hispanica…          8 Ackerm…       1920                8 5549557.</span></span>
-<span id="cb28-14"><a href="karten-erstellen-ftr.html#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="do">##  9 Platanus x hispanica…          9 Ackerm…       1920                8 5549564.</span></span>
-<span id="cb28-15"><a href="karten-erstellen-ftr.html#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 Platanus x hispanica…         10 Ackerm…       1920                8 5549571.</span></span>
-<span id="cb28-16"><a href="karten-erstellen-ftr.html#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="do">## # … with 118,393 more rows, and 2 more variables: RECHTSWERT &lt;dbl&gt;, alter &lt;dbl&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="karten-erstellen-ftr.html#cb31-1" aria-hidden="true" tabindex="-1"></a>baumkataster <span class="sc">%&gt;%</span></span>
+<span id="cb31-2"><a href="karten-erstellen-ftr.html#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">alter =</span> <span class="dv">2020</span> <span class="sc">-</span> Pflanzjahr)</span>
+<span id="cb31-3"><a href="karten-erstellen-ftr.html#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 118,403 x 8</span></span>
+<span id="cb31-4"><a href="karten-erstellen-ftr.html#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="do">##    `Gattung/Art/Deutsch… Baumnummer Objekt  Pflanzjahr Kronendurchmess… HOCHWERT</span></span>
+<span id="cb31-5"><a href="karten-erstellen-ftr.html#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="do">##    &lt;chr&gt;                      &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;            &lt;dbl&gt;    &lt;dbl&gt;</span></span>
+<span id="cb31-6"><a href="karten-erstellen-ftr.html#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="do">##  1 Platanus x hispanica…          1 Ackerm…       1920                8 5549511.</span></span>
+<span id="cb31-7"><a href="karten-erstellen-ftr.html#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  2 Platanus x hispanica…          2 Ackerm…       1920                8 5549517.</span></span>
+<span id="cb31-8"><a href="karten-erstellen-ftr.html#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  3 Platanus x hispanica…          3 Ackerm…       1920                8 5549524.</span></span>
+<span id="cb31-9"><a href="karten-erstellen-ftr.html#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  4 Platanus x hispanica…          4 Ackerm…       1920                8 5549531 </span></span>
+<span id="cb31-10"><a href="karten-erstellen-ftr.html#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  5 Platanus x hispanica…          5 Ackerm…       1920                8 5549538.</span></span>
+<span id="cb31-11"><a href="karten-erstellen-ftr.html#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  6 Platanus x hispanica…          6 Ackerm…       1920                8 5549544.</span></span>
+<span id="cb31-12"><a href="karten-erstellen-ftr.html#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  7 Platanus x hispanica…          7 Ackerm…       1920                8 5549551.</span></span>
+<span id="cb31-13"><a href="karten-erstellen-ftr.html#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  8 Platanus x hispanica…          8 Ackerm…       1920                8 5549557.</span></span>
+<span id="cb31-14"><a href="karten-erstellen-ftr.html#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="do">##  9 Platanus x hispanica…          9 Ackerm…       1920                8 5549564.</span></span>
+<span id="cb31-15"><a href="karten-erstellen-ftr.html#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 Platanus x hispanica…         10 Ackerm…       1920                8 5549571.</span></span>
+<span id="cb31-16"><a href="karten-erstellen-ftr.html#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="do">## # … with 118,393 more rows, and 2 more variables: RECHTSWERT &lt;dbl&gt;, alter &lt;dbl&gt;</span></span></code></pre></div>
 <p>So lassen sich auch hier verschiedene Befehle verknüpfen. <code>filter()</code> beschränkt den Datensatz auf Merkmalsträger, die den Kriterien entsprechen:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="karten-erstellen-ftr.html#cb29-1" aria-hidden="true" tabindex="-1"></a>baumkataster <span class="sc">%&gt;%</span></span>
-<span id="cb29-2"><a href="karten-erstellen-ftr.html#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">alter =</span> <span class="dv">2020</span> <span class="sc">-</span> Pflanzjahr) <span class="sc">%&gt;%</span></span>
-<span id="cb29-3"><a href="karten-erstellen-ftr.html#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(alter <span class="sc">&gt;</span> <span class="dv">30</span>) <span class="ot">-&gt;</span></span>
-<span id="cb29-4"><a href="karten-erstellen-ftr.html#cb29-4" aria-hidden="true" tabindex="-1"></a>  alte_baeume</span>
-<span id="cb29-5"><a href="karten-erstellen-ftr.html#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-6"><a href="karten-erstellen-ftr.html#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(alte_baeume)</span>
-<span id="cb29-7"><a href="karten-erstellen-ftr.html#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  Gattung/Art/Deutscher Name   Baumnummer         Objekt            Pflanzjahr  </span></span>
-<span id="cb29-8"><a href="karten-erstellen-ftr.html#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  Length:73859               Min.   :    1.0   Length:73859       Min.   :1645  </span></span>
-<span id="cb29-9"><a href="karten-erstellen-ftr.html#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  Class :character           1st Qu.:   29.0   Class :character   1st Qu.:1960  </span></span>
-<span id="cb29-10"><a href="karten-erstellen-ftr.html#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mode  :character           Median :   97.0   Mode  :character   Median :1974  </span></span>
-<span id="cb29-11"><a href="karten-erstellen-ftr.html#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Mean   :  263.2                      Mean   :1966  </span></span>
-<span id="cb29-12"><a href="karten-erstellen-ftr.html#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="do">##                             3rd Qu.:  314.0                      3rd Qu.:1980  </span></span>
-<span id="cb29-13"><a href="karten-erstellen-ftr.html#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Max.   :10489.0                      Max.   :1989  </span></span>
-<span id="cb29-14"><a href="karten-erstellen-ftr.html#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="do">##                             NA&#39;s   :684                                        </span></span>
-<span id="cb29-15"><a href="karten-erstellen-ftr.html#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="do">##  Kronendurchmesser    HOCHWERT         RECHTSWERT         alter       </span></span>
-<span id="cb29-16"><a href="karten-erstellen-ftr.html#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="do">##  Min.   : 2.000    Min.   :5545117   Min.   :463163   Min.   : 31.00  </span></span>
-<span id="cb29-17"><a href="karten-erstellen-ftr.html#cb29-17" aria-hidden="true" tabindex="-1"></a><span class="do">##  1st Qu.: 6.000    1st Qu.:5550415   1st Qu.:472667   1st Qu.: 40.00  </span></span>
-<span id="cb29-18"><a href="karten-erstellen-ftr.html#cb29-18" aria-hidden="true" tabindex="-1"></a><span class="do">##  Median : 8.000    Median :5552480   Median :475708   Median : 46.00  </span></span>
-<span id="cb29-19"><a href="karten-erstellen-ftr.html#cb29-19" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mean   : 8.503    Mean   :5552593   Mean   :475402   Mean   : 53.54  </span></span>
-<span id="cb29-20"><a href="karten-erstellen-ftr.html#cb29-20" aria-hidden="true" tabindex="-1"></a><span class="do">##  3rd Qu.:10.000    3rd Qu.:5554589   3rd Qu.:478539   3rd Qu.: 60.00  </span></span>
-<span id="cb29-21"><a href="karten-erstellen-ftr.html#cb29-21" aria-hidden="true" tabindex="-1"></a><span class="do">##  Max.   :35.000    Max.   :5563639   Max.   :485360   Max.   :375.00  </span></span>
-<span id="cb29-22"><a href="karten-erstellen-ftr.html#cb29-22" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="karten-erstellen-ftr.html#cb32-1" aria-hidden="true" tabindex="-1"></a>baumkataster <span class="sc">%&gt;%</span></span>
+<span id="cb32-2"><a href="karten-erstellen-ftr.html#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">alter =</span> <span class="dv">2020</span> <span class="sc">-</span> Pflanzjahr) <span class="sc">%&gt;%</span></span>
+<span id="cb32-3"><a href="karten-erstellen-ftr.html#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(alter <span class="sc">&gt;</span> <span class="dv">30</span>) <span class="ot">-&gt;</span></span>
+<span id="cb32-4"><a href="karten-erstellen-ftr.html#cb32-4" aria-hidden="true" tabindex="-1"></a>  alte_baeume</span>
+<span id="cb32-5"><a href="karten-erstellen-ftr.html#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-6"><a href="karten-erstellen-ftr.html#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(alte_baeume)</span>
+<span id="cb32-7"><a href="karten-erstellen-ftr.html#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  Gattung/Art/Deutscher Name   Baumnummer         Objekt            Pflanzjahr  </span></span>
+<span id="cb32-8"><a href="karten-erstellen-ftr.html#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  Length:73859               Min.   :    1.0   Length:73859       Min.   :1645  </span></span>
+<span id="cb32-9"><a href="karten-erstellen-ftr.html#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  Class :character           1st Qu.:   29.0   Class :character   1st Qu.:1960  </span></span>
+<span id="cb32-10"><a href="karten-erstellen-ftr.html#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mode  :character           Median :   97.0   Mode  :character   Median :1974  </span></span>
+<span id="cb32-11"><a href="karten-erstellen-ftr.html#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Mean   :  263.2                      Mean   :1966  </span></span>
+<span id="cb32-12"><a href="karten-erstellen-ftr.html#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="do">##                             3rd Qu.:  314.0                      3rd Qu.:1980  </span></span>
+<span id="cb32-13"><a href="karten-erstellen-ftr.html#cb32-13" aria-hidden="true" tabindex="-1"></a><span class="do">##                             Max.   :10489.0                      Max.   :1989  </span></span>
+<span id="cb32-14"><a href="karten-erstellen-ftr.html#cb32-14" aria-hidden="true" tabindex="-1"></a><span class="do">##                             NA&#39;s   :684                                        </span></span>
+<span id="cb32-15"><a href="karten-erstellen-ftr.html#cb32-15" aria-hidden="true" tabindex="-1"></a><span class="do">##  Kronendurchmesser    HOCHWERT         RECHTSWERT         alter       </span></span>
+<span id="cb32-16"><a href="karten-erstellen-ftr.html#cb32-16" aria-hidden="true" tabindex="-1"></a><span class="do">##  Min.   : 2.000    Min.   :5545117   Min.   :463163   Min.   : 31.00  </span></span>
+<span id="cb32-17"><a href="karten-erstellen-ftr.html#cb32-17" aria-hidden="true" tabindex="-1"></a><span class="do">##  1st Qu.: 6.000    1st Qu.:5550415   1st Qu.:472667   1st Qu.: 40.00  </span></span>
+<span id="cb32-18"><a href="karten-erstellen-ftr.html#cb32-18" aria-hidden="true" tabindex="-1"></a><span class="do">##  Median : 8.000    Median :5552480   Median :475708   Median : 46.00  </span></span>
+<span id="cb32-19"><a href="karten-erstellen-ftr.html#cb32-19" aria-hidden="true" tabindex="-1"></a><span class="do">##  Mean   : 8.503    Mean   :5552593   Mean   :475402   Mean   : 53.54  </span></span>
+<span id="cb32-20"><a href="karten-erstellen-ftr.html#cb32-20" aria-hidden="true" tabindex="-1"></a><span class="do">##  3rd Qu.:10.000    3rd Qu.:5554589   3rd Qu.:478539   3rd Qu.: 60.00  </span></span>
+<span id="cb32-21"><a href="karten-erstellen-ftr.html#cb32-21" aria-hidden="true" tabindex="-1"></a><span class="do">##  Max.   :35.000    Max.   :5563639   Max.   :485360   Max.   :375.00  </span></span>
+<span id="cb32-22"><a href="karten-erstellen-ftr.html#cb32-22" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span></code></pre></div>
 <p>Schließlich ergibt das Streudiagramm von Koordinaten so eine art Karte:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="karten-erstellen-ftr.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(alte_baeume) <span class="sc">+</span></span>
-<span id="cb30-2"><a href="karten-erstellen-ftr.html#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">0.1</span>, <span class="fu">aes</span>(<span class="at">x =</span> RECHTSWERT, <span class="at">y =</span> HOCHWERT))</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="karten-erstellen-ftr.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(alte_baeume) <span class="sc">+</span></span>
+<span id="cb33-2"><a href="karten-erstellen-ftr.html#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">0.1</span>, <span class="fu">aes</span>(<span class="at">x =</span> RECHTSWERT, <span class="at">y =</span> HOCHWERT))</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
 <p>Diesen Ansatz werden wir in der nächsten Lektion vertiefen.</p>
 
