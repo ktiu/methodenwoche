@@ -1,5 +1,9 @@
 # Daten visualisieren
 
+```{r include = F}
+solutions <- F
+```
+
 ## Lernziele dieser Sitzung
 
 Sie können...

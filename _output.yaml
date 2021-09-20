@@ -11,4 +11,4 @@ bookdown::gitbook:
 
 bookdown::pdf_book:
   keep_tex: true
-  latex_engine: xelatex
+  template: template.tex

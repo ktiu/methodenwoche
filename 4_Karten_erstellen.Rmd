@@ -2,6 +2,10 @@
 
 ## Aufgaben
 
+```{r include = F}
+solutions <- F
+```
+
 1. Besuchen Sie https://pleiades.stoa.org/ - worum geht es hier?
 
 2. Finden Sie den kompletten aktuellen Datensatz für „locations“ als CSV-Datei.

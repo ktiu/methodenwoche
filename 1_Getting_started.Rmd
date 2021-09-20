@@ -72,6 +72,7 @@ Sie können...
 
 ### "Schattenkompetenzen"
 
+- Über Code reden
 - Fehlermeldungen lesen
 - Gezielt googlen (und Antworten auswählen)
 - Copy, paste, customize
@@ -118,7 +119,7 @@ Sie können...
 ### Workshopunterlagen
 
 - Bookdown (statt OLAT)
-- ~Können~ Werden sich verändern
+- ~~Können~~ Werden sich verändern
 - Am besten neu laden mit Strg+Umschalt+R
 - https://tiny.gu/mwsa
 
@@ -127,4 +128,4 @@ Sie können...
 - Grundsätzliche Empfehlung: R und RStudio lokal installieren
 - Wir nutzen im Rahmen des Workshops die RStudio Cloud
   - für einfaches Teilen von Code
-  - für homogenes Setup
+  - für ein homogenes Setup
