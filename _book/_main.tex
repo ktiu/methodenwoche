@@ -1164,5 +1164,1119 @@ Diesen Ansatz werden wir in der nächsten Lektion vertiefen.
   \includegraphics{_main_files/figure-latex/unnamed-chunk-49-1.png}
 \end{enumerate}
 
+\hypertarget{geodaten-beschaffen}{%
+\section{Geodaten beschaffen}\label{geodaten-beschaffen}}
+
+\hypertarget{lernziele-dieser-sitzung-2}{%
+\subsection{Lernziele dieser Sitzung}\label{lernziele-dieser-sitzung-2}}
+
+Sie können\ldots{}
+
+\begin{itemize}
+\tightlist
+\item
+  sich den Quellcode einer Webseite anzeigen lassen und interpretieren.
+\item
+  HTML-Tabellen als Datensatz einlesen.
+\item
+  Fortgeschrittene Methoden der Datenbereinigung nachvollziehen.
+\end{itemize}
+
+\hypertarget{vorbereitung}{%
+\subsection{Vorbereitung}\label{vorbereitung}}
+
+Am Beispiel der Küstenlängen verschiedener Länder besprechen wir Techniken der Datenerhebung/-erfassung und -visualisierung. Unser Ziel ist es, die Daten zu den Küstenlängen in einer Grafik darzustellen.
+
+Für die folgenden Aufgaben benötigen wir die Pakete \texttt{rvest} und \texttt{tidyverse}. Zunächst müssen diese installiert und in unsere Umgebung geladen werden.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(rvest)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{datenbeschaffung}{%
+\subsection{Datenbeschaffung}\label{datenbeschaffung}}
+
+Auf dem Internetauftritt der CIA gab es es eine Tabelle, welche die Küstenlänge (inklusive der Inseln) der einzelnen Länder enthält.
+
+Über die Archivierungsplattform WayBackMachine ist die Seite immer noch abrufbar: \url{https://web.archive.org/web/20190802010710/https://www.cia.gov/library/publications/the-world-factbook/fields/282.html}
+
+In einem ersten Schritt wird die URL der Tabelle der Variable \texttt{url} zugewiesen, sodass der Quellcode mit dem Befehl \texttt{read\_html()} eingelesen werden kann.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{url }\OtherTok{\textless{}{-}} \StringTok{"https://web.archive.org/web/20190802010710/https://www.cia.gov/library/publications/the{-}world{-}factbook/fields/282.html"}
+\NormalTok{reply }\OtherTok{\textless{}{-}} \FunctionTok{read\_html}\NormalTok{(url)}
+\end{Highlighting}
+\end{Shaded}
+
+Der Befehl \texttt{html\_table()} ermöglicht das Auslesen \emph{aller} Tabellen auf der Seite. Mithilfe des Befehls \texttt{str()} sehen wir, dass die Seite genau eine Tabelle enthält, welche die Informationen zu den Küstenlängen enthält.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tables }\OtherTok{\textless{}{-}} \FunctionTok{html\_table}\NormalTok{(reply, }\AttributeTok{fill =} \ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{str}\NormalTok{(tables)}
+\DocumentationTok{\#\# List of 1}
+\DocumentationTok{\#\#  $ : tibble [266 x 2] (S3: tbl\_df/tbl/data.frame)}
+\DocumentationTok{\#\#   ..$ Country  : chr [1:266] "Afghanistan" "Akrotiri" "Albania" "Algeria" ...}
+\DocumentationTok{\#\#   ..$ Coastline: chr [1:266] "0 km\textbackslash{}n          (landlocked)" "56.3 km" "362 km" "998 km" ...}
+\end{Highlighting}
+\end{Shaded}
+
+Durch die Umformung zu einem tibble erhalten wir eine Tabelle mit den gewünschten Informationen:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{as\_tibble}\NormalTok{(tables[[}\DecValTok{1}\NormalTok{]])}
+\DocumentationTok{\#\# \# A tibble: 266 x 2}
+\DocumentationTok{\#\#    Country             Coastline                     }
+\DocumentationTok{\#\#    \textless{}chr\textgreater{}               \textless{}chr\textgreater{}                         }
+\DocumentationTok{\#\#  1 Afghanistan         "0 km\textbackslash{}n          (landlocked)"}
+\DocumentationTok{\#\#  2 Akrotiri            "56.3 km"                     }
+\DocumentationTok{\#\#  3 Albania             "362 km"                      }
+\DocumentationTok{\#\#  4 Algeria             "998 km"                      }
+\DocumentationTok{\#\#  5 American Samoa      "116 km"                      }
+\DocumentationTok{\#\#  6 Andorra             "0 km\textbackslash{}n          (landlocked)"}
+\DocumentationTok{\#\#  7 Angola              "1,600 km"                    }
+\DocumentationTok{\#\#  8 Anguilla            "61 km"                       }
+\DocumentationTok{\#\#  9 Antarctica          "17,968 km"                   }
+\DocumentationTok{\#\# 10 Antigua and Barbuda "153 km"                      }
+\DocumentationTok{\#\# \# ... with 256 more rows}
+\end{Highlighting}
+\end{Shaded}
+
+Mit pipes können wir die obigen Befehle zusammenfassen und somit das Ganze auf einmal ausführen.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"https://web.archive.org/web/20190802010710/https://www.cia.gov/library/publications/the{-}world{-}factbook/fields/282.html"} \SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{read\_html}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{html\_table}\NormalTok{(}\AttributeTok{fill =}\NormalTok{ T) }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  .[[}\DecValTok{1}\NormalTok{]] }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{as\_tibble}\NormalTok{() }\OtherTok{{-}\textgreater{}}\NormalTok{ coast}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{datenformatierung}{%
+\subsection{Datenformatierung}\label{datenformatierung}}
+
+Zur Datenformatierung nutzen wir Funktionen aus dem Paket \texttt{stringr}. Die Spalte mit der Küstenlänge soll keinen Text, keine Einheit direkt hinter den Zahlenwerten und keine Kommata zur Trennung der Zahlenwerte enthalten.
+
+Der Befehl ``str\_extract()'' sucht nach vorgegebenen Mustern (engl. \emph{patterns}) und wählt diese aus. Diese patterns werden auch reguläre Ausdrücke (\emph{regular expressions / regex}) genannt und sind eigentlich \href{https://danielfett.de/en/tutorials/tutorial-regulare-ausdrucke/}{ein Thema für sich}. Das Pattern \texttt{{[}0-9,.{]}+\ km} extrahiert die Kilometerangaben.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{km }\OtherTok{\textless{}{-}} \FunctionTok{str\_extract}\NormalTok{(coast}\SpecialCharTok{$}\NormalTok{Coastline, }\StringTok{"[0{-}9,.]+ km"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Die ausgewählten Muster (in unserem Fall Kommata und Text) können durch den Befehl \texttt{str\_replace\_all()} gelöscht oder ersetzt werden. Wir ersetzen alle Zeichen \emph{außer} Zahlen und Dezimalpunkt mit einem leeren String, so dass sie verschwinden.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str\_replace\_all}\NormalTok{(km, }\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{)}
+\DocumentationTok{\#\#   [1] "0"       "56.3"    "362"     "998"     "116"     "0"       "1600"   }
+\DocumentationTok{\#\#   [8] "61"      "17968"   "153"     "45389"   "4989"    "0"       "68.5"   }
+\DocumentationTok{\#\#  [15] "74.1"    "111866"  "25760"   "0"       "0"       "3542"    "161"    }
+\DocumentationTok{\#\#  [22] "580"     "97"      "0"       "66.5"    "386"     "121"     "103"    }
+\DocumentationTok{\#\#  [29] "0"       "0"       "20"      "0"       "29.6"    "7491"    "698"    }
+\DocumentationTok{\#\#  [36] "80"      "161"     "354"     "0"       "1930"    "0"       "965"    }
+\DocumentationTok{\#\#  [43] "443"     "402"     "202080"  "160"     "0"       "0"       "6435"   }
+\DocumentationTok{\#\#  [50] "14500"   "138.9"   "11.1"    "26"      "3208"    "340"     "37"     }
+\DocumentationTok{\#\#  [57] "169"     "120"     "3095"    "1290"    "515"     "5835"    "3735"   }
+\DocumentationTok{\#\#  [64] "364"     "648"     "0"       "7314"    "27.5"    "314"     "148"    }
+\DocumentationTok{\#\#  [71] "1288"    "2237"    "2450"    "307"     "296"     "2234"    "3794"   }
+\DocumentationTok{\#\#  [78] "0"       "0"       "65992.9" "1288"    "1117"    "1129"    "1250"   }
+\DocumentationTok{\#\#  [85] "4853"    "2525"    "28"      "885"     "80"      "40"      "310"    }
+\DocumentationTok{\#\#  [92] "2389"    "539"     "12"      "13676"   "44087"   "121"     "125.5"  }
+\DocumentationTok{\#\#  [99] "400"     "50"      "320"     "350"     "459"     "1771"    "101.9"  }
+\DocumentationTok{\#\# [106] "0"       "823"     "733"     "6.4"     "0"       "4970"    "7000"   }
+\DocumentationTok{\#\# [113] "66526"   "54716"   "2440"    "58"      "1448"    "160"     "273"    }
+\DocumentationTok{\#\# [120] "7600"    "1022"    "124.1"   "29751"   "8"       "70"      "34"     }
+\DocumentationTok{\#\# [127] "26"      "0"       "536"     "3"       "1143"    "2495"    "2413"   }
+\DocumentationTok{\#\# [134] "0"       "499"     "0"       "0"       "498"     "225"     "0"      }
+\DocumentationTok{\#\# [141] "579"     "1770"    "0"       "90"      "0"       "41"      "4828"   }
+\DocumentationTok{\#\# [148] "0"       "4675"    "644"     "0"       "196.8"   "370.4"   "754"    }
+\DocumentationTok{\#\# [155] "177"     "9330"    "6112"    "15"      "0"       "4.1"     "0"      }
+\DocumentationTok{\#\# [162] "293.5"   "40"      "1835"    "2470"    "1572"    "30"      "8"      }
+\DocumentationTok{\#\# [169] "0"       "451"     "2254"    "15134"   "910"     "0"       "853"    }
+\DocumentationTok{\#\# [176] "64"      "32"      "0"       "1482"    "25148"   "2092"    "135663" }
+\DocumentationTok{\#\# [183] "1046"    "1519"    "14.5"    "2490"    "5152"    "518"     "0"      }
+\DocumentationTok{\#\# [190] "2414"    "36289"   "51"      "440"     "1793"    "501"     "563"    }
+\DocumentationTok{\#\# [197] "225"     "37653"   "0"       "60"      "135"     "158"     "58.9"   }
+\DocumentationTok{\#\# [204] "120"     "84"      "403"     "0"       "209"     "2640"    "531"    }
+\DocumentationTok{\#\# [211] "0"       "491"     "402"     "193"     "58.9"    "0"       "46.6"   }
+\DocumentationTok{\#\# [218] "5313"    "3025"    "2798"    NA        "0"       "17968"   "4964"   }
+\DocumentationTok{\#\# [225] "926"     "1340"    "853"     "386"     "3587"    "3218"    "0"      }
+\DocumentationTok{\#\# [232] "193"     "1566.3"  "0"       "1424"    "3219"    "706"     "56"     }
+\DocumentationTok{\#\# [239] "101"     "419"     "362"     "1148"    "7200"    "0"       "389"    }
+\DocumentationTok{\#\# [246] "24"      "0"       "2782"    "1318"    "12429"   "19924"   "4.8"    }
+\DocumentationTok{\#\# [253] "660"     "0"       "2528"    "2800"    "3444"    "188"     "19.3"   }
+\DocumentationTok{\#\# [260] "129"     "0"       "1110"    "356000"  "1906"    "0"       "0"}
+\end{Highlighting}
+\end{Shaded}
+
+Auch hier kann alles in einen Befehl gepackt werden:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{coast}\SpecialCharTok{$}\NormalTok{Coastline }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{str\_extract}\NormalTok{(}\StringTok{"[0{-}9,.]+ km"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{str\_replace\_all}\NormalTok{(}\StringTok{"[\^{}0{-}9.]"}\NormalTok{, }\StringTok{""}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{as.numeric}\NormalTok{() }\OtherTok{{-}\textgreater{}}\NormalTok{ coast}\SpecialCharTok{$}\NormalTok{coast\_num}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{datenaufbereitung}{%
+\subsection{Datenaufbereitung}\label{datenaufbereitung}}
+
+Mit dem Befehl \texttt{arrange()} kann die Tabelle sortiert werden. Zunächst auftseigend,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{coast }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(coast\_num)}
+\DocumentationTok{\#\# \# A tibble: 266 x 3}
+\DocumentationTok{\#\#    Country     Coastline                                               coast\_num}
+\DocumentationTok{\#\#    \textless{}chr\textgreater{}       \textless{}chr\textgreater{}                                                       \textless{}dbl\textgreater{}}
+\DocumentationTok{\#\#  1 Afghanistan "0 km\textbackslash{}n          (landlocked)"                                  0}
+\DocumentationTok{\#\#  2 Andorra     "0 km\textbackslash{}n          (landlocked)"                                  0}
+\DocumentationTok{\#\#  3 Armenia     "0 km\textbackslash{}n          (landlocked)"                                  0}
+\DocumentationTok{\#\#  4 Austria     "0 km\textbackslash{}n          (landlocked)"                                  0}
+\DocumentationTok{\#\#  5 Azerbaijan  "0 km\textbackslash{}n          (landlocked); note {-} Azerbaijan borde\textasciitilde{}         0}
+\DocumentationTok{\#\#  6 Belarus     "0 km\textbackslash{}n          (landlocked)"                                  0}
+\DocumentationTok{\#\#  7 Bhutan      "0 km\textbackslash{}n          (landlocked)"                                  0}
+\DocumentationTok{\#\#  8 Bolivia     "0 km\textbackslash{}n          (landlocked)"                                  0}
+\DocumentationTok{\#\#  9 Botswana    "0 km\textbackslash{}n          (landlocked)"                                  0}
+\DocumentationTok{\#\# 10 Burkina Fa\textasciitilde{} "0 km\textbackslash{}n          (landlocked)"                                  0}
+\DocumentationTok{\#\# \# ... with 256 more rows}
+\end{Highlighting}
+\end{Shaded}
+
+und schließlich absteigend, sodass die größten Werte an erster Stelle stehen.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{coast }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(coast\_num))}
+\DocumentationTok{\#\# \# A tibble: 266 x 3}
+\DocumentationTok{\#\#    Country      Coastline                                              coast\_num}
+\DocumentationTok{\#\#    \textless{}chr\textgreater{}        \textless{}chr\textgreater{}                                                      \textless{}dbl\textgreater{}}
+\DocumentationTok{\#\#  1 World        "356,000 km\textbackslash{}n          \textbackslash{}n          \textbackslash{}n        \textbackslash{}n\textbackslash{}n  \textbackslash{}n\textasciitilde{}   356000 }
+\DocumentationTok{\#\#  2 Canada       "202,080 km\textbackslash{}n          \textbackslash{}n          \textbackslash{}n        \textbackslash{}n\textbackslash{}n  \textbackslash{}n\textasciitilde{}   202080 }
+\DocumentationTok{\#\#  3 Pacific Oce\textasciitilde{} "135,663 km"                                             135663 }
+\DocumentationTok{\#\#  4 Atlantic Oc\textasciitilde{} "111,866 km"                                             111866 }
+\DocumentationTok{\#\#  5 Indian Ocean "66,526 km"                                               66526 }
+\DocumentationTok{\#\#  6 European Un\textasciitilde{} "65,992.9 km"                                             65993.}
+\DocumentationTok{\#\#  7 Indonesia    "54,716 km"                                               54716 }
+\DocumentationTok{\#\#  8 Arctic Ocean "45,389 km"                                               45389 }
+\DocumentationTok{\#\#  9 Greenland    "44,087 km"                                               44087 }
+\DocumentationTok{\#\# 10 Russia       "37,653 km"                                               37653 }
+\DocumentationTok{\#\# \# ... with 256 more rows}
+\end{Highlighting}
+\end{Shaded}
+
+Bevor wir jedoch eine vollständig sortierte Liste haben, muss der Datensatz noch von falschen Einträgen gesäubert werden. Dafür benutzen wir den Befehl \texttt{filter()}. Wir suchen wieder nach einem bestimmten Muster (hier zum Beispiel dem Wort ``Ocean'') und filtern es aus dem Datensatz.
+
+Die Grafik soll nur aus den ersten 30 Einträgen der Tabelle bestehen, welche uns der Befehl \texttt{head()} ausgibt.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{coast }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(coast\_num)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{str\_detect}\NormalTok{(Country, }\StringTok{"Ocean"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\NormalTok{Country }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"World"}\NormalTok{, }\StringTok{"European Union"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{head}\NormalTok{(}\DecValTok{30}\NormalTok{) }\OtherTok{{-}\textgreater{}}\NormalTok{ top\_30}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{datenvisualisierung}{%
+\subsection{Datenvisualisierung}\label{datenvisualisierung}}
+
+Das Balkendiagramm erhalten wir durch den ``ggplot'' Befehl. Hierbei gibt es verschiedenste Einstellmöglichkeiten. Wichitg sind vor allem die Angabe des verwendeten Datensatzes und die Art der Grafik (ob Kartendarstellung oder Balkendiagramm). Desweiteren kann man noch Farben der Eigenschaften, eine Achsenbeschriftung u. v. m. bestimmen.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(top\_30, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{reorder}\NormalTok{(Country, coast\_num), }\AttributeTok{y=}\NormalTok{coast\_num)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat=}\StringTok{\textquotesingle{}identity\textquotesingle{}}\NormalTok{, }\AttributeTok{fill=}\StringTok{"darkblue"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{coord\_flip}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\ConstantTok{NULL}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\StringTok{"Küstenlinie (km)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-61-1.png}
+
+\hypertarget{aufgaben-2}{%
+\subsection{Aufgaben}\label{aufgaben-2}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Importieren Sie die Daten zu den \href{https://en.wikipedia.org/wiki/List_of_deadly_earthquakes_since_1900}{tödlichen Erdbeben auf Wikipedia}
+  und formen sie diese zu einem tibble um.
+\item
+  Erstellen Sie mit den erhaltenen Daten eine Karte, welche die Lage und die Stärke der Erdbeben angibt:
+
+  \includegraphics{_main_files/figure-latex/unnamed-chunk-64-1.png}
+\item
+  Wandeln Sie den Erdbeben-Datensatz in das Simple Features Format um. Laden Sie zusätzlich eine Weltkarte mit dem Paket \texttt{rnaturalearth} und wandeln Sie auch diese in Simple Features um. Finden Sie außerdem einen Geodatensatz zu tektonischen Platten. Visualiseren Sie alles auf einer Welktarte (Projektion: Gall-Peters).
+\end{enumerate}
+
+\hypertarget{geodaten-verschneiden}{%
+\section{Geodaten verschneiden}\label{geodaten-verschneiden}}
+
+\hypertarget{lernziele}{%
+\subsection{Lernziele}\label{lernziele}}
+
+Sie können\ldots{}
+
+\begin{itemize}
+\tightlist
+\item
+  Geodaten als Simple Features importieren,
+\item
+  CRS bestimmen und umwandeln,
+\item
+  einfache Verschneidungen von Simple Features durchführen und
+\item
+  Simple Features kartographisch darstellen.
+\end{itemize}
+
+\hypertarget{vorbereitung-1}{%
+\subsection{Vorbereitung}\label{vorbereitung-1}}
+
+Für diese Lektion werden zwei Pakete geladen:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(sf)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{ziel}{%
+\subsection{Ziel}\label{ziel}}
+
+Ziel ist, eine \href{https://de.wikipedia.org/wiki/Choroplethenkarte}{Choroplethenkarte} von Frankfurt zu erstellen, die die Versorgung mit Kiosken darstellt.
+
+\hypertarget{grundkarte}{%
+\subsection{Grundkarte}\label{grundkarte}}
+
+Eine Shapefile der Frankfurter Stadtteile findet sich hier: \url{http://www.offenedaten.frankfurt.de/dataset/frankfurter-stadtteilgrenzen-fur-gis-systeme}
+
+Wir laden die Zip-Datei herunter und speichern den enthaltenen Ordner \texttt{stadtteile} in unserem Arbeitsverzeichnis. Es ist eine gute Angewohnheit, einen Unterordner für Ressourcen anzulegen.
+
+Dann importieren wir den Geodatensatz als Simple Features (Paket \texttt{sf}):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{stadtteile }\OtherTok{\textless{}{-}} \FunctionTok{st\_read}\NormalTok{(}\StringTok{"resources/stadtteile/Stadtteile\_Frankfurt\_am\_Main.shp"}\NormalTok{)}
+\DocumentationTok{\#\# Reading layer \textasciigrave{}Stadtteile\_Frankfurt\_am\_Main\textquotesingle{} from data source }
+\DocumentationTok{\#\#   \textasciigrave{}/Users/till/mzs/2021\_methodenwoche/skript/resources/stadtteile/Stadtteile\_Frankfurt\_am\_Main.shp\textquotesingle{} }
+\DocumentationTok{\#\#   using driver \textasciigrave{}ESRI Shapefile\textquotesingle{}}
+\DocumentationTok{\#\# Simple feature collection with 46 features and 2 fields}
+\DocumentationTok{\#\# Geometry type: POLYGON}
+\DocumentationTok{\#\# Dimension:     XY}
+\DocumentationTok{\#\# Bounding box:  xmin: 462292.7 ymin: 5540412 xmax: 485744.8 ymax: 5563925}
+\DocumentationTok{\#\# Projected CRS: ETRS89 / UTM zone 32N}
+\end{Highlighting}
+\end{Shaded}
+
+Simple Features sind Datensätze, die eine Spalte \texttt{geometry} enthalten, in der Geodaten in einem standardisierten Format hinterlegt sind.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(stadtteile)}
+\DocumentationTok{\#\# Classes \textquotesingle{}sf\textquotesingle{} and \textquotesingle{}data.frame\textquotesingle{}:   46 obs. of  3 variables:}
+\DocumentationTok{\#\#  $ STTLNR  : num  1 2 3 4 5 6 7 8 9 10 ...}
+\DocumentationTok{\#\#  $ STTLNAME: chr  "Altstadt" "Innenstadt" "Bahnhofsviertel" "Westend{-}Süd" ...}
+\DocumentationTok{\#\#  $ geometry:sfc\_POLYGON of length 46; first list element: List of 1}
+\DocumentationTok{\#\#   ..$ : num [1:46, 1:2] 476934 476890 476852 476813 476799 ...}
+\DocumentationTok{\#\#   ..{-} attr(*, "class")= chr [1:3] "XY" "POLYGON" "sfg"}
+\DocumentationTok{\#\#  {-} attr(*, "sf\_column")= chr "geometry"}
+\DocumentationTok{\#\#  {-} attr(*, "agr")= Factor w/ 3 levels "constant","aggregate",..: NA NA}
+\DocumentationTok{\#\#   ..{-} attr(*, "names")= chr [1:2] "STTLNR" "STTLNAME"}
+\end{Highlighting}
+\end{Shaded}
+
+Eine Vorschau:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(stadtteile) }\SpecialCharTok{+}
+  \FunctionTok{geom\_sf}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_sf\_label}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{label =}\NormalTok{ STTLNAME), }\AttributeTok{size =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-71-1.png}
+
+\hypertarget{osm-daten}{%
+\subsection{OSM-Daten}\label{osm-daten}}
+
+Im \href{https://wiki.openstreetmap.org/wiki/Map_Features}{OSM Wiki} suchen wir den richtigen \emph{tag} heraus. In diesem Fall \texttt{shop=kiosk}
+
+Dann bauen wir auf \href{https://overpass-turbo.eu/}{Overpass Turbo} die Abfrage und laden den Datensatz herunter.
+
+Schließlich importieren wir:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{kioske }\OtherTok{\textless{}{-}} \FunctionTok{st\_read}\NormalTok{(}\StringTok{"resources/kioske.geojson"}\NormalTok{)}
+\DocumentationTok{\#\# Reading layer \textasciigrave{}kioske\textquotesingle{} from data source }
+\DocumentationTok{\#\#   \textasciigrave{}/Users/till/mzs/2021\_methodenwoche/skript/resources/kioske.geojson\textquotesingle{} }
+\DocumentationTok{\#\#   using driver \textasciigrave{}GeoJSON\textquotesingle{}}
+\DocumentationTok{\#\# Simple feature collection with 325 features and 74 fields}
+\DocumentationTok{\#\# Geometry type: GEOMETRY}
+\DocumentationTok{\#\# Dimension:     XY}
+\DocumentationTok{\#\# Bounding box:  xmin: 8.505468 ymin: 50.04801 xmax: 8.789538 ymax: 50.20185}
+\DocumentationTok{\#\# Geodetic CRS:  WGS 84}
+\end{Highlighting}
+\end{Shaded}
+
+Eine Vorschau:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_sf}\NormalTok{(}\AttributeTok{data =}\NormalTok{ stadtteile) }\SpecialCharTok{+}
+  \FunctionTok{geom\_sf}\NormalTok{(}\AttributeTok{data =}\NormalTok{ kioske)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-73-1.png}
+
+\hypertarget{koordinatenreferenzsysteme}{%
+\subsection{Koordinatenreferenzsysteme}\label{koordinatenreferenzsysteme}}
+
+Der OSM-Datensatz ist mit WGS84 (EPSG 4326) referenziert:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{st\_crs}\NormalTok{(kioske)}
+\DocumentationTok{\#\# Coordinate Reference System:}
+\DocumentationTok{\#\#   User input: WGS 84 }
+\DocumentationTok{\#\#   wkt:}
+\DocumentationTok{\#\# GEOGCRS["WGS 84",}
+\DocumentationTok{\#\#     DATUM["World Geodetic System 1984",}
+\DocumentationTok{\#\#         ELLIPSOID["WGS 84",6378137,298.257223563,}
+\DocumentationTok{\#\#             LENGTHUNIT["metre",1]]],}
+\DocumentationTok{\#\#     PRIMEM["Greenwich",0,}
+\DocumentationTok{\#\#         ANGLEUNIT["degree",0.0174532925199433]],}
+\DocumentationTok{\#\#     CS[ellipsoidal,2],}
+\DocumentationTok{\#\#         AXIS["geodetic latitude (Lat)",north,}
+\DocumentationTok{\#\#             ORDER[1],}
+\DocumentationTok{\#\#             ANGLEUNIT["degree",0.0174532925199433]],}
+\DocumentationTok{\#\#         AXIS["geodetic longitude (Lon)",east,}
+\DocumentationTok{\#\#             ORDER[2],}
+\DocumentationTok{\#\#             ANGLEUNIT["degree",0.0174532925199433]],}
+\DocumentationTok{\#\#     ID["EPSG",4326]]}
+\end{Highlighting}
+\end{Shaded}
+
+Die Stadtteilen hingegen sind sind in ETSR89 (EPSG 25832):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{st\_crs}\NormalTok{(stadtteile)}
+\DocumentationTok{\#\# Coordinate Reference System:}
+\DocumentationTok{\#\#   User input: ETRS89 / UTM zone 32N }
+\DocumentationTok{\#\#   wkt:}
+\DocumentationTok{\#\# PROJCRS["ETRS89 / UTM zone 32N",}
+\DocumentationTok{\#\#     BASEGEOGCRS["ETRS89",}
+\DocumentationTok{\#\#         DATUM["European Terrestrial Reference System 1989",}
+\DocumentationTok{\#\#             ELLIPSOID["GRS 1980",6378137,298.257222101,}
+\DocumentationTok{\#\#                 LENGTHUNIT["metre",1]]],}
+\DocumentationTok{\#\#         PRIMEM["Greenwich",0,}
+\DocumentationTok{\#\#             ANGLEUNIT["degree",0.0174532925199433]],}
+\DocumentationTok{\#\#         ID["EPSG",4258]],}
+\DocumentationTok{\#\#     CONVERSION["UTM zone 32N",}
+\DocumentationTok{\#\#         METHOD["Transverse Mercator",}
+\DocumentationTok{\#\#             ID["EPSG",9807]],}
+\DocumentationTok{\#\#         PARAMETER["Latitude of natural origin",0,}
+\DocumentationTok{\#\#             ANGLEUNIT["degree",0.0174532925199433],}
+\DocumentationTok{\#\#             ID["EPSG",8801]],}
+\DocumentationTok{\#\#         PARAMETER["Longitude of natural origin",9,}
+\DocumentationTok{\#\#             ANGLEUNIT["degree",0.0174532925199433],}
+\DocumentationTok{\#\#             ID["EPSG",8802]],}
+\DocumentationTok{\#\#         PARAMETER["Scale factor at natural origin",0.9996,}
+\DocumentationTok{\#\#             SCALEUNIT["unity",1],}
+\DocumentationTok{\#\#             ID["EPSG",8805]],}
+\DocumentationTok{\#\#         PARAMETER["False easting",500000,}
+\DocumentationTok{\#\#             LENGTHUNIT["metre",1],}
+\DocumentationTok{\#\#             ID["EPSG",8806]],}
+\DocumentationTok{\#\#         PARAMETER["False northing",0,}
+\DocumentationTok{\#\#             LENGTHUNIT["metre",1],}
+\DocumentationTok{\#\#             ID["EPSG",8807]]],}
+\DocumentationTok{\#\#     CS[Cartesian,2],}
+\DocumentationTok{\#\#         AXIS["(E)",east,}
+\DocumentationTok{\#\#             ORDER[1],}
+\DocumentationTok{\#\#             LENGTHUNIT["metre",1]],}
+\DocumentationTok{\#\#         AXIS["(N)",north,}
+\DocumentationTok{\#\#             ORDER[2],}
+\DocumentationTok{\#\#             LENGTHUNIT["metre",1]],}
+\DocumentationTok{\#\#     USAGE[}
+\DocumentationTok{\#\#         SCOPE["Engineering survey, topographic mapping."],}
+\DocumentationTok{\#\#         AREA["Europe between 6°E and 12°E: Austria; Belgium; Denmark {-} onshore and offshore; Germany {-} onshore and offshore; Norway including {-} onshore and offshore; Spain {-} offshore."],}
+\DocumentationTok{\#\#         BBOX[38.76,6,83.92,12]],}
+\DocumentationTok{\#\#     ID["EPSG",25832]]}
+\end{Highlighting}
+\end{Shaded}
+
+Der Datensatz lässt sich allerdings transformieren:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{stadtteile }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{st\_transform}\NormalTok{(}\DecValTok{4326}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{st\_crs}\NormalTok{()}
+\DocumentationTok{\#\# Coordinate Reference System:}
+\DocumentationTok{\#\#   User input: EPSG:4326 }
+\DocumentationTok{\#\#   wkt:}
+\DocumentationTok{\#\# GEOGCRS["WGS 84",}
+\DocumentationTok{\#\#     DATUM["World Geodetic System 1984",}
+\DocumentationTok{\#\#         ELLIPSOID["WGS 84",6378137,298.257223563,}
+\DocumentationTok{\#\#             LENGTHUNIT["metre",1]]],}
+\DocumentationTok{\#\#     PRIMEM["Greenwich",0,}
+\DocumentationTok{\#\#         ANGLEUNIT["degree",0.0174532925199433]],}
+\DocumentationTok{\#\#     CS[ellipsoidal,2],}
+\DocumentationTok{\#\#         AXIS["geodetic latitude (Lat)",north,}
+\DocumentationTok{\#\#             ORDER[1],}
+\DocumentationTok{\#\#             ANGLEUNIT["degree",0.0174532925199433]],}
+\DocumentationTok{\#\#         AXIS["geodetic longitude (Lon)",east,}
+\DocumentationTok{\#\#             ORDER[2],}
+\DocumentationTok{\#\#             ANGLEUNIT["degree",0.0174532925199433]],}
+\DocumentationTok{\#\#     USAGE[}
+\DocumentationTok{\#\#         SCOPE["Horizontal component of 3D system."],}
+\DocumentationTok{\#\#         AREA["World."],}
+\DocumentationTok{\#\#         BBOX[{-}90,{-}180,90,180]],}
+\DocumentationTok{\#\#     ID["EPSG",4326]]}
+\end{Highlighting}
+\end{Shaded}
+
+Jetzt haben beide Datensätze den selben EPSG-Code. Das ist die Voraussetzung für den nächsten Schritt.
+
+\hypertarget{verschneiden}{%
+\subsection{Verschneiden}\label{verschneiden}}
+
+Mit \texttt{st\_covers()} und \texttt{lengths()} lassen sich die Anzahl der Kioske in jedem Stadtteil zählen und einer neuen Spalte im Originaldatensatz zuordnen:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{stadtteile }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{st\_transform}\NormalTok{(}\DecValTok{4326}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{st\_covers}\NormalTok{(kioske) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{lengths}\NormalTok{() }\OtherTok{{-}\textgreater{}}\NormalTok{ stadtteile}\SpecialCharTok{$}\NormalTok{anzahl\_kioske}
+\end{Highlighting}
+\end{Shaded}
+
+Auf einer Karte veranschaulicht:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(stadtteile) }\SpecialCharTok{+}
+  \FunctionTok{geom\_sf}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{fill =}\NormalTok{ anzahl\_kioske))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-78-1.png}
+
+Allerdings wäre es schöner, die Kioskdichte (nach Fläche) darzustellen. Dazu berechnen wir zunächst die Flächen der Stadtteile:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{st\_area}\NormalTok{(stadtteile) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{as.numeric}\NormalTok{() }\SpecialCharTok{/} \DecValTok{1000} \SpecialCharTok{/} \DecValTok{1000} \OtherTok{{-}\textgreater{}}
+\NormalTok{  stadtteile}\SpecialCharTok{$}\NormalTok{qkm}
+\end{Highlighting}
+\end{Shaded}
+
+Oder mit Pipes:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{stadtteile }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{qkm =} \FunctionTok{st\_area}\NormalTok{(.) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{as.numeric}\NormalTok{() }\SpecialCharTok{/} \DecValTok{1000} \SpecialCharTok{/} \DecValTok{1000}\NormalTok{)}
+\DocumentationTok{\#\# Simple feature collection with 46 features and 4 fields}
+\DocumentationTok{\#\# Geometry type: POLYGON}
+\DocumentationTok{\#\# Dimension:     XY}
+\DocumentationTok{\#\# Bounding box:  xmin: 462292.7 ymin: 5540412 xmax: 485744.8 ymax: 5563925}
+\DocumentationTok{\#\# Projected CRS: ETRS89 / UTM zone 32N}
+\DocumentationTok{\#\# First 10 features:}
+\DocumentationTok{\#\#    STTLNR        STTLNAME                       geometry anzahl\_kioske}
+\DocumentationTok{\#\# 1       1        Altstadt POLYGON ((476934.3 5550541,...             5}
+\DocumentationTok{\#\# 2       2      Innenstadt POLYGON ((477611.9 5552034,...             5}
+\DocumentationTok{\#\# 3       3 Bahnhofsviertel POLYGON ((475831 5550785, 4...             7}
+\DocumentationTok{\#\# 4       4     Westend{-}Süd POLYGON ((475745.4 5552373,...             6}
+\DocumentationTok{\#\# 5       5    Westend{-}Nord POLYGON ((476497.9 5553910,...             3}
+\DocumentationTok{\#\# 6       6    Nordend{-}West POLYGON ((478362.5 5553898,...            10}
+\DocumentationTok{\#\# 7       7     Nordend{-}Ost POLYGON ((478397.9 5551924,...            17}
+\DocumentationTok{\#\# 8       8          Ostend POLYGON ((481955.2 5552141,...            15}
+\DocumentationTok{\#\# 9       9        Bornheim POLYGON ((478959.8 5552336,...            14}
+\DocumentationTok{\#\# 10     10  Gutleutviertel POLYGON ((472942 5548802, 4...            11}
+\DocumentationTok{\#\#          qkm}
+\DocumentationTok{\#\# 1  0.5065673}
+\DocumentationTok{\#\# 2  1.4902009}
+\DocumentationTok{\#\# 3  0.5425421}
+\DocumentationTok{\#\# 4  2.4948957}
+\DocumentationTok{\#\# 5  1.6307925}
+\DocumentationTok{\#\# 6  3.0977694}
+\DocumentationTok{\#\# 7  1.5305338}
+\DocumentationTok{\#\# 8  5.5573382}
+\DocumentationTok{\#\# 9  2.7840413}
+\DocumentationTok{\#\# 10 2.1982354}
+\end{Highlighting}
+\end{Shaded}
+
+Und dann die Kioskdichte:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{stadtteile }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{qkm =} \FunctionTok{st\_area}\NormalTok{(.) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{as.numeric}\NormalTok{() }\SpecialCharTok{/} \DecValTok{1000} \SpecialCharTok{/} \DecValTok{1000}\NormalTok{,}
+         \AttributeTok{kioskdichte =}\NormalTok{ anzahl\_kioske }\SpecialCharTok{/}\NormalTok{ qkm)}
+\DocumentationTok{\#\# Simple feature collection with 46 features and 5 fields}
+\DocumentationTok{\#\# Geometry type: POLYGON}
+\DocumentationTok{\#\# Dimension:     XY}
+\DocumentationTok{\#\# Bounding box:  xmin: 462292.7 ymin: 5540412 xmax: 485744.8 ymax: 5563925}
+\DocumentationTok{\#\# Projected CRS: ETRS89 / UTM zone 32N}
+\DocumentationTok{\#\# First 10 features:}
+\DocumentationTok{\#\#    STTLNR        STTLNAME                       geometry anzahl\_kioske}
+\DocumentationTok{\#\# 1       1        Altstadt POLYGON ((476934.3 5550541,...             5}
+\DocumentationTok{\#\# 2       2      Innenstadt POLYGON ((477611.9 5552034,...             5}
+\DocumentationTok{\#\# 3       3 Bahnhofsviertel POLYGON ((475831 5550785, 4...             7}
+\DocumentationTok{\#\# 4       4     Westend{-}Süd POLYGON ((475745.4 5552373,...             6}
+\DocumentationTok{\#\# 5       5    Westend{-}Nord POLYGON ((476497.9 5553910,...             3}
+\DocumentationTok{\#\# 6       6    Nordend{-}West POLYGON ((478362.5 5553898,...            10}
+\DocumentationTok{\#\# 7       7     Nordend{-}Ost POLYGON ((478397.9 5551924,...            17}
+\DocumentationTok{\#\# 8       8          Ostend POLYGON ((481955.2 5552141,...            15}
+\DocumentationTok{\#\# 9       9        Bornheim POLYGON ((478959.8 5552336,...            14}
+\DocumentationTok{\#\# 10     10  Gutleutviertel POLYGON ((472942 5548802, 4...            11}
+\DocumentationTok{\#\#          qkm kioskdichte}
+\DocumentationTok{\#\# 1  0.5065673    9.870357}
+\DocumentationTok{\#\# 2  1.4902009    3.355252}
+\DocumentationTok{\#\# 3  0.5425421   12.902225}
+\DocumentationTok{\#\# 4  2.4948957    2.404910}
+\DocumentationTok{\#\# 5  1.6307925    1.839596}
+\DocumentationTok{\#\# 6  3.0977694    3.228129}
+\DocumentationTok{\#\# 7  1.5305338   11.107236}
+\DocumentationTok{\#\# 8  5.5573382    2.699134}
+\DocumentationTok{\#\# 9  2.7840413    5.028661}
+\DocumentationTok{\#\# 10 2.1982354    5.004014}
+\end{Highlighting}
+\end{Shaded}
+
+Schließlich die Karte:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{stadtteile }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{qkm =} \FunctionTok{st\_area}\NormalTok{(.) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{as.numeric}\NormalTok{() }\SpecialCharTok{/} \DecValTok{1000} \SpecialCharTok{/} \DecValTok{1000}\NormalTok{,}
+         \AttributeTok{kioskdichte =}\NormalTok{ anzahl\_kioske }\SpecialCharTok{/}\NormalTok{ qkm) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{() }\SpecialCharTok{+}
+    \FunctionTok{geom\_sf}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{fill =}\NormalTok{ kioskdichte), }\AttributeTok{color=}\ConstantTok{NA}\NormalTok{) }\SpecialCharTok{+}
+    \FunctionTok{scale\_fill\_continuous}\NormalTok{(}\StringTok{"Kioske pro km²"}\NormalTok{) }\SpecialCharTok{+}
+    \FunctionTok{theme\_void}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-82-1.png}
+
+\hypertarget{aufgaben-3}{%
+\subsection{Aufgaben}\label{aufgaben-3}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Erstellen Sie eine Choroplethenkarte der Frankfurter Stadtteile, in der Sie die Anzahl bzw. die Dichte von Apotheken darstellen. (Schritte analog zu oben.)
+\item
+  Welche Stadtteile haben mehr Kioske? Welche mehr Apotheken? Wie ausgeprägt ist das Verhältnis? Erstellen Sie eine Karte, die das zum Ausdruck bringt.
+\item
+  (Achtung, knifflig!) Siemens veröffentlicht einen \href{https://press.siemens.com/global/de/feature/wo-blitzt-es-am-haeufigsten}{Blitzatlas}. Laden Sie den Datensatz herunter und bauen Sie die folgende Ansicht nach:
+
+  \includegraphics{_main_files/figure-latex/unnamed-chunk-86-1.png}
+\end{enumerate}
+
+\hypertarget{weitere-methoden}{%
+\section{Weitere Methoden}\label{weitere-methoden}}
+
+\hypertarget{vorbereitung-2}{%
+\subsection{Vorbereitung}\label{vorbereitung-2}}
+
+Für diese Lektion brauchen wir folgende Pakete:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(sf)}
+\FunctionTok{library}\NormalTok{(tmap)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{aufgabe}{%
+\subsection{Aufgabe}\label{aufgabe}}
+
+Ziel soll sein, eine Deutschlandkarte mit Tankstellenpreisen für Diesel zu erstellen.
+
+\hypertarget{daten-einlesen}{%
+\subsection{Daten einlesen}\label{daten-einlesen}}
+
+Das ``Tankerkönig''-Projekt veröffentlicht aktuelle Tankstellenpreise über eine API, und stellt historische Preise hier bereit: \url{https://dev.azure.com/tankerkoenig/_git/tankerkoenig-data}
+
+Wir laden die Dateien für \texttt{prices} und \texttt{stations} von einem Tag (hier: 26.5.2019) herunter und speichern sie im Unterordner \texttt{resources} des Projektordners.
+
+Dann können wir sie einlesen:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{preise }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"resources/2019{-}05{-}26{-}prices.csv"}\NormalTok{)}
+\NormalTok{preise}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 231,174 x 8
+##    date                station_uuid     diesel    e5   e10 dieselchange e5change
+##    <dttm>              <chr>             <dbl> <dbl> <dbl>        <dbl>    <dbl>
+##  1 2019-05-25 22:01:06 51e171d0-1a9c-4~   1.37  1.58  1.56            1        1
+##  2 2019-05-25 22:02:06 8a796af1-8d78-4~   1.32  1.56  1.54            1        1
+##  3 2019-05-25 22:02:06 2d658127-11b5-4~   1.28  1.52  0               0        1
+##  4 2019-05-25 22:03:06 904d3a45-df30-4~   1.32  1.54  1.52            1        1
+##  5 2019-05-25 22:03:06 a98ed5d0-261b-4~   1.34  1.57  1.55            1        1
+##  6 2019-05-25 22:04:06 7671d5ad-4c7d-4~   1.30  1.54  0               1        1
+##  7 2019-05-25 22:04:06 44fa4d12-5571-4~   1.34  1.58  1.56            1        1
+##  8 2019-05-25 22:04:06 da9abcda-3218-4~   1.38  1.52  1.50            0        1
+##  9 2019-05-25 22:04:06 bcba0c2b-fbe7-4~   1.35  1.55  1.53            0        1
+## 10 2019-05-25 22:04:06 00061000-0001-4~   1.20  1.48  1.46            1        1
+## # ... with 231,164 more rows, and 1 more variable: e10change <dbl>
+\end{verbatim}
+
+\hypertarget{uxfcberblick-verschaffen-1}{%
+\subsection{Überblick verschaffen}\label{uxfcberblick-verschaffen-1}}
+
+Beim nähreren Betrachten fällt auf, dass im Datensatz \texttt{preise} 231.174 Zeilen enthalten sind, in \texttt{stations} nur 15.668. Das liegt daran, das für jede Station \emph{mehrere} Preisupdates im Datensatz \texttt{preise} stehen, jedoch nur \emph{einmal} die gleichbleibenden Informationen (Name, Marke, Adresse, Koordinaten) in \texttt{stations}.
+
+Beide Datensätze sind über einen eindeutigen „Key`` verbunden: In \texttt{preise} heißt er \texttt{station\_uuid}, in \texttt{stations} einfach nur \texttt{uuid}.
+
+Um ein besseres Gefühl für den Datensatz zu bekommen, könnten wir uns z.~B. anschauen, zu welcher Uhrzeit wie viele Preise aktualisiert wurden:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(preise) }\SpecialCharTok{+}
+  \FunctionTok{geom\_histogram}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ date))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-90-1.png}
+
+\hypertarget{zusammenfassen}{%
+\subsection{Zusammenfassen}\label{zusammenfassen}}
+
+Eine weitere Frage könnte sein: Wie sieht die Verteilung der Anzahl der Preisupdates je Tankstelle aus? Hierfür müssen wir den Datensatz \texttt{preise} anhand der Spalte \texttt{station\_uuid} zusammenfassen und die Einträge zählen. Das geht mit \texttt{group\_by()} und \texttt{summarize()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{preise }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(station\_uuid) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{anzahl\_updates =} \FunctionTok{n}\NormalTok{()) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{() }\SpecialCharTok{+}
+    \FunctionTok{geom\_histogram}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ anzahl\_updates))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-91-1.png}
+
+Um unserem Ziel der Dieselkarte etwas näher zu kommen, sollten wir aber nicht die Anzahl der Updates zusammenfassen, sondern den Dieselpreis.
+Aber nach welchem Schema?
+Einfach nur den Durchschnitt (mit \texttt{mean()}) zu nehmen, könnte das Bild verfälschen: Man stelle sich z.~B. vor, ein besonders teurer (oder günstiger) Preis sei nur wenige Sekunden gültig gewesen.
+
+Wir orientieren uns einfach an der Börse und nehmen einfach den letzten gültigen Preis (wie der Aktienwert bei Börsenschluss).
+Dafür müssen wir den Datensatz erst mit \texttt{arrange()} chronologisch sortieren, dann entsprechend gruppieren und mit \texttt{last()} zusammenfassen:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{preise }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(date) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(station\_uuid) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{dieselpreis =} \FunctionTok{last}\NormalTok{(diesel),}
+            \AttributeTok{e5preis     =} \FunctionTok{last}\NormalTok{(e5),}
+            \AttributeTok{e10preis    =} \FunctionTok{last}\NormalTok{(e10)) }\OtherTok{{-}\textgreater{}}
+\NormalTok{  preise\_nach\_tankstelle}
+
+\NormalTok{preise\_nach\_tankstelle}
+\DocumentationTok{\#\# \# A tibble: 13,701 x 4}
+\DocumentationTok{\#\#    station\_uuid                         dieselpreis e5preis e10preis}
+\DocumentationTok{\#\#    \textless{}chr\textgreater{}                                      \textless{}dbl\textgreater{}   \textless{}dbl\textgreater{}    \textless{}dbl\textgreater{}}
+\DocumentationTok{\#\#  1 00006210{-}0037{-}4444{-}8888{-}acdc00006210        1.33    1.55     1.53}
+\DocumentationTok{\#\#  2 00016899{-}3247{-}4444{-}8888{-}acdc00000007        1.31    1.53     1.51}
+\DocumentationTok{\#\#  3 00060001{-}d387{-}4444{-}8888{-}acdc00000001        1.37    1.62     1.60}
+\DocumentationTok{\#\#  4 00060009{-}3adf{-}4444{-}8888{-}acdc00000001        1.35    1.64     1.62}
+\DocumentationTok{\#\#  5 00060014{-}b0d9{-}4444{-}8888{-}acdc00000002        1.32    1.61     1.59}
+\DocumentationTok{\#\#  6 00060015{-}0090{-}4444{-}8888{-}acdc00000090        1.27    1.52     1.50}
+\DocumentationTok{\#\#  7 00060016{-}ed96{-}4444{-}8888{-}acdc00000001        1.35    1.57     1.55}
+\DocumentationTok{\#\#  8 00060034{-}0011{-}4444{-}8888{-}acdc00000011        1.37    1.61     1.59}
+\DocumentationTok{\#\#  9 00060051{-}533e{-}75a1{-}87f9{-}8a9f00060051        1.25    1.50     1.48}
+\DocumentationTok{\#\# 10 00060055{-}0001{-}4444{-}8888{-}acdc00000001        1.26    1.53     1.51}
+\DocumentationTok{\#\# \# ... with 13,691 more rows}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{verschneiden-1}{%
+\subsection{Verschneiden}\label{verschneiden-1}}
+
+Jetzt haben wir für jede Station nur noch eine Zeile mit den Preisen.
+Um das zu kartieren, fehlen noch die Informationen zu den Tankstellen. Dafür laden wir auch den \texttt{stations}-Datensatz für den richtigen Tag herunter und importieren ihn in R:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tankstellen }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"resources/2019{-}05{-}26{-}stations.csv"}\NormalTok{)}
+\NormalTok{tankstellen}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 15,668 x 11
+##    uuid    name    brand  street house_number post_code city  latitude longitude
+##    <chr>   <chr>   <chr>  <chr>  <chr>        <chr>     <chr>    <dbl>     <dbl>
+##  1 0e18d0~ OIL! T~ OIL!   Evers~ <NA>         80999     Münc~     48.2     11.5 
+##  2 ad8122~ bft Bo~ bft    Godes~ 55           53175     Bonn      50.7      7.14
+##  3 44e2bd~ bft Ta~ <NA>   Schel~ 53           36304     Alsf~     50.8      9.28
+##  4 1a8e4d~ Hessol  Hessol Frank~ 65           61279     Gräv~     50.4      8.46
+##  5 005056~ star T~ STAR   Leipz~ 11           06217     Mers~     51.4     12.0 
+##  6 d435f7~ ROSDOR~ Shell  A7 GÖ~ <NA>         37124     Rosd~     51.5      9.88
+##  7 88a23d~ AVIA T~ AVIA   Burgs~ 8            63637     Joss~     50.2      9.48
+##  8 f0e93f~ Aral T~ ARAL   Eicke~ 357          41063     Mönc~     51.2      6.45
+##  9 005056~ star T~ STAR   Celle~ 55           29303     Berg~     52.8      9.97
+## 10 8e47dd~ Aral T~ ARAL   Crail~ 32           74532     Ilsh~     49.2      9.93
+## # ... with 15,658 more rows, and 2 more variables: first_active <dttm>,
+## #   openingtimes_json <chr>
+\end{verbatim}
+
+Wir verschneiden mit \texttt{inner\_join()} unter Angabe der relevanten Spaltennamen und wählen die Spalten aus, mit denen wir weiterarbeiten wollen:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{inner\_join}\NormalTok{(preise\_nach\_tankstelle, tankstellen,}
+           \AttributeTok{by =} \FunctionTok{c}\NormalTok{(}\StringTok{"station\_uuid"} \OtherTok{=} \StringTok{"uuid"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(dieselpreis, e5preis, e10preis, name, brand, latitude, longitude) }\OtherTok{{-}\textgreater{}}
+\NormalTok{  preise\_geo}
+
+\NormalTok{preise\_geo}
+\DocumentationTok{\#\# \# A tibble: 13,700 x 7}
+\DocumentationTok{\#\#    dieselpreis e5preis e10preis name              brand       latitude longitude}
+\DocumentationTok{\#\#          \textless{}dbl\textgreater{}   \textless{}dbl\textgreater{}    \textless{}dbl\textgreater{} \textless{}chr\textgreater{}             \textless{}chr\textgreater{}          \textless{}dbl\textgreater{}     \textless{}dbl\textgreater{}}
+\DocumentationTok{\#\#  1        1.33    1.55     1.53 Beducker {-} Quali\textasciitilde{} Beducker        48.6     10.9 }
+\DocumentationTok{\#\#  2        1.31    1.53     1.51 Röttenbach        BFT Pickel\textasciitilde{}     49.7     10.9 }
+\DocumentationTok{\#\#  3        1.37    1.62     1.60 Haisch Mineralöl\textasciitilde{} TankCenter\textasciitilde{}     48.0      7.59}
+\DocumentationTok{\#\#  4        1.35    1.64     1.62 Tank{-}Kontor Wilh\textasciitilde{} \textless{}NA\textgreater{}            47.9      9.42}
+\DocumentationTok{\#\#  5        1.32    1.61     1.59 Tank{-}Kontor Baie\textasciitilde{} \textless{}NA\textgreater{}            47.8      9.65}
+\DocumentationTok{\#\#  6        1.27    1.52     1.50 Schindele, Lochb\textasciitilde{} \textless{}NA\textgreater{}            47.7      9.53}
+\DocumentationTok{\#\#  7        1.35    1.57     1.55 bft{-}Tankstelle H\textasciitilde{} BFT             48.1      7.78}
+\DocumentationTok{\#\#  8        1.37    1.61     1.59 EXTROL Tank{-} \& W\textasciitilde{} EXTROL          48.0      7.79}
+\DocumentationTok{\#\#  9        1.25    1.50     1.48 Wingenfeld Energ\textasciitilde{} Wingenfeld\textasciitilde{}     50.8     10.2 }
+\DocumentationTok{\#\# 10        1.26    1.53     1.51 Wilhlem Heim GmbH Oel {-} Heim      48.6      9.03}
+\DocumentationTok{\#\# \# ... with 13,690 more rows}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{inner\_join} hat die Besonderheit, dass nur Zeilen im kombinierten Datensatz übrigbleiben, deren Key in \emph{beiden} Datensätzen gefunden wurde. Mit \texttt{left\_join} würden hier alle Preise behalten werden (und die fehlenden Koordinaten mit \texttt{NA} ergänzt), mit \texttt{right\_join} würden alle Stationen behalten werden (und fehlende Preise mit \texttt{NA} ergänzt). \texttt{full\_join} löscht gar keine Informationen.
+
+\hypertarget{kartieren}{%
+\subsection{Kartieren}\label{kartieren}}
+
+Den georeferenzierten Datensatz der Preise wandeln wir in eine Simple Feature Collection um:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{preise\_geo }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{st\_as\_sf}\NormalTok{(}\AttributeTok{coords =} \FunctionTok{c}\NormalTok{(}\StringTok{"longitude"}\NormalTok{, }\StringTok{"latitude"}\NormalTok{)) }\OtherTok{{-}\textgreater{}}\NormalTok{ preise\_sf}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{ggplot()} kartiert so einen großen Datensatz nur langsam. Wir nehmen stattdessen das Paket \texttt{tmap()} zur Hand, das mit einer ähnlichen Grammatik funktioniert.
+
+Interaktive Karten lassen sich mit \texttt{tmap} produzieren, wenn die Option
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{tmap\_mode}\NormalTok{(}\StringTok{"view"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+gesetzt ist. Aus technischen Gründen wird an dieser Stelle im Skript darauf verzichtet und wir bleiben beim \texttt{plot}-Modus:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{tm\_shape}\NormalTok{(preise\_sf) }\SpecialCharTok{+}
+  \FunctionTok{tm\_dots}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-98-1.png}
+
+Zwei Koordinaten sind quatsch! Wir finden ihre ungefähren Werte mit \texttt{summary}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(preise\_geo}\SpecialCharTok{$}\NormalTok{longitude)}
+\DocumentationTok{\#\#    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. }
+\DocumentationTok{\#\#   5.901   8.021   9.275   9.607  11.058  97.364}
+\end{Highlighting}
+\end{Shaded}
+
+Und filtern sie raus, und wiederholen die Umwandlung (diesmal auch mit CRS)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{preise\_geo }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(longitude }\SpecialCharTok{\textless{}} \DecValTok{80}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{st\_as\_sf}\NormalTok{(}\AttributeTok{coords =} \FunctionTok{c}\NormalTok{(}\StringTok{"longitude"}\NormalTok{, }\StringTok{"latitude"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{st\_set\_crs}\NormalTok{(}\DecValTok{4326}\NormalTok{) }\OtherTok{{-}\textgreater{}}\NormalTok{ preise\_sf}
+\end{Highlighting}
+\end{Shaded}
+
+Dann mappen wir nochmal:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{tm\_shape}\NormalTok{(preise\_sf) }\SpecialCharTok{+}
+  \FunctionTok{tm\_dots}\NormalTok{(}\StringTok{"dieselpreis"}\NormalTok{, }\AttributeTok{style =} \StringTok{"cont"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-101-1.png}
+
+Schon ganz hübsch, aber die Skala wird nun verzerrt durch sehr teure Autobahntankstellen einerseits, und falsche Null-werte andererseits:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(preise\_sf}\SpecialCharTok{$}\NormalTok{dieselpreis)}
+\DocumentationTok{\#\#    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. }
+\DocumentationTok{\#\#   0.000   1.249   1.289   1.290   1.329   1.679}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{choroplethen}{%
+\subsection{Choroplethen}\label{choroplethen}}
+
+Eine Lösung wäre, die Daten auf Kreisebene zusammenzufassen, und zwar anhand ihres Medians. Damit würden diese Ausreißer keine Role mehr spielen.
+
+Das \texttt{eurostat}-Paket macht es einfach, diese Geodaten einzulesen. NUTS3 ist die Ebene der Stadt- und Landkreise bzw. ihrer europäischen Equivalente.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{kreise }\OtherTok{\textless{}{-}}\NormalTok{ eurostat}\SpecialCharTok{::}\FunctionTok{get\_eurostat\_geospatial}\NormalTok{(}\AttributeTok{nuts\_level =} \DecValTok{3}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(CNTR\_CODE }\SpecialCharTok{==} \StringTok{"DE"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Mal schauen wie es aussieht:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{tm\_shape}\NormalTok{(kreise) }\SpecialCharTok{+}
+  \FunctionTok{tm\_polygons}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-104-1.png}
+
+\hypertarget{ruxe4umliches-verschneiden}{%
+\subsection{Räumliches Verschneiden}\label{ruxe4umliches-verschneiden}}
+
+mit \texttt{st\_join} werden Datensätze nicht mit einem Key verschnitten, sondern anhand ihrer Geolokation. Dann können wir wieder ganz normal \texttt{group\_by} und \texttt{summarise} verwenden:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{st\_join}\NormalTok{(kreise, preise\_sf) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(NUTS\_ID) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{dieselpreis =} \FunctionTok{median}\NormalTok{(dieselpreis),}
+            \AttributeTok{e5preis     =} \FunctionTok{median}\NormalTok{(e5preis),}
+            \AttributeTok{e10preis    =} \FunctionTok{median}\NormalTok{(e10preis)) }\OtherTok{{-}\textgreater{}}\NormalTok{ preise\_kreise}
+\end{Highlighting}
+\end{Shaded}
+
+Und so könnte vielleicht ein vorläufiges Ergebnis aussehen:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{tm\_shape}\NormalTok{(preise\_kreise) }\SpecialCharTok{+}
+  \FunctionTok{tm\_fill}\NormalTok{(}\StringTok{"dieselpreis"}\NormalTok{,}
+          \AttributeTok{title =} \StringTok{"Median der Dieselpreise"}\NormalTok{,}
+          \AttributeTok{style =} \StringTok{"cont"}\NormalTok{,}
+          \AttributeTok{alpha =} \FloatTok{0.8}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{tm\_layout}\NormalTok{(}\AttributeTok{legend.outside =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-106-1.png}
+
+\hypertarget{publizieren-und-nach-hilfe-fragen}{%
+\section{Publizieren und nach Hilfe fragen}\label{publizieren-und-nach-hilfe-fragen}}
+
+\hypertarget{publizieren-mit-rmarkdown}{%
+\subsection{Publizieren mit Rmarkdown}\label{publizieren-mit-rmarkdown}}
+
+\hypertarget{text-formatieren}{%
+\subsubsection{Text formatieren}\label{text-formatieren}}
+
+Wir arbeiten schon von Anfang an mit im Rmarkdown-Format. Wie Überschriften, Links, Bilder usw. in Rmarkdown genau funktionieren, ist in \href{https://rmarkdown.rstudio.com/authoring_basics.html}{dieser Übersicht} und auf \href{https://github.com/rstudio/cheatsheets/blob/master/rmarkdown-2.0.pdf}{diesem Cheat Sheet} gut festgehalten.
+
+\hypertarget{der-knit-button}{%
+\subsubsection{Der Knit-Button}\label{der-knit-button}}
+
+Wenn wir im \href{https://de.wikipedia.org/wiki/YAML}{YAML}-Header die Zeile
+
+\begin{verbatim}
+output: html_document
+\end{verbatim}
+
+setzen, erscheint (nach Abspeichern) ein „Knit``-Button in der GUI. Durch Drücken auf diesen Knopf passiert folgendes:
+
+\begin{itemize}
+\tightlist
+\item
+  R erstellt („strickt``) ein HTML-Dokument aus dem vorliegenden Markdown und den Code Chunks
+\item
+  Dabei spielen „gespeicherte`` Objekte keine Rolle, die Chunks werden einfach der Reihe nach (in einem neuen Environment) ausgeführt
+\item
+  Externe Datensätze o.~ä. müssen also am Anfang des Dokuments explizit geladen werden (etwa mit \texttt{load()}). Für den Abschlussbericht ist es ratsam, einen vorbereiteten Datensatz am Anfang des Rmarkdown-Dokuments so zu laden.
+\end{itemize}
+
+Im YAML-Header können noch viele weitere Angaben gemacht werden, die das Resultat verändern. Hier eine gute Dokumentation: \url{https://bookdown.org/yihui/rmarkdown/html-document.html}
+
+\hypertarget{kable}{%
+\subsubsection{Kable}\label{kable}}
+
+Im \texttt{knitr}-Paket sorgt der Befehl \texttt{kable()} für eine schöne Darstellung von Tabellen:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ggplot2}\SpecialCharTok{::}\NormalTok{diamonds }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{head}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{tabular}{r|l|l|l|r|r|r|r|r|r}
+\hline
+carat & cut & color & clarity & depth & table & price & x & y & z\\
+\hline
+0.23 & Ideal & E & SI2 & 61.5 & 55 & 326 & 3.95 & 3.98 & 2.43\\
+\hline
+0.21 & Premium & E & SI1 & 59.8 & 61 & 326 & 3.89 & 3.84 & 2.31\\
+\hline
+0.23 & Good & E & VS1 & 56.9 & 65 & 327 & 4.05 & 4.07 & 2.31\\
+\hline
+0.29 & Premium & I & VS2 & 62.4 & 58 & 334 & 4.20 & 4.23 & 2.63\\
+\hline
+0.31 & Good & J & SI2 & 63.3 & 58 & 335 & 4.34 & 4.35 & 2.75\\
+\hline
+0.24 & Very Good & J & VVS2 & 62.8 & 57 & 336 & 3.94 & 3.96 & 2.48\\
+\hline
+\end{tabular}
+
+Auch hier gibt es wieder vielfältige Möglichkeiten zur visuellen Gestaltung. Diesen Post finde ich immer besonders hilfreich: \url{https://haozhu233.github.io/kableExtra/awesome_table_in_html.html}
+
+\hypertarget{chunk-options}{%
+\subsubsection{Chunk Options}\label{chunk-options}}
+
+Am Anfang eines Code Chunks kann genau festgelegt werden, ob der Code ausgeführt werden soll, ob er im finalen Dokument erscheinen soll, ob Warnungen oder Fehler ausgegeben werden sollen, etc. Wenn zum Beispiel Libraries „versteckt`` geladen werden sollen, geht das mit diesem Code Chunk:
+
+\begin{verbatim}
+```{r, include = FALSE}
+library(tidyverse)
+library(rvest)
+```
+\end{verbatim}
+
+Ein überblick über die Chunk-Optionen findet sich hier: \url{https://bookdown.org/yihui/rmarkdown/r-code.html}
+
+\hypertarget{reproducible-research}{%
+\subsubsection{Reproducible research}\label{reproducible-research}}
+
+Wenn z.~B. ein (längeres) Script einen (größeren) Datensatz generiert und ihn dem Objektnamen \texttt{mein\_datensatz} zuweist, dann erscheint der Datensatz im lokalen Environment. Um den Datensatz mit anderen zu teilen, muss er irgendwie exportiert werden. Hierfür ist es ratsam, die \texttt{save()}-Funktion zu nutzen:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{save}\NormalTok{(mein\_datensatz, }\AttributeTok{file =} \StringTok{"zwischenstand\_mein\_datensatz.Rdata"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+So wird eine Datei erstellt, die den Datensatz enthält und verschoben oder geteilt werden kann. Eine solche Datei kann auch andere Objekte (Funktionen, Listen, \ldots) und mehrere Objekte auf einmal enthalten. Die Dateiendung ist dabei eigentlich egal, \texttt{.Rdata} scheint aber Usus zu sein.
+
+Aus der Datei können Objekte dann jederzeit wieder ins Environment geladen werden mit dem Befehl:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{load}\NormalTok{(}\StringTok{"zwischenstand\_mein\_datensatz.Rdata"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Auch wenn ein Skript auf einmal nicht mehr funktioniert (etwa weil die API sich ändert), ist es hilfreich, auf solche Zwischenstände zurückgreifen zu können.
+
+\hypertarget{wissenschaftliches-zitieren}{%
+\subsubsection{Wissenschaftliches Zitieren}\label{wissenschaftliches-zitieren}}
+
+Wer die Vorzüge von Literaturverwaltungssoftware (wie Citavi, Zotero, \ldots) schon schätzen gelernt hat, kann in Rmarkdown folgendermaßen vorgehen:
+
+\hypertarget{schritt-1-exportieren}{%
+\paragraph{Schritt 1: Exportieren}\label{schritt-1-exportieren}}
+
+Die relevante Literatur in eine BibTex-Datei im R-Arbeitsverzeichnis exportieren, z.B. \texttt{literatur.bib}. BibTex (bzw. BibLatex) ist ein bewährtes und gut dokumentiertes Format. Ein Eintrag sieht dann z.B. so aus, wobei \texttt{bortz} der „Name`` des Eintrags ist, den wir frei wählen können:
+
+\begin{verbatim}
+@book{bortz,
+  author = {Bortz, J{\"u}rgen and Schuster, Christof},
+  title = {{Statistik f{\"u}r Human- und Sozialwissenschaftler}},
+  publisher = {Springer},
+  year = {2010},
+  address = {Berlin},
+  edition = {7},
+}
+\end{verbatim}
+
+\hypertarget{schritt-2-verlinken}{%
+\paragraph{Schritt 2: Verlinken}\label{schritt-2-verlinken}}
+
+Im YAML-Header des Rmarkdown-dokuments die Angabe ergänzen:
+
+\begin{verbatim}
+bibliography: literatur.bib
+\end{verbatim}
+
+Damit weiß der „Knit``-Befehl, wo er nach Literatur suchen soll.
+
+\hypertarget{schritt-3-zitieren}{%
+\paragraph{Schritt 3: Zitieren}\label{schritt-3-zitieren}}
+
+Im Text kann dann z.~B. so zitiert werden:
+
+\begin{verbatim}
+Das zentrale Grenzwerttheorem besagt, dass die Stichprobenverteilung von
+$\bar{x}$ mit steigender Stichprobengröße $n$ in eine Normalverteilung übergeht
+[@bortz: 86].
+\end{verbatim}
+
+\hypertarget{schritt-4-stricken}{%
+\paragraph{Schritt 4: Stricken}\label{schritt-4-stricken}}
+
+Beim „Knit``-Befehl wird ein Literaturverzeichnis automatisch erstellt und ans Ende des Dokuments gehängt. Deshalb beendet man das Dokument am besten mit der Zeile:
+
+\begin{verbatim}
+## Literaturverzeichnis
+\end{verbatim}
+
+\hypertarget{nach-hilfe-fragen}{%
+\subsection{Nach Hilfe fragen}\label{nach-hilfe-fragen}}
+
+Online-Foren, insb. \href{https://stackoverflow.com}{Stackoverflow} sind tolle Ressourcen um Probleme beim Programmieren zu lösen.
+
+\hypertarget{gute-beispiele}{%
+\subsubsection{Gute Beispiele}\label{gute-beispiele}}
+
 
 \end{document}

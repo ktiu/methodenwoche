@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="de" xml:lang="de">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Teil 6 Geodaten verschneiden | Spatial Analysis mit R (I)</title>
+  <meta name="description" content="Workshop" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Teil 6 Geodaten verschneiden | Spatial Analysis mit R (I)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Workshop" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Teil 6 Geodaten verschneiden | Spatial Analysis mit R (I)" />
+  
+  <meta name="twitter:description" content="Workshop" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="geodaten-beschaffen.html"/>
+<link rel="next" href="weitere-methoden.html"/>
+<script src="assets/header-attrs-2.8/header-attrs.js"></script>
+<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="assets/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="assets/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link rel="icon" href="https://www.uni-frankfurt.de/favicon.ico" type="image/x-icon">
+<script src="solutions.js"></script>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Zeitplan</a></li>
+<li class="chapter" data-level="1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>1</b> Getting started</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="getting-started.html"><a href="getting-started.html#formales"><i class="fa fa-check"></i><b>1.1</b> Formales</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="getting-started.html"><a href="getting-started.html#keine-reguläre-anrechnung-des-workshops"><i class="fa fa-check"></i><b>1.1.1</b> Keine reguläre Anrechnung des Workshops</a></li>
+<li class="chapter" data-level="1.1.2" data-path="getting-started.html"><a href="getting-started.html#methodenzertifikat"><i class="fa fa-check"></i><b>1.1.2</b> Methodenzertifikat</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="getting-started.html"><a href="getting-started.html#inhaltliches"><i class="fa fa-check"></i><b>1.2</b> Inhaltliches</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="getting-started.html"><a href="getting-started.html#lernziele-der-veranstaltung"><i class="fa fa-check"></i><b>1.2.1</b> Lernziele der Veranstaltung</a></li>
+<li class="chapter" data-level="1.2.2" data-path="getting-started.html"><a href="getting-started.html#seminarkonzept"><i class="fa fa-check"></i><b>1.2.2</b> Seminarkonzept</a></li>
+<li class="chapter" data-level="1.2.3" data-path="getting-started.html"><a href="getting-started.html#opinionated"><i class="fa fa-check"></i><b>1.2.3</b> <q>Opinionated…</q></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="getting-started.html"><a href="getting-started.html#didaktisches"><i class="fa fa-check"></i><b>1.3</b> Didaktisches</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="getting-started.html"><a href="getting-started.html#herausforderungen-in-der-it-didaktik"><i class="fa fa-check"></i><b>1.3.1</b> Herausforderungen in der IT-Didaktik</a></li>
+<li class="chapter" data-level="1.3.2" data-path="getting-started.html"><a href="getting-started.html#everyone-fails"><i class="fa fa-check"></i><b>1.3.2</b> Everyone fails</a></li>
+<li class="chapter" data-level="1.3.3" data-path="getting-started.html"><a href="getting-started.html#mein-ansatz-in-der-lehre"><i class="fa fa-check"></i><b>1.3.3</b> Mein Ansatz in der Lehre</a></li>
+<li class="chapter" data-level="1.3.4" data-path="getting-started.html"><a href="getting-started.html#schattenkompetenzen"><i class="fa fa-check"></i><b>1.3.4</b> <q>Schattenkompetenzen</q></a></li>
+<li class="chapter" data-level="1.3.5" data-path="getting-started.html"><a href="getting-started.html#dieser-workshop-findet-in-verschiedenen-modi-statt"><i class="fa fa-check"></i><b>1.3.5</b> Dieser Workshop findet in verschiedenen Modi statt:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="getting-started.html"><a href="getting-started.html#technisches"><i class="fa fa-check"></i><b>1.4</b> Technisches</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="getting-started.html"><a href="getting-started.html#arbeitsplatz"><i class="fa fa-check"></i><b>1.4.1</b> Arbeitsplatz</a></li>
+<li class="chapter" data-level="1.4.2" data-path="getting-started.html"><a href="getting-started.html#workshopunterlagen"><i class="fa fa-check"></i><b>1.4.2</b> Workshopunterlagen</a></li>
+<li class="chapter" data-level="1.4.3" data-path="getting-started.html"><a href="getting-started.html#rstudio-cloud"><i class="fa fa-check"></i><b>1.4.3</b> RStudio Cloud</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html"><i class="fa fa-check"></i><b>2</b> Daten visualisieren</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#lernziele-dieser-sitzung"><i class="fa fa-check"></i><b>2.1</b> Lernziele dieser Sitzung</a></li>
+<li class="chapter" data-level="2.2" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#voraussetzungen"><i class="fa fa-check"></i><b>2.2</b> Voraussetzungen</a></li>
+<li class="chapter" data-level="2.3" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#überblick"><i class="fa fa-check"></i><b>2.3</b> Überblick</a></li>
+<li class="chapter" data-level="2.4" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#visualisierung-mit-dem-standardpaket"><i class="fa fa-check"></i><b>2.4</b> Visualisierung mit dem Standardpaket</a></li>
+<li class="chapter" data-level="2.5" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#visualisierung-mit-ggplot"><i class="fa fa-check"></i><b>2.5</b> Visualisierung mit <code>ggplot()</code></a></li>
+<li class="chapter" data-level="2.6" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#aufgaben"><i class="fa fa-check"></i><b>2.6</b> Aufgaben</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html"><i class="fa fa-check"></i><b>3</b> Karten erstellen (FTR)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#lernziele-dieser-sitzung-1"><i class="fa fa-check"></i><b>3.1</b> Lernziele dieser Sitzung</a></li>
+<li class="chapter" data-level="3.2" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#voraussetzungen-1"><i class="fa fa-check"></i><b>3.2</b> Voraussetzungen</a></li>
+<li class="chapter" data-level="3.3" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#exkurs-pipes"><i class="fa fa-check"></i><b>3.3</b> Exkurs: Pipes</a></li>
+<li class="chapter" data-level="3.4" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#daten-importieren"><i class="fa fa-check"></i><b>3.4</b> Daten importieren</a></li>
+<li class="chapter" data-level="3.5" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#überblick-verschaffen"><i class="fa fa-check"></i><b>3.5</b> Überblick verschaffen</a></li>
+<li class="chapter" data-level="3.6" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#visualisieren"><i class="fa fa-check"></i><b>3.6</b> Visualisieren</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="karten-erstellen-hos.html"><a href="karten-erstellen-hos.html"><i class="fa fa-check"></i><b>4</b> Karten erstellen (HOS)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="karten-erstellen-hos.html"><a href="karten-erstellen-hos.html#aufgaben-1"><i class="fa fa-check"></i><b>4.1</b> Aufgaben</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html"><i class="fa fa-check"></i><b>5</b> Geodaten beschaffen</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#lernziele-dieser-sitzung-2"><i class="fa fa-check"></i><b>5.1</b> Lernziele dieser Sitzung</a></li>
+<li class="chapter" data-level="5.2" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#vorbereitung"><i class="fa fa-check"></i><b>5.2</b> Vorbereitung</a></li>
+<li class="chapter" data-level="5.3" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#datenbeschaffung"><i class="fa fa-check"></i><b>5.3</b> Datenbeschaffung</a></li>
+<li class="chapter" data-level="5.4" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#datenformatierung"><i class="fa fa-check"></i><b>5.4</b> Datenformatierung</a></li>
+<li class="chapter" data-level="5.5" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#datenaufbereitung"><i class="fa fa-check"></i><b>5.5</b> Datenaufbereitung</a></li>
+<li class="chapter" data-level="5.6" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#datenvisualisierung"><i class="fa fa-check"></i><b>5.6</b> Datenvisualisierung</a></li>
+<li class="chapter" data-level="5.7" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#aufgaben-2"><i class="fa fa-check"></i><b>5.7</b> Aufgaben</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html"><i class="fa fa-check"></i><b>6</b> Geodaten verschneiden</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#lernziele"><i class="fa fa-check"></i><b>6.1</b> Lernziele</a></li>
+<li class="chapter" data-level="6.2" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#vorbereitung-1"><i class="fa fa-check"></i><b>6.2</b> Vorbereitung</a></li>
+<li class="chapter" data-level="6.3" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#ziel"><i class="fa fa-check"></i><b>6.3</b> Ziel</a></li>
+<li class="chapter" data-level="6.4" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#grundkarte"><i class="fa fa-check"></i><b>6.4</b> Grundkarte</a></li>
+<li class="chapter" data-level="6.5" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#osm-daten"><i class="fa fa-check"></i><b>6.5</b> OSM-Daten</a></li>
+<li class="chapter" data-level="6.6" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#koordinatenreferenzsysteme"><i class="fa fa-check"></i><b>6.6</b> Koordinatenreferenzsysteme</a></li>
+<li class="chapter" data-level="6.7" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#verschneiden"><i class="fa fa-check"></i><b>6.7</b> Verschneiden</a></li>
+<li class="chapter" data-level="6.8" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#aufgaben-3"><i class="fa fa-check"></i><b>6.8</b> Aufgaben</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="weitere-methoden.html"><a href="weitere-methoden.html"><i class="fa fa-check"></i><b>7</b> Weitere Methoden</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="weitere-methoden.html"><a href="weitere-methoden.html#vorbereitung-2"><i class="fa fa-check"></i><b>7.1</b> Vorbereitung</a></li>
+<li class="chapter" data-level="7.2" data-path="weitere-methoden.html"><a href="weitere-methoden.html#aufgabe"><i class="fa fa-check"></i><b>7.2</b> Aufgabe</a></li>
+<li class="chapter" data-level="7.3" data-path="weitere-methoden.html"><a href="weitere-methoden.html#daten-einlesen"><i class="fa fa-check"></i><b>7.3</b> Daten einlesen</a></li>
+<li class="chapter" data-level="7.4" data-path="weitere-methoden.html"><a href="weitere-methoden.html#überblick-verschaffen-1"><i class="fa fa-check"></i><b>7.4</b> Überblick verschaffen</a></li>
+<li class="chapter" data-level="7.5" data-path="weitere-methoden.html"><a href="weitere-methoden.html#zusammenfassen"><i class="fa fa-check"></i><b>7.5</b> Zusammenfassen</a></li>
+<li class="chapter" data-level="7.6" data-path="weitere-methoden.html"><a href="weitere-methoden.html#verschneiden-1"><i class="fa fa-check"></i><b>7.6</b> Verschneiden</a></li>
+<li class="chapter" data-level="7.7" data-path="weitere-methoden.html"><a href="weitere-methoden.html#kartieren"><i class="fa fa-check"></i><b>7.7</b> Kartieren</a></li>
+<li class="chapter" data-level="7.8" data-path="weitere-methoden.html"><a href="weitere-methoden.html#choroplethen"><i class="fa fa-check"></i><b>7.8</b> Choroplethen</a></li>
+<li class="chapter" data-level="7.9" data-path="weitere-methoden.html"><a href="weitere-methoden.html#räumliches-verschneiden"><i class="fa fa-check"></i><b>7.9</b> Räumliches Verschneiden</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html"><i class="fa fa-check"></i><b>8</b> Publizieren und nach Hilfe fragen</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#publizieren-mit-rmarkdown"><i class="fa fa-check"></i><b>8.1</b> Publizieren mit Rmarkdown</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#text-formatieren"><i class="fa fa-check"></i><b>8.1.1</b> Text formatieren</a></li>
+<li class="chapter" data-level="8.1.2" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#der-knit-button"><i class="fa fa-check"></i><b>8.1.2</b> Der Knit-Button</a></li>
+<li class="chapter" data-level="8.1.3" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#kable"><i class="fa fa-check"></i><b>8.1.3</b> Kable</a></li>
+<li class="chapter" data-level="8.1.4" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#chunk-options"><i class="fa fa-check"></i><b>8.1.4</b> Chunk Options</a></li>
+<li class="chapter" data-level="8.1.5" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#reproducible-research"><i class="fa fa-check"></i><b>8.1.5</b> Reproducible research</a></li>
+<li class="chapter" data-level="8.1.6" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#wissenschaftliches-zitieren"><i class="fa fa-check"></i><b>8.1.6</b> Wissenschaftliches Zitieren</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#nach-hilfe-fragen"><i class="fa fa-check"></i><b>8.2</b> Nach Hilfe fragen</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#gute-beispiele"><i class="fa fa-check"></i><b>8.2.1</b> Gute Beispiele</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Spatial Analysis mit R (I)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="geodaten-verschneiden" class="section level1" number="6">
+<h1><span class="header-section-number">Teil 6</span> Geodaten verschneiden</h1>
+<div id="lernziele" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Lernziele</h2>
+<p>Sie können…</p>
+<ul>
+<li>Geodaten als Simple Features importieren,</li>
+<li>CRS bestimmen und umwandeln,</li>
+<li>einfache Verschneidungen von Simple Features durchführen und</li>
+<li>Simple Features kartographisch darstellen.</li>
+</ul>
+</div>
+<div id="vorbereitung-1" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Vorbereitung</h2>
+<p>Für diese Lektion werden zwei Pakete geladen:</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="geodaten-verschneiden.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb61-2"><a href="geodaten-verschneiden.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code></pre></div>
+</div>
+<div id="ziel" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Ziel</h2>
+<p>Ziel ist, eine <a href="https://de.wikipedia.org/wiki/Choroplethenkarte">Choroplethenkarte</a> von Frankfurt zu erstellen, die die Versorgung mit Kiosken darstellt.</p>
+</div>
+<div id="grundkarte" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Grundkarte</h2>
+<p>Eine Shapefile der Frankfurter Stadtteile findet sich hier: <a href="http://www.offenedaten.frankfurt.de/dataset/frankfurter-stadtteilgrenzen-fur-gis-systeme" class="uri">http://www.offenedaten.frankfurt.de/dataset/frankfurter-stadtteilgrenzen-fur-gis-systeme</a></p>
+<p>Wir laden die Zip-Datei herunter und speichern den enthaltenen Ordner <code>stadtteile</code> in unserem Arbeitsverzeichnis. Es ist eine gute Angewohnheit, einen Unterordner für Ressourcen anzulegen.</p>
+<p>Dann importieren wir den Geodatensatz als Simple Features (Paket <code>sf</code>):</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="geodaten-verschneiden.html#cb62-1" aria-hidden="true" tabindex="-1"></a>stadtteile <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;resources/stadtteile/Stadtteile_Frankfurt_am_Main.shp&quot;</span>)</span>
+<span id="cb62-2"><a href="geodaten-verschneiden.html#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Reading layer `Stadtteile_Frankfurt_am_Main&#39; from data source </span></span>
+<span id="cb62-3"><a href="geodaten-verschneiden.html#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="do">##   `/Users/till/mzs/2021_methodenwoche/skript/resources/stadtteile/Stadtteile_Frankfurt_am_Main.shp&#39; </span></span>
+<span id="cb62-4"><a href="geodaten-verschneiden.html#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   using driver `ESRI Shapefile&#39;</span></span>
+<span id="cb62-5"><a href="geodaten-verschneiden.html#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Simple feature collection with 46 features and 2 fields</span></span>
+<span id="cb62-6"><a href="geodaten-verschneiden.html#cb62-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Geometry type: POLYGON</span></span>
+<span id="cb62-7"><a href="geodaten-verschneiden.html#cb62-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Dimension:     XY</span></span>
+<span id="cb62-8"><a href="geodaten-verschneiden.html#cb62-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Bounding box:  xmin: 462292.7 ymin: 5540412 xmax: 485744.8 ymax: 5563925</span></span>
+<span id="cb62-9"><a href="geodaten-verschneiden.html#cb62-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Projected CRS: ETRS89 / UTM zone 32N</span></span></code></pre></div>
+<p>Simple Features sind Datensätze, die eine Spalte <code>geometry</code> enthalten, in der Geodaten in einem standardisierten Format hinterlegt sind.</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="geodaten-verschneiden.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(stadtteile)</span>
+<span id="cb63-2"><a href="geodaten-verschneiden.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Classes &#39;sf&#39; and &#39;data.frame&#39;:   46 obs. of  3 variables:</span></span>
+<span id="cb63-3"><a href="geodaten-verschneiden.html#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ STTLNR  : num  1 2 3 4 5 6 7 8 9 10 ...</span></span>
+<span id="cb63-4"><a href="geodaten-verschneiden.html#cb63-4" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ STTLNAME: chr  &quot;Altstadt&quot; &quot;Innenstadt&quot; &quot;Bahnhofsviertel&quot; &quot;Westend-Süd&quot; ...</span></span>
+<span id="cb63-5"><a href="geodaten-verschneiden.html#cb63-5" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ geometry:sfc_POLYGON of length 46; first list element: List of 1</span></span>
+<span id="cb63-6"><a href="geodaten-verschneiden.html#cb63-6" aria-hidden="true" tabindex="-1"></a><span class="do">##   ..$ : num [1:46, 1:2] 476934 476890 476852 476813 476799 ...</span></span>
+<span id="cb63-7"><a href="geodaten-verschneiden.html#cb63-7" aria-hidden="true" tabindex="-1"></a><span class="do">##   ..- attr(*, &quot;class&quot;)= chr [1:3] &quot;XY&quot; &quot;POLYGON&quot; &quot;sfg&quot;</span></span>
+<span id="cb63-8"><a href="geodaten-verschneiden.html#cb63-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  - attr(*, &quot;sf_column&quot;)= chr &quot;geometry&quot;</span></span>
+<span id="cb63-9"><a href="geodaten-verschneiden.html#cb63-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  - attr(*, &quot;agr&quot;)= Factor w/ 3 levels &quot;constant&quot;,&quot;aggregate&quot;,..: NA NA</span></span>
+<span id="cb63-10"><a href="geodaten-verschneiden.html#cb63-10" aria-hidden="true" tabindex="-1"></a><span class="do">##   ..- attr(*, &quot;names&quot;)= chr [1:2] &quot;STTLNR&quot; &quot;STTLNAME&quot;</span></span></code></pre></div>
+<p>Eine Vorschau:</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="geodaten-verschneiden.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(stadtteile) <span class="sc">+</span></span>
+<span id="cb64-2"><a href="geodaten-verschneiden.html#cb64-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>() <span class="sc">+</span></span>
+<span id="cb64-3"><a href="geodaten-verschneiden.html#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf_label</span>(<span class="fu">aes</span>(<span class="at">label =</span> STTLNAME), <span class="at">size =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+</div>
+<div id="osm-daten" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> OSM-Daten</h2>
+<p>Im <a href="https://wiki.openstreetmap.org/wiki/Map_Features">OSM Wiki</a> suchen wir den richtigen <em>tag</em> heraus. In diesem Fall <code>shop=kiosk</code></p>
+<p>Dann bauen wir auf <a href="https://overpass-turbo.eu/">Overpass Turbo</a> die Abfrage und laden den Datensatz herunter.</p>
+<p>Schließlich importieren wir:</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="geodaten-verschneiden.html#cb65-1" aria-hidden="true" tabindex="-1"></a>kioske <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;resources/kioske.geojson&quot;</span>)</span>
+<span id="cb65-2"><a href="geodaten-verschneiden.html#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Reading layer `kioske&#39; from data source </span></span>
+<span id="cb65-3"><a href="geodaten-verschneiden.html#cb65-3" aria-hidden="true" tabindex="-1"></a><span class="do">##   `/Users/till/mzs/2021_methodenwoche/skript/resources/kioske.geojson&#39; </span></span>
+<span id="cb65-4"><a href="geodaten-verschneiden.html#cb65-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   using driver `GeoJSON&#39;</span></span>
+<span id="cb65-5"><a href="geodaten-verschneiden.html#cb65-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Simple feature collection with 325 features and 74 fields</span></span>
+<span id="cb65-6"><a href="geodaten-verschneiden.html#cb65-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Geometry type: GEOMETRY</span></span>
+<span id="cb65-7"><a href="geodaten-verschneiden.html#cb65-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Dimension:     XY</span></span>
+<span id="cb65-8"><a href="geodaten-verschneiden.html#cb65-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Bounding box:  xmin: 8.505468 ymin: 50.04801 xmax: 8.789538 ymax: 50.20185</span></span>
+<span id="cb65-9"><a href="geodaten-verschneiden.html#cb65-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Geodetic CRS:  WGS 84</span></span></code></pre></div>
+<p>Eine Vorschau:</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="geodaten-verschneiden.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb66-2"><a href="geodaten-verschneiden.html#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> stadtteile) <span class="sc">+</span></span>
+<span id="cb66-3"><a href="geodaten-verschneiden.html#cb66-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> kioske)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+</div>
+<div id="koordinatenreferenzsysteme" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> Koordinatenreferenzsysteme</h2>
+<p>Der OSM-Datensatz ist mit WGS84 (EPSG 4326) referenziert:</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="geodaten-verschneiden.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(kioske)</span>
+<span id="cb67-2"><a href="geodaten-verschneiden.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Coordinate Reference System:</span></span>
+<span id="cb67-3"><a href="geodaten-verschneiden.html#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="do">##   User input: WGS 84 </span></span>
+<span id="cb67-4"><a href="geodaten-verschneiden.html#cb67-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   wkt:</span></span>
+<span id="cb67-5"><a href="geodaten-verschneiden.html#cb67-5" aria-hidden="true" tabindex="-1"></a><span class="do">## GEOGCRS[&quot;WGS 84&quot;,</span></span>
+<span id="cb67-6"><a href="geodaten-verschneiden.html#cb67-6" aria-hidden="true" tabindex="-1"></a><span class="do">##     DATUM[&quot;World Geodetic System 1984&quot;,</span></span>
+<span id="cb67-7"><a href="geodaten-verschneiden.html#cb67-7" aria-hidden="true" tabindex="-1"></a><span class="do">##         ELLIPSOID[&quot;WGS 84&quot;,6378137,298.257223563,</span></span>
+<span id="cb67-8"><a href="geodaten-verschneiden.html#cb67-8" aria-hidden="true" tabindex="-1"></a><span class="do">##             LENGTHUNIT[&quot;metre&quot;,1]]],</span></span>
+<span id="cb67-9"><a href="geodaten-verschneiden.html#cb67-9" aria-hidden="true" tabindex="-1"></a><span class="do">##     PRIMEM[&quot;Greenwich&quot;,0,</span></span>
+<span id="cb67-10"><a href="geodaten-verschneiden.html#cb67-10" aria-hidden="true" tabindex="-1"></a><span class="do">##         ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></span>
+<span id="cb67-11"><a href="geodaten-verschneiden.html#cb67-11" aria-hidden="true" tabindex="-1"></a><span class="do">##     CS[ellipsoidal,2],</span></span>
+<span id="cb67-12"><a href="geodaten-verschneiden.html#cb67-12" aria-hidden="true" tabindex="-1"></a><span class="do">##         AXIS[&quot;geodetic latitude (Lat)&quot;,north,</span></span>
+<span id="cb67-13"><a href="geodaten-verschneiden.html#cb67-13" aria-hidden="true" tabindex="-1"></a><span class="do">##             ORDER[1],</span></span>
+<span id="cb67-14"><a href="geodaten-verschneiden.html#cb67-14" aria-hidden="true" tabindex="-1"></a><span class="do">##             ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></span>
+<span id="cb67-15"><a href="geodaten-verschneiden.html#cb67-15" aria-hidden="true" tabindex="-1"></a><span class="do">##         AXIS[&quot;geodetic longitude (Lon)&quot;,east,</span></span>
+<span id="cb67-16"><a href="geodaten-verschneiden.html#cb67-16" aria-hidden="true" tabindex="-1"></a><span class="do">##             ORDER[2],</span></span>
+<span id="cb67-17"><a href="geodaten-verschneiden.html#cb67-17" aria-hidden="true" tabindex="-1"></a><span class="do">##             ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></span>
+<span id="cb67-18"><a href="geodaten-verschneiden.html#cb67-18" aria-hidden="true" tabindex="-1"></a><span class="do">##     ID[&quot;EPSG&quot;,4326]]</span></span></code></pre></div>
+<p>Die Stadtteilen hingegen sind sind in ETSR89 (EPSG 25832):</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="geodaten-verschneiden.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(stadtteile)</span>
+<span id="cb68-2"><a href="geodaten-verschneiden.html#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Coordinate Reference System:</span></span>
+<span id="cb68-3"><a href="geodaten-verschneiden.html#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="do">##   User input: ETRS89 / UTM zone 32N </span></span>
+<span id="cb68-4"><a href="geodaten-verschneiden.html#cb68-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   wkt:</span></span>
+<span id="cb68-5"><a href="geodaten-verschneiden.html#cb68-5" aria-hidden="true" tabindex="-1"></a><span class="do">## PROJCRS[&quot;ETRS89 / UTM zone 32N&quot;,</span></span>
+<span id="cb68-6"><a href="geodaten-verschneiden.html#cb68-6" aria-hidden="true" tabindex="-1"></a><span class="do">##     BASEGEOGCRS[&quot;ETRS89&quot;,</span></span>
+<span id="cb68-7"><a href="geodaten-verschneiden.html#cb68-7" aria-hidden="true" tabindex="-1"></a><span class="do">##         DATUM[&quot;European Terrestrial Reference System 1989&quot;,</span></span>
+<span id="cb68-8"><a href="geodaten-verschneiden.html#cb68-8" aria-hidden="true" tabindex="-1"></a><span class="do">##             ELLIPSOID[&quot;GRS 1980&quot;,6378137,298.257222101,</span></span>
+<span id="cb68-9"><a href="geodaten-verschneiden.html#cb68-9" aria-hidden="true" tabindex="-1"></a><span class="do">##                 LENGTHUNIT[&quot;metre&quot;,1]]],</span></span>
+<span id="cb68-10"><a href="geodaten-verschneiden.html#cb68-10" aria-hidden="true" tabindex="-1"></a><span class="do">##         PRIMEM[&quot;Greenwich&quot;,0,</span></span>
+<span id="cb68-11"><a href="geodaten-verschneiden.html#cb68-11" aria-hidden="true" tabindex="-1"></a><span class="do">##             ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></span>
+<span id="cb68-12"><a href="geodaten-verschneiden.html#cb68-12" aria-hidden="true" tabindex="-1"></a><span class="do">##         ID[&quot;EPSG&quot;,4258]],</span></span>
+<span id="cb68-13"><a href="geodaten-verschneiden.html#cb68-13" aria-hidden="true" tabindex="-1"></a><span class="do">##     CONVERSION[&quot;UTM zone 32N&quot;,</span></span>
+<span id="cb68-14"><a href="geodaten-verschneiden.html#cb68-14" aria-hidden="true" tabindex="-1"></a><span class="do">##         METHOD[&quot;Transverse Mercator&quot;,</span></span>
+<span id="cb68-15"><a href="geodaten-verschneiden.html#cb68-15" aria-hidden="true" tabindex="-1"></a><span class="do">##             ID[&quot;EPSG&quot;,9807]],</span></span>
+<span id="cb68-16"><a href="geodaten-verschneiden.html#cb68-16" aria-hidden="true" tabindex="-1"></a><span class="do">##         PARAMETER[&quot;Latitude of natural origin&quot;,0,</span></span>
+<span id="cb68-17"><a href="geodaten-verschneiden.html#cb68-17" aria-hidden="true" tabindex="-1"></a><span class="do">##             ANGLEUNIT[&quot;degree&quot;,0.0174532925199433],</span></span>
+<span id="cb68-18"><a href="geodaten-verschneiden.html#cb68-18" aria-hidden="true" tabindex="-1"></a><span class="do">##             ID[&quot;EPSG&quot;,8801]],</span></span>
+<span id="cb68-19"><a href="geodaten-verschneiden.html#cb68-19" aria-hidden="true" tabindex="-1"></a><span class="do">##         PARAMETER[&quot;Longitude of natural origin&quot;,9,</span></span>
+<span id="cb68-20"><a href="geodaten-verschneiden.html#cb68-20" aria-hidden="true" tabindex="-1"></a><span class="do">##             ANGLEUNIT[&quot;degree&quot;,0.0174532925199433],</span></span>
+<span id="cb68-21"><a href="geodaten-verschneiden.html#cb68-21" aria-hidden="true" tabindex="-1"></a><span class="do">##             ID[&quot;EPSG&quot;,8802]],</span></span>
+<span id="cb68-22"><a href="geodaten-verschneiden.html#cb68-22" aria-hidden="true" tabindex="-1"></a><span class="do">##         PARAMETER[&quot;Scale factor at natural origin&quot;,0.9996,</span></span>
+<span id="cb68-23"><a href="geodaten-verschneiden.html#cb68-23" aria-hidden="true" tabindex="-1"></a><span class="do">##             SCALEUNIT[&quot;unity&quot;,1],</span></span>
+<span id="cb68-24"><a href="geodaten-verschneiden.html#cb68-24" aria-hidden="true" tabindex="-1"></a><span class="do">##             ID[&quot;EPSG&quot;,8805]],</span></span>
+<span id="cb68-25"><a href="geodaten-verschneiden.html#cb68-25" aria-hidden="true" tabindex="-1"></a><span class="do">##         PARAMETER[&quot;False easting&quot;,500000,</span></span>
+<span id="cb68-26"><a href="geodaten-verschneiden.html#cb68-26" aria-hidden="true" tabindex="-1"></a><span class="do">##             LENGTHUNIT[&quot;metre&quot;,1],</span></span>
+<span id="cb68-27"><a href="geodaten-verschneiden.html#cb68-27" aria-hidden="true" tabindex="-1"></a><span class="do">##             ID[&quot;EPSG&quot;,8806]],</span></span>
+<span id="cb68-28"><a href="geodaten-verschneiden.html#cb68-28" aria-hidden="true" tabindex="-1"></a><span class="do">##         PARAMETER[&quot;False northing&quot;,0,</span></span>
+<span id="cb68-29"><a href="geodaten-verschneiden.html#cb68-29" aria-hidden="true" tabindex="-1"></a><span class="do">##             LENGTHUNIT[&quot;metre&quot;,1],</span></span>
+<span id="cb68-30"><a href="geodaten-verschneiden.html#cb68-30" aria-hidden="true" tabindex="-1"></a><span class="do">##             ID[&quot;EPSG&quot;,8807]]],</span></span>
+<span id="cb68-31"><a href="geodaten-verschneiden.html#cb68-31" aria-hidden="true" tabindex="-1"></a><span class="do">##     CS[Cartesian,2],</span></span>
+<span id="cb68-32"><a href="geodaten-verschneiden.html#cb68-32" aria-hidden="true" tabindex="-1"></a><span class="do">##         AXIS[&quot;(E)&quot;,east,</span></span>
+<span id="cb68-33"><a href="geodaten-verschneiden.html#cb68-33" aria-hidden="true" tabindex="-1"></a><span class="do">##             ORDER[1],</span></span>
+<span id="cb68-34"><a href="geodaten-verschneiden.html#cb68-34" aria-hidden="true" tabindex="-1"></a><span class="do">##             LENGTHUNIT[&quot;metre&quot;,1]],</span></span>
+<span id="cb68-35"><a href="geodaten-verschneiden.html#cb68-35" aria-hidden="true" tabindex="-1"></a><span class="do">##         AXIS[&quot;(N)&quot;,north,</span></span>
+<span id="cb68-36"><a href="geodaten-verschneiden.html#cb68-36" aria-hidden="true" tabindex="-1"></a><span class="do">##             ORDER[2],</span></span>
+<span id="cb68-37"><a href="geodaten-verschneiden.html#cb68-37" aria-hidden="true" tabindex="-1"></a><span class="do">##             LENGTHUNIT[&quot;metre&quot;,1]],</span></span>
+<span id="cb68-38"><a href="geodaten-verschneiden.html#cb68-38" aria-hidden="true" tabindex="-1"></a><span class="do">##     USAGE[</span></span>
+<span id="cb68-39"><a href="geodaten-verschneiden.html#cb68-39" aria-hidden="true" tabindex="-1"></a><span class="do">##         SCOPE[&quot;Engineering survey, topographic mapping.&quot;],</span></span>
+<span id="cb68-40"><a href="geodaten-verschneiden.html#cb68-40" aria-hidden="true" tabindex="-1"></a><span class="do">##         AREA[&quot;Europe between 6°E and 12°E: Austria; Belgium; Denmark - onshore and offshore; Germany - onshore and offshore; Norway including - onshore and offshore; Spain - offshore.&quot;],</span></span>
+<span id="cb68-41"><a href="geodaten-verschneiden.html#cb68-41" aria-hidden="true" tabindex="-1"></a><span class="do">##         BBOX[38.76,6,83.92,12]],</span></span>
+<span id="cb68-42"><a href="geodaten-verschneiden.html#cb68-42" aria-hidden="true" tabindex="-1"></a><span class="do">##     ID[&quot;EPSG&quot;,25832]]</span></span></code></pre></div>
+<p>Der Datensatz lässt sich allerdings transformieren:</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="geodaten-verschneiden.html#cb69-1" aria-hidden="true" tabindex="-1"></a>stadtteile <span class="sc">%&gt;%</span></span>
+<span id="cb69-2"><a href="geodaten-verschneiden.html#cb69-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="dv">4326</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb69-3"><a href="geodaten-verschneiden.html#cb69-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_crs</span>()</span>
+<span id="cb69-4"><a href="geodaten-verschneiden.html#cb69-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Coordinate Reference System:</span></span>
+<span id="cb69-5"><a href="geodaten-verschneiden.html#cb69-5" aria-hidden="true" tabindex="-1"></a><span class="do">##   User input: EPSG:4326 </span></span>
+<span id="cb69-6"><a href="geodaten-verschneiden.html#cb69-6" aria-hidden="true" tabindex="-1"></a><span class="do">##   wkt:</span></span>
+<span id="cb69-7"><a href="geodaten-verschneiden.html#cb69-7" aria-hidden="true" tabindex="-1"></a><span class="do">## GEOGCRS[&quot;WGS 84&quot;,</span></span>
+<span id="cb69-8"><a href="geodaten-verschneiden.html#cb69-8" aria-hidden="true" tabindex="-1"></a><span class="do">##     DATUM[&quot;World Geodetic System 1984&quot;,</span></span>
+<span id="cb69-9"><a href="geodaten-verschneiden.html#cb69-9" aria-hidden="true" tabindex="-1"></a><span class="do">##         ELLIPSOID[&quot;WGS 84&quot;,6378137,298.257223563,</span></span>
+<span id="cb69-10"><a href="geodaten-verschneiden.html#cb69-10" aria-hidden="true" tabindex="-1"></a><span class="do">##             LENGTHUNIT[&quot;metre&quot;,1]]],</span></span>
+<span id="cb69-11"><a href="geodaten-verschneiden.html#cb69-11" aria-hidden="true" tabindex="-1"></a><span class="do">##     PRIMEM[&quot;Greenwich&quot;,0,</span></span>
+<span id="cb69-12"><a href="geodaten-verschneiden.html#cb69-12" aria-hidden="true" tabindex="-1"></a><span class="do">##         ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></span>
+<span id="cb69-13"><a href="geodaten-verschneiden.html#cb69-13" aria-hidden="true" tabindex="-1"></a><span class="do">##     CS[ellipsoidal,2],</span></span>
+<span id="cb69-14"><a href="geodaten-verschneiden.html#cb69-14" aria-hidden="true" tabindex="-1"></a><span class="do">##         AXIS[&quot;geodetic latitude (Lat)&quot;,north,</span></span>
+<span id="cb69-15"><a href="geodaten-verschneiden.html#cb69-15" aria-hidden="true" tabindex="-1"></a><span class="do">##             ORDER[1],</span></span>
+<span id="cb69-16"><a href="geodaten-verschneiden.html#cb69-16" aria-hidden="true" tabindex="-1"></a><span class="do">##             ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></span>
+<span id="cb69-17"><a href="geodaten-verschneiden.html#cb69-17" aria-hidden="true" tabindex="-1"></a><span class="do">##         AXIS[&quot;geodetic longitude (Lon)&quot;,east,</span></span>
+<span id="cb69-18"><a href="geodaten-verschneiden.html#cb69-18" aria-hidden="true" tabindex="-1"></a><span class="do">##             ORDER[2],</span></span>
+<span id="cb69-19"><a href="geodaten-verschneiden.html#cb69-19" aria-hidden="true" tabindex="-1"></a><span class="do">##             ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></span>
+<span id="cb69-20"><a href="geodaten-verschneiden.html#cb69-20" aria-hidden="true" tabindex="-1"></a><span class="do">##     USAGE[</span></span>
+<span id="cb69-21"><a href="geodaten-verschneiden.html#cb69-21" aria-hidden="true" tabindex="-1"></a><span class="do">##         SCOPE[&quot;Horizontal component of 3D system.&quot;],</span></span>
+<span id="cb69-22"><a href="geodaten-verschneiden.html#cb69-22" aria-hidden="true" tabindex="-1"></a><span class="do">##         AREA[&quot;World.&quot;],</span></span>
+<span id="cb69-23"><a href="geodaten-verschneiden.html#cb69-23" aria-hidden="true" tabindex="-1"></a><span class="do">##         BBOX[-90,-180,90,180]],</span></span>
+<span id="cb69-24"><a href="geodaten-verschneiden.html#cb69-24" aria-hidden="true" tabindex="-1"></a><span class="do">##     ID[&quot;EPSG&quot;,4326]]</span></span></code></pre></div>
+<p>Jetzt haben beide Datensätze den selben EPSG-Code. Das ist die Voraussetzung für den nächsten Schritt.</p>
+</div>
+<div id="verschneiden" class="section level2" number="6.7">
+<h2><span class="header-section-number">6.7</span> Verschneiden</h2>
+<p>Mit <code>st_covers()</code> und <code>lengths()</code> lassen sich die Anzahl der Kioske in jedem Stadtteil zählen und einer neuen Spalte im Originaldatensatz zuordnen:</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="geodaten-verschneiden.html#cb70-1" aria-hidden="true" tabindex="-1"></a>stadtteile <span class="sc">%&gt;%</span></span>
+<span id="cb70-2"><a href="geodaten-verschneiden.html#cb70-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="dv">4326</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb70-3"><a href="geodaten-verschneiden.html#cb70-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_covers</span>(kioske) <span class="sc">%&gt;%</span></span>
+<span id="cb70-4"><a href="geodaten-verschneiden.html#cb70-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lengths</span>() <span class="ot">-&gt;</span> stadtteile<span class="sc">$</span>anzahl_kioske</span></code></pre></div>
+<p>Auf einer Karte veranschaulicht:</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="geodaten-verschneiden.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(stadtteile) <span class="sc">+</span></span>
+<span id="cb71-2"><a href="geodaten-verschneiden.html#cb71-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> anzahl_kioske))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<p>Allerdings wäre es schöner, die Kioskdichte (nach Fläche) darzustellen. Dazu berechnen wir zunächst die Flächen der Stadtteile:</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="geodaten-verschneiden.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_area</span>(stadtteile) <span class="sc">%&gt;%</span></span>
+<span id="cb72-2"><a href="geodaten-verschneiden.html#cb72-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.numeric</span>() <span class="sc">/</span> <span class="dv">1000</span> <span class="sc">/</span> <span class="dv">1000</span> <span class="ot">-&gt;</span></span>
+<span id="cb72-3"><a href="geodaten-verschneiden.html#cb72-3" aria-hidden="true" tabindex="-1"></a>  stadtteile<span class="sc">$</span>qkm</span></code></pre></div>
+<p>Oder mit Pipes:</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="geodaten-verschneiden.html#cb73-1" aria-hidden="true" tabindex="-1"></a>stadtteile <span class="sc">%&gt;%</span></span>
+<span id="cb73-2"><a href="geodaten-verschneiden.html#cb73-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">qkm =</span> <span class="fu">st_area</span>(.) <span class="sc">%&gt;%</span> <span class="fu">as.numeric</span>() <span class="sc">/</span> <span class="dv">1000</span> <span class="sc">/</span> <span class="dv">1000</span>)</span>
+<span id="cb73-3"><a href="geodaten-verschneiden.html#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Simple feature collection with 46 features and 4 fields</span></span>
+<span id="cb73-4"><a href="geodaten-verschneiden.html#cb73-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Geometry type: POLYGON</span></span>
+<span id="cb73-5"><a href="geodaten-verschneiden.html#cb73-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Dimension:     XY</span></span>
+<span id="cb73-6"><a href="geodaten-verschneiden.html#cb73-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Bounding box:  xmin: 462292.7 ymin: 5540412 xmax: 485744.8 ymax: 5563925</span></span>
+<span id="cb73-7"><a href="geodaten-verschneiden.html#cb73-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Projected CRS: ETRS89 / UTM zone 32N</span></span>
+<span id="cb73-8"><a href="geodaten-verschneiden.html#cb73-8" aria-hidden="true" tabindex="-1"></a><span class="do">## First 10 features:</span></span>
+<span id="cb73-9"><a href="geodaten-verschneiden.html#cb73-9" aria-hidden="true" tabindex="-1"></a><span class="do">##    STTLNR        STTLNAME                       geometry anzahl_kioske</span></span>
+<span id="cb73-10"><a href="geodaten-verschneiden.html#cb73-10" aria-hidden="true" tabindex="-1"></a><span class="do">## 1       1        Altstadt POLYGON ((476934.3 5550541,...             5</span></span>
+<span id="cb73-11"><a href="geodaten-verschneiden.html#cb73-11" aria-hidden="true" tabindex="-1"></a><span class="do">## 2       2      Innenstadt POLYGON ((477611.9 5552034,...             5</span></span>
+<span id="cb73-12"><a href="geodaten-verschneiden.html#cb73-12" aria-hidden="true" tabindex="-1"></a><span class="do">## 3       3 Bahnhofsviertel POLYGON ((475831 5550785, 4...             7</span></span>
+<span id="cb73-13"><a href="geodaten-verschneiden.html#cb73-13" aria-hidden="true" tabindex="-1"></a><span class="do">## 4       4     Westend-Süd POLYGON ((475745.4 5552373,...             6</span></span>
+<span id="cb73-14"><a href="geodaten-verschneiden.html#cb73-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 5       5    Westend-Nord POLYGON ((476497.9 5553910,...             3</span></span>
+<span id="cb73-15"><a href="geodaten-verschneiden.html#cb73-15" aria-hidden="true" tabindex="-1"></a><span class="do">## 6       6    Nordend-West POLYGON ((478362.5 5553898,...            10</span></span>
+<span id="cb73-16"><a href="geodaten-verschneiden.html#cb73-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 7       7     Nordend-Ost POLYGON ((478397.9 5551924,...            17</span></span>
+<span id="cb73-17"><a href="geodaten-verschneiden.html#cb73-17" aria-hidden="true" tabindex="-1"></a><span class="do">## 8       8          Ostend POLYGON ((481955.2 5552141,...            15</span></span>
+<span id="cb73-18"><a href="geodaten-verschneiden.html#cb73-18" aria-hidden="true" tabindex="-1"></a><span class="do">## 9       9        Bornheim POLYGON ((478959.8 5552336,...            14</span></span>
+<span id="cb73-19"><a href="geodaten-verschneiden.html#cb73-19" aria-hidden="true" tabindex="-1"></a><span class="do">## 10     10  Gutleutviertel POLYGON ((472942 5548802, 4...            11</span></span>
+<span id="cb73-20"><a href="geodaten-verschneiden.html#cb73-20" aria-hidden="true" tabindex="-1"></a><span class="do">##          qkm</span></span>
+<span id="cb73-21"><a href="geodaten-verschneiden.html#cb73-21" aria-hidden="true" tabindex="-1"></a><span class="do">## 1  0.5065673</span></span>
+<span id="cb73-22"><a href="geodaten-verschneiden.html#cb73-22" aria-hidden="true" tabindex="-1"></a><span class="do">## 2  1.4902009</span></span>
+<span id="cb73-23"><a href="geodaten-verschneiden.html#cb73-23" aria-hidden="true" tabindex="-1"></a><span class="do">## 3  0.5425421</span></span>
+<span id="cb73-24"><a href="geodaten-verschneiden.html#cb73-24" aria-hidden="true" tabindex="-1"></a><span class="do">## 4  2.4948957</span></span>
+<span id="cb73-25"><a href="geodaten-verschneiden.html#cb73-25" aria-hidden="true" tabindex="-1"></a><span class="do">## 5  1.6307925</span></span>
+<span id="cb73-26"><a href="geodaten-verschneiden.html#cb73-26" aria-hidden="true" tabindex="-1"></a><span class="do">## 6  3.0977694</span></span>
+<span id="cb73-27"><a href="geodaten-verschneiden.html#cb73-27" aria-hidden="true" tabindex="-1"></a><span class="do">## 7  1.5305338</span></span>
+<span id="cb73-28"><a href="geodaten-verschneiden.html#cb73-28" aria-hidden="true" tabindex="-1"></a><span class="do">## 8  5.5573382</span></span>
+<span id="cb73-29"><a href="geodaten-verschneiden.html#cb73-29" aria-hidden="true" tabindex="-1"></a><span class="do">## 9  2.7840413</span></span>
+<span id="cb73-30"><a href="geodaten-verschneiden.html#cb73-30" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 2.1982354</span></span></code></pre></div>
+<p>Und dann die Kioskdichte:</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="geodaten-verschneiden.html#cb74-1" aria-hidden="true" tabindex="-1"></a>stadtteile <span class="sc">%&gt;%</span></span>
+<span id="cb74-2"><a href="geodaten-verschneiden.html#cb74-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">qkm =</span> <span class="fu">st_area</span>(.) <span class="sc">%&gt;%</span> <span class="fu">as.numeric</span>() <span class="sc">/</span> <span class="dv">1000</span> <span class="sc">/</span> <span class="dv">1000</span>,</span>
+<span id="cb74-3"><a href="geodaten-verschneiden.html#cb74-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">kioskdichte =</span> anzahl_kioske <span class="sc">/</span> qkm)</span>
+<span id="cb74-4"><a href="geodaten-verschneiden.html#cb74-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Simple feature collection with 46 features and 5 fields</span></span>
+<span id="cb74-5"><a href="geodaten-verschneiden.html#cb74-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Geometry type: POLYGON</span></span>
+<span id="cb74-6"><a href="geodaten-verschneiden.html#cb74-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Dimension:     XY</span></span>
+<span id="cb74-7"><a href="geodaten-verschneiden.html#cb74-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Bounding box:  xmin: 462292.7 ymin: 5540412 xmax: 485744.8 ymax: 5563925</span></span>
+<span id="cb74-8"><a href="geodaten-verschneiden.html#cb74-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Projected CRS: ETRS89 / UTM zone 32N</span></span>
+<span id="cb74-9"><a href="geodaten-verschneiden.html#cb74-9" aria-hidden="true" tabindex="-1"></a><span class="do">## First 10 features:</span></span>
+<span id="cb74-10"><a href="geodaten-verschneiden.html#cb74-10" aria-hidden="true" tabindex="-1"></a><span class="do">##    STTLNR        STTLNAME                       geometry anzahl_kioske</span></span>
+<span id="cb74-11"><a href="geodaten-verschneiden.html#cb74-11" aria-hidden="true" tabindex="-1"></a><span class="do">## 1       1        Altstadt POLYGON ((476934.3 5550541,...             5</span></span>
+<span id="cb74-12"><a href="geodaten-verschneiden.html#cb74-12" aria-hidden="true" tabindex="-1"></a><span class="do">## 2       2      Innenstadt POLYGON ((477611.9 5552034,...             5</span></span>
+<span id="cb74-13"><a href="geodaten-verschneiden.html#cb74-13" aria-hidden="true" tabindex="-1"></a><span class="do">## 3       3 Bahnhofsviertel POLYGON ((475831 5550785, 4...             7</span></span>
+<span id="cb74-14"><a href="geodaten-verschneiden.html#cb74-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 4       4     Westend-Süd POLYGON ((475745.4 5552373,...             6</span></span>
+<span id="cb74-15"><a href="geodaten-verschneiden.html#cb74-15" aria-hidden="true" tabindex="-1"></a><span class="do">## 5       5    Westend-Nord POLYGON ((476497.9 5553910,...             3</span></span>
+<span id="cb74-16"><a href="geodaten-verschneiden.html#cb74-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 6       6    Nordend-West POLYGON ((478362.5 5553898,...            10</span></span>
+<span id="cb74-17"><a href="geodaten-verschneiden.html#cb74-17" aria-hidden="true" tabindex="-1"></a><span class="do">## 7       7     Nordend-Ost POLYGON ((478397.9 5551924,...            17</span></span>
+<span id="cb74-18"><a href="geodaten-verschneiden.html#cb74-18" aria-hidden="true" tabindex="-1"></a><span class="do">## 8       8          Ostend POLYGON ((481955.2 5552141,...            15</span></span>
+<span id="cb74-19"><a href="geodaten-verschneiden.html#cb74-19" aria-hidden="true" tabindex="-1"></a><span class="do">## 9       9        Bornheim POLYGON ((478959.8 5552336,...            14</span></span>
+<span id="cb74-20"><a href="geodaten-verschneiden.html#cb74-20" aria-hidden="true" tabindex="-1"></a><span class="do">## 10     10  Gutleutviertel POLYGON ((472942 5548802, 4...            11</span></span>
+<span id="cb74-21"><a href="geodaten-verschneiden.html#cb74-21" aria-hidden="true" tabindex="-1"></a><span class="do">##          qkm kioskdichte</span></span>
+<span id="cb74-22"><a href="geodaten-verschneiden.html#cb74-22" aria-hidden="true" tabindex="-1"></a><span class="do">## 1  0.5065673    9.870357</span></span>
+<span id="cb74-23"><a href="geodaten-verschneiden.html#cb74-23" aria-hidden="true" tabindex="-1"></a><span class="do">## 2  1.4902009    3.355252</span></span>
+<span id="cb74-24"><a href="geodaten-verschneiden.html#cb74-24" aria-hidden="true" tabindex="-1"></a><span class="do">## 3  0.5425421   12.902225</span></span>
+<span id="cb74-25"><a href="geodaten-verschneiden.html#cb74-25" aria-hidden="true" tabindex="-1"></a><span class="do">## 4  2.4948957    2.404910</span></span>
+<span id="cb74-26"><a href="geodaten-verschneiden.html#cb74-26" aria-hidden="true" tabindex="-1"></a><span class="do">## 5  1.6307925    1.839596</span></span>
+<span id="cb74-27"><a href="geodaten-verschneiden.html#cb74-27" aria-hidden="true" tabindex="-1"></a><span class="do">## 6  3.0977694    3.228129</span></span>
+<span id="cb74-28"><a href="geodaten-verschneiden.html#cb74-28" aria-hidden="true" tabindex="-1"></a><span class="do">## 7  1.5305338   11.107236</span></span>
+<span id="cb74-29"><a href="geodaten-verschneiden.html#cb74-29" aria-hidden="true" tabindex="-1"></a><span class="do">## 8  5.5573382    2.699134</span></span>
+<span id="cb74-30"><a href="geodaten-verschneiden.html#cb74-30" aria-hidden="true" tabindex="-1"></a><span class="do">## 9  2.7840413    5.028661</span></span>
+<span id="cb74-31"><a href="geodaten-verschneiden.html#cb74-31" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 2.1982354    5.004014</span></span></code></pre></div>
+<p>Schließlich die Karte:</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="geodaten-verschneiden.html#cb75-1" aria-hidden="true" tabindex="-1"></a>stadtteile <span class="sc">%&gt;%</span></span>
+<span id="cb75-2"><a href="geodaten-verschneiden.html#cb75-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">qkm =</span> <span class="fu">st_area</span>(.) <span class="sc">%&gt;%</span> <span class="fu">as.numeric</span>() <span class="sc">/</span> <span class="dv">1000</span> <span class="sc">/</span> <span class="dv">1000</span>,</span>
+<span id="cb75-3"><a href="geodaten-verschneiden.html#cb75-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">kioskdichte =</span> anzahl_kioske <span class="sc">/</span> qkm) <span class="sc">%&gt;%</span></span>
+<span id="cb75-4"><a href="geodaten-verschneiden.html#cb75-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb75-5"><a href="geodaten-verschneiden.html#cb75-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> kioskdichte), <span class="at">color=</span><span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb75-6"><a href="geodaten-verschneiden.html#cb75-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_continuous</span>(<span class="st">&quot;Kioske pro km²&quot;</span>) <span class="sc">+</span></span>
+<span id="cb75-7"><a href="geodaten-verschneiden.html#cb75-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
+</div>
+<div id="aufgaben-3" class="section level2" number="6.8">
+<h2><span class="header-section-number">6.8</span> Aufgaben</h2>
+<ol style="list-style-type: decimal">
+<li><p>Erstellen Sie eine Choroplethenkarte der Frankfurter Stadtteile, in der Sie die Anzahl bzw. die Dichte von Apotheken darstellen. (Schritte analog zu oben.)</p></li>
+<li><p>Welche Stadtteile haben mehr Kioske? Welche mehr Apotheken? Wie ausgeprägt ist das Verhältnis? Erstellen Sie eine Karte, die das zum Ausdruck bringt.</p></li>
+<li><p>(Achtung, knifflig!) Siemens veröffentlicht einen <a href="https://press.siemens.com/global/de/feature/wo-blitzt-es-am-haeufigsten">Blitzatlas</a>. Laden Sie den Datensatz herunter und bauen Sie die folgende Ansicht nach:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="geodaten-beschaffen.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="weitere-methoden.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ktiu/ds21/edit/master/6_Geodaten_verschneiden.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ktiu/ds21/blob/master/6_Geodaten_verschneiden.Rmd",
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

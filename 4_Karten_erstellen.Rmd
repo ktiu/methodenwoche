@@ -3,7 +3,6 @@
 ## Aufgaben
 
 ```{r include = F}
-solutions <- F
 ```
 
 1. Besuchen Sie https://pleiades.stoa.org/ - worum geht es hier?

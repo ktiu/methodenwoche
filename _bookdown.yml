@@ -12,5 +12,7 @@ rmd_files:
   - 2_Daten_visualisieren.Rmd
   - 3_Karten_erstellen.Rmd
   - 4_Karten_erstellen.Rmd
-  # - 5_Geodaten_verschneiden.Rmd
-  # - 6_Geodaten_verschneiden.Rmd
+  - 5_Geodaten_beschaffen.Rmd
+  - 6_Geodaten_verschneiden.Rmd
+  - 7_Weitere_Methoden.Rmd
+  - 8_Publizieren_und_nach_Hilfe_fragen.Rmd

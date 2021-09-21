@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="de" xml:lang="de">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Teil 8 Publizieren und nach Hilfe fragen | Spatial Analysis mit R (I)</title>
+  <meta name="description" content="Workshop" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Teil 8 Publizieren und nach Hilfe fragen | Spatial Analysis mit R (I)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Workshop" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Teil 8 Publizieren und nach Hilfe fragen | Spatial Analysis mit R (I)" />
+  
+  <meta name="twitter:description" content="Workshop" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="weitere-methoden.html"/>
+
+<script src="assets/header-attrs-2.8/header-attrs.js"></script>
+<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="assets/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="assets/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link rel="icon" href="https://www.uni-frankfurt.de/favicon.ico" type="image/x-icon">
+<script src="solutions.js"></script>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Zeitplan</a></li>
+<li class="chapter" data-level="1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>1</b> Getting started</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="getting-started.html"><a href="getting-started.html#formales"><i class="fa fa-check"></i><b>1.1</b> Formales</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="getting-started.html"><a href="getting-started.html#keine-reguläre-anrechnung-des-workshops"><i class="fa fa-check"></i><b>1.1.1</b> Keine reguläre Anrechnung des Workshops</a></li>
+<li class="chapter" data-level="1.1.2" data-path="getting-started.html"><a href="getting-started.html#methodenzertifikat"><i class="fa fa-check"></i><b>1.1.2</b> Methodenzertifikat</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="getting-started.html"><a href="getting-started.html#inhaltliches"><i class="fa fa-check"></i><b>1.2</b> Inhaltliches</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="getting-started.html"><a href="getting-started.html#lernziele-der-veranstaltung"><i class="fa fa-check"></i><b>1.2.1</b> Lernziele der Veranstaltung</a></li>
+<li class="chapter" data-level="1.2.2" data-path="getting-started.html"><a href="getting-started.html#seminarkonzept"><i class="fa fa-check"></i><b>1.2.2</b> Seminarkonzept</a></li>
+<li class="chapter" data-level="1.2.3" data-path="getting-started.html"><a href="getting-started.html#opinionated"><i class="fa fa-check"></i><b>1.2.3</b> <q>Opinionated…</q></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="getting-started.html"><a href="getting-started.html#didaktisches"><i class="fa fa-check"></i><b>1.3</b> Didaktisches</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="getting-started.html"><a href="getting-started.html#herausforderungen-in-der-it-didaktik"><i class="fa fa-check"></i><b>1.3.1</b> Herausforderungen in der IT-Didaktik</a></li>
+<li class="chapter" data-level="1.3.2" data-path="getting-started.html"><a href="getting-started.html#everyone-fails"><i class="fa fa-check"></i><b>1.3.2</b> Everyone fails</a></li>
+<li class="chapter" data-level="1.3.3" data-path="getting-started.html"><a href="getting-started.html#mein-ansatz-in-der-lehre"><i class="fa fa-check"></i><b>1.3.3</b> Mein Ansatz in der Lehre</a></li>
+<li class="chapter" data-level="1.3.4" data-path="getting-started.html"><a href="getting-started.html#schattenkompetenzen"><i class="fa fa-check"></i><b>1.3.4</b> <q>Schattenkompetenzen</q></a></li>
+<li class="chapter" data-level="1.3.5" data-path="getting-started.html"><a href="getting-started.html#dieser-workshop-findet-in-verschiedenen-modi-statt"><i class="fa fa-check"></i><b>1.3.5</b> Dieser Workshop findet in verschiedenen Modi statt:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="getting-started.html"><a href="getting-started.html#technisches"><i class="fa fa-check"></i><b>1.4</b> Technisches</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="getting-started.html"><a href="getting-started.html#arbeitsplatz"><i class="fa fa-check"></i><b>1.4.1</b> Arbeitsplatz</a></li>
+<li class="chapter" data-level="1.4.2" data-path="getting-started.html"><a href="getting-started.html#workshopunterlagen"><i class="fa fa-check"></i><b>1.4.2</b> Workshopunterlagen</a></li>
+<li class="chapter" data-level="1.4.3" data-path="getting-started.html"><a href="getting-started.html#rstudio-cloud"><i class="fa fa-check"></i><b>1.4.3</b> RStudio Cloud</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html"><i class="fa fa-check"></i><b>2</b> Daten visualisieren</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#lernziele-dieser-sitzung"><i class="fa fa-check"></i><b>2.1</b> Lernziele dieser Sitzung</a></li>
+<li class="chapter" data-level="2.2" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#voraussetzungen"><i class="fa fa-check"></i><b>2.2</b> Voraussetzungen</a></li>
+<li class="chapter" data-level="2.3" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#überblick"><i class="fa fa-check"></i><b>2.3</b> Überblick</a></li>
+<li class="chapter" data-level="2.4" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#visualisierung-mit-dem-standardpaket"><i class="fa fa-check"></i><b>2.4</b> Visualisierung mit dem Standardpaket</a></li>
+<li class="chapter" data-level="2.5" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#visualisierung-mit-ggplot"><i class="fa fa-check"></i><b>2.5</b> Visualisierung mit <code>ggplot()</code></a></li>
+<li class="chapter" data-level="2.6" data-path="daten-visualisieren.html"><a href="daten-visualisieren.html#aufgaben"><i class="fa fa-check"></i><b>2.6</b> Aufgaben</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html"><i class="fa fa-check"></i><b>3</b> Karten erstellen (FTR)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#lernziele-dieser-sitzung-1"><i class="fa fa-check"></i><b>3.1</b> Lernziele dieser Sitzung</a></li>
+<li class="chapter" data-level="3.2" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#voraussetzungen-1"><i class="fa fa-check"></i><b>3.2</b> Voraussetzungen</a></li>
+<li class="chapter" data-level="3.3" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#exkurs-pipes"><i class="fa fa-check"></i><b>3.3</b> Exkurs: Pipes</a></li>
+<li class="chapter" data-level="3.4" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#daten-importieren"><i class="fa fa-check"></i><b>3.4</b> Daten importieren</a></li>
+<li class="chapter" data-level="3.5" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#überblick-verschaffen"><i class="fa fa-check"></i><b>3.5</b> Überblick verschaffen</a></li>
+<li class="chapter" data-level="3.6" data-path="karten-erstellen-ftr.html"><a href="karten-erstellen-ftr.html#visualisieren"><i class="fa fa-check"></i><b>3.6</b> Visualisieren</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="karten-erstellen-hos.html"><a href="karten-erstellen-hos.html"><i class="fa fa-check"></i><b>4</b> Karten erstellen (HOS)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="karten-erstellen-hos.html"><a href="karten-erstellen-hos.html#aufgaben-1"><i class="fa fa-check"></i><b>4.1</b> Aufgaben</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html"><i class="fa fa-check"></i><b>5</b> Geodaten beschaffen</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#lernziele-dieser-sitzung-2"><i class="fa fa-check"></i><b>5.1</b> Lernziele dieser Sitzung</a></li>
+<li class="chapter" data-level="5.2" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#vorbereitung"><i class="fa fa-check"></i><b>5.2</b> Vorbereitung</a></li>
+<li class="chapter" data-level="5.3" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#datenbeschaffung"><i class="fa fa-check"></i><b>5.3</b> Datenbeschaffung</a></li>
+<li class="chapter" data-level="5.4" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#datenformatierung"><i class="fa fa-check"></i><b>5.4</b> Datenformatierung</a></li>
+<li class="chapter" data-level="5.5" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#datenaufbereitung"><i class="fa fa-check"></i><b>5.5</b> Datenaufbereitung</a></li>
+<li class="chapter" data-level="5.6" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#datenvisualisierung"><i class="fa fa-check"></i><b>5.6</b> Datenvisualisierung</a></li>
+<li class="chapter" data-level="5.7" data-path="geodaten-beschaffen.html"><a href="geodaten-beschaffen.html#aufgaben-2"><i class="fa fa-check"></i><b>5.7</b> Aufgaben</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html"><i class="fa fa-check"></i><b>6</b> Geodaten verschneiden</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#lernziele"><i class="fa fa-check"></i><b>6.1</b> Lernziele</a></li>
+<li class="chapter" data-level="6.2" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#vorbereitung-1"><i class="fa fa-check"></i><b>6.2</b> Vorbereitung</a></li>
+<li class="chapter" data-level="6.3" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#ziel"><i class="fa fa-check"></i><b>6.3</b> Ziel</a></li>
+<li class="chapter" data-level="6.4" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#grundkarte"><i class="fa fa-check"></i><b>6.4</b> Grundkarte</a></li>
+<li class="chapter" data-level="6.5" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#osm-daten"><i class="fa fa-check"></i><b>6.5</b> OSM-Daten</a></li>
+<li class="chapter" data-level="6.6" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#koordinatenreferenzsysteme"><i class="fa fa-check"></i><b>6.6</b> Koordinatenreferenzsysteme</a></li>
+<li class="chapter" data-level="6.7" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#verschneiden"><i class="fa fa-check"></i><b>6.7</b> Verschneiden</a></li>
+<li class="chapter" data-level="6.8" data-path="geodaten-verschneiden.html"><a href="geodaten-verschneiden.html#aufgaben-3"><i class="fa fa-check"></i><b>6.8</b> Aufgaben</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="weitere-methoden.html"><a href="weitere-methoden.html"><i class="fa fa-check"></i><b>7</b> Weitere Methoden</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="weitere-methoden.html"><a href="weitere-methoden.html#vorbereitung-2"><i class="fa fa-check"></i><b>7.1</b> Vorbereitung</a></li>
+<li class="chapter" data-level="7.2" data-path="weitere-methoden.html"><a href="weitere-methoden.html#aufgabe"><i class="fa fa-check"></i><b>7.2</b> Aufgabe</a></li>
+<li class="chapter" data-level="7.3" data-path="weitere-methoden.html"><a href="weitere-methoden.html#daten-einlesen"><i class="fa fa-check"></i><b>7.3</b> Daten einlesen</a></li>
+<li class="chapter" data-level="7.4" data-path="weitere-methoden.html"><a href="weitere-methoden.html#überblick-verschaffen-1"><i class="fa fa-check"></i><b>7.4</b> Überblick verschaffen</a></li>
+<li class="chapter" data-level="7.5" data-path="weitere-methoden.html"><a href="weitere-methoden.html#zusammenfassen"><i class="fa fa-check"></i><b>7.5</b> Zusammenfassen</a></li>
+<li class="chapter" data-level="7.6" data-path="weitere-methoden.html"><a href="weitere-methoden.html#verschneiden-1"><i class="fa fa-check"></i><b>7.6</b> Verschneiden</a></li>
+<li class="chapter" data-level="7.7" data-path="weitere-methoden.html"><a href="weitere-methoden.html#kartieren"><i class="fa fa-check"></i><b>7.7</b> Kartieren</a></li>
+<li class="chapter" data-level="7.8" data-path="weitere-methoden.html"><a href="weitere-methoden.html#choroplethen"><i class="fa fa-check"></i><b>7.8</b> Choroplethen</a></li>
+<li class="chapter" data-level="7.9" data-path="weitere-methoden.html"><a href="weitere-methoden.html#räumliches-verschneiden"><i class="fa fa-check"></i><b>7.9</b> Räumliches Verschneiden</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html"><i class="fa fa-check"></i><b>8</b> Publizieren und nach Hilfe fragen</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#publizieren-mit-rmarkdown"><i class="fa fa-check"></i><b>8.1</b> Publizieren mit Rmarkdown</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#text-formatieren"><i class="fa fa-check"></i><b>8.1.1</b> Text formatieren</a></li>
+<li class="chapter" data-level="8.1.2" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#der-knit-button"><i class="fa fa-check"></i><b>8.1.2</b> Der Knit-Button</a></li>
+<li class="chapter" data-level="8.1.3" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#kable"><i class="fa fa-check"></i><b>8.1.3</b> Kable</a></li>
+<li class="chapter" data-level="8.1.4" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#chunk-options"><i class="fa fa-check"></i><b>8.1.4</b> Chunk Options</a></li>
+<li class="chapter" data-level="8.1.5" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#reproducible-research"><i class="fa fa-check"></i><b>8.1.5</b> Reproducible research</a></li>
+<li class="chapter" data-level="8.1.6" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#wissenschaftliches-zitieren"><i class="fa fa-check"></i><b>8.1.6</b> Wissenschaftliches Zitieren</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#nach-hilfe-fragen"><i class="fa fa-check"></i><b>8.2</b> Nach Hilfe fragen</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#gute-beispiele"><i class="fa fa-check"></i><b>8.2.1</b> Gute Beispiele</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Spatial Analysis mit R (I)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="publizieren-und-nach-hilfe-fragen" class="section level1" number="8">
+<h1><span class="header-section-number">Teil 8</span> Publizieren und nach Hilfe fragen</h1>
+<div id="publizieren-mit-rmarkdown" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Publizieren mit Rmarkdown</h2>
+<div id="text-formatieren" class="section level3" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Text formatieren</h3>
+<p>Wir arbeiten schon von Anfang an mit im Rmarkdown-Format. Wie Überschriften, Links, Bilder usw. in Rmarkdown genau funktionieren, ist in <a href="https://rmarkdown.rstudio.com/authoring_basics.html">dieser Übersicht</a> und auf <a href="https://github.com/rstudio/cheatsheets/blob/master/rmarkdown-2.0.pdf">diesem Cheat Sheet</a> gut festgehalten.</p>
+</div>
+<div id="der-knit-button" class="section level3" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> Der Knit-Button</h3>
+<p>Wenn wir im <a href="https://de.wikipedia.org/wiki/YAML">YAML</a>-Header die Zeile</p>
+<pre><code>output: html_document</code></pre>
+<p>setzen, erscheint (nach Abspeichern) ein „Knit“-Button in der GUI. Durch Drücken auf diesen Knopf passiert folgendes:</p>
+<ul>
+<li>R erstellt („strickt“) ein HTML-Dokument aus dem vorliegenden Markdown und den Code Chunks</li>
+<li>Dabei spielen „gespeicherte“ Objekte keine Rolle, die Chunks werden einfach der Reihe nach (in einem neuen Environment) ausgeführt</li>
+<li>Externe Datensätze o. ä. müssen also am Anfang des Dokuments explizit geladen werden (etwa mit <code>load()</code>). Für den Abschlussbericht ist es ratsam, einen vorbereiteten Datensatz am Anfang des Rmarkdown-Dokuments so zu laden.</li>
+</ul>
+<p>Im YAML-Header können noch viele weitere Angaben gemacht werden, die das Resultat verändern. Hier eine gute Dokumentation: <a href="https://bookdown.org/yihui/rmarkdown/html-document.html" class="uri">https://bookdown.org/yihui/rmarkdown/html-document.html</a></p>
+</div>
+<div id="kable" class="section level3" number="8.1.3">
+<h3><span class="header-section-number">8.1.3</span> Kable</h3>
+<p>Im <code>knitr</code>-Paket sorgt der Befehl <code>kable()</code> für eine schöne Darstellung von Tabellen:</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="publizieren-und-nach-hilfe-fragen.html#cb97-1" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span>diamonds <span class="sc">%&gt;%</span></span>
+<span id="cb97-2"><a href="publizieren-und-nach-hilfe-fragen.html#cb97-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb97-3"><a href="publizieren-und-nach-hilfe-fragen.html#cb97-3" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">carat</th>
+<th align="left">cut</th>
+<th align="left">color</th>
+<th align="left">clarity</th>
+<th align="right">depth</th>
+<th align="right">table</th>
+<th align="right">price</th>
+<th align="right">x</th>
+<th align="right">y</th>
+<th align="right">z</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0.23</td>
+<td align="left">Ideal</td>
+<td align="left">E</td>
+<td align="left">SI2</td>
+<td align="right">61.5</td>
+<td align="right">55</td>
+<td align="right">326</td>
+<td align="right">3.95</td>
+<td align="right">3.98</td>
+<td align="right">2.43</td>
+</tr>
+<tr class="even">
+<td align="right">0.21</td>
+<td align="left">Premium</td>
+<td align="left">E</td>
+<td align="left">SI1</td>
+<td align="right">59.8</td>
+<td align="right">61</td>
+<td align="right">326</td>
+<td align="right">3.89</td>
+<td align="right">3.84</td>
+<td align="right">2.31</td>
+</tr>
+<tr class="odd">
+<td align="right">0.23</td>
+<td align="left">Good</td>
+<td align="left">E</td>
+<td align="left">VS1</td>
+<td align="right">56.9</td>
+<td align="right">65</td>
+<td align="right">327</td>
+<td align="right">4.05</td>
+<td align="right">4.07</td>
+<td align="right">2.31</td>
+</tr>
+<tr class="even">
+<td align="right">0.29</td>
+<td align="left">Premium</td>
+<td align="left">I</td>
+<td align="left">VS2</td>
+<td align="right">62.4</td>
+<td align="right">58</td>
+<td align="right">334</td>
+<td align="right">4.20</td>
+<td align="right">4.23</td>
+<td align="right">2.63</td>
+</tr>
+<tr class="odd">
+<td align="right">0.31</td>
+<td align="left">Good</td>
+<td align="left">J</td>
+<td align="left">SI2</td>
+<td align="right">63.3</td>
+<td align="right">58</td>
+<td align="right">335</td>
+<td align="right">4.34</td>
+<td align="right">4.35</td>
+<td align="right">2.75</td>
+</tr>
+<tr class="even">
+<td align="right">0.24</td>
+<td align="left">Very Good</td>
+<td align="left">J</td>
+<td align="left">VVS2</td>
+<td align="right">62.8</td>
+<td align="right">57</td>
+<td align="right">336</td>
+<td align="right">3.94</td>
+<td align="right">3.96</td>
+<td align="right">2.48</td>
+</tr>
+</tbody>
+</table>
+<p>Auch hier gibt es wieder vielfältige Möglichkeiten zur visuellen Gestaltung. Diesen Post finde ich immer besonders hilfreich: <a href="https://haozhu233.github.io/kableExtra/awesome_table_in_html.html" class="uri">https://haozhu233.github.io/kableExtra/awesome_table_in_html.html</a></p>
+</div>
+<div id="chunk-options" class="section level3" number="8.1.4">
+<h3><span class="header-section-number">8.1.4</span> Chunk Options</h3>
+<p>Am Anfang eines Code Chunks kann genau festgelegt werden, ob der Code ausgeführt werden soll, ob er im finalen Dokument erscheinen soll, ob Warnungen oder Fehler ausgegeben werden sollen, etc. Wenn zum Beispiel Libraries „versteckt“ geladen werden sollen, geht das mit diesem Code Chunk:</p>
+<pre><code>```{r, include = FALSE}
+library(tidyverse)
+library(rvest)
+```</code></pre>
+<p>Ein überblick über die Chunk-Optionen findet sich hier: <a href="https://bookdown.org/yihui/rmarkdown/r-code.html" class="uri">https://bookdown.org/yihui/rmarkdown/r-code.html</a></p>
+</div>
+<div id="reproducible-research" class="section level3" number="8.1.5">
+<h3><span class="header-section-number">8.1.5</span> Reproducible research</h3>
+<p>Wenn z. B. ein (längeres) Script einen (größeren) Datensatz generiert und ihn dem Objektnamen <code>mein_datensatz</code> zuweist, dann erscheint der Datensatz im lokalen Environment. Um den Datensatz mit anderen zu teilen, muss er irgendwie exportiert werden. Hierfür ist es ratsam, die <code>save()</code>-Funktion zu nutzen:</p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="publizieren-und-nach-hilfe-fragen.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(mein_datensatz, <span class="at">file =</span> <span class="st">&quot;zwischenstand_mein_datensatz.Rdata&quot;</span>)</span></code></pre></div>
+<p>So wird eine Datei erstellt, die den Datensatz enthält und verschoben oder geteilt werden kann. Eine solche Datei kann auch andere Objekte (Funktionen, Listen, …) und mehrere Objekte auf einmal enthalten. Die Dateiendung ist dabei eigentlich egal, <code>.Rdata</code> scheint aber Usus zu sein.</p>
+<p>Aus der Datei können Objekte dann jederzeit wieder ins Environment geladen werden mit dem Befehl:</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="publizieren-und-nach-hilfe-fragen.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;zwischenstand_mein_datensatz.Rdata&quot;</span>)</span></code></pre></div>
+<p>Auch wenn ein Skript auf einmal nicht mehr funktioniert (etwa weil die API sich ändert), ist es hilfreich, auf solche Zwischenstände zurückgreifen zu können.</p>
+</div>
+<div id="wissenschaftliches-zitieren" class="section level3" number="8.1.6">
+<h3><span class="header-section-number">8.1.6</span> Wissenschaftliches Zitieren</h3>
+<p>Wer die Vorzüge von Literaturverwaltungssoftware (wie Citavi, Zotero, …) schon schätzen gelernt hat, kann in Rmarkdown folgendermaßen vorgehen:</p>
+<div id="schritt-1-exportieren" class="section level4" number="8.1.6.1">
+<h4><span class="header-section-number">8.1.6.1</span> Schritt 1: Exportieren</h4>
+<p>Die relevante Literatur in eine BibTex-Datei im R-Arbeitsverzeichnis exportieren, z.B. <code>literatur.bib</code>. BibTex (bzw. BibLatex) ist ein bewährtes und gut dokumentiertes Format. Ein Eintrag sieht dann z.B. so aus, wobei <code>bortz</code> der „Name“ des Eintrags ist, den wir frei wählen können:</p>
+<pre><code>@book{bortz,
+  author = {Bortz, J{\&quot;u}rgen and Schuster, Christof},
+  title = {{Statistik f{\&quot;u}r Human- und Sozialwissenschaftler}},
+  publisher = {Springer},
+  year = {2010},
+  address = {Berlin},
+  edition = {7},
+}</code></pre>
+</div>
+<div id="schritt-2-verlinken" class="section level4" number="8.1.6.2">
+<h4><span class="header-section-number">8.1.6.2</span> Schritt 2: Verlinken</h4>
+<p>Im YAML-Header des Rmarkdown-dokuments die Angabe ergänzen:</p>
+<pre><code>bibliography: literatur.bib</code></pre>
+<p>Damit weiß der „Knit“-Befehl, wo er nach Literatur suchen soll.</p>
+</div>
+<div id="schritt-3-zitieren" class="section level4" number="8.1.6.3">
+<h4><span class="header-section-number">8.1.6.3</span> Schritt 3: Zitieren</h4>
+<p>Im Text kann dann z. B. so zitiert werden:</p>
+<pre><code>Das zentrale Grenzwerttheorem besagt, dass die Stichprobenverteilung von
+$\bar{x}$ mit steigender Stichprobengröße $n$ in eine Normalverteilung übergeht
+[@bortz: 86].</code></pre>
+</div>
+<div id="schritt-4-stricken" class="section level4" number="8.1.6.4">
+<h4><span class="header-section-number">8.1.6.4</span> Schritt 4: Stricken</h4>
+<p>Beim „Knit“-Befehl wird ein Literaturverzeichnis automatisch erstellt und ans Ende des Dokuments gehängt. Deshalb beendet man das Dokument am besten mit der Zeile:</p>
+<pre><code>## Literaturverzeichnis</code></pre>
+</div>
+</div>
+</div>
+<div id="nach-hilfe-fragen" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Nach Hilfe fragen</h2>
+<p>Online-Foren, insb. <a href="https://stackoverflow.com">Stackoverflow</a> sind tolle Ressourcen um Probleme beim Programmieren zu lösen.</p>
+<div id="gute-beispiele" class="section level3" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Gute Beispiele</h3>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="weitere-methoden.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ktiu/ds21/edit/master/8_Publizieren_und_nach_Hilfe_fragen.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ktiu/ds21/blob/master/8_Publizieren_und_nach_Hilfe_fragen.Rmd",
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
