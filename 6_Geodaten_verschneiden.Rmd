@@ -148,7 +148,6 @@ stadtteile %>%
 ## Aufgaben
 
 ```{r include = F}
-solutions <- F
 ```
 
 1. Erstellen Sie eine Choroplethenkarte der Frankfurter Stadtteile, in der Sie die Anzahl bzw. die Dichte von Apotheken darstellen. (Schritte analog zu oben.)

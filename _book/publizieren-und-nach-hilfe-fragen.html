@@ -232,10 +232,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1.5" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#reproducible-research"><i class="fa fa-check"></i><b>8.1.5</b> Reproducible research</a></li>
 <li class="chapter" data-level="8.1.6" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#wissenschaftliches-zitieren"><i class="fa fa-check"></i><b>8.1.6</b> Wissenschaftliches Zitieren</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#nach-hilfe-fragen"><i class="fa fa-check"></i><b>8.2</b> Nach Hilfe fragen</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#gute-beispiele"><i class="fa fa-check"></i><b>8.2.1</b> Gute Beispiele</a></li>
-</ul></li>
+<li class="chapter" data-level="8.2" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#nach-hilfe-fragen"><i class="fa fa-check"></i><b>8.2</b> Nach Hilfe fragen</a></li>
 </ul></li>
 </ul>
 
@@ -277,9 +274,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="kable" class="section level3" number="8.1.3">
 <h3><span class="header-section-number">8.1.3</span> Kable</h3>
 <p>Im <code>knitr</code>-Paket sorgt der Befehl <code>kable()</code> für eine schöne Darstellung von Tabellen:</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="publizieren-und-nach-hilfe-fragen.html#cb97-1" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span>diamonds <span class="sc">%&gt;%</span></span>
-<span id="cb97-2"><a href="publizieren-und-nach-hilfe-fragen.html#cb97-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb97-3"><a href="publizieren-und-nach-hilfe-fragen.html#cb97-3" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="publizieren-und-nach-hilfe-fragen.html#cb100-1" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span>diamonds <span class="sc">%&gt;%</span></span>
+<span id="cb100-2"><a href="publizieren-und-nach-hilfe-fragen.html#cb100-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb100-3"><a href="publizieren-und-nach-hilfe-fragen.html#cb100-3" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -384,10 +381,10 @@ library(rvest)
 <div id="reproducible-research" class="section level3" number="8.1.5">
 <h3><span class="header-section-number">8.1.5</span> Reproducible research</h3>
 <p>Wenn z. B. ein (längeres) Script einen (größeren) Datensatz generiert und ihn dem Objektnamen <code>mein_datensatz</code> zuweist, dann erscheint der Datensatz im lokalen Environment. Um den Datensatz mit anderen zu teilen, muss er irgendwie exportiert werden. Hierfür ist es ratsam, die <code>save()</code>-Funktion zu nutzen:</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="publizieren-und-nach-hilfe-fragen.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(mein_datensatz, <span class="at">file =</span> <span class="st">&quot;zwischenstand_mein_datensatz.Rdata&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="publizieren-und-nach-hilfe-fragen.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(mein_datensatz, <span class="at">file =</span> <span class="st">&quot;zwischenstand_mein_datensatz.Rdata&quot;</span>)</span></code></pre></div>
 <p>So wird eine Datei erstellt, die den Datensatz enthält und verschoben oder geteilt werden kann. Eine solche Datei kann auch andere Objekte (Funktionen, Listen, …) und mehrere Objekte auf einmal enthalten. Die Dateiendung ist dabei eigentlich egal, <code>.Rdata</code> scheint aber Usus zu sein.</p>
 <p>Aus der Datei können Objekte dann jederzeit wieder ins Environment geladen werden mit dem Befehl:</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="publizieren-und-nach-hilfe-fragen.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;zwischenstand_mein_datensatz.Rdata&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="publizieren-und-nach-hilfe-fragen.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;zwischenstand_mein_datensatz.Rdata&quot;</span>)</span></code></pre></div>
 <p>Auch wenn ein Skript auf einmal nicht mehr funktioniert (etwa weil die API sich ändert), ist es hilfreich, auf solche Zwischenstände zurückgreifen zu können.</p>
 </div>
 <div id="wissenschaftliches-zitieren" class="section level3" number="8.1.6">
@@ -427,11 +424,18 @@ $\bar{x}$ mit steigender Stichprobengröße $n$ in eine Normalverteilung überge
 </div>
 <div id="nach-hilfe-fragen" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Nach Hilfe fragen</h2>
-<p>Online-Foren, insb. <a href="https://stackoverflow.com">Stackoverflow</a> sind tolle Ressourcen um Probleme beim Programmieren zu lösen.</p>
-<div id="gute-beispiele" class="section level3" number="8.2.1">
-<h3><span class="header-section-number">8.2.1</span> Gute Beispiele</h3>
+<p>Online-Foren, insb. <a href="https://stackoverflow.com">Stackoverflow</a> sind tolle Ressourcen um Probleme beim Programmieren zu lösen. (Weniger bekannt: die Statistik-Schwesterseite <a href="https://stats.stackexchange.com">Cross Validated</a>.)</p>
+<p>Oft landet man auf Stackoverflow, wenn man nach einer Fehlermeldung oder einer Problemstellung googelt. Aber obwohl die Stackoverflow-Community den Ruf hat, sehr streng zu sein und Hilfegesuche einfach <q>abzubügeln</q>, ist es gar nicht so verkehrt hier nach Hilfe auch zu komplexen Problemen zu fragen.</p>
+<p>Um hilfreiches Feedback zu bekommen, lohnt es sich jedoch, einige Punkte zu beachten:</p>
+<ul>
+<li>Fragen können mit Stichworten getaggt werden. Neben dem Tag <q>R</q> lohnt es sich, konkrete Pakete wie <q>ggplot2</q>, <q>sf</q> o. ä. zu taggen, damit die <q>richtigen</q> Personen darauf aufmerksam werden.</li>
+<li>Ein ganz kurzer einleitender Satz zum Kontext sollte nicht fehlen: <q>I’m trying to … in order to …</q></li>
+<li>Wenn es eine existierende Frage oder eine Online-Ressource gibt, die dem Problem sehr ähnlich ist (aber nicht ganz auf den Fall passt), ist es ratsam darauf zu verweisen: <q>I already tried this solution, but my problem is …</q></li>
+<li><a href="https://en.wikipedia.org/wiki/Minimal_working_example">Kurze, reproduzierbare Beispiele</a> helfen den Antwortenden dabei, mögliche Lösungen auszuprobieren und zu testen.</li>
+<li>Dabei ist es oft sinnvoll, kurze Auszüge von Datensätzen in die Frage einzubauen – und zwar so, dass sie einfach in R kopiert werden können. Das geht oft ganz gut mit <code>dput(head(DATENSATZ))</code>. Weitere Infos dazu: <a href="https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example#5963610" class="uri">https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example#5963610</a></li>
+<li>Schließlich ist es hilfreich deutlich zu machen, was das unmittelbare Ziel des Codes ist: <q>My expected output should look like this: …</q></li>
+</ul>
 
-</div>
 </div>
 </div>
             </section>

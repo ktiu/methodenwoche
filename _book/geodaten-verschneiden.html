@@ -232,10 +232,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1.5" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#reproducible-research"><i class="fa fa-check"></i><b>8.1.5</b> Reproducible research</a></li>
 <li class="chapter" data-level="8.1.6" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#wissenschaftliches-zitieren"><i class="fa fa-check"></i><b>8.1.6</b> Wissenschaftliches Zitieren</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#nach-hilfe-fragen"><i class="fa fa-check"></i><b>8.2</b> Nach Hilfe fragen</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#gute-beispiele"><i class="fa fa-check"></i><b>8.2.1</b> Gute Beispiele</a></li>
-</ul></li>
+<li class="chapter" data-level="8.2" data-path="publizieren-und-nach-hilfe-fragen.html"><a href="publizieren-und-nach-hilfe-fragen.html#nach-hilfe-fragen"><i class="fa fa-check"></i><b>8.2</b> Nach Hilfe fragen</a></li>
 </ul></li>
 </ul>
 
@@ -509,9 +506,80 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="aufgaben-3" class="section level2" number="6.8">
 <h2><span class="header-section-number">6.8</span> Aufgaben</h2>
 <ol style="list-style-type: decimal">
-<li><p>Erstellen Sie eine Choroplethenkarte der Frankfurter Stadtteile, in der Sie die Anzahl bzw. die Dichte von Apotheken darstellen. (Schritte analog zu oben.)</p></li>
-<li><p>Welche Stadtteile haben mehr Kioske? Welche mehr Apotheken? Wie ausgeprägt ist das Verhältnis? Erstellen Sie eine Karte, die das zum Ausdruck bringt.</p></li>
+<li><p>Erstellen Sie eine Choroplethenkarte der Frankfurter Stadtteile, in der Sie die Anzahl bzw. die Dichte von Apotheken darstellen. (Schritte analog zu oben.)</p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r solution"><code class="sourceCode r"><span id="cb76-1"><a href="geodaten-verschneiden.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Aus dem OSM-Wiki erfahren wir, dass die Abfrage lautet: amenity=pharmacy</span></span>
+<span id="cb76-2"><a href="geodaten-verschneiden.html#cb76-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-3"><a href="geodaten-verschneiden.html#cb76-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Auf Overpass Turbo lässt sich das Resultat als geoJSON exportieren.</span></span>
+<span id="cb76-4"><a href="geodaten-verschneiden.html#cb76-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-5"><a href="geodaten-verschneiden.html#cb76-5" aria-hidden="true" tabindex="-1"></a>stadtteile <span class="sc">%&gt;%</span></span>
+<span id="cb76-6"><a href="geodaten-verschneiden.html#cb76-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="dv">4326</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb76-7"><a href="geodaten-verschneiden.html#cb76-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_covers</span>(<span class="fu">st_read</span>(<span class="st">&quot;resources/apotheken.geojson&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb76-8"><a href="geodaten-verschneiden.html#cb76-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lengths</span>() <span class="ot">-&gt;</span> stadtteile<span class="sc">$</span>anzahl_apotheken</span>
+<span id="cb76-9"><a href="geodaten-verschneiden.html#cb76-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Reading layer `apotheken&#39; from data source </span></span>
+<span id="cb76-10"><a href="geodaten-verschneiden.html#cb76-10" aria-hidden="true" tabindex="-1"></a><span class="do">##   `/Users/till/mzs/2021_methodenwoche/skript/resources/apotheken.geojson&#39; </span></span>
+<span id="cb76-11"><a href="geodaten-verschneiden.html#cb76-11" aria-hidden="true" tabindex="-1"></a><span class="do">##   using driver `GeoJSON&#39;</span></span>
+<span id="cb76-12"><a href="geodaten-verschneiden.html#cb76-12" aria-hidden="true" tabindex="-1"></a><span class="do">## Simple feature collection with 257 features and 61 fields</span></span>
+<span id="cb76-13"><a href="geodaten-verschneiden.html#cb76-13" aria-hidden="true" tabindex="-1"></a><span class="do">## Geometry type: GEOMETRY</span></span>
+<span id="cb76-14"><a href="geodaten-verschneiden.html#cb76-14" aria-hidden="true" tabindex="-1"></a><span class="do">## Dimension:     XY</span></span>
+<span id="cb76-15"><a href="geodaten-verschneiden.html#cb76-15" aria-hidden="true" tabindex="-1"></a><span class="do">## Bounding box:  xmin: 8.466004 ymin: 50.04214 xmax: 8.834962 ymax: 50.21252</span></span>
+<span id="cb76-16"><a href="geodaten-verschneiden.html#cb76-16" aria-hidden="true" tabindex="-1"></a><span class="do">## Geodetic CRS:  WGS 84</span></span>
+<span id="cb76-17"><a href="geodaten-verschneiden.html#cb76-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-18"><a href="geodaten-verschneiden.html#cb76-18" aria-hidden="true" tabindex="-1"></a>stadtteile <span class="sc">%&gt;%</span></span>
+<span id="cb76-19"><a href="geodaten-verschneiden.html#cb76-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">qkm =</span> <span class="fu">st_area</span>(.) <span class="sc">%&gt;%</span> <span class="fu">as.numeric</span>() <span class="sc">/</span> <span class="dv">1000</span> <span class="sc">/</span> <span class="dv">1000</span>,</span>
+<span id="cb76-20"><a href="geodaten-verschneiden.html#cb76-20" aria-hidden="true" tabindex="-1"></a>         <span class="at">apothekendichte =</span> anzahl_apotheken<span class="sc">/</span> qkm) <span class="sc">%&gt;%</span></span>
+<span id="cb76-21"><a href="geodaten-verschneiden.html#cb76-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb76-22"><a href="geodaten-verschneiden.html#cb76-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> apothekendichte), <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb76-23"><a href="geodaten-verschneiden.html#cb76-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_continuous</span>(<span class="st">&quot;Apotheken pro km²&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-84-1.png" width="672" class="solution" /></p></li>
+<li><p>Welche Stadtteile haben mehr Kioske? Welche mehr Apotheken? Wie ausgeprägt ist das Verhältnis? Erstellen Sie eine Karte, die das zum Ausdruck bringt.</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r solution"><code class="sourceCode r"><span id="cb77-1"><a href="geodaten-verschneiden.html#cb77-1" aria-hidden="true" tabindex="-1"></a>stadtteile <span class="sc">%&gt;%</span></span>
+<span id="cb77-2"><a href="geodaten-verschneiden.html#cb77-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ratio =</span> (anzahl_apotheken <span class="sc">-</span> anzahl_kioske) <span class="sc">/</span> (anzahl_apotheken <span class="sc">+</span> anzahl_kioske)) <span class="sc">%&gt;%</span></span>
+<span id="cb77-3"><a href="geodaten-verschneiden.html#cb77-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb77-4"><a href="geodaten-verschneiden.html#cb77-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> ratio), <span class="at">color=</span><span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb77-5"><a href="geodaten-verschneiden.html#cb77-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_continuous</span>(<span class="cn">NULL</span>,</span>
+<span id="cb77-6"><a href="geodaten-verschneiden.html#cb77-6" aria-hidden="true" tabindex="-1"></a>                          <span class="at">type =</span> <span class="st">&quot;viridis&quot;</span>,</span>
+<span id="cb77-7"><a href="geodaten-verschneiden.html#cb77-7" aria-hidden="true" tabindex="-1"></a>                          <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="fl">0.5</span>),</span>
+<span id="cb77-8"><a href="geodaten-verschneiden.html#cb77-8" aria-hidden="true" tabindex="-1"></a>                          <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;nur Apotheken&quot;</span>,</span>
+<span id="cb77-9"><a href="geodaten-verschneiden.html#cb77-9" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;mehr Apotheken&quot;</span>,</span>
+<span id="cb77-10"><a href="geodaten-verschneiden.html#cb77-10" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;gleiche Anzahl&quot;</span>,</span>
+<span id="cb77-11"><a href="geodaten-verschneiden.html#cb77-11" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;mehr Kioske&quot;</span>,</span>
+<span id="cb77-12"><a href="geodaten-verschneiden.html#cb77-12" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;nur Kioske&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb77-13"><a href="geodaten-verschneiden.html#cb77-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-85-1.png" width="672" class="solution" /></p></li>
 <li><p>(Achtung, knifflig!) Siemens veröffentlicht einen <a href="https://press.siemens.com/global/de/feature/wo-blitzt-es-am-haeufigsten">Blitzatlas</a>. Laden Sie den Datensatz herunter und bauen Sie die folgende Ansicht nach:</p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r solution"><code class="sourceCode r"><span id="cb78-1"><a href="geodaten-verschneiden.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;resources/Uebersicht-Blitzeinschlaege-2019.xlsx&quot;</span> <span class="sc">%&gt;%</span></span>
+<span id="cb78-2"><a href="geodaten-verschneiden.html#cb78-2" aria-hidden="true" tabindex="-1"></a>  readxl<span class="sc">::</span><span class="fu">read_excel</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb78-3"><a href="geodaten-verschneiden.html#cb78-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb78-4"><a href="geodaten-verschneiden.html#cb78-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Dichte2016 =</span> <span class="st">`</span><span class="at">Dichte 2016</span><span class="st">`</span>,</span>
+<span id="cb78-5"><a href="geodaten-verschneiden.html#cb78-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">DichteGesamt =</span> <span class="fu">mean</span>(<span class="fu">c</span>(Dichte2015,</span>
+<span id="cb78-6"><a href="geodaten-verschneiden.html#cb78-6" aria-hidden="true" tabindex="-1"></a>                               Dichte2016,</span>
+<span id="cb78-7"><a href="geodaten-verschneiden.html#cb78-7" aria-hidden="true" tabindex="-1"></a>                               Dichte2017,</span>
+<span id="cb78-8"><a href="geodaten-verschneiden.html#cb78-8" aria-hidden="true" tabindex="-1"></a>                               Dichte2018,</span>
+<span id="cb78-9"><a href="geodaten-verschneiden.html#cb78-9" aria-hidden="true" tabindex="-1"></a>                               Dichte2019)),</span>
+<span id="cb78-10"><a href="geodaten-verschneiden.html#cb78-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">kreis =</span> <span class="st">`</span><span class="at">Stadt- oder Landkreis</span><span class="st">`</span> <span class="sc">%&gt;%</span></span>
+<span id="cb78-11"><a href="geodaten-verschneiden.html#cb78-11" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">str_remove</span>(<span class="st">&quot;(LK) |(SK) &quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb78-12"><a href="geodaten-verschneiden.html#cb78-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">`</span><span class="at">Dichte 2016</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb78-13"><a href="geodaten-verschneiden.html#cb78-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="fu">starts_with</span>(<span class="st">&quot;Dichte&quot;</span>),</span>
+<span id="cb78-14"><a href="geodaten-verschneiden.html#cb78-14" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_prefix =</span> <span class="st">&quot;Dichte&quot;</span>,</span>
+<span id="cb78-15"><a href="geodaten-verschneiden.html#cb78-15" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to     =</span> <span class="st">&quot;Jahr&quot;</span>,</span>
+<span id="cb78-16"><a href="geodaten-verschneiden.html#cb78-16" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to    =</span> <span class="st">&quot;Blitzdichte&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb78-17"><a href="geodaten-verschneiden.html#cb78-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(kreis, Jahr, Blitzdichte) <span class="ot">-&gt;</span></span>
+<span id="cb78-18"><a href="geodaten-verschneiden.html#cb78-18" aria-hidden="true" tabindex="-1"></a>  blitze</span>
+<span id="cb78-19"><a href="geodaten-verschneiden.html#cb78-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-20"><a href="geodaten-verschneiden.html#cb78-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Landkreise gibt es z. B. vom GDZ: https://gdz.bkg.bund.de/</span></span>
+<span id="cb78-21"><a href="geodaten-verschneiden.html#cb78-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Datensatz: Verwaltungsgebiete 1:250 000 mit Einwohnerzahlen (Ebenen)</span></span>
+<span id="cb78-22"><a href="geodaten-verschneiden.html#cb78-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-23"><a href="geodaten-verschneiden.html#cb78-23" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;resources/vg250-ew_3112.gk3.shape.ebenen/vg250-ew_ebenen_3112/VG250_KRS.shp&quot;</span> <span class="sc">%&gt;%</span></span>
+<span id="cb78-24"><a href="geodaten-verschneiden.html#cb78-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_sf</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb78-25"><a href="geodaten-verschneiden.html#cb78-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(RS, <span class="st">&quot;^06&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb78-26"><a href="geodaten-verschneiden.html#cb78-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(blitze, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;GEN&quot;</span> <span class="ot">=</span> <span class="st">&quot;kreis&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb78-27"><a href="geodaten-verschneiden.html#cb78-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb78-28"><a href="geodaten-verschneiden.html#cb78-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> Blitzdichte), <span class="at">color=</span><span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb78-29"><a href="geodaten-verschneiden.html#cb78-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>Jahr) <span class="sc">+</span></span>
+<span id="cb78-30"><a href="geodaten-verschneiden.html#cb78-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_continuous</span>(<span class="at">type=</span><span class="st">&quot;viridis&quot;</span>) <span class="sc">+</span></span>
+<span id="cb78-31"><a href="geodaten-verschneiden.html#cb78-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb78-32"><a href="geodaten-verschneiden.html#cb78-32" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.text  =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb78-33"><a href="geodaten-verschneiden.html#cb78-33" aria-hidden="true" tabindex="-1"></a>          <span class="at">panel.grid =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p></li>
 </ol>
 

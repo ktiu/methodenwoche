@@ -2273,10 +2273,27 @@ Beim „Knit``-Befehl wird ein Literaturverzeichnis automatisch erstellt und ans
 \hypertarget{nach-hilfe-fragen}{%
 \subsection{Nach Hilfe fragen}\label{nach-hilfe-fragen}}
 
-Online-Foren, insb. \href{https://stackoverflow.com}{Stackoverflow} sind tolle Ressourcen um Probleme beim Programmieren zu lösen.
+Online-Foren, insb. \href{https://stackoverflow.com}{Stackoverflow} sind tolle Ressourcen um Probleme beim Programmieren zu lösen. (Weniger bekannt: die Statistik-Schwesterseite \href{https://stats.stackexchange.com}{Cross Validated}.)
 
-\hypertarget{gute-beispiele}{%
-\subsubsection{Gute Beispiele}\label{gute-beispiele}}
+Oft landet man auf Stackoverflow, wenn man nach einer Fehlermeldung oder einer Problemstellung googelt. Aber obwohl die Stackoverflow-Community den Ruf hat, sehr streng zu sein und Hilfegesuche einfach ``abzubügeln'', ist es gar nicht so verkehrt hier nach Hilfe auch zu komplexen Problemen zu fragen.
+
+Um hilfreiches Feedback zu bekommen, lohnt es sich jedoch, einige Punkte zu beachten:
+
+\begin{itemize}
+\tightlist
+\item
+  Fragen können mit Stichworten getaggt werden. Neben dem Tag ``R'' lohnt es sich, konkrete Pakete wie ``ggplot2'', ``sf'' o.~ä. zu taggen, damit die ``richtigen'' Personen darauf aufmerksam werden.
+\item
+  Ein ganz kurzer einleitender Satz zum Kontext sollte nicht fehlen: ``I'm trying to \ldots{} in order to \ldots{}''
+\item
+  Wenn es eine existierende Frage oder eine Online-Ressource gibt, die dem Problem sehr ähnlich ist (aber nicht ganz auf den Fall passt), ist es ratsam darauf zu verweisen: ``I already tried this solution, but my problem is \ldots{}''
+\item
+  \href{https://en.wikipedia.org/wiki/Minimal_working_example}{Kurze, reproduzierbare Beispiele} helfen den Antwortenden dabei, mögliche Lösungen auszuprobieren und zu testen.
+\item
+  Dabei ist es oft sinnvoll, kurze Auszüge von Datensätzen in die Frage einzubauen -- und zwar so, dass sie einfach in R kopiert werden können. Das geht oft ganz gut mit \texttt{dput(head(DATENSATZ))}. Weitere Infos dazu: \url{https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example\#5963610}
+\item
+  Schließlich ist es hilfreich deutlich zu machen, was das unmittelbare Ziel des Codes ist: ``My expected output should look like this: \ldots{}''
+\end{itemize}
 
 
 \end{document}
