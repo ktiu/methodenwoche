@@ -17,6 +17,18 @@
 - Schriftliche Leistungsnachweise mit maximal vierwöchiger Abgabefrist
 - Alle Fragen dazu bitte an hiwis-methodenzentrum@uni-frankfurt.de
 
+### Leistungsnachweis
+
+- Schriftliche Ausarbeitung
+- In Form eines kleinen Forschungsberichts:
+  - Thematische Einleitung
+  - Fragestellung
+  - Beschreibung der Datenquelle(n)
+  - Nachvollziehbare Bearbeitung der Daten
+  - Nachvollziehbare Visualisierung(en)
+  - Interpretation
+- Format: Rmarkdown + (Roh-)datensatz
+
 ## Inhaltliches
 
 ### Lernziele der Veranstaltung
